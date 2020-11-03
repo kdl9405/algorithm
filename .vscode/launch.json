@@ -1,0 +1,2034 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro106",
+            "request": "launch",
+            "mainClass": "pro106",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro105",
+            "request": "launch",
+            "mainClass": "pro105",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro104",
+            "request": "launch",
+            "mainClass": "pro104",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - winter2",
+            "request": "launch",
+            "mainClass": "programmers.winter2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - winter1",
+            "request": "launch",
+            "mainClass": "programmers.winter1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro103",
+            "request": "launch",
+            "mainClass": "programmers.pro103",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro102",
+            "request": "launch",
+            "mainClass": "programmers.pro102",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro101",
+            "request": "launch",
+            "mainClass": "programmers.pro101",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro100",
+            "request": "launch",
+            "mainClass": "programmers.pro100",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro99",
+            "request": "launch",
+            "mainClass": "programmers.pro99",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro98",
+            "request": "launch",
+            "mainClass": "programmers.pro98",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro97",
+            "request": "launch",
+            "mainClass": "programmers.pro97",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro95",
+            "request": "launch",
+            "mainClass": "programmers.pro95",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro94",
+            "request": "launch",
+            "mainClass": "programmers.pro94",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro93",
+            "request": "launch",
+            "mainClass": "programmers.pro93",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - nhn3",
+            "request": "launch",
+            "mainClass": "gooorm.nhn3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - nhn2",
+            "request": "launch",
+            "mainClass": "gooorm.nhn2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - nhn1",
+            "request": "launch",
+            "mainClass": "gooorm.nhn1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro92",
+            "request": "launch",
+            "mainClass": "programmers.pro92",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro91",
+            "request": "launch",
+            "mainClass": "programmers.pro91",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro90",
+            "request": "launch",
+            "mainClass": "programmers.pro90",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test1",
+            "request": "launch",
+            "mainClass": "gooorm.test1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro89",
+            "request": "launch",
+            "mainClass": "pro89",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro88",
+            "request": "launch",
+            "mainClass": "pro88",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro87_copy",
+            "request": "launch",
+            "mainClass": "pro87_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro87",
+            "request": "launch",
+            "mainClass": "pro87",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro86",
+            "request": "launch",
+            "mainClass": "pro86",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro85",
+            "request": "launch",
+            "mainClass": "pro85",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro84",
+            "request": "launch",
+            "mainClass": "pro84",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - publickeyCipher",
+            "request": "launch",
+            "mainClass": "publickeyCipher",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - publickeyCipher_copy",
+            "request": "launch",
+            "mainClass": "publickeyCipher_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro83",
+            "request": "launch",
+            "mainClass": "pro83",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro82",
+            "request": "launch",
+            "mainClass": "pro82",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro81",
+            "request": "launch",
+            "mainClass": "pro81",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro80",
+            "request": "launch",
+            "mainClass": "pro80",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro79_copy",
+            "request": "launch",
+            "mainClass": "pro79_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro78",
+            "request": "launch",
+            "mainClass": "pro78",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro77",
+            "request": "launch",
+            "mainClass": "pro77",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro76",
+            "request": "launch",
+            "mainClass": "pro76",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro75",
+            "request": "launch",
+            "mainClass": "pro75",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro74",
+            "request": "launch",
+            "mainClass": "pro74",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15651",
+            "request": "launch",
+            "mainClass": "BJ.BJ15651",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro73",
+            "request": "launch",
+            "mainClass": "pro73",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - blockcipher",
+            "request": "launch",
+            "mainClass": "blockcipher",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro3",
+            "request": "launch",
+            "mainClass": "pro3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - dev3",
+            "request": "launch",
+            "mainClass": "dev3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - dev2",
+            "request": "launch",
+            "mainClass": "dev2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - cupang4",
+            "request": "launch",
+            "mainClass": "cupang4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - cupang3",
+            "request": "launch",
+            "mainClass": "cupang3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - cupang2",
+            "request": "launch",
+            "mainClass": "cupang2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - cupang1",
+            "request": "launch",
+            "mainClass": "cupang1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro71",
+            "request": "launch",
+            "mainClass": "pro71",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro20_10_2",
+            "request": "launch",
+            "mainClass": "pro20_10_2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro20_10_4",
+            "request": "launch",
+            "mainClass": "pro20_10_4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro20_10_1",
+            "request": "launch",
+            "mainClass": "pro20_10_1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro70",
+            "request": "launch",
+            "mainClass": "pro70",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro69",
+            "request": "launch",
+            "mainClass": "pro69",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro68",
+            "request": "launch",
+            "mainClass": "pro68",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro67",
+            "request": "launch",
+            "mainClass": "pro67",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro66",
+            "request": "launch",
+            "mainClass": "pro66",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Crawling",
+            "request": "launch",
+            "mainClass": "Crawling",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro65",
+            "request": "launch",
+            "mainClass": "pro65",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro64",
+            "request": "launch",
+            "mainClass": "pro64",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro63",
+            "request": "launch",
+            "mainClass": "pro63",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro62",
+            "request": "launch",
+            "mainClass": "pro62",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro60",
+            "request": "launch",
+            "mainClass": "pro60",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro59",
+            "request": "launch",
+            "mainClass": "programmers.pro59",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro58",
+            "request": "launch",
+            "mainClass": "programmers.pro58",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro57",
+            "request": "launch",
+            "mainClass": "programmers.pro57",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro56",
+            "request": "launch",
+            "mainClass": "programmers.pro56",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro54",
+            "request": "launch",
+            "mainClass": "programmers.pro54",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15650",
+            "request": "launch",
+            "mainClass": "BJ.BJ15650",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15649",
+            "request": "launch",
+            "mainClass": "BJ.BJ15649",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro53",
+            "request": "launch",
+            "mainClass": "programmers.pro53",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro52",
+            "request": "launch",
+            "mainClass": "programmers.pro52",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro51",
+            "request": "launch",
+            "mainClass": "programmers.pro51",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro50",
+            "request": "launch",
+            "mainClass": "programmers.pro50",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro49",
+            "request": "launch",
+            "mainClass": "programmers.pro49",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro48",
+            "request": "launch",
+            "mainClass": "programmers.pro48",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro47",
+            "request": "launch",
+            "mainClass": "programmers.pro47",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro46",
+            "request": "launch",
+            "mainClass": "programmers.pro46",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro45",
+            "request": "launch",
+            "mainClass": "programmers.pro45",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro44",
+            "request": "launch",
+            "mainClass": "programmers.pro44",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro43",
+            "request": "launch",
+            "mainClass": "programmers.pro43",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro42",
+            "request": "launch",
+            "mainClass": "programmers.pro42",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro41",
+            "request": "launch",
+            "mainClass": "programmers.pro41",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro40",
+            "request": "launch",
+            "mainClass": "programmers.pro40",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro39",
+            "request": "launch",
+            "mainClass": "BJ.pro39",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro38",
+            "request": "launch",
+            "mainClass": "programmers.pro38",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro37",
+            "request": "launch",
+            "mainClass": "programmers.pro37",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10942",
+            "request": "launch",
+            "mainClass": "BJ.BJ10942",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ7579",
+            "request": "launch",
+            "mainClass": "BJ.BJ7579",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1520",
+            "request": "launch",
+            "mainClass": "BJ.BJ1520",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11049",
+            "request": "launch",
+            "mainClass": "BJ.BJ11049",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11066",
+            "request": "launch",
+            "mainClass": "BJ.BJ11066",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test3",
+            "request": "launch",
+            "mainClass": "Elevenst.test3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test2",
+            "request": "launch",
+            "mainClass": "Elevenst.test2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test1",
+            "request": "launch",
+            "mainClass": "Elevenst.test1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2293",
+            "request": "launch",
+            "mainClass": "BJ.BJ2293",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1463",
+            "request": "launch",
+            "mainClass": "BJ.BJ1463",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11055",
+            "request": "launch",
+            "mainClass": "BJ.BJ11055",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ9461",
+            "request": "launch",
+            "mainClass": "BJ.BJ9461",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ12865",
+            "request": "launch",
+            "mainClass": "BJ.BJ12865",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ9251",
+            "request": "launch",
+            "mainClass": "BJ.BJ9251",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2206",
+            "request": "launch",
+            "mainClass": "BJ.BJ2206",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1697",
+            "request": "launch",
+            "mainClass": "BJ.BJ1697",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ7569",
+            "request": "launch",
+            "mainClass": "BJ.BJ7569",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test3",
+            "request": "launch",
+            "mainClass": "naver.test3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test2",
+            "request": "launch",
+            "mainClass": "naver.test2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test1",
+            "request": "launch",
+            "mainClass": "naver.test1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ3687",
+            "request": "launch",
+            "mainClass": "BJ.BJ3687",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ7576",
+            "request": "launch",
+            "mainClass": "BJ.BJ7576",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2178",
+            "request": "launch",
+            "mainClass": "BJ.BJ2178",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1012",
+            "request": "launch",
+            "mainClass": "BJ.BJ1012",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RC4_copy",
+            "request": "launch",
+            "mainClass": "RC4_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2667",
+            "request": "launch",
+            "mainClass": "BJ.BJ2667",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2606",
+            "request": "launch",
+            "mainClass": "BJ.BJ2606",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1260",
+            "request": "launch",
+            "mainClass": "BJ.BJ1260",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1655",
+            "request": "launch",
+            "mainClass": "BJ.BJ1655",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11286",
+            "request": "launch",
+            "mainClass": "BJ.BJ11286",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1927",
+            "request": "launch",
+            "mainClass": "BJ.BJ1927",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11279",
+            "request": "launch",
+            "mainClass": "BJ.BJ11279",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RC4",
+            "request": "launch",
+            "mainClass": "RC4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2110",
+            "request": "launch",
+            "mainClass": "BJ2110",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2805",
+            "request": "launch",
+            "mainClass": "BJ2805",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1654",
+            "request": "launch",
+            "mainClass": "BJ1654",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10816",
+            "request": "launch",
+            "mainClass": "BJ10816",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1920",
+            "request": "launch",
+            "mainClass": "BJ1920",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2740",
+            "request": "launch",
+            "mainClass": "BJ2740",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1629",
+            "request": "launch",
+            "mainClass": "BJ1629",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1780",
+            "request": "launch",
+            "mainClass": "BJ1780",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1992",
+            "request": "launch",
+            "mainClass": "BJ1992",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2630",
+            "request": "launch",
+            "mainClass": "BJ2630",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ5430_copy",
+            "request": "launch",
+            "mainClass": "BJ5430_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ5430",
+            "request": "launch",
+            "mainClass": "BJ5430",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1021",
+            "request": "launch",
+            "mainClass": "BJ1021",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10866",
+            "request": "launch",
+            "mainClass": "BJ10866",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1966",
+            "request": "launch",
+            "mainClass": "BJ1966",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11866",
+            "request": "launch",
+            "mainClass": "BJ11866",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2164",
+            "request": "launch",
+            "mainClass": "BJ2164",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ18258",
+            "request": "launch",
+            "mainClass": "BJ18258",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1874",
+            "request": "launch",
+            "mainClass": "BJ1874",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ4949",
+            "request": "launch",
+            "mainClass": "BJ4949",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ9012",
+            "request": "launch",
+            "mainClass": "BJ9012",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10773",
+            "request": "launch",
+            "mainClass": "BJ10773",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10828",
+            "request": "launch",
+            "mainClass": "BJ10828",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1541",
+            "request": "launch",
+            "mainClass": "BJ1541",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11399",
+            "request": "launch",
+            "mainClass": "BJ11399",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1931",
+            "request": "launch",
+            "mainClass": "BJ1931",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11047",
+            "request": "launch",
+            "mainClass": "BJ11047",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1912",
+            "request": "launch",
+            "mainClass": "BJ1912",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2565",
+            "request": "launch",
+            "mainClass": "BJ2565",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11053",
+            "request": "launch",
+            "mainClass": "BJ11053",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FindDuplicateCharacters",
+            "request": "launch",
+            "mainClass": "FindDuplicateCharacters",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2156",
+            "request": "launch",
+            "mainClass": "BJ2156",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10844",
+            "request": "launch",
+            "mainClass": "BJ10844",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro36",
+            "request": "launch",
+            "mainClass": "pro36",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro35",
+            "request": "launch",
+            "mainClass": "pro35",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro34_copy",
+            "request": "launch",
+            "mainClass": "pro34_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro34",
+            "request": "launch",
+            "mainClass": "pro34",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro33",
+            "request": "launch",
+            "mainClass": "pro33",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro32_copy",
+            "request": "launch",
+            "mainClass": "pro32_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro32",
+            "request": "launch",
+            "mainClass": "pro32",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - line6",
+            "request": "launch",
+            "mainClass": "line6",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - line3",
+            "request": "launch",
+            "mainClass": "line3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - line2",
+            "request": "launch",
+            "mainClass": "line2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - line1",
+            "request": "launch",
+            "mainClass": "line1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - AA",
+            "request": "launch",
+            "mainClass": "AA",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2579",
+            "request": "launch",
+            "mainClass": "BJ2579",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1932",
+            "request": "launch",
+            "mainClass": "BJ1932",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1149_copy",
+            "request": "launch",
+            "mainClass": "BJ1149_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1149",
+            "request": "launch",
+            "mainClass": "BJ1149",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro31",
+            "request": "launch",
+            "mainClass": "programmers.pro31",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro5",
+            "request": "launch",
+            "mainClass": "kakao.kakao2021.pro5",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro4",
+            "request": "launch",
+            "mainClass": "kakao.kakao2021.pro4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro3",
+            "request": "launch",
+            "mainClass": "kakao.kakao2021.pro3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro2",
+            "request": "launch",
+            "mainClass": "kakao.kakao2021.pro2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro1",
+            "request": "launch",
+            "mainClass": "kakao.kakao2021.pro1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro4_copy",
+            "request": "launch",
+            "mainClass": "kakao.kakao2020.pro4_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro4",
+            "request": "launch",
+            "mainClass": "kakao.kakao2020.pro4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro3",
+            "request": "launch",
+            "mainClass": "kakao.kakao2020.pro3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro2",
+            "request": "launch",
+            "mainClass": "kakao.kakao2020.pro2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro1",
+            "request": "launch",
+            "mainClass": "kakao.kakao2020.pro1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro30",
+            "request": "launch",
+            "mainClass": "programmers.pro30",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro29",
+            "request": "launch",
+            "mainClass": "programmers.pro29",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro28",
+            "request": "launch",
+            "mainClass": "programmers.pro28",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro27",
+            "request": "launch",
+            "mainClass": "programmers.pro27",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro26",
+            "request": "launch",
+            "mainClass": "programmers.pro26",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro25",
+            "request": "launch",
+            "mainClass": "programmers.pro25",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15651",
+            "request": "launch",
+            "mainClass": "BJ15651",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro24",
+            "request": "launch",
+            "mainClass": "programmers.pro24",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro23",
+            "request": "launch",
+            "mainClass": "programmers.pro23",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro22_copy",
+            "request": "launch",
+            "mainClass": "programmers.pro22_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro22",
+            "request": "launch",
+            "mainClass": "programmers.pro22",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro21",
+            "request": "launch",
+            "mainClass": "programmers.pro21",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro20",
+            "request": "launch",
+            "mainClass": "programmers.pro20",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro19_copy",
+            "request": "launch",
+            "mainClass": "programmers.pro19_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro19",
+            "request": "launch",
+            "mainClass": "programmers.pro19",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro18",
+            "request": "launch",
+            "mainClass": "programmers.pro18",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro17",
+            "request": "launch",
+            "mainClass": "programmers.pro17",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro16",
+            "request": "launch",
+            "mainClass": "programmers.pro16",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro15",
+            "request": "launch",
+            "mainClass": "programmers.pro15",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro14",
+            "request": "launch",
+            "mainClass": "programmers.pro14",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro13",
+            "request": "launch",
+            "mainClass": "programmers.pro13",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro11",
+            "request": "launch",
+            "mainClass": "programmers.pro11",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro10",
+            "request": "launch",
+            "mainClass": "programmers.pro10",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro9",
+            "request": "launch",
+            "mainClass": "programmers.pro9",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro8",
+            "request": "launch",
+            "mainClass": "programmers.pro8",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro7",
+            "request": "launch",
+            "mainClass": "programmers.pro7",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro6",
+            "request": "launch",
+            "mainClass": "programmers.pro6",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro4",
+            "request": "launch",
+            "mainClass": "programmers.pro4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro3",
+            "request": "launch",
+            "mainClass": "programmers.pro3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro2",
+            "request": "launch",
+            "mainClass": "programmers.pro2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro1",
+            "request": "launch",
+            "mainClass": "programmers.pro1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1904",
+            "request": "launch",
+            "mainClass": "BJ1904",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1003_copy",
+            "request": "launch",
+            "mainClass": "BJ1003_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1003",
+            "request": "launch",
+            "mainClass": "BJ1003",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2748_copy_copy",
+            "request": "launch",
+            "mainClass": "BJ2748_copy_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2748_copy",
+            "request": "launch",
+            "mainClass": "BJ2748_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2748",
+            "request": "launch",
+            "mainClass": "BJ2748",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ9663_copy_copy",
+            "request": "launch",
+            "mainClass": "BJ9663_copy_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ9663_copy",
+            "request": "launch",
+            "mainClass": "BJ9663_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ9663",
+            "request": "launch",
+            "mainClass": "BJ9663",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ14888_copy",
+            "request": "launch",
+            "mainClass": "BJ14888_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ14888",
+            "request": "launch",
+            "mainClass": "BJ14888",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ14889",
+            "request": "launch",
+            "mainClass": "BJ14889",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ6603",
+            "request": "launch",
+            "mainClass": "BJ6603",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15655",
+            "request": "launch",
+            "mainClass": "BJ15655",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15654",
+            "request": "launch",
+            "mainClass": "BJ15654",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ16968",
+            "request": "launch",
+            "mainClass": "BJ16968",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15652",
+            "request": "launch",
+            "mainClass": "BJ15652",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ13418",
+            "request": "launch",
+            "mainClass": "BJ13418",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15650",
+            "request": "launch",
+            "mainClass": "BJ15650",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ15649",
+            "request": "launch",
+            "mainClass": "BJ15649",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10814_copy",
+            "request": "launch",
+            "mainClass": "BJ10814_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10814",
+            "request": "launch",
+            "mainClass": "BJ10814",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1181_copy",
+            "request": "launch",
+            "mainClass": "BJ1181_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1181",
+            "request": "launch",
+            "mainClass": "BJ1181",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11651",
+            "request": "launch",
+            "mainClass": "BJ11651",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11650",
+            "request": "launch",
+            "mainClass": "BJ11650",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1427_copy",
+            "request": "launch",
+            "mainClass": "BJ1427_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1427",
+            "request": "launch",
+            "mainClass": "BJ1427",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2108",
+            "request": "launch",
+            "mainClass": "BJ2108",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10989",
+            "request": "launch",
+            "mainClass": "BJ10989",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2750",
+            "request": "launch",
+            "mainClass": "BJ2750",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1436",
+            "request": "launch",
+            "mainClass": "BJ1436",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1018",
+            "request": "launch",
+            "mainClass": "BJ1018",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ7568",
+            "request": "launch",
+            "mainClass": "BJ7568",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2231",
+            "request": "launch",
+            "mainClass": "BJ2231",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2796",
+            "request": "launch",
+            "mainClass": "BJ2796",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11729",
+            "request": "launch",
+            "mainClass": "BJ11729",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2447_copy",
+            "request": "launch",
+            "mainClass": "BJ2447_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2447",
+            "request": "launch",
+            "mainClass": "BJ2447",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10870",
+            "request": "launch",
+            "mainClass": "BJ10870",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10872",
+            "request": "launch",
+            "mainClass": "BJ10872",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1002",
+            "request": "launch",
+            "mainClass": "BJ1002",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ4153",
+            "request": "launch",
+            "mainClass": "BJ4153",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ3009",
+            "request": "launch",
+            "mainClass": "BJ3009",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1085",
+            "request": "launch",
+            "mainClass": "BJ1085",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ9020",
+            "request": "launch",
+            "mainClass": "BJ9020",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ4948",
+            "request": "launch",
+            "mainClass": "BJ4948",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1929",
+            "request": "launch",
+            "mainClass": "BJ1929",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2581_copy",
+            "request": "launch",
+            "mainClass": "BJ2581_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2581",
+            "request": "launch",
+            "mainClass": "BJ2581",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1978",
+            "request": "launch",
+            "mainClass": "BJ1978",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2775",
+            "request": "launch",
+            "mainClass": "BJ2775",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10250",
+            "request": "launch",
+            "mainClass": "BJ10250",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2869",
+            "request": "launch",
+            "mainClass": "BJ2869",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1193",
+            "request": "launch",
+            "mainClass": "BJ1193",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2292",
+            "request": "launch",
+            "mainClass": "BJ2292",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1712",
+            "request": "launch",
+            "mainClass": "BJ1712",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1316",
+            "request": "launch",
+            "mainClass": "BJ1316",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ5622",
+            "request": "launch",
+            "mainClass": "BJ5622",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2908",
+            "request": "launch",
+            "mainClass": "BJ2908",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1152",
+            "request": "launch",
+            "mainClass": "BJ1152",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2675",
+            "request": "launch",
+            "mainClass": "BJ2675",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10809",
+            "request": "launch",
+            "mainClass": "BJ10809",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11720",
+            "request": "launch",
+            "mainClass": "BJ11720",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2446",
+            "request": "launch",
+            "mainClass": "BJ2446",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2523",
+            "request": "launch",
+            "mainClass": "BJ2523",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10817",
+            "request": "launch",
+            "mainClass": "BJ10817",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10039",
+            "request": "launch",
+            "mainClass": "BJ10039",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10951",
+            "request": "launch",
+            "mainClass": "BJ10951",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ10875",
+            "request": "launch",
+            "mainClass": "BJ10875",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2439",
+            "request": "launch",
+            "mainClass": "BJ2439",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2438",
+            "request": "launch",
+            "mainClass": "BJ2438",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11022",
+            "request": "launch",
+            "mainClass": "BJ11022",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ11021",
+            "request": "launch",
+            "mainClass": "BJ11021",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ2742",
+            "request": "launch",
+            "mainClass": "BJ2742",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
