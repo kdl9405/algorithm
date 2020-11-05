@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - pro109",
+            "request": "launch",
+            "mainClass": "pro109",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro108_copy",
+            "request": "launch",
+            "mainClass": "pro108_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro108",
+            "request": "launch",
+            "mainClass": "pro108",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro107",
+            "request": "launch",
+            "mainClass": "pro107",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test3",
+            "request": "launch",
+            "mainClass": "test3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test2",
+            "request": "launch",
+            "mainClass": "test2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test1",
+            "request": "launch",
+            "mainClass": "test1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - pro106",
             "request": "launch",
             "mainClass": "pro106",

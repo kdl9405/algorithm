@@ -44,11 +44,13 @@ public class pro106 {
         System.out.println(hash);
         System.out.println(set);
 
-        int max = set.keySet().stream().mapToInt(i->i).toArray()[set.size()-1];
-        System.out.println(max);
-        // while (!set.isEmpty()) {
-            
-        // }
+        int max = set.keySet().stream().mapToInt(i->i).toArray()[set.size()-1] + 1;
+        Stack<Integer> stack = new Stack<>();
+        stack.push(max);
+
+        while (!set.isEmpty()) {
+                
+        }
 
         // Arrays.sort(nodeinfo, (n1, n2) -> {
         //     if (n2[1] == n1[1]) {
