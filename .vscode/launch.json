@@ -2,6 +2,76 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - hashMAC",
+            "request": "launch",
+            "mainClass": "hashMAC",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - elel3",
+            "request": "launch",
+            "mainClass": "elel3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - elel2",
+            "request": "launch",
+            "mainClass": "elel2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ele1",
+            "request": "launch",
+            "mainClass": "ele1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - challenge1",
+            "request": "launch",
+            "mainClass": "challenge1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - task3",
+            "request": "launch",
+            "mainClass": "task3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - task2",
+            "request": "launch",
+            "mainClass": "task2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - task1",
+            "request": "launch",
+            "mainClass": "task1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro111",
+            "request": "launch",
+            "mainClass": "pro111",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro110",
+            "request": "launch",
+            "mainClass": "pro110",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - pro109",
             "request": "launch",
             "mainClass": "pro109",

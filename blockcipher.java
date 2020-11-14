@@ -7,17 +7,7 @@ public class blockcipher {
         int p = 0x12345678;
         int k = 0xC58FA10B;
         String c = "0";
-
-        // Long temp = Long.parseLong(Long.toString(p^k));
-        // String st = temp.toHexString(temp);
-
-        // String temp1 = Integer.toHexString(k);
-        // System.out.println("int16 To String16 !!!!"+temp1);
-        // long tp = Long.parseLong(temp1, 16);
-        // System.out.println("String16 To Long10 !!!!"+tp);
-        // String temp2 = Long.toHexString(tp);
-        // System.out.println("Long10 To String16 !!!!"+temp2);
-
+       
         String pp = Integer.toHexString(p);
         String kk = Integer.toHexString(k);
         long PL = Long.parseLong(pp, 16);
@@ -35,17 +25,18 @@ public class blockcipher {
     }
 
     static String BlockCipherEncrypt(long k, long p) {
-        long n = p ^ k;
+        long n = (p&0xffffffff) ^ k;
 
         for(int r = 0; r<8; r++){
             String nS = Long.toHexString(n);
-            System.out.println("라운드 "+(r+1) + " : " + nS);
 
             if (nS.length()<8) {
                 while (nS.length()<8) {
-                    nS+= "0"+nS;
+                    nS = "0"+nS;
                 }
             }
+            System.out.println("라운드 "+(r+1) + "시작  : " + nS);
+
             String[] x = nS.split("");
             int[] y = new int[8];
     
@@ -56,8 +47,11 @@ public class blockcipher {
     
             String zS = metrix(y);
             Long z = Long.parseLong(zS, 16);
-    
-            n = z ^ k;    
+
+            n = (z&0xffffffff) ^ k;   
+            
+            System.out.println("라운드 "+(r+1) + "xor후 : " + Long.toHexString(n));
+
         }       
 
         String result = Long.toHexString(n);
@@ -92,14 +86,14 @@ public class blockcipher {
     static String metrix(int[] y) {
 
         int[] z = new int[8];
-        z[0] = (y[0] ^ y[2] ^ y[3] ^ y[5] ^ y[6] ^ y[7])&0xffffffff;
-        z[1] = (y[0] ^ y[1] ^ y[3] ^ y[4] ^ y[6] ^ y[7])&0xffffffff;
-        z[2] = (y[0] ^ y[1] ^ y[2] ^ y[4] ^ y[5] ^ y[7])&0xffffffff;
-        z[3] = (y[1] ^ y[2] ^ y[3] ^ y[4] ^ y[5] ^ y[6])&0xffffffff;
-        z[4] = (y[0] ^ y[1] ^ y[5] ^ y[6] ^ y[7])&0xffffffff;
-        z[5] = (y[1] ^ y[2] ^ y[4] ^ y[6] ^ y[7])&0xffffffff;
-        z[6] = (y[2] ^ y[3] ^ y[4] ^ y[5] ^ y[7])&0xffffffff;
-        z[7] = (y[0] ^ y[3] ^ y[4] ^ y[5] ^ y[6])&0xffffffff;
+        z[7] = (y[7] ^ y[5] ^ y[4] ^ y[2] ^ y[1] ^ y[0]);
+        z[6] = (y[7] ^ y[6] ^ y[4] ^ y[3] ^ y[1] ^ y[0]);
+        z[5] = (y[7] ^ y[6] ^ y[5] ^ y[3] ^ y[2] ^ y[0]);
+        z[4] = (y[6] ^ y[5] ^ y[4] ^ y[3] ^ y[2] ^ y[1]);
+        z[3] = (y[7] ^ y[6] ^ y[2] ^ y[1] ^ y[0]);
+        z[2] = (y[6] ^ y[5] ^ y[3] ^ y[1] ^ y[0]);
+        z[1] = (y[5] ^ y[4] ^ y[3] ^ y[2] ^ y[0]);
+        z[0] = (y[7] ^ y[4] ^ y[3] ^ y[2] ^ y[1]);
 
         String zS = "";
         for (int n : z) {
