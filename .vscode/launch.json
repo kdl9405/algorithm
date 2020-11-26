@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - pro113",
+            "request": "launch",
+            "mainClass": "programmers.pro113",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro113_copy",
+            "request": "launch",
+            "mainClass": "programmers.pro113_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - hashMAC2",
+            "request": "launch",
+            "mainClass": "hashMAC2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Electronic_signature",
+            "request": "launch",
+            "mainClass": "Electronic_signature",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ12015",
+            "request": "launch",
+            "mainClass": "BJ.BJ12015",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1300",
+            "request": "launch",
+            "mainClass": "BJ.BJ1300",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro113",
+            "request": "launch",
+            "mainClass": "pro113",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - pro112_copy",
             "request": "launch",
             "mainClass": "pro112_copy",

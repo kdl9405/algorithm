@@ -9,8 +9,8 @@ public class hashMAC {
 
         int k = 0xcf36e59a;
 
-        String macValue = hmac(k, M);
-        System.out.println("MAC 값 = " + macValue);
+        // String macValue = hmac(k, M);
+        // System.out.println("MAC 값 = " + macValue);
 
     }
 
@@ -57,6 +57,7 @@ public class hashMAC {
         for (int i = 0; i < M.length(); i++) {
             int n = (int) M.charAt(i);
             String s = Integer.toHexString(n);
+
             if (s.length() == 1) {
                 s = "0" + s;
             }
