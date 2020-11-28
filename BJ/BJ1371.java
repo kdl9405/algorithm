@@ -1,6 +1,6 @@
 package BJ;
 
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class BJ1371 {
