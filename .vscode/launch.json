@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - BJ1004",
+            "request": "launch",
+            "mainClass": "BJ.BJ1004",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1834",
+            "request": "launch",
+            "mainClass": "BJ.BJ1834",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BJ1568",
+            "request": "launch",
+            "mainClass": "BJ.BJ1568",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BJ1371",
             "request": "launch",
             "mainClass": "BJ.BJ1371",
