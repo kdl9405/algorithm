@@ -1,0 +1,25 @@
+-- 최댓값 구하기
+
+SELECT MAX(DATETIME) AS '시간'
+FROM ANIMAL_INS;
+
+-- 최솟값 구하기
+
+SELECT MIN(DATETIME) as '시간'
+FROM ANIMAL_INS;
+
+
+--동물 수 구하기
+
+SELECT COUNT(*)
+FROM ANIMAL_INS;
+
+
+-- 중복 제거하기
+
+SELECT COUNT(*)
+FROM (
+SELECT DISTINCT NAME
+FROM ANIMAL_INS
+    WHERE NAME IS NOT NULL    
+) SQL1
