@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - combination",
+            "request": "launch",
+            "mainClass": "basic.combination",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - gcdAndLcm",
+            "request": "launch",
+            "mainClass": "basic.gcdAndLcm",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - IsAnagram",
+            "request": "launch",
+            "mainClass": "basic.IsAnagram",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UniqueChar",
+            "request": "launch",
+            "mainClass": "basic.UniqueChar",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ReverseString",
+            "request": "launch",
+            "mainClass": "basic.ReverseString",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - StringToInt",
+            "request": "launch",
+            "mainClass": "basic.StringToInt",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - BJ1004",
             "request": "launch",
             "mainClass": "BJ.BJ1004",
