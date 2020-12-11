@@ -1,7 +1,7 @@
 package basic;
 
 import java.util.*;
-
+// 유클리드 호제법
 public class gcdAndLcm {
 
 	public static void main(String[] args){

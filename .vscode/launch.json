@@ -2,6 +2,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - pro106_copy",
+            "request": "launch",
+            "mainClass": "programmers.pro106_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - pro106",
+            "request": "launch",
+            "mainClass": "programmers.pro106",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - LadderN",
+            "request": "launch",
+            "mainClass": "basic.LadderN",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SumN",
+            "request": "launch",
+            "mainClass": "basic.SumN",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Fibonacci",
+            "request": "launch",
+            "mainClass": "basic.Fibonacci",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - primeNumber",
             "request": "launch",
             "mainClass": "basic.primeNumber",

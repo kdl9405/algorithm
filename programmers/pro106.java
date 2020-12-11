@@ -15,77 +15,92 @@ public class pro106 {
         int[][] result = solution(nodeinfo);
 
         for (int[] r : result) {
-            for (int i = 0; i < r.length; i++) {
-                System.out.print(r[i] + " ");
-            }
-            System.out.println("");
+        for (int i = 0; i < r.length; i++) {
+        System.out.print(r[i] + " ");
+        }
+        System.out.println("");
         }
 
     }
 
     static int[][] solution(int[][] nodeinfo) {
-        int[][] answer = {};
 
-        HashMap<String, Integer> hash = new HashMap<>();
-        HashMap<Integer,HashSet<Integer>> set = new HashMap<>(); 
+        List<Node> list = new ArrayList<>();
+
         for (int i = 0; i < nodeinfo.length; i++) {
-            String temp = nodeinfo[i][0] + "," + nodeinfo[i][1];
-            hash.put(temp, i + 1);
-            if (set.containsKey(nodeinfo[i][1])) {
-                HashSet<Integer> s = set.get(nodeinfo[i][1]);
-                s.add(nodeinfo[i][0]);
-                set.put(nodeinfo[i][1], s);
-            }else{
-                HashSet<Integer> s = new HashSet<>();
-                s.add(nodeinfo[i][0]);
-                set.put(nodeinfo[i][1], s);
+            list.add(new Node(i + 1, nodeinfo[i][0], nodeinfo[i][1]));
+        }
+
+       
+        Collections.sort(list, (o1, o2) ->{
+            if(o1.y == o2.y){
+                return o1.x - o2.x;
+            }
+            return o2.y - o1.y;
+        });
+
+        Node root = list.get(0);
+        int[][] answer = new int[2][nodeinfo.length];
+
+        for (int i = 1; i < list.size(); i++) {
+            addNode(root, list.get(i));
+        }
+
+        preorder(answer, root);
+        index = 0;
+        postorder(answer, root);
+
+        return answer;
+    }
+
+    static int index = 0;
+
+    static void addNode(Node parent, Node child) {
+        if (parent.x > child.x) {
+            if (parent.left == null) {
+                parent.left = child;
+            } else {
+                addNode(parent.left, child);
+            }
+        } else {
+            if (parent.right == null) {
+                parent.right = child;
+            } else {
+                addNode(parent.right, child);
             }
         }
+    }
 
-        System.out.println(hash);
-        System.out.println(set);
-
-        int max = set.keySet().stream().mapToInt(i->i).toArray()[set.size()-1] + 1;
-        Stack<Integer> stack = new Stack<>();
-        stack.push(max);
-
-        while (!set.isEmpty()) {
-                
+    static void preorder(int[][] arr, Node root) {
+        if (root != null) {
+            arr[0][index++] = root.num;
+            preorder(arr, root.left);
+            preorder(arr, root.right);
         }
+    }
 
-        // Arrays.sort(nodeinfo, (n1, n2) -> {
-        //     if (n2[1] == n1[1]) {
-        //         return n1[0] - n2[0];
-        //     }
-        //     return n2[1] - n1[1];
-        // });
+    static void postorder(int[][] arr, Node root) {
+        if (root != null) {
+            postorder(arr, root.left);
+            postorder(arr, root.right);
+            arr[1][index++] = root.num;
+        }
+    }
 
-        // Queue<Integer[]> queue = new LinkedList<>();
-        // for (int[] n : nodeinfo) {
-        //     queue.offer(new Integer[] { n[0], n[1] });
-        // }
+}
 
-        // Stack<Integer> stack = new Stack<>();
-        // stack.push(100001);
-        
-        // int depth = queue.peek()[1]+1;
-        // StringBuilder sb = new StringBuilder();
-        // while (!queue.isEmpty()) {
-        //     Integer[] point = queue.poll();
-        //     if (point[0] <= stack.peek() && point[1] < depth) {
-        //         sb.append(hash.get(point[0]+","+point[1])+"  ");
-        //         stack.push(point[0]);
-        //         depth = point[1];
-        //     }else if (point[1] < depth) {
-        //         stack.pop();
+class Node {
 
-        //     }
+    int num;
+    int x;
+    int y;
 
-        // }
+    Node left;
+    Node right;
 
-        // while (!queue.isEmpty()) {
-        //     System.out.println(queue.peek()[0] + " " + queue.poll()[1] );
-        // }
-        return answer;
+    Node(int num, int x, int y) {
+        this.num = num;
+        this.x = x;
+        this.y = y;
     }
 }
