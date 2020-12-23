@@ -22,7 +22,7 @@ public class RC4_copy {
             x = (x + 1) & 0xff;
             y = (y + (s[x] & 0xff)) & 0xff;
             byte tmp = s[x];
-            s[x] = s[y];
+            s[x] = s[y];  
             s[y] = tmp;
             int t = ((s[x] & 0xff) + (s[y] & 0xff)) & 0xff;
             int k = s[t];
