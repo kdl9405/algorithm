@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ9184",
+            "request": "launch",
+            "mainClass": "BJ.BJ9184",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - catalanNum",
             "request": "launch",
             "mainClass": "nhn.catalanNum",
