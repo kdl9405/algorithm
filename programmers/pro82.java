@@ -1,7 +1,10 @@
+package programmers;
+
 import java.util.HashMap;
 
 /**
  * pro82
+ * 브라이언의 고민
  */
 public class pro82 {
     public static void main(String[] args) {
