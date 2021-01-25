@@ -1,7 +1,20 @@
-var person = {
-    name: 'abc'
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+
 }
 
-person.name[0] = 'b';
+var a = new Person('AAA', 10);
 
-console.log(person.name[0]);
+//확장
+Person.prototype.hello = function () {
+    console.log('hello', this.name, this.age);
+}
+
+a.hello();
+
+var b = new Person('BBB', 20);
+
+
+b.hello();
