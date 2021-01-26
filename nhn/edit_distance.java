@@ -7,8 +7,8 @@ public class edit_distance {
 
     public static void main(String[] args) {
 
-        String s1 = "ABCD";
-        String s2 = "ABD";
+        String s1 = "123367";
+        String s2 = "1";
 
         System.out.println(solution(s1, s2));
 
