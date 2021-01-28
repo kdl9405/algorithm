@@ -1,20 +1,23 @@
+function Person(name, gender) {
+    this.name = name;
+    this.gender = gender;   
+  }
+  
+  var foo = new Person('Lee', 'male');
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
+  console.log(foo.__proto__);       
+  console.log(foo.prototype);
+  console.log(foo.__proto__.constructor);
+  console.log(foo.constructor);       
+  console.log("----------------------");
 
-}
+  console.log(Person.__proto__);       
+  console.log(Person.prototype);  
+  console.log(Person.__proto__.constructor);       
+  console.log(Person.prototype.constructor);
+  console.log("----------------------");
 
-var a = new Person('AAA', 10);
-
-//확장
-Person.prototype.hello = function () {
-    console.log('hello', this.name, this.age);
-}
-
-a.hello();
-
-var b = new Person('BBB', 20);
-
-
-b.hello();
+  
+  console.log(Function.constructor);       
+  console.log(Function.prototype.__proto__.constructor.__proto__);
+  console.log("----------------------");
