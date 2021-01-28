@@ -44,3 +44,17 @@ function Person(name, gender) {
 
 
 
+var str = 'test';
+
+String.prototype.myMethod = function() {
+  return 'myMethod';
+}
+
+console.log(str.myMethod());
+console.dir(String.prototype);
+
+console.log(str.__proto__ === String.prototype);                 // ① true
+console.log(String.prototype.__proto__  === Object.prototype);   // ② true
+console.log(String.prototype.constructor === String);            // ③ true
+console.log(String.__proto__ === Function.prototype);            // ④ true
+console.log(Function.prototype.__proto__  === Object.prototype); // ⑤ true
