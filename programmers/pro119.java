@@ -6,10 +6,7 @@ GPS
 
 dp[i][j] = i번째 경로가 j일때 i번째 경로까지 최소 수정값
 
-
  */
-
-// 시간초과
 
 public class pro119 {
 
