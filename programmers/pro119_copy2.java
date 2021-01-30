@@ -9,10 +9,11 @@ import java.util.HashSet;
 GPS
 
 dp[i][j] = i번째 경로가 j가 맞을 때 i번째 경로까지 최소 수정값
-    top-down
+
+    down-top
  */
 
-public class pro119 {
+public class pro119_copy2 {
 
     public static void main(String[] args) {
 
@@ -31,21 +32,20 @@ public class pro119 {
 
         int answer = 0;
 
-        log = gps_log.clone();
-
-        road = new boolean[n + 1][n + 1];
-        for (int[] r : edge_list) {
-            road[r[0]][r[1]] = true;
-            road[r[1]][r[0]] = true;
+        road = new boolean[n+1][n+1];
+        for(int i = 0; i<m; i++){
+            road[edge_list[i][0]][edge_list[i][1]] = true;
+            road[edge_list[i][1]][edge_list[i][0]] = true;            
         }
-        for (int i = 1; i <= n; i++) {
+        for(int i = 1; i<=n; i++){
             road[i][i] = true;
         }
 
         hash = new HashMap<>();
-        for (int i = 1; i <= n; i++) {
+
+        for(int i = 0; i<=n; i++){
             HashSet<Integer> set = new HashSet<>();
-            for (int j = 1; j <= n; j++) {
+            for(int j = 0; j<=n ;j++){
                 if (road[i][j]) {
                     set.add(j);
                 }
@@ -53,44 +53,39 @@ public class pro119 {
             hash.put(i, set);
         }
 
-        dp = new int[k][n + 1];
-
-        for (int[] d : dp) {
-            Arrays.fill(d, 10000);            
+        dp = new int[k][n+1];
+        for(int i = 0; i<k; i++){
+            Arrays.fill(dp[i], 10000);
         }
-      
         dp[0][gps_log[0]] = 0;
+        
+        for(int i = 1; i<k; i++){
+            for(int j = 1; j<=n; j++){
+              //  dp[i][j] = Math.min(dp[i][j], dp[i-1][j]);
 
-        answer = findDP(k - 1, gps_log[k - 1]);
-        if (answer>k) {
-            answer = -1;
+                HashSet<Integer> temp = hash.get(j);
+
+                for(int x : temp){
+                    dp[i][j] = Math.min(dp[i][j], dp[i-1][x]);
+                }
+                if (gps_log[i] != j) {
+                    dp[i][j]+=1;
+                }
+            }
         }
+
+        if (dp[k-1][gps_log[k-1]] >= 10000) {
+            answer = -1;
+        }else{
+            answer = dp[k-1][gps_log[k-1]];
+        }
+       
         return answer;
     }
 
     static int[][] dp;
     static boolean[][] road;
-    static int[] log;
     static HashMap<Integer, HashSet<Integer>> hash;
 
-    static int findDP(int i, int j) {
-
-        if (i == 0 || dp[i][j] != 10000) {
-            return dp[i][j];
-        }
-
-        HashSet<Integer> temp = hash.get(j);
-
-        dp[i][j] = Math.min(dp[i][j], findDP(i-1, j));
-
-        for (int x : temp) {
-            dp[i][j] = Math.min(dp[i][j], findDP(i - 1, x));
-        }
-
-        if (log[i] != j) {
-            dp[i][j]++;
-        }
-        return dp[i][j];
-
-    }
+    
 }
