@@ -4,15 +4,17 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 
-/**
- * 매칭점수
- * 테스트케이스 9,11,13,17 안됨.....ㅜㅜㅜㅜㅜㅜㅜㅜㅜ
+/*
+ * 
+ * 매칭점수 
+ * 
+ *  뭐가 문제냐야앙아아아아아아아앙 9 11 13 17!!!!!!!!!!!
  */
 public class pro122 {
 
     public static void main(String[] args) {
-        String word = "blind";
-        String[] pages = {"<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://a.com\"/>블라블라블라\n</head>  \n<body>\nBlind Lorem Blind ipsum dolor Blind test sit amet, consectetur adipiscing elit. \n<a href=\"https://b.com\"> Link to b </a>\n</body>\n</html>", "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://b.com\"/>\n</head>  \n<body>\nSuspendisse potenti. Vivamus venenatis tellus non turpis bibendum, \n<a href=\"https://a.com\"> Link to a </a>\nblind sed congue urna varius. Suspendisse feugiat nisl ligula, quis malesuada felis hendrerit ut.\n<a href=\"https://c.com\"> Link to c </a>\n</body>\n</html>", "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://c.com\"/>\n</head>  \n<body>\nUt condimentum urna at felis sodales rutrum. Sed dapibus cursus diam, non interdum nulla tempor nec. Phasellus rutrum enim at orci consectetu blind\n<a href=\"https://a.com\"> Link to a </a>\n</body>\n</html>"};
+        String word = "Muzi";
+        String[] pages = {"<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://careers.kakao.com/interview/list\"/>\n</head>  \n<body>\n<a href=\"https://programmers.co.kr/learn/courses/4673\"></a>#!MuziMuzi!)jayg07con&&\n\n</body>\n</html>", "<html lang=\"ko\" xml:lang=\"ko\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta property=\"og:url\" content=\"https://www.kakaocorp.com\"/>\n</head>  \n<body>\ncon%\tmuzI92apeach&2<a href=\"https://hashcode.co.kr/tos\"></a>\n\n\t^\n</body>\n</html>"};
 
         System.out.println(solution(word, pages));
 
@@ -25,10 +27,10 @@ public class pro122 {
 
         HashMap<String, Integer> pageIndex = new HashMap<>();
 
-        double[][] point = new double[pages.length][4]; // 0: index 1 : basic 2 : link 3 : total
-        String[][] html = new String[pages.length][5]; // 1 : head 3 : body
+        double[][] point = new double[pages.length][4]; // 0: index, 1 : basic, 2 : link, 3 : total
+        String[][] html = new String[pages.length][5]; // 1 : head, 3 : body
 
-        for (int i = 0; i < pages.length; i++) {
+        for (int i = 0; i < pages.length; i++) {  // 해당 URL 찾고 인덱스 번호 연결
             String temp = pages[i].replaceAll("<head>", "@rayJump!");
             temp = temp.replaceAll("</head>", "@rayJump!");
             temp = temp.replaceAll("<body>", "@rayJump!");
@@ -40,65 +42,57 @@ public class pro122 {
             html[i][1] = html[i][1].replaceAll(">", "@rayJump!");
 
             String[] str = html[i][1].split("@rayJump!");
+
+            loop:
             for(String s : str){
-                if (s.contains("meta") && s.contains("\"https://")) {
-                    String[] str2 = s.split("\"https://");
-                    int ind = str2[1].indexOf("\"");
-                    html[i][1] = "https://"+str2[1].substring(0, ind);
+                if (s.contains("meta") && s.contains("https://")) {
+                    String[] str2 = s.split("\"");
+                    for(String ss : str2){
+                        if (ss.contains("https://")) {
+                            html[i][1] = ss;
+                            break loop;
+                        }
+                    }
                 }
-            }
-            
-            // String[] str2 = str[1].split("\"/>");
-            // html[i][1] = str2[0].substring(1, str2[0].length());
+           }
 
-            System.out.println(html[i][1]);
-
-            // html[i][1] = str[1].substring(1, str[1].length() - 4);
             pageIndex.put(html[i][1], i);
             point[i][0] = i;
         }
 
-        for (int i = 0; i < pages.length; i++) {
+        for(int i = 0; i< pages.length; i++){ // 기본점수 
+            String temp = pages[i].replaceAll("[^a-z_^A-Z]", " ");
+            temp = temp.toLowerCase();
+            String[] str = temp.split(" ");
 
-            // html[i][3] = html[i][3].replaceAll("<a", "@rayJump!");
-            // html[i][3] = html[i][3].replaceAll("</a>", "@rayJump!");
-            html[i][3] = html[i][3].replaceAll("<", "@rayJump!");
-            html[i][3] = html[i][3].replaceAll(">", "@rayJump!");
-            String[] str = html[i][3].split("@rayJump!");
+            for(String s : str){
+                if (s.equals(word)) {
+                    point[i][1]++;
+                }
+            }
+        }
 
+
+        for (int i = 0; i < pages.length; i++) {  // a 태그 안에 있는 외부 링크 
+            String[] str = pages[i].split(">");
+            
             HashSet<String> linkPage = new HashSet<>();
 
-            for (String s : str) {
-
-                // if (s.length()==0 || s.charAt(0) == '/') {
-                //     continue;
-                // }
-
-                if (s.contains("a href=")) {
-                    s = s.substring(8, s.length() - 1);
-                    linkPage.add(s);
-                } else {
-                    s = s.replaceAll("[^a-z_^A-Z]", " ");
-                    s = s.toLowerCase();
-                    if (s.contains(word)) {
-                        String[] wordStr = s.split(" ");
-                        for (String w : wordStr) {
-                            if (w.equals(word)) {
-                                point[i][1]++;
-                            }
-                        }
+            for(String s : str){
+                if (s.contains("<a")) {
+                    String[] str2 = s.split("href=\"");
+                    str2 = str2[1].split("\"");
+                    linkPage.add(str2[0]);
+                }
+            }
+            if (!linkPage.isEmpty()) {
+                double linkpoint = point[i][1] / (double)linkPage.size();
+                for(String p : linkPage){
+                    if (pageIndex.containsKey(p)) {
+                        point[pageIndex.get(p)][2] += linkpoint;
                     }
                 }
             }
-
-            if (!linkPage.isEmpty()) {
-                double linkPoint = (point[i][1] / (double) linkPage.size());
-                for(String page : linkPage){
-                    if (pageIndex.containsKey(page)) {
-                        point[pageIndex.get(page)][2] += linkPoint;
-                    }
-                }
-            }  
         }
 
         for(int i = 0; i<point.length; i++){
