@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch pro122",
+            "request": "launch",
+            "mainClass": "programmers.pro122",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch pro121",
             "request": "launch",
             "mainClass": "programmers.pro121",
