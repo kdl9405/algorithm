@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch sample1",
+            "request": "launch",
+            "mainClass": "hackerRank.sample1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch pro123",
+            "request": "launch",
+            "mainClass": "programmers.pro123",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch pro122",
             "request": "launch",
             "mainClass": "programmers.pro122",
