@@ -46,3 +46,16 @@ class Circle {
   
   const foo = new Foo();
   console.log(foo.#p);
+
+
+  var reader = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+reader.question("What's your name? ", answer => {
+    console.log(`Thank you for your answer : ${answer}`);
+    reader.close();
+})
+
+
