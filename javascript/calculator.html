@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>(0207) JS 실습</title>
+
+</head>
+    
+<body>
+    <script>
+
+        let num = 0;
+
+        while (true) {
+            const target = prompt("더할 숫자를 입력해 주세요");
+            
+            if (target == '=' || !target) {
+                break;
+            }else{               
+                num = num + Number(target);
+            }
+        }
+        alert("다 더한 결과는 "+num+" 입니다.");
+    </script>
+
+
+
+
+</body>
+
+</html>
