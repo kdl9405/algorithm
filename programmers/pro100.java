@@ -22,7 +22,7 @@ public class pro100 {
         int mid = 2;
         int to = 3;
 
-        move(2, from, mid, to);
+        move(n, from, mid, to);
 
         int[][] answer = new int[list.size()][2];
 
