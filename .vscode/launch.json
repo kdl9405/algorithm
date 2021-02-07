@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch pro131",
+            "request": "launch",
+            "mainClass": "programmers.pro131",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch pro130",
+            "request": "launch",
+            "mainClass": "programmers.pro130",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch pro129",
+            "request": "launch",
+            "mainClass": "programmers.pro129",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch pro128",
             "request": "launch",
             "mainClass": "programmers.pro128",

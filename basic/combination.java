@@ -7,10 +7,10 @@ public class combination {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        // int n = sc.nextInt();
         int r = sc.nextInt();
 
-        System.out.println(nCr(n, r));
+        // System.out.println(nCr(n, r));
 
         int[] num = { 1, 2, 3, 4, 5 };
 
