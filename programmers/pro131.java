@@ -1,10 +1,10 @@
 package programmers;
 
-import java.util.Arrays;
-
+import java.util.*;
 /* 
     순위 검색
 
+    // 효율성 통과 / 정확성에서 6개 런타임에러
     
 */
 
@@ -23,66 +23,109 @@ public class pro131 {
             System.out.println(a);
         }
 
+  
+
         // String s1 = "java bac 150";
         // String s2 = "java ... 150";
         // System.out.println(s1.replaceAll("[^a-z]", ""));
     }
 
+    static HashMap<String, List<Integer>> hash;
+
     public static int[] solution(String[] info, String[] query) {
         int[] answer = new int[query.length];
 
-        String[][] infoArr = new String[info.length][5];
+        hash = new HashMap<>();
+
+        // 1. 각 info를 16가지 경우의 수로 만들어 각각 점수를 집어넣음
+        for (String i : info) {
+            String temp = i.replaceAll("[0-9]", "");
+            int point = Integer.parseInt(i.replaceAll("[^0-9]", ""));
+            temp = temp.trim();
+            to16case(temp, point);
+        }
+
+        // 2. 각 경우의 수에 들어가있는 점수를 정렬
+        for (String k : hash.keySet()) {
+            List<Integer> list = hash.get(k);
+            Collections.sort(list);
+            hash.put(k, list);
+        }
+
+        // 3. 각 쿼리에 맞는 점수 집합에서 해당 점수 이상의 개수를 탐색 후 answer에 할당
         int i = 0;
-        for (String[] arr : infoArr) {
-            String[] str = info[i].split(" ");
-            for (int j = 0; j < 5; j++) {
-                arr[j] = str[j];
-            }
+        for (String q : query) {
+            String s = q.replaceAll("and", "");
+            int point = Integer.parseInt(s.replaceAll("[^0-9]", ""));
+            s = s.replaceAll("[^a-z-]", "");
+
+            answer[i] = binarySearch(hash.get(s), point);
             i++;
         }
 
-        Arrays.sort(infoArr, (a1, a2) -> {
-            if (a2[4].equals(a1[4])) {
-                if (a1[0].equals(a2[0])) {
-                    if (a1[1].equals(a2[1])) {
-                        if (a1[2].equals(a2[2])) {
-                            return a1[3].compareTo(a2[3]);
-                        }
-                        return a1[2].compareTo(a2[2]);
-                    }
-                    return a1[1].compareTo(a2[1]);
-                }
-                return a1[0].compareTo(a2[0]);
-            }
-            return Integer.parseInt(a2[4]) - Integer.parseInt(a1[4]);
-        });
-
-        // i = 0;
-        // for (String[] arr : infoArr) {
-        //     for (int j = 0; j < 5; j++) {
-        //         System.out.print(arr[j] + " ");
-        //     }
-        //     System.out.println("");
-        //     i++;
-        // }
-
-        for (int j = 0; j < query.length; j++) {
-
-            query[j] = query[j].replaceAll(" and","");
-            String[] str = query[j].split(" ");            
-            int point = Integer.parseInt(str[4]);
-
-            int count = 0;
-            for (String[] a : infoArr) {
-
-                if (Integer.parseInt(a[4]) < point) {
-                    break;
-                }
-
-                count++;
-            }
-            answer[j] = count;
-        }
         return answer;
+    }
+
+    static void to16case(String info, Integer point) {
+
+        String[] str = info.split(" ");
+
+        Queue<String> queue = new LinkedList<>();
+        queue.add(str[0]);
+        queue.add("-");
+
+        for (int i = 1; i < 4; i++) {
+
+            Queue<String> temp = new LinkedList<>();
+            while (!queue.isEmpty()) {
+                String s = queue.poll();
+                temp.add(s + str[i]);
+                temp.add(s + "-");
+            }
+            
+            queue.addAll(temp);
+        }
+
+        for (String s : queue) {
+
+            List<Integer> list;
+
+            if (hash.containsKey(s)) {
+                list = hash.get(s);
+            } else {
+                list = new ArrayList<>();
+            }
+
+            list.add(point);
+
+            hash.put(s, list);
+        }
+    }
+
+
+    static int binarySearch(List<Integer> list, int point){
+
+        if (list.isEmpty()) {
+            return 0;
+        }
+
+        int index = list.size();
+
+        int min = 0;
+        int max = list.size()-1;
+
+        while(min<=max){
+            int mid = (min+max)/2;
+            
+
+            if (list.get(mid) >= point) {
+                index = mid;
+                max = mid-1;               
+            }else{
+                min = mid+1;
+            }
+        }
+
+        return list.size()-index;
     }
 }
