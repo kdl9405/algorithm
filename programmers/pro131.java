@@ -4,7 +4,10 @@ import java.util.*;
 /* 
     순위 검색
 
-    // 효율성 통과 / 정확성에서 6개 런타임에러
+    // 효율성 통과 
+    //정확성에서 6개 런타임에러 => query조건(점수 제외)에 해당하는 지원자가 없는 경우, 0명 처리해서 반환
+
+    => 시간 아슬아슬 함
     
 */
 
@@ -22,8 +25,6 @@ public class pro131 {
         for (int a : answer) {
             System.out.println(a);
         }
-
-  
 
         // String s1 = "java bac 150";
         // String s2 = "java ... 150";
@@ -59,8 +60,11 @@ public class pro131 {
             int point = Integer.parseInt(s.replaceAll("[^0-9]", ""));
             s = s.replaceAll("[^a-z-]", "");
 
-            answer[i] = binarySearch(hash.get(s), point);
+            if (hash.containsKey(s)) {
+                answer[i] = binarySearch(hash.get(s), point);
+            }
             i++;
+
         }
 
         return answer;
@@ -82,7 +86,7 @@ public class pro131 {
                 temp.add(s + str[i]);
                 temp.add(s + "-");
             }
-            
+
             queue.addAll(temp);
         }
 
@@ -102,8 +106,7 @@ public class pro131 {
         }
     }
 
-
-    static int binarySearch(List<Integer> list, int point){
+    static int binarySearch(List<Integer> list, int point) {
 
         if (list.isEmpty()) {
             return 0;
@@ -112,20 +115,19 @@ public class pro131 {
         int index = list.size();
 
         int min = 0;
-        int max = list.size()-1;
+        int max = list.size() - 1;
 
-        while(min<=max){
-            int mid = (min+max)/2;
-            
+        while (min <= max) {
+            int mid = (min + max) / 2;
 
             if (list.get(mid) >= point) {
                 index = mid;
-                max = mid-1;               
-            }else{
-                min = mid+1;
+                max = mid - 1;
+            } else {
+                min = mid + 1;
             }
         }
 
-        return list.size()-index;
+        return list.size() - index;
     }
 }
