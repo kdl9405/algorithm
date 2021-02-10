@@ -21,13 +21,11 @@ public class pro132 {
         System.out.println(solution(n, s, a, b, fares));
     }
 
-    static int[][] cost;
     static int[][] dp;
 
     public static int solution(int n, int s, int a, int b, int[][] fares) {
         int answer = Integer.MAX_VALUE;
 
-        cost = new int[n + 1][n + 1];
         dp = new int[n + 1][n + 1];
 
         for (int[] d : dp) {
@@ -35,8 +33,8 @@ public class pro132 {
         }
 
         for (int[] f : fares) {
-            cost[f[0]][f[1]] = f[2];
-            cost[f[1]][f[0]] = f[2];
+            dp[f[0]][f[1]] = f[2];
+            dp[f[1]][f[0]] = f[2];
         }
 
         for (int m = 1; m <= n; m++) {
