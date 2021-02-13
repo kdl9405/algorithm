@@ -24,95 +24,41 @@ public class BJ2629 {
             test[i] = Integer.parseInt(tests[i]);
         }
 
-        possible = new boolean[15001];
-
-        for (int i = 0; i < weight.length; i++) {
-            if ((2 * i) > weight.length) {
-                break;
-            }
-            for (int j = i; i + j <= weight.length; j++) {
-                // System.out.println(i+" "+ j);
-                if (i != 0 || j!= 0) {
-                    visit = new boolean[weight.length];
-                    arrA = new int[i];
-                    dfs(weight, i, j, 0, 0);
+        boolean[] possible = new boolean[15001];
+        boolean[] temp = new boolean[15001];
+        
+        possible[0] = true;
+        for(int w : weight){
+            for(int i = 0; i<=15000; i++){
+                if (possible[i]) {
+                    int left = Math.abs(w-i);
+                    int right = Math.abs(w+i);
+                    
+                    temp[left] = true;
+                    temp[right] = true;
+                    temp[w] = true;
                 }
+            }
+
+            for(int i = 0; i<=15000; i++){
+                possible[i] = temp[i];
             }
         }
 
         StringBuilder sb = new StringBuilder();
         for(int t : test){
-            if (possible[t]) {
+           
+            if (t<=15000 && possible[t]) {
                 sb.append("Y ");
             }else{
                 sb.append("N ");
             }
         }
 
+
         System.out.println(sb.toString().trim());
 
     }
 
-    static boolean[] possible;
-    static int[] arrA;
-    static int[] arrB;
-    static boolean[] visit;
-
-    static void dfs(int[] weight, int a, int b, int depth, int x) {
-
-        if (a == 0) {
-            arrB = new int[b];
-            dfs2(weight, 0, b, 0, 0);
-
-            return;
-        }
-
-        if (depth == a) {
-            int A = 0;
-            for (int n : arrA) {
-                A += n;
-            }
-            arrB = new int[b];
-            dfs2(weight, A, b, 0, 0);
-
-            return;
-        }
-
-        for (int i = x; i < weight.length; i++) {
-            if (!visit[i]) {
-                visit[i] = true;
-                arrA[depth] = weight[i];
-                dfs(weight, a, b, depth + 1, i + 1);
-                visit[i] = false;
-            }
-        }
-
-    }
-
-    static void dfs2(int[] weight, int A, int b, int depth, int x) {
-
-        if (b == 0) {
-            possible[A] = true;
-            return;
-        }
-
-        if (depth == b) {
-            int B = 0;
-            for(int n : arrB){
-                B+=n;
-            }
-            possible[Math.abs(A-B)] = true;
-
-            return;
-        }
-
-        for (int i = x; i < weight.length; i++) {
-            if (!visit[i]) {
-                visit[i] = true;
-                arrB[depth] = weight[i];
-                dfs2(weight, A, b, depth + 1, i + 1);
-                visit[i] = false;
-            }
-        }
-    }    
+   
 }

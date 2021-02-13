@@ -25,26 +25,32 @@ public class BJ2629_copy {
         }
 
         possible = new boolean[15001];
+        boolean[][] done = new boolean[weight.length+1][weight.length+1];
 
         for (int i = 0; i < weight.length; i++) {
             if ((2 * i) > weight.length) {
                 break;
             }
             for (int j = i; i + j <= weight.length; j++) {
-                // System.out.println(i+" "+ j);
-                if (i != 0 || j!= 0) {
-                    visit = new boolean[weight.length];
-                    arrA = new int[i];
-                    dfs(weight, i, j, 0, 0);
+                if (i != 0 || j != 0) {
+
+                    if (!done[i][j] && !done[j][i]) {
+                        done[i][j] = true;
+                        done[j][i] = true;
+
+                        visit = new boolean[weight.length];
+                        arrA = new int[i];
+                        dfs(weight, i, j, 0, 0);
+                    }
                 }
             }
         }
 
         StringBuilder sb = new StringBuilder();
-        for(int t : test){
+        for (int t : test) {
             if (possible[t]) {
                 sb.append("Y ");
-            }else{
+            } else {
                 sb.append("N ");
             }
         }
@@ -98,10 +104,10 @@ public class BJ2629_copy {
 
         if (depth == b) {
             int B = 0;
-            for(int n : arrB){
-                B+=n;
+            for (int n : arrB) {
+                B += n;
             }
-            possible[Math.abs(A-B)] = true;
+            possible[Math.abs(A - B)] = true;
 
             return;
         }
@@ -114,5 +120,5 @@ public class BJ2629_copy {
                 visit[i] = false;
             }
         }
-    }    
+    }
 }
