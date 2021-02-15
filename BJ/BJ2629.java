@@ -4,8 +4,7 @@ import java.io.*;
 
 /* 
     양팔저울     
-
-    
+   
 */
 
 public class BJ2629 {
