@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /* 
-    Z
+    Z 
 */
 
 public class BJ1074 {
