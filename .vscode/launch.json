@@ -2,6 +2,62 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ7662",
+            "request": "launch",
+            "mainClass": "BJ.BJ7662",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ18870",
+            "request": "launch",
+            "mainClass": "BJ.BJ18870",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ11724",
+            "request": "launch",
+            "mainClass": "BJ.BJ11724",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ11726",
+            "request": "launch",
+            "mainClass": "BJ.BJ11726",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ9095",
+            "request": "launch",
+            "mainClass": "BJ.BJ9095",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1764",
+            "request": "launch",
+            "mainClass": "BJ.BJ1764",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ1620",
+            "request": "launch",
+            "mainClass": "BJ.BJ1620",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ11723",
+            "request": "launch",
+            "mainClass": "BJ.BJ11723",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ1074",
             "request": "launch",
             "mainClass": "BJ.BJ1074",
