@@ -5,26 +5,106 @@
     <title>(0207) JS 실습</title>
 
 </head>
-    
+
 <body>
-    <script>
 
-        let num = 0;
+    <table>
+        <tr>
+            <td colspan="7">
+                <input type="text" id="result">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <input type="text" id="display">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="reset()">CE</td>
+            <td colspan="2" onclick="resetAll()">C</td>
+            <td colspan="2" onclick="percent()">%</td>
+            <td colspan="1" onclick="input('/')">/</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="input(7)">7</td>
+            <td colspan="2" onclick="input(8)">8</td>
+            <td colspan="2" onclick="input(9)">9</td>
+            <td colspan="1" onclick="input('*')">X</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="input(4)">4</td>
+            <td colspan="2" onclick="input(5)">5</td>
+            <td colspan="2" onclick="input(6)">6</td>
+            <td colspan="1" onclick="input('-')">-</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="input(1)">1</td>
+            <td colspan="2" onclick="input(2)">2</td>
+            <td colspan="2" onclick="input(3)">3</td>
+            <td colspan="1" onclick="input('+')">+</td>
+        </tr>
+        <tr>
+            <td colspan="4" onclick="input(0)">0</td>
+            <td colspan="2" onclick="input('.')">.</td>
+            <td colspan="2" onclick="calculate()">=</td>
+        </tr>
+    </table>
 
-        while (true) {
-            const target = prompt("더할 숫자를 입력해 주세요");
-            
-            if (target == '=' || !target) {
-                break;
-            }else{               
-                num = num + Number(target);
+    <script type="text/javascript">
+        function input(operation) {
+
+            var display = document.getElementById('display');            
+
+            if(!isNaN(display.value[display.value.length-1]) || !display.value){
+                display.value = display.value + operation;
+            }else{
+                if (isNaN(operation)) {
+                    alert("잘못된 입력입니다.")
+                    display.value = "";
+                }
             }
         }
-        alert("다 더한 결과는 "+num+" 입니다.");
+
+        function calculate() {
+
+            var display = document.getElementById('display');
+            var result = document.getElementById('result');
+            var temp = result.value;
+
+
+            if (!temp) {
+                if (isNaN(display.value[0])) {
+                    display.value = 0 + display.value
+                }
+            } else {
+                display.value = temp + display.value
+            }
+
+            result.value = eval(display.value);
+            display.value = "";
+
+        }
+
+        function reset() {
+            var display = document.getElementById('display');
+            display.value = ""
+        }
+
+        function resetAll() {
+            var display = document.getElementById('display');
+            var result = document.getElementById('result');
+            display.value = ""
+            result.value = ""
+        }
+
+        function percent() {
+            var display = document.getElementById('display');
+            display.value *= 0.01;
+        }
+
+
+
     </script>
-
-
-
 
 </body>
 

@@ -21,8 +21,6 @@ public class BJ7662 {
 
             TreeMap<Integer, Integer> treeMap = new TreeMap<>();
             
-            treeMap.
-
             int count = Integer.parseInt(br.readLine());
 
             for (int j = 0; j < count; j++) {
@@ -31,40 +29,36 @@ public class BJ7662 {
                     
                     int num = Integer.parseInt(operation[1]);
 
-                    hashMap.put(num, hashMap.getOrDefault(num, 0)+1);
-
-                } else if (!hashMap.isEmpty()) {
+                    treeMap.put(num, treeMap.getOrDefault(num, 0)+1);
                     
-                    int[] arr = hashMap.keySet().stream().mapToInt(a->a).toArray();
-                    Arrays.sort(arr);
-
+                } else if (!treeMap.isEmpty()) {
+                   
                     if (operation[1].equals("1")) {
 
-                        int max = arr[arr.length-1];
-                        if (hashMap.get(max) == 1) {
-                            hashMap.remove(max);
+                        int max = treeMap.lastKey();
+                        if (treeMap.get(max) == 1) {
+                            treeMap.remove(max);
                         }else{
-                            hashMap.put(max, hashMap.get(max)-1);
+                            treeMap.put(max, treeMap.get(max)-1);
                         }
 
                     } else {
 
-                        int min = arr[0];
-                        if (hashMap.get(min) == 1) {
-                            hashMap.remove(min);
+                        int min = treeMap.firstKey();
+                        if (treeMap.get(min) == 1) {
+                            treeMap.remove(min);
                         }else{
-                            hashMap.put(min, hashMap.get(min)-1);
+                            treeMap.put(min, treeMap.get(min)-1);
                         }
                     }
                 }
             }
 
-            if (hashMap.isEmpty()) {
+            if (treeMap.isEmpty()) {
                 sb.append("EMPTY");
             } else {
-                int[] arr = hashMap.keySet().stream().mapToInt(a->a).toArray();
-                Arrays.sort(arr);
-                sb.append(arr[arr.length-1] + " " + arr[0]);
+                
+                sb.append(treeMap.lastKey() + " " + treeMap.firstKey());
             }
             sb.append("\n");
         }
