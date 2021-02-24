@@ -2,6 +2,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ2696",
+            "request": "launch",
+            "mainClass": "BJ.BJ2696",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ4358",
+            "request": "launch",
+            "mainClass": "BJ.BJ4358",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ2075",
+            "request": "launch",
+            "mainClass": "BJ.BJ2075",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ14425",
             "request": "launch",
             "mainClass": "BJ.BJ14425",
