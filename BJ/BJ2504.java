@@ -16,16 +16,16 @@ public class BJ2504 {
         Stack<String> stack = new Stack<>();
 
         String expression = sc.nextLine();
+        boolean impossible = false;
 
-        for (int i = 0; i < expression.length(); i++) {
+        loop: for (int i = 0; i < expression.length(); i++) {
             char c = expression.charAt(i);
 
             switch (c) {
                 case ')':
-
                     if (stack.isEmpty()) {
-                        stack.clear();
-                        break;
+                        impossible = true;
+                        break loop;
                     }
 
                     if (stack.peek().equals("(")) {
@@ -33,29 +33,27 @@ public class BJ2504 {
                         stack.push("2");
                     } else {
                         int num = 0;
-                        while (!stack.isEmpty()) {
-                            // if (stack.peek().equals("(")) {
-                            // break;
-                            // }
-                            if (!Character.isDigit(stack.peek().charAt(0))) {
-                                break;
+                        while (!stack.isEmpty() && !stack.peek().equals("(")) {
+                            if (!isNum(stack.peek())) {
+                                impossible = true;
+                                break loop;
                             }
                             num += Integer.parseInt(stack.pop());
                         }
-                        if (!stack.isEmpty()) {
-                            stack.pop();
+                        if (stack.isEmpty()) {
+                            impossible = true;
+                            break loop;
                         }
+                        stack.pop();
                         num *= 2;
                         stack.push(Integer.toString(num));
                     }
-
                     break;
 
                 case ']':
-
                     if (stack.isEmpty()) {
-                        stack.clear();
-                        break;
+                        impossible = true;
+                        break loop;
                     }
 
                     if (stack.peek().equals("[")) {
@@ -63,18 +61,18 @@ public class BJ2504 {
                         stack.push("3");
                     } else {
                         int num = 0;
-                        while (!stack.isEmpty()) {
-                            // if (stack.peek().equals("[")) {
-                            // break;
-                            // }
-                            if (!Character.isDigit(stack.peek().charAt(0))) {
-                                break;
+                        while (!stack.isEmpty() && !stack.peek().equals("[")) {
+                            if (!isNum(stack.peek())) {
+                                impossible = true;
+                                break loop;
                             }
                             num += Integer.parseInt(stack.pop());
                         }
-                        if (!stack.isEmpty()) {
-                            stack.pop();
+                        if (stack.isEmpty()) {
+                            impossible = true;
+                            break loop;
                         }
+                        stack.pop();
                         num *= 3;
                         stack.push(Integer.toString(num));
                     }
@@ -88,15 +86,26 @@ public class BJ2504 {
 
         int result = 0;
 
-        while (!stack.isEmpty()) {
-            String s = stack.pop();
-            if (!Character.isDigit(s.charAt(0))) {
-                result = 0;
-                break;
+        if (!impossible) {
+            while (!stack.isEmpty()) {
+                String s = stack.pop();
+                if (!isNum(s)) {
+                    result = 0;
+                    break;
+                }
+                result += Integer.parseInt(s);
             }
-            result += Integer.parseInt(s);
         }
 
         System.out.println(result);
+    }
+
+    static boolean isNum(String s) {
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
     }
 }
