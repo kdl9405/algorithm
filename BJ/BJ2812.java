@@ -1,6 +1,7 @@
 package BJ;
 
 import java.io.*;
+import java.math.BigInteger;
 import java.util.*;
 
 /* 
@@ -18,41 +19,40 @@ public class BJ2812 {
 
         String num = br.readLine();
 
-        Deque<Integer> deque = new ArrayDeque<>();
+        Deque<Character> deque = new ArrayDeque<>();
 
         int count = 0;
 
         for(int i = 0; i<num.length(); i++){
        
-            int x = Integer.parseInt(Character.toString(num.charAt(i)));
-            if (deque.isEmpty()) {
-                deque.addLast(x);
-            }else{
-
-                if (count == k) {
-                    deque.addLast(x);
-                }else{
-                    int y = deque.peekLast();
-                    
-                    if (y<x) {
-                        deque.pollLast();
-                        count++;
-                    }
-                    deque.addLast(x);
-                }
+            char x = num.charAt(i);
+            
+            while (k>0 && !deque.isEmpty() && deque.peekLast() < x) {
+                deque.removeLast();
+                k--;
             }
+            deque.add(x);
+            
         }
 
-       while (deque.size()>n-k){
-           deque.pollLast();
-       }
+    //    while (deque.size()>n-k){
+    //        deque.pollLast();
+    //    }
 
         StringBuffer sb = new StringBuffer();
-        while (!deque.isEmpty()) {
+        while (deque.size()>k) {
             sb.append(deque.pollFirst());
         }
 
-        System.out.println(sb.toString());
+        // int result1 = Integer.parseInt(sb.toString());
+
+        // String num2 = num.substring(k, n);
+        // int result2 = 0;
+        // if (num2.length() > 0) {
+        //     result2 = Integer.parseInt(num.substring(k, n));
+        // }
+
+        System.out.println(sb.toString().trim());
 
     }   
 }
