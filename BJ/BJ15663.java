@@ -52,8 +52,6 @@ public class BJ15663 {
             }
             String s = sb.toString().trim();
 
-            System.out.println("!!!!!!!! " + s);
-
             if (!set.contains(s)) {
                 result.append(s).append("\n");
                 set.add(s);
