@@ -5,11 +5,13 @@ import java.io.*;
 
 /* 
     파일 합치기 3
+
+    3324ms
 */
 public class BJ13975 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+                
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st;
@@ -20,35 +22,24 @@ public class BJ13975 {
 
             st = new StringTokenizer(br.readLine());
 
-            PriorityQueue<Integer> pq = new PriorityQueue<>();
+            PriorityQueue<Long> pq = new PriorityQueue<>();
 
             for(int i = 0; i<k; i++){
-                pq.offer(Integer.parseInt(st.nextToken()));              
+                pq.offer(Long.parseLong(st.nextToken()));              
             }
 
-            int cost = 0;
+            long cost = 0;
 
-            while (true) {
-                PriorityQueue<Integer> temp = new PriorityQueue<>();
+            while (pq.size()>1) {
+                long x = pq.poll();
+                long y = pq.poll();
+                
+                cost += (x+y);
+                pq.add(x+y);
+            }
 
-                while (!pq.isEmpty()) {
-                    int x = pq.poll();
-                    if (pq.isEmpty()) {
-                        temp.add(x);
-                    }else {
-                        int y = pq.poll();
-                        cost += (x+y);
-                        temp.add(x+y);
-                    }
-                }
-
-                if (temp.size() <= 1) {
-                    sb.append(cost).append("\n");
-                    break;
-                }else{
-                    pq.addAll(temp);
-                }
-            }            
+            sb.append(cost).append("\n");
+    
         }
 
         System.out.println(sb.toString().trim());
