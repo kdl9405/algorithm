@@ -7,6 +7,10 @@ import java.util.*;
     택배
 */
 
+// 도착지 오름차순
+//      출발지 오름차순
+//                          
+
 public class BJ8980 {
 
     public static void main(String[] args) throws IOException {
@@ -17,103 +21,58 @@ public class BJ8980 {
         int n = Integer.parseInt(st.nextToken());
         int c = Integer.parseInt(st.nextToken());
 
+        int[] possible = new int[n+1];
+        Arrays.fill(possible, c);
+
         ArrayList<ArrayList<parcel>> info = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             info.add(new ArrayList<>());
         }
         int m = Integer.parseInt(br.readLine());
-        // int[][] info = new int[m][3];
         for (int i = 0; i < m; i++) {
             st = new StringTokenizer(br.readLine());
             int f = Integer.parseInt(st.nextToken());
             int t = Integer.parseInt(st.nextToken());
-            int a = Integer.parseInt(st.nextToken());
+            long a = Long.parseLong(st.nextToken());
 
-            info.get(f).add(new parcel(t, a));
+            info.get(t).add(new parcel(f, a));
         }
 
-        HashMap<Integer, Integer> delivery = new HashMap<>();
-        int total = 0;
-        int now = 0;
+        long total = 0;
 
-        for (int i = n; i >= 0; i--) {
+        for (int i = 0; i <= n ; i++) {
             ArrayList<parcel> cityParcel = info.get(i);
             Collections.sort(cityParcel, (p1, p2) -> {
-                if (p2.to == p1.to) {
-                    return p2.amount - p1.amount;
+                if (p1.from == p2.from) {
+                    return (int)(p1.amount - p2.amount);
                 }
-                return p1.to - p2.to;
+                return p2.from - p1.from;
             });
 
-            // for(int j = 0; j<cityParcel.size(); j++){
-            // System.out.println("from = "+i+" to = "+cityParcel.get(j).to+" amout =
-            // "+cityParcel.get(j).amount);
-            // }
-
-            if (delivery.containsKey(i)) {
-                now -= delivery.get(i);
-                total += delivery.get(i);
-                delivery.remove(i);
-            }
-
-            for (parcel p : cityParcel) {
-
-                if (c >= now + p.amount) {
-                    now += p.amount;
-                    total += p.amount;
-                    delivery.put(p.to, value)
+            for(parcel p : cityParcel){
+                
+                long max = p.amount;
+                for(int x = p.from; x<i; x++){
+                    max = Math.min(max, possible[x]);
                 }
-            }
-        }
 
-        // for (int i = 4; i >= 0; i--) {
-        // if (delivery.containsKey(i)) {
+                total += max;
 
-        // System.out.println(i+"에 내렷당 " + delivery.get(i));
-        // now -= delivery.get(i);
-        // total += delivery.get(i);
-        // delivery.remove(i);
-        // }
-
-        // if (!info.get(i).isEmpty()) {
-        // ArrayList<parcel> cityParcel = info.get(i);
-        // Collections.sort(cityParcel, (p1, p2) -> {
-        // if (p1.to == p2.to) {
-        // return p1.amount - p2.amount;
-        // }
-        // return p1.to - p2.to;
-        // });
-
-        // for (parcel p : cityParcel) {
-
-        // System.out.println("to = " + p.to + " amount = " + p.amount);
-
-        // if (c >= now + p.amount) {
-        // now += p.amount;
-        // delivery.put(p.to, delivery.getOrDefault(p.to, 0) + p.amount);
-        // } else {
-        // if (c != now) {
-        // delivery.put(p.to, delivery.getOrDefault(p.to, 0) + (c-now));
-        // now = c;
-        // }
-        // }
-        // }
-        // }
-
-        // System.out.println("dele " + delivery);
-        // System.out.println("now = " + now + " total = " + total);
-        // }
-
+                for(int x = p.from; x<i; x++){
+                    possible[x] -= max;
+                }
+            }           
+        }  
         System.out.println(total);
     }
 }
 
 class parcel {
-    int to;
-    int amount;
+    int from;
+    long amount;
 
-    public parcel(int to, int amount) {
-        this.to = to;
+    public parcel(int from, long amount) {
+        this.from = from;
         this.amount = amount;
     }
 }
