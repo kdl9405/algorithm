@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class test {
+public class permutation_combination {
  
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
