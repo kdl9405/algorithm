@@ -19,12 +19,12 @@ public class BJ10972 {
         boolean change = false;
         for (int i = arr.length - 1; i > 0; i--) {
             max = Math.max(max, arr[i]);
-            if (arr[i - 1] < max) {
+            if (arr[i - 1] < max) { 
                 change = true;
                 int index = i;
                 for (int j = i; j < arr.length; j++) {
                     if (arr[j] > arr[i - 1] && max > arr[j]) {
-                        max = arr[j];
+                        max = arr[j]; // 오른쪽 숫자 중에 (가장 차이가 적게)큰 수를 찾음
                         index = j;
                     }
                 }
