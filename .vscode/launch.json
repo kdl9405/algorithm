@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BJ15724",
+            "request": "launch",
+            "mainClass": "BJ.BJ15724",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ17485",
+            "request": "launch",
+            "mainClass": "BJ.BJ17485",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ2758_copy",
             "request": "launch",
             "mainClass": "BJ.BJ2758_copy",
