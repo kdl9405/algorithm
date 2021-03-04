@@ -3,13 +3,12 @@ package BJ;
 import java.io.*;
 import java.util.*;
 
-
 /* 
     ACM Craft
 */
 public class BJ1005 {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st;
@@ -22,8 +21,8 @@ public class BJ1005 {
             int k = Integer.parseInt(st.nextToken());
 
             times = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-            
-            dp = new int[n+1]; // i번 건물을 완성하는 시간
+
+            dp = new int[n + 1]; // i번 건물을 완성하는 시간
             Arrays.fill(dp, -1);
             before = new HashMap<>();
 
@@ -33,17 +32,13 @@ public class BJ1005 {
                 int b = Integer.parseInt(st.nextToken());
                 int build = Integer.parseInt(st.nextToken());
 
-                ArrayList<Integer> bList = new ArrayList<>();
-                if (before.containsKey(build)) {
-                    bList = before.get(build);
+                if (!before.containsKey(build)) {
+                  before.put(build, new ArrayList<>());
                 }
-                bList.add(b);
-                before.put(build, bList);
-
+                before.get(build).add(b);
             }
 
             int w = Integer.parseInt(br.readLine());
-
             sb.append(findDP(w)).append("\n");
 
         }
@@ -56,20 +51,20 @@ public class BJ1005 {
     static int[] dp;
     static HashMap<Integer, ArrayList<Integer>> before;
 
-    static int findDP(int n){
+    static int findDP(int n) {
         if (dp[n] != -1) {
             return dp[n];
         }
 
         if (!before.containsKey(n)) {
-            return times[n-1];
+            return times[n - 1];
         }
 
-        for(Integer e : before.get(n)){
+        for (Integer e : before.get(n)) {
             dp[n] = Math.max(dp[n], findDP(e));
         }
 
-        dp[n] += times[n-1];
+        dp[n] += times[n - 1];
         return dp[n];
     }
 }
