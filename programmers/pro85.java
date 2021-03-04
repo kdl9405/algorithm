@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * pro85
+ * 베스트앨범
  */
 public class pro85 {
 
