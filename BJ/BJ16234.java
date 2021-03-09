@@ -15,11 +15,11 @@ public class BJ16234 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int N = Integer.parseInt(st.nextToken());
-        int L = Integer.parseInt(st.nextToken());
-        int R = Integer.parseInt(st.nextToken());
+        N = Integer.parseInt(st.nextToken());
+        L = Integer.parseInt(st.nextToken());
+        R = Integer.parseInt(st.nextToken());
 
-        int[][] arr = new int[N][N];
+        arr = new int[N][N];
 
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
@@ -28,75 +28,63 @@ public class BJ16234 {
             }
         }
 
-        boolean[][] visit;
-        List<HashSet<String>> united; // 연합
         int count = 0;
-        while (true) {
-            united = new ArrayList<>();
-            visit = new boolean[N][N];
+        boolean change = true;
+        while (change) {
 
-            for (int i = 0; i < N; i++) { // 연합 탐색
+            visit = new boolean[N][N];
+            change = false;
+
+            for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
                     if (!visit[i][j]) {
-
-                        Queue<String> queue = new LinkedList<>();
-                        queue.add(i+" "+j);
-                     
-                        HashSet<String> set = new HashSet<>();
-                        set.add(i+" "+j);
-
-                        while (!queue.isEmpty()) {
-                            int[] now = Arrays.stream(queue.poll().split(" ")).mapToInt(Integer::parseInt).toArray();
-                            visit[now[0]][now[1]] = true;
-                            for (int k = 0; k < 4; k++) {
-                                int nx = now[0] + dx[k];
-                                int ny = now[1] + dy[k];
-                                if (nx >= 0 && nx < N && ny >= 0 && ny < N) {
-                                    if (!visit[nx][ny]) {
-                                        int d = Math.abs(arr[now[0]][now[1]] - arr[nx][ny]);
-                                        if (d >= L && d <= R) {
-                                            queue.add(nx+" "+ny);
-                                            set.add(nx+" "+ny);
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        if (set.size() > 1) {
-                            united.add(set);
+                        sum = 0;
+                        united = new ArrayList<>();
+                        findUnited(i, j);
+                        if (united.size()>1) {
+                            change = true;
+                            sum /= united.size();
+                            for(int[] u : united){
+                                arr[u[0]][u[1]] = sum;
+                            }   
                         }
                     }
                 }
             }
-
-
-            if (united.isEmpty()) {
-                break;
-            }
-
-            for (HashSet<String> set : united) {
-                int sum = 0;
-                for (String s : set) {
-                    int[] str = Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt).toArray(); 
-                    sum += arr[str[0]][str[1]];
-                }
-                sum /= set.size();
-                for (String s : set) {
-                    int[] str = Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt).toArray(); 
-                    arr[str[0]][str[1]] = sum;
-                }
-            }
             count++;
-
         }
 
-        System.out.println(count);
+        System.out.println(count-1);
 
     }
 
+    static int N, L, R;
+    static int[][] arr;
+    static boolean[][] visit;
     static int[] dx = { 1, -1, 0, 0 };
     static int[] dy = { 0, 0, 1, -1 };
+    static int sum;
+    static List<int[]> united;
+
+    static void findUnited(int x, int y) {
+        visit[x][y] = true;
+        united.add(new int[]{x,y});
+        sum += arr[x][y];
+
+        for (int i = 0; i < 4; i++) {
+            int nx = x + dx[i];
+            int ny = y + dy[i];
+
+            if (nx >= 0 && nx < N && ny >= 0 && ny < N && !visit[nx][ny])  {
+                int d = Math.abs(arr[nx][ny] - arr[x][y]);
+                if (d >= L && d<=R ) {
+                    visit[nx][ny] = true;
+                    findUnited(nx, ny);
+                }
+            }
+        }
+
+        return;
+    }
 
 }
-
