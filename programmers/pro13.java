@@ -1,6 +1,9 @@
 
 import java.util.*;
 
+/* 
+    디스크 컨트롤러
+*/
 public class pro13 {
 
     public static void main(String[] args) {

@@ -3,7 +3,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-// 이중 우선 순위 큐
+// 이중우선순위큐
 public class pro14 {
 
     public static void main(String[] args) {
