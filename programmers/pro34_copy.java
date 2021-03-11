@@ -42,7 +42,7 @@ public class pro34_copy {
             return;
         }
         for(int i = 0; i<tickets.length; i++){
-            if (!visit[i] && start.equals(start)) {
+            if (!visit[i] && start.equals(tickets[i][0])) {
                 visit[i] = true;
                 dfs(count+1, tickets[i][1], answer +" "+tickets[i][1], tickets);
                 visit[i] = false;
