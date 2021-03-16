@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch three",
+            "request": "launch",
+            "mainClass": "softeer.three",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch two",
+            "request": "launch",
+            "mainClass": "softeer.two",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch one",
+            "request": "launch",
+            "mainClass": "softeer.one",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BJ17614",
+            "request": "launch",
+            "mainClass": "BOJ.BJ17614",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BJ16236",
             "request": "launch",
             "mainClass": "BOJ.BJ16236",
