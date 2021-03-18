@@ -6,9 +6,10 @@ import java.util.*;
 /* 
     섬의 개수
 
+    BFS 192ms
 */
 
-public class BOJ4963 {
+public class BOJ4963_copy {
 
     public static void main(String[] args) throws IOException {
 
@@ -26,21 +27,21 @@ public class BOJ4963 {
                 break;
             }
 
-            map = new int[h + 2][w + 2];
+            map = new int[h][w];
 
-            for (int i = 1; i <= h; i++) {
+            for (int i = 0; i < h; i++) {
                 st = new StringTokenizer(br.readLine());
-                for (int j = 1; j <= w; j++) {
+                for (int j = 0; j < w; j++) {
                     map[i][j] = Integer.parseInt(st.nextToken());
                 }
             }
 
             int count = 0;
-            for (int i = 1; i <= h; i++) {
-                for (int j = 1; j <= w; j++) {
+            for (int i = 0; i < h; i++) {
+                for (int j = 0; j < w; j++) {
                     if (map[i][j] == 1) {
-                        dfs(i, j);
                         count++;
+                        bfs(i, j);
                     }
                 }
             }
@@ -56,21 +57,31 @@ public class BOJ4963 {
     static int[][] map;
     static int[][] d = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
 
-    static void dfs(int x, int y) {
+    static void bfs(int x, int y) {
 
         map[x][y] = 0;
 
-        for (int i = 0; i < 8; i++) {
-            int nx = x + d[i][0];
-            int ny = y + d[i][1];
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(new int[] { x, y });
 
-            if (map[nx][ny] == 1) {
-                dfs(nx, ny);
+        while (!queue.isEmpty()) {
+
+            int size = queue.size();
+
+            for (int q = 0; q < size; q++) {
+                int[] now = queue.poll();
+
+                for (int i = 0; i < 8; i++) {
+                    int nx = now[0] + d[i][0];
+                    int ny = now[1] + d[i][1];
+                    if (nx >= 0 && nx < h && ny >= 0 && ny < w) {
+                        if (map[nx][ny] == 1) {
+                            map[nx][ny] = 0;
+                            queue.offer(new int[] { nx, ny });
+                        }
+                    }
+                }
             }
-
         }
-
-        return;
-
     }
 }

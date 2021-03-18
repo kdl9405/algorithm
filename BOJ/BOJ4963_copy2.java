@@ -6,9 +6,10 @@ import java.util.*;
 /* 
     섬의 개수
 
+    DFS 204ms
 */
 
-public class BOJ4963 {
+public class BOJ4963_copy2 {
 
     public static void main(String[] args) throws IOException {
 
@@ -26,19 +27,22 @@ public class BOJ4963 {
                 break;
             }
 
-            map = new int[h + 2][w + 2];
+            map = new int[h][w];
 
-            for (int i = 1; i <= h; i++) {
+            for (int i = 0; i < h; i++) {
                 st = new StringTokenizer(br.readLine());
-                for (int j = 1; j <= w; j++) {
+                for (int j = 0; j < w; j++) {
                     map[i][j] = Integer.parseInt(st.nextToken());
                 }
             }
 
+            visit = new boolean[h][w];
+
             int count = 0;
-            for (int i = 1; i <= h; i++) {
-                for (int j = 1; j <= w; j++) {
-                    if (map[i][j] == 1) {
+            for (int i = 0; i < h; i++) {
+                for (int j = 0; j < w; j++) {
+                    if (map[i][j] == 1 && !visit[i][j]) {
+                        visit[i][j] = true;
                         dfs(i, j);
                         count++;
                     }
@@ -54,23 +58,24 @@ public class BOJ4963 {
 
     static int w, h;
     static int[][] map;
+    static boolean[][] visit;
     static int[][] d = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
 
     static void dfs(int x, int y) {
 
-        map[x][y] = 0;
-
-        for (int i = 0; i < 8; i++) {
+        for(int i = 0; i<8; i++){
             int nx = x + d[i][0];
             int ny = y + d[i][1];
 
-            if (map[nx][ny] == 1) {
-                dfs(nx, ny);
+            if (nx >= 0 && nx<h && ny>=0 && ny<w) {
+                if (map[nx][ny] == 1 && !visit[nx][ny]) {
+                    visit[nx][ny] = true;
+                    dfs(nx, ny);
+                }
             }
-
         }
 
         return;
-
+        
     }
 }
