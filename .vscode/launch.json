@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BOJ4963",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ4963",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ17071",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ17071",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ5052",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ5052",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ50502",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ50502",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch pro179_copy",
             "request": "launch",
             "mainClass": "programmers.pro179_copy",
