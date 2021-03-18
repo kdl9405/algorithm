@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     문자열 지옥에 빠진 호석
 
-    시간초과
+    
 */
 public class pro179_copy {
     public static void main(String[] args) throws IOException {
@@ -33,8 +33,17 @@ public class pro179_copy {
         }
 
         StringBuilder sb = new StringBuilder();
+        HashMap<String, Integer> result = new HashMap<>();
         while (K-- > 0) {
-            sb.append(findCase(br.readLine())).append("\n");
+            String S = br.readLine();
+            int c = 0;
+            if (result.containsKey(S)) {
+                c = result.get(S);
+            } else {
+                c = findCase(S);
+                result.put(S, c);
+            }
+            sb.append(c).append("\n");
         }
 
         System.out.println(sb.toString().trim());
@@ -71,16 +80,15 @@ public class pro179_copy {
 
                     if (nx == 0) {
                         nx = N;
-                    }else if(nx > N){
+                    } else if (nx > N) {
                         nx = 1;
                     }
 
                     if (ny == 0) {
                         ny = M;
-                    }else if(ny > M){
+                    } else if (ny > M) {
                         ny = 1;
                     }
-
 
                     if (S.charAt(i) == map[nx][ny]) {
                         temp.add(new int[] { nx, ny });
