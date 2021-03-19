@@ -1,15 +1,11 @@
 package BOJ;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
+import java.io.*;
+import java.util.*;
 
 /* 
     전화번호 목록
 
-    배열 이용
 */
 public class BOJ5052 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -29,7 +25,8 @@ public class BOJ5052 {
             while (n-- > 0) {
                 String number = br.readLine();
                 if (!trie.insertCheck(number)){
-                    
+                    check = false;
+                    break;
                 }
             }
 
@@ -46,31 +43,49 @@ public class BOJ5052 {
     }
 }
 
-class Node {
-    int depth;
+class TrieNode {
+    int count;
     char num;
     boolean isLast;
-    HashMap<Character, Node> children;
+    HashMap<Character, TrieNode> children;
+
+    public TrieNode(){
+        this.count = 0;
+        this.isLast = false;
+        this.children = new HashMap<>();
+
+    }
 }
 
 class Trie {
-    public Node root;
+    public TrieNode root;
 
     Trie() {
-        this.root = new Node();
+        this.root = new TrieNode();
     }
 
     public boolean insertCheck(String number) {
-        Node node = this.root;
+        TrieNode node = this.root;
 
         for (int i = 0; i < number.length(); i++) {
+
+            // if (node.children == null) {
+            //     node.children = new HashMap<>();
+            // }
+
             if (!node.children.containsKey(number.charAt(i))) {
-                node.children.put(number.charAt(i), new Node());
+                node.children.put(number.charAt(i), new TrieNode());
             }
             node = node.children.get(number.charAt(i));
+            node.count++;
+
             if (node.isLast) {
                 return false;
-            }
+            }            
+        }
+
+        if (node.count > 1) {
+            return false;
         }
         node.isLast = true;
 
