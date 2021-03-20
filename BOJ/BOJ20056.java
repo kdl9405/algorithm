@@ -7,7 +7,7 @@ import java.util.*;
     마법사 상어와 파이어
 */
 
-public class BJ20056 {
+public class BOJ20056 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
