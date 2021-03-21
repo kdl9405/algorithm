@@ -2,6 +2,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch line2021_5",
+            "request": "launch",
+            "mainClass": "Line.line2021_5",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch line2021_7",
+            "request": "launch",
+            "mainClass": "Line.line2021_7",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch line2021_6",
+            "request": "launch",
+            "mainClass": "Line.line2021_6",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch line2021_4",
+            "request": "launch",
+            "mainClass": "Line.line2021_4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch line2021_3",
+            "request": "launch",
+            "mainClass": "Line.line2021_3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch line2021_2",
+            "request": "launch",
+            "mainClass": "Line.line2021_2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch line2021_1",
+            "request": "launch",
+            "mainClass": "Line.line2021_1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BOJ16235",
             "request": "launch",
             "mainClass": "BOJ.BOJ16235",

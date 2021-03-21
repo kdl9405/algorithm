@@ -69,10 +69,6 @@ class Trie {
 
         for (int i = 0; i < number.length(); i++) {
 
-            // if (node.children == null) {
-            //     node.children = new HashMap<>();
-            // }
-
             if (!node.children.containsKey(number.charAt(i))) {
                 node.children.put(number.charAt(i), new TrieNode());
             }
