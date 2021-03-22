@@ -15,5 +15,4 @@
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
 
-/Line/*
-Line
+Line/**
