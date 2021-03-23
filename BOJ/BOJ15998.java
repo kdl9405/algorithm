@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     카카오머니 
 */
-public class BOJ15988 {
+public class BOJ15998 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -16,7 +16,7 @@ public class BOJ15988 {
         long budget = 0;
         long m = 0;
 
-        long min = Long.MAX_VALUE;
+        long min = Long.MIN_VALUE;
         boolean impossible = false;
 
         StringTokenizer st;
@@ -29,29 +29,26 @@ public class BOJ15988 {
 
             if (budget + a >= 0) {
                 budget += a;
-                
+
             } else {
 
-                long charge = (b-a)-budget;  // 충전금액 계산
-
-                if (b != 0 && b < min) {
-                    min = b;
-                }
+                long charge = (b - a) - budget; // 충전금액 계산
 
                 if (m == 0) {
-                    m = charge;    // m의 초기값은 첫 충전금액
-                }else{
-                    m = GCD(m, charge);   // m은 다음 충전금액과의 GCD
-                }                
+                    m = charge;
+                } else {
+                    m = GCD(m, charge);
+                }
 
-                if (m <= min) {
+                min = Math.max(min, b);
+                if (m <= b || m < min) {
                     impossible = true;
                 }
-               
-                budget = (budget+charge)+a;
               
-            }  
-            
+                budget = budget+charge+a;
+
+            }
+
             if (budget != b) {
                 impossible = true;
             }
@@ -59,7 +56,7 @@ public class BOJ15988 {
 
         if (impossible) {
             m = -1;
-        }else if(m == 0){
+        } else if (m == 0) {
             m = 1;
         }
 
@@ -75,12 +72,10 @@ public class BOJ15988 {
             b = temp;
         }
 
-        while (b != 0) {
-            long n = a % b;
-            a = b;
-            b = n;
+        if (b == 0) {
+            return a;
+        }else{
+            return GCD(b, a%b);
         }
-
-        return a;
     }
 }
