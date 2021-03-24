@@ -4,90 +4,75 @@ import java.io.*;
 import java.util.*;
 
 /* 
-    드래곤 커브
+    치킨 배달
 */
 public class BOJ15686_copy {
-    public static void main(String[] args) throws NumberFormatException, IOException {
+
+    public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int n = Integer.parseInt(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
 
-        map = new boolean[101][101];
-        genration = new int[4][1024];
 
-        for(int i = 0; i<4; i++){
-            Arrays.fill(genration[i], -1);
-            genration[i][0] = i;
-        }
+        house = new ArrayList<>();
+        chicken = new ArrayList<>();
 
-        while (n-- > 0) {
+        for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            int y = Integer.parseInt(st.nextToken());
-            int x = Integer.parseInt(st.nextToken());
-            int d = Integer.parseInt(st.nextToken());
-            int g = Integer.parseInt(st.nextToken());
+            for (int j = 0; j < N; j++) {
 
-            drawing(x, y, d, g);
-        }
+                String x = st.nextToken();
 
-        int count = 0;
-
-        for (int i = 0; i < 100; i++) {
-            for (int j = 0; j < 100; j++) {
-                if (map[i][j]) {
-                    if (map[i + 1][j] && map[i + 1][j + 1] && map[i][j + 1]) {
-                        count++;
-                    }
+                if (x.equals("1")) {
+                    house.add(new int[] { i, j });
+                } else if (x.equals("2")) {
+                    chicken.add(new int[] { i, j });
                 }
             }
         }
 
-        System.out.println(count);
+        visit = new boolean[chicken.size()];
+        candidate = new int[M];
+        min = Integer.MAX_VALUE;
 
+        nCr(M, 0, 0);
+
+        System.out.println(min);
+       
     }
 
-    static boolean[][] map;
-    static int[][] genration;
-    static int[][] direction = { { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 0 } };
+    static List<int[]> house;
+    static List<int[]> chicken;
+    static boolean[] visit;
+    static int[] candidate;
+    static int min;
 
-    static void drawing(int x, int y, int d, int g) {
+    static void nCr(int m, int depth, int x){
 
-        fill(d, g);
-
-        int last = (int)Math.pow(2, g);
-
-        map[x][y] = true;
-        for(int i = 0; i<last; i++){
-            x+=direction[genration[d][i]][0];
-            y+=direction[genration[d][i]][1];
-            
-            map[x][y] = true;
-        }
-        return;
-    }
-
-    static void fill(int d, int g) {
-        
-        if (genration[d][(int)Math.pow(2, g)-1] != -1) {
+        if (depth == m) {
+            int distance = 0;
+            for(int[] h : house){
+                int temp = Integer.MAX_VALUE;
+                for(int c : candidate){
+                    temp = Math.min(temp, Math.abs(h[0] - chicken.get(c)[0]) + Math.abs(h[1] - chicken.get(c)[1]));
+                }
+                distance += temp;
+            }
+            min = Math.min(min, distance);
             return;
         }
 
-        fill(d, g-1);
-
-        int i = (int)Math.pow(2, g-1)-1;
-        int j = i+1;
-
-        for(; i>=0; i--){
-            if (genration[d][i] == 3) {
-                genration[d][j] = 0;
-            }else{
-                genration[d][j] = genration[d][i]+1;
+        for(int i = x; i<chicken.size(); i++){
+            if (!visit[i]) {
+                visit[i] = true;
+                candidate[depth] = i;
+                nCr(m, depth+1, i+1);
+                visit[i] = false;
             }
-            j++;
         }
-
         return;
     }
 }
