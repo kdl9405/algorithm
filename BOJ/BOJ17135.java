@@ -12,9 +12,8 @@ public class BOJ17135 {
     static int N, M, D;
     static int[][] map;
     static int[][] testMap;
-    static boolean[] visit;
-    static int[] position;
     static int max;
+    static Queue<int[]> queue;
 
     public static void main(String[] args) throws IOException {
 
@@ -34,22 +33,76 @@ public class BOJ17135 {
             }
         }
 
+        for (int i = 0; i < M - 2; i++) {
+            for (int j = i + 1; j < M - 1; j++) {
+                for (int k = j + 1; k < M; k++) {
+                    initMap();
+                    queue = new LinkedList<>();
+
+                    int count = 0;
+
+                    for (int r = N - 1; r >= 0; r--) {
+                        simulation(r, i);
+                        simulation(r, j);
+                        simulation(r, k);
+
+                        while (!queue.isEmpty()) {
+                            int[] e = queue.poll();
+                            if (testMap[e[0]][e[1]] == 1) {
+                                count++;
+                                testMap[e[0]][e[1]] = 0;
+                            }
+                        }
+
+                    }
+                    max = Math.max(max, count);
+
+                }
+            }
+        }
+        System.out.println(max);
+
+    }
+
+    static void initMap() {
+        testMap = new int[N][N];
+
+        for (int i = 0; i < N; i++) {
+            testMap[i] = map[i].clone();
+        }
     }
 
     static void simulation(int r, int c) {
 
-        for(int d = 0; d<D; d++){
+        for (int d = 1; d <= D; d++) {
 
             int nr = r;
-
-            for(int nc = c-d; nc<=c+d; nc++){
-                if (nc>=0 && nc<M && nr <N && nr >=0) {
+            int nc = c - d + 1;
+            for (; nc <= c; nc++) {
+                if (nc >= 0 && nc < M && nr < N && nr >= 0) {
                     if (testMap[nr][nc] == 1) {
-                        
+                        queue.add(new int[] { nr, nc });
+                        return;
+                    }
+                }
+                nr--;
+            }
+
+            nr++;
+            for (; nc <= c + d - 1; nc++) {
+                nr++;
+                if (nc >= 0 && nc < M && nr < N && nr >= 0) {
+                    if (testMap[nr][nc] == 1) {
+                        queue.add(new int[] { nr, nc });
+                        return;
                     }
                 }
             }
+
         }
 
+        return;
+
     }
+
 }

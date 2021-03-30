@@ -44,16 +44,6 @@ public class BOJ17135_copy {
 
         System.out.println(max);
 
-        /*
-         * int p = 2; loop: for (int d = 1; d <= D; d++) { for (int i = d - 1; i >= 0;
-         * i--) { if (p - i >= 0) {
-         * 
-         * System.out.println("left and mid " + (N - (d - i)) + " " + (p - i)); } }
-         * 
-         * for (int i = 1; i <= d - 1; i++) { if (p + i < M) {
-         * System.out.println("right " + (N - (d - i)) + " " + (p + i)); } } }
-         */
-
     }
 
     static void nCr(int depth, int x) {
