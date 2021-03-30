@@ -7,7 +7,7 @@ import java.util.*;
     파이프 옮기기 1
 
 */
-public class BJ17070 {
+public class BOJ17070 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

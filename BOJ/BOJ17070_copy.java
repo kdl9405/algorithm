@@ -8,7 +8,7 @@ import java.util.*;
 
     완탐 => 시간초과
 */
-public class BJ17070_copy {
+public class BOJ17070_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
