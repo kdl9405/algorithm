@@ -10,6 +10,8 @@ import java.util.Arrays;
 // 이닝과 타자의 득점은 배열로 구현
 // 순열은 다음순열을 구하는 함수로 구함  .. 순열을 어떤 자료구조에 담을 것인가
 // 이닝 진행하여 득점 계산..
+// => 다음 순열을 구하는 함수에서 순열 복사 부분을 바꾸면 리펙토링 가능!
+
 public class BOJ17281 {
 
     static int[][] points;
@@ -33,19 +35,12 @@ public class BOJ17281 {
         last = false;
         max = Integer.MIN_VALUE;
 
-        lineUp = new int[] {4, 2, 9, 1, 7, 3, 8, 5, 6};
+        while (!last) {
 
-        // while (!last) {
+            play();
+            nextLineup();
 
-        //     // for(int l : lineUp){
-        //     //     System.out.print(l+" ");
-        //     // }System.out.println();
-
-        //     play();
-        //     nextLineup();
-
-
-        // }
+        }
 
         System.out.println(max);
 
@@ -62,7 +57,7 @@ public class BOJ17281 {
 
             while (out < 3) {
 
-                switch (points[i][lineUp[player]-1]) {
+                switch (points[i][lineUp[player] - 1]) {
                 case 0:
                     out++;
                     break;
@@ -116,8 +111,6 @@ public class BOJ17281 {
 
                 }
 
-                // System.out.println(lineUp[player]+" "+ point);
-
                 player++;
 
                 if (player == 9) {
@@ -125,14 +118,8 @@ public class BOJ17281 {
                 }
             }
 
-            // System.out.println(point);
         }
-
-        if (point > max) {
-            for(int l : lineUp){
-                System.out.print(l+ " ");
-            }System.out.println();
-        }
+       
         max = Math.max(max, point);
 
     }
@@ -147,26 +134,28 @@ public class BOJ17281 {
             temp[i] = lineUp[i + 1];
         }
 
-        int x = 7;
-        while (x > 0 && temp[x - 1] >= temp[x]) {
-            x--;
+        int idx = -1;
+        for (int i = 0; i < 7; i++) {
+            if (temp[i] < temp[i + 1]) {
+                idx = i;
+            }
         }
 
-        if (x <= 0) {
+        if (idx < 0) {
             last = true;
             return;
         }
 
-        int y = 7;
-        while (temp[x - 1] >= temp[y]) {
-            y--;
+        for (int i = 7; i > idx; i--) {
+            if (temp[idx] < temp[i]) {
+                int t = temp[idx];
+                temp[idx] = temp[i];
+                temp[i] = t;
+                break;
+            }
         }
 
-        int t = temp[x - 1];
-        temp[x - 1] = temp[y];
-        temp[y] = t;
-
-        Arrays.sort(temp, x, 7);
+        Arrays.sort(temp, idx + 1, 8);
 
         for (int i = 0; i < 3; i++) {
             lineUp[i] = temp[i];
@@ -174,5 +163,7 @@ public class BOJ17281 {
         for (int i = 4; i < 9; i++) {
             lineUp[i] = temp[i - 1];
         }
+
+        return;
     }
 }
