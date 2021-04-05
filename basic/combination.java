@@ -6,15 +6,15 @@ public class combination {
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
         // int n = sc.nextInt();
-        int r = sc.nextInt();
+        // int r = sc.nextInt();
 
-        // System.out.println(nCr(n, r));
+        System.out.println(nCr(15, 7));
 
-        int[] num = { 1, 2, 3, 4, 5 };
+        // int[] num = { 1, 2, 3, 4, 5 };
 
-        nCrGroup(num, r);
+        // nCrGroup(num, r);
         System.out.println(sb);
 
     }
