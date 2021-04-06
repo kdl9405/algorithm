@@ -2,7 +2,9 @@ package BOJ;
 
 import java.io.*;
 import java.util.*;
-
+/* 
+    다각형의 면적
+*/
 public class BOJ2166 {
     
     public static void main(String[] args) throws NumberFormatException, IOException {
