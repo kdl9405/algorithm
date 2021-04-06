@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BOJ2166_copy",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ2166_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ2166",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ2166",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch dev4",
             "request": "launch",
             "mainClass": "programmers.dev.dev4",
