@@ -8,12 +8,12 @@ public class pro1 {
 
     public static void main(String[] args) {
 
-        int[] gift_cards = new int[100000];
+        int[] gift_cards = {1,1,2,3,4};
         
-        int[] wants = new int[100000];
+        int[] wants = {2,2,2,2,2};
 
-        Arrays.fill(gift_cards, 1);
-        Arrays.fill(wants, 2);
+        // Arrays.fill(gift_cards, 1);
+        // Arrays.fill(wants, 2);
 
         System.out.println(solution(gift_cards, wants));
         

@@ -1,6 +1,5 @@
 package kakao;
 
-import java.io.*;
 import java.util.*;
 
 public class pro3 {
