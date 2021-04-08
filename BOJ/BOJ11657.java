@@ -9,8 +9,8 @@ import java.util.*;
 public class BOJ11657 {
 
     static int N;
-    static long[][] moveTime;
-    static ArrayList<Integer>[] nextStation;
+    // static long[][] moveTime;
+    static ArrayList<nextStation>[] next;
     static long[] dp;
     static int INF;
 
@@ -22,10 +22,10 @@ public class BOJ11657 {
         N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        moveTime = new long[N + 1][N + 1];
-        nextStation = new ArrayList[N + 1];
+        // moveTime = new long[N + 1][N + 1];
+        next = new ArrayList[N + 1];
         for (int i = 1; i <= N; i++) {
-            nextStation[i] = new ArrayList<>();
+            next[i] = new ArrayList<>();
         }
 
         while (M-- > 0) {
@@ -35,8 +35,8 @@ public class BOJ11657 {
             int b = Integer.parseInt(st.nextToken());
             int time = Integer.parseInt(st.nextToken());
 
-            moveTime[a][b] = time;
-            nextStation[a].add(b);
+            // moveTime[a][b] = time;
+            next[a].add(new nextStation(b, time));
 
         }
 
@@ -75,11 +75,11 @@ public class BOJ11657 {
                     continue;
                 }
 
-                for (int next : nextStation[i]) {
+                for (nextStation root : next[i]) {
 
-                    if (dp[next] > moveTime[i][next] + dp[i]) {
+                    if (dp[root.station] > dp[i] + root.time) {
 
-                        dp[next] = moveTime[i][next] + dp[i];
+                        dp[root.station] = dp[i] + root.time;
 
                         update = true;
                     }
@@ -96,9 +96,9 @@ public class BOJ11657 {
                 if (dp[i] == INF) {
                     continue;
                 }
-                for (int next : nextStation[i]) {
+                for (nextStation root : next[i]) {
 
-                    if (dp[next] > moveTime[i][next] + dp[i]) {
+                    if (dp[root.station] > dp[i]+root.time) {
                         return true;
                     }
                 }
@@ -106,5 +106,15 @@ public class BOJ11657 {
         }
 
         return false;
+    }
+}
+
+class nextStation{
+    int station;
+    int time;
+
+    nextStation(int station, int time){
+        this.station = station;
+        this.time = time;
     }
 }
