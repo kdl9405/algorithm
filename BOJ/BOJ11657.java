@@ -5,6 +5,8 @@ import java.util.*;
 
 /* 
     타임머신 
+
+    벨만 포드
 */
 public class BOJ11657 {
 
