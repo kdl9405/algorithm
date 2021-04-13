@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -10,7 +10,7 @@ import java.util.*;
     
 */
 
-public class BJ1753_copy {
+public class BOJ1753_copy {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

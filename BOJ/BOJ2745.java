@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
 /* 
     진법 변환
 */
-public class BJ2745 {
+public class BOJ2745 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

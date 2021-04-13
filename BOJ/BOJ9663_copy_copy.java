@@ -5,7 +5,7 @@ import java.io.IOException;
 
 
 
-public class BJ9663_copy_copy {
+public class BOJ9663_copy_copy {
  
 	public static int[] arr;
 	public static int N;

@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class BJ11729 {
+public class BOJ11729 {
     
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     public static void main(String[] args) throws NumberFormatException, IOException {

@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ10814_copy {
+public class BOJ10814_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

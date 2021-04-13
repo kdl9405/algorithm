@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.Arrays;
@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
     에너지 드링크
 */
 
-public class BJ20115 {
+public class BOJ20115 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

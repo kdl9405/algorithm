@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     홀수 홀릭 호석
 */
 
-public class BJ20164 {
+public class BOJ20164 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String num = br.readLine();

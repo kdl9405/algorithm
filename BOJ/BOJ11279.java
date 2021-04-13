@@ -1,12 +1,12 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
 
 /**
- * BJ11279
+ * BOJ11279
  */
-public class BJ11279 {
+public class BOJ11279 {
 
     public static void main(String[] args) throws IOException {
        

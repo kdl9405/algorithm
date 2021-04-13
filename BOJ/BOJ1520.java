@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class BJ1520 {
+public class BOJ1520 {
 
     static int n, m;
     static int[][] map;

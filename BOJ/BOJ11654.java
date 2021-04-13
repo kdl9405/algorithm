@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BJ11654 {
+public class BOJ11654 {
     
     public static void main(String[] args) {
         

@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
     괄호 제거
 */
 
-public class BJ2800 {
+public class BOJ2800 {
 
     public static void main(String[] args) {
 

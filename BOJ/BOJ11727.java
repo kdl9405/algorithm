@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * 2×n 타일링 2
  */
-public class BJ11727 {
+public class BOJ11727 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 

@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BJ2739 {
+public class BOJ2739 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

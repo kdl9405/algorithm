@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 
 import java.util.*;
 import java.io.*;
 
-public class BJ1780 {
+public class BOJ1780 {
 
     static int[][] arr;
     static int a = 0;

@@ -37,10 +37,10 @@ function Person(name, gender) {
 //   console.dir(foo);
   
 //   console.log(foo.__proto__ === Person.prototype);               
-//   console.log(Person.prototype.__proto__ === Object.prototype);  
+//   console.log(Person.prototype.__proto__ === OBOJect.prototype);  
 //   console.log(Person.prototype.constructor === Person);           
 //   console.log(Person.__proto__ === Function.prototype);          
-//   console.log(Function.prototype.__proto__ === Object.prototype); 
+//   console.log(Function.prototype.__proto__ === OBOJect.prototype); 
 
 
 
@@ -54,7 +54,7 @@ console.log(str.myMethod());
 console.dir(String.prototype);
 
 console.log(str.__proto__ === String.prototype);                 // ① true
-console.log(String.prototype.__proto__  === Object.prototype);   // ② true
+console.log(String.prototype.__proto__  === OBOJect.prototype);   // ② true
 console.log(String.prototype.constructor === String);            // ③ true
 console.log(String.__proto__ === Function.prototype);            // ④ true
-console.log(Function.prototype.__proto__  === Object.prototype); // ⑤ true
+console.log(Function.prototype.__proto__  === OBOJect.prototype); // ⑤ true

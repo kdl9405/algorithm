@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
@@ -6,7 +6,7 @@ import java.io.*;
 /* 
     동전
 */
-public class BJ9084 {
+public class BOJ9084 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

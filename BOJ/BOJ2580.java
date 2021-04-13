@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
     
 */
 
-public class BJ2580 {
+public class BOJ2580 {
 
     public static void main(String[] args) throws IOException {
 

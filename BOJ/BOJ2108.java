@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 
 /**
- * BJ2108
+ * BOJ2108
  */
-public class BJ2108 {
+public class BOJ2108 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /**
- * BJ15650
+ * BOJ15650
  */
-public class BJ15650 {
+public class BOJ15650 {
 
     static int n, m;
     static int[] arr;

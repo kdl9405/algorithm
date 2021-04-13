@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BJ1904 {
+public class BOJ1904 {
 
     static int[] dp = new int[1000001];
     public static void main(String[] args) throws NumberFormatException, IOException {

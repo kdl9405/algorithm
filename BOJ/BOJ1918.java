@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
     후위 표기식
 */
 
-public class BJ1918 {
+public class BOJ1918 {
 
     public static void main(String[] args) {
 

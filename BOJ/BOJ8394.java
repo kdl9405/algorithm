@@ -1,7 +1,7 @@
 import java.io.*;
 
 /**
- * InnerBJ8394
+ * InnerBOJ8394
  * 
  * 문제
 n이 주어졌을 때, 1부터 n까지 합을 구하는 프로그램을 작성하시오.
@@ -12,7 +12,7 @@ n이 주어졌을 때, 1부터 n까지 합을 구하는 프로그램을 작성�
 출력
 1부터 n까지 합을 출력한다.
  */
-public class BJ8394 {
+public class BOJ8394 {
 
     public static void main(String[] args) throws IOException {
         

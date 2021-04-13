@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.StringTokenizer;
     N번째 큰 수
     1216ms
 */
-public class BJ2075 {
+public class BOJ2075 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

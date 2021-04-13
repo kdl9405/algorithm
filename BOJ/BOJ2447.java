@@ -1,8 +1,8 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
-public class BJ2447 {
+public class BOJ2447 {
 
     static char[][] arr;
 

@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ11054 {
+public class BOJ11054 {
 
     static int n;
     static int[] up;

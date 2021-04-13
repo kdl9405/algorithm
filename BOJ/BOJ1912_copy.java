@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 // 시간초과
 
-public class BJ1912_copy {
+public class BOJ1912_copy {
 
     public static void main(final String[] args) throws NumberFormatException, IOException {
 

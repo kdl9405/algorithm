@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
     타일 채우기
 */
 
-public class BJ2133_copy {
+public class BOJ2133_copy {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

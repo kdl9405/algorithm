@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 
-public class BJ1912 {
+public class BOJ1912 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

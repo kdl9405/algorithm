@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 /**
  * 조합
  */
-public class BJ2407 {
+public class BOJ2407 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

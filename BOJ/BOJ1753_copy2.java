@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -8,7 +8,7 @@ import java.util.*;
     메모리초과
 */
 
-public class BJ1753_copy2 {
+public class BOJ1753_copy2 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

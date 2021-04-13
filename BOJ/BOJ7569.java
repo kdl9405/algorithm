@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 
-public class BJ7569 {
+public class BOJ7569 {
 
     static int[][][] tomato;
 

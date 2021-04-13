@@ -8,7 +8,7 @@ import java.util.*;
 
     980ms
 */
-public class BJ16236 {
+public class BOJ16236 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

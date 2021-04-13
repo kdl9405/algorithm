@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BJ1463 {
+public class BOJ1463 {
 
     static int[] dp;
 

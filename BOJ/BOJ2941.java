@@ -3,9 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ2941
+ * BOJ2941
  */
-public class BJ2941 {
+public class BOJ2941 {
 
     public static void main(String[] args) throws IOException {
         

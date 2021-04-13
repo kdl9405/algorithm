@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ14888 {
+public class BOJ14888 {
 
     static int n;
     static int[] number;

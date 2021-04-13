@@ -74,4 +74,4 @@ var c = new Person('CCC', 30);
   
 //   console.log(foo.constructor); // ① Person(name)
   
-//   console.log(bar.constructor); // ② Object()
+//   console.log(bar.constructor); // ② OBOJect()

@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 public class Scnnaer {
 

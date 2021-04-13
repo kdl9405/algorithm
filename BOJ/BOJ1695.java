@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     팰린드롬 만들기
 */
 
-public class BJ1695 {
+public class BOJ1695 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

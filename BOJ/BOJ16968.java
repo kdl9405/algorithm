@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BJ16968 {
+public class BOJ16968 {
 
     static int result;
     static int x = 26, y = 10;

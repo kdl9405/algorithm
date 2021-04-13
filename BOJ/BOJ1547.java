@@ -1,7 +1,7 @@
-package BJ;
+package BOJ;
 import java.util.*;
 
-public class BJ1547 {
+public class BOJ1547 {
     public static void main(String[] args){
      
         Scanner sc = new Scanner(System.in);

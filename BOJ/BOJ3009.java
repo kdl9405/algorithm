@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BJ3009 {
+public class BOJ3009 {
 
     public static void main(String[] args) {
 

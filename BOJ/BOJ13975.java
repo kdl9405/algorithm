@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
@@ -8,7 +8,7 @@ import java.io.*;
 
     3324ms
 */
-public class BJ13975 {
+public class BOJ13975 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
                 

@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BJ2164 {
+public class BOJ2164 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

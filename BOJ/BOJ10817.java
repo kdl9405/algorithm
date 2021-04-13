@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class BJ10817 {
+public class BOJ10817 {
     
     public static void main(String[] args) throws IOException {
         

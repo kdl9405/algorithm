@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
 
 // dfs는 시간초과
 
-public class BJ2178 {
+public class BOJ2178 {
 
     static int[][] map;
     static boolean[][] visit;

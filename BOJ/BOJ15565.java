@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     귀여운 라이언
 */
 
-public class BJ15565 {
+public class BOJ15565 {
 
     public static void main(String[] args) throws IOException {
 

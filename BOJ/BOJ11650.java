@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BJ11650 {
+public class BOJ11650 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

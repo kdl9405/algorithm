@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BJ2565 {
+public class BOJ2565 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

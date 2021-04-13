@@ -3,9 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ9663
+ * BOJ9663
  */
-public class BJ9663 {
+public class BOJ9663 {
 
     static int n;
     static boolean[][] map;

@@ -11,8 +11,8 @@ public class pro9 {
         solution(progresses, speeds);
     }
 
-    public static Object[] solution(int[] progresses, int[] speeds) {
-        Object[] answer;
+    public static OBOJect[] solution(int[] progresses, int[] speeds) {
+        OBOJect[] answer;
 
         ArrayList<Integer> array = new ArrayList<>();
 

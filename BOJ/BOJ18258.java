@@ -6,9 +6,9 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
- * BJ18258
+ * BOJ18258
  */
-public class BJ18258 {
+public class BOJ18258 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

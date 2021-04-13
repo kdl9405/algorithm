@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BJ2579 {
+public class BOJ2579 {
 
     static int[] stair;
     static int[] arr;

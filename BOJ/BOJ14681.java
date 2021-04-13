@@ -3,9 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ14681
+ * BOJ14681
  */
-public class BJ14681 {
+public class BOJ14681 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

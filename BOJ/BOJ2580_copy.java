@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
     시간초과
 */
 
-public class BJ2580_copy {
+public class BOJ2580_copy {
 
     public static void main(String[] args) throws IOException {
 

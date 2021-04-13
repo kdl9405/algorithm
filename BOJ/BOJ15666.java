@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -10,7 +10,7 @@ import java.util.*;
     
  */
 
-public class BJ15666 {
+public class BOJ15666 {
 
     public static void main(String[] args) throws IOException {
 

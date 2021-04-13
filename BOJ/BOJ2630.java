@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
 
-public class BJ2630 {
+public class BOJ2630 {
 
     static int[][] arr;
     static int white = 0;

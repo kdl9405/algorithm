@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     카드 정렬하기
 */
-public class BJ1715 {
+public class BOJ1715 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
 
-public class BJ1992 {
+public class BOJ1992 {
     
     static int[][] arr;
     static StringBuilder sb = new StringBuilder();

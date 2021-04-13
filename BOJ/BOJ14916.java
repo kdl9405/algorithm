@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
 /* 
     거스름돈 
 */
-public class BJ14916 {
+public class BOJ14916 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

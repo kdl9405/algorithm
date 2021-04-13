@@ -2,7 +2,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
-public class BJ10171 {
+public class BOJ10171 {
 
     public static void main(String[] args) throws IOException {
 

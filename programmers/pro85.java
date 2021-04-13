@@ -37,13 +37,13 @@ public class pro85 {
 
         List<Integer> list = new LinkedList<>();
 
-        Object[] arr = map.keySet().toArray();
+        OBOJect[] arr = map.keySet().toArray();
 
         Arrays.sort(arr, (a1, a2) -> {
             return map.get(a2) - map.get(a1);
         });
 
-        for (Object a : arr) {
+        for (OBOJect a : arr) {
             int[] temp = set.get(a.toString()).stream().mapToInt(i -> i).toArray();
 
             if (temp.length == 1) {

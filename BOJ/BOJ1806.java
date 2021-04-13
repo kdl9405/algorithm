@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     부분합 
 */
-public class BJ1806 {
+public class BOJ1806 {
 
     public static void main(String[] args) throws IOException {
 

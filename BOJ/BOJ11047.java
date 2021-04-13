@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class BJ11047 {
+public class BOJ11047 {
     
     public static void main(String[] args) throws IOException {
         

@@ -1,15 +1,15 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ9461
+ * BOJ9461
  */
 
 // 파도반 수열
-public class BJ9461 {
+public class BOJ9461 {
 
     static Long[] dp = new Long[101];
 

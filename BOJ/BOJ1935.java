@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -7,7 +7,7 @@ import java.util.Stack;
     후위 표기식2
 */
 
-public class BJ1935 {
+public class BOJ1935 {
 
     public static void main(String[] args) {
 

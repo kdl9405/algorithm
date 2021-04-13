@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
     퇴사
 */
 
-public class BJ14501 {
+public class BOJ14501 {
     
     public static void main(String[] args) throws NumberFormatException, IOException {
         

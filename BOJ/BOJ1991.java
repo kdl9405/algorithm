@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 
 /* 
     트리 순회
 */
-public class BJ1991 {
+public class BOJ1991 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

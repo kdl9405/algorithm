@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -9,7 +9,7 @@ import java.util.*;
     작업이 선행순서에 뒤집히는 일 없이 입력됨!!!!
 */
 
-public class BJ2056 {
+public class BOJ2056 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

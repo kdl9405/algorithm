@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.LinkedList;
     큐
 */
 
-public class BJ10845 {
+public class BOJ10845 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

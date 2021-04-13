@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 
 /* 
     쇠막대기
 */
-public class BJ10799 {
+public class BOJ10799 {
 
     public static void main(String[] args) {
 

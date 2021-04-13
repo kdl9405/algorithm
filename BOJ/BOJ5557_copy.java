@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
@@ -8,7 +8,7 @@ import java.io.*;
     시간초과
 */
 
-public class BJ5557_copy {
+public class BOJ5557_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

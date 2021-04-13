@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
     시간 초과
 */
 
-public class BJ9465_copy {
+public class BOJ9465_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

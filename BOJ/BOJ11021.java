@@ -1,14 +1,14 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 
 /**
- * InnerBJ8394
+ * InnerBOJ8394
  * 
  * 
  */
-public class BJ11021 {
+public class BOJ11021 {
 
     public static void main(String[] args) throws IOException {
 

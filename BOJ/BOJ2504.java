@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Stack;
 /* 
     괄호의 값
 */
-public class BJ2504 {
+public class BOJ2504 {
 
     public static void main(String[] args) throws IOException {
 

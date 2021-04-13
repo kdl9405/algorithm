@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     Four Squares
 */
 
-public class BJ17626 {
+public class BOJ17626 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

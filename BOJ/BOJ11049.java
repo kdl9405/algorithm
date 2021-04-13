@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BJ11049 {
+public class BOJ11049 {
 
     static int[][] arr;
     static int[][] dp;

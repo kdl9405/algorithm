@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BJ1427_copy {
+public class BOJ1427_copy {
 
     public static void main(String[] args) throws IOException {
  

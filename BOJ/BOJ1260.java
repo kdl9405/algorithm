@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 
-public class BJ1260 {
+public class BOJ1260 {
     
     static int[][] connect;
     static boolean[] visit;

@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
@@ -7,7 +7,7 @@ import java.io.*;
     후위 표기식
 */
 
-public class BJ1918_copy {
+public class BOJ1918_copy {
 
     public static void main(String[] args) throws IOException {
 

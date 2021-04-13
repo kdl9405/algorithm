@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     소수의 연속합
     300ms
 */
-public class BJ1644 {
+public class BOJ1644 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

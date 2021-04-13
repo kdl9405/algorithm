@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Scanner;
     큰 수 A+B
 */
 
-public class BJ10757 {
+public class BOJ10757 {
 
     public static void main(String[] args) {
 

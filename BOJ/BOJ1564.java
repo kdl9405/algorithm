@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 
 import java.io.BufferedReader;
@@ -6,11 +6,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ1564
+ * BOJ1564
  * 
  *
  */
-class BJ1564 {
+class BOJ1564 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

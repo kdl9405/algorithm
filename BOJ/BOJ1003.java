@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 
 //시간초과
-public class BJ1003 {
+public class BOJ1003 {
     
     static Long[] arr;
     static int firstC;

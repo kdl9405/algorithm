@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 /* 
     A → B
 */
-public class BJ16953 {
+public class BOJ16953 {
     public static void main(String[] args) throws IOException {
         
         BufferedReader br  = new BufferedReader(new InputStreamReader(System.in));

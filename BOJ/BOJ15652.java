@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ15652 {
+public class BOJ15652 {
 
     static int n, m;
     static int[] arr;

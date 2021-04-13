@@ -2,9 +2,9 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 /**
- * InnerBJ15596
+ * InnerBOJ15596
  */
-public class BJ15596 {
+public class BOJ15596 {
 
     public static void main(String[] args) {
 

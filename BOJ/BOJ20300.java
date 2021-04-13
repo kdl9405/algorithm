@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 /* 
     서강근육맨
 */
-public class BJ20300 {
+public class BOJ20300 {
     
     public static void main(String[] args) throws NumberFormatException, IOException {
         

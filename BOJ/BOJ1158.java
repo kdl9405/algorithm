@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
     요세푸스 문제
 */
 
-public class BJ1158 {
+public class BOJ1158 {
     
     public static void main(String[] args) {
         

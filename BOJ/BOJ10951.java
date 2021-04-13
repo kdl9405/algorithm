@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 
 import java.io.*;
 import java.util.Scanner;
 
-public class BJ10951 {
+public class BOJ10951 {
     
     public static void main(String[] args) {
         

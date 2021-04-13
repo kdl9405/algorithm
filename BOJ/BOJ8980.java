@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -11,7 +11,7 @@ import java.util.*;
 //      출발지 오름차순
 //                          
 
-public class BJ8980 {
+public class BOJ8980 {
 
     public static void main(String[] args) throws IOException {
 

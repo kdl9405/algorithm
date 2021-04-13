@@ -1,13 +1,13 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class BJ10996 {
+class BOJ10996 {
 
     /**
-     * InnerBJ10996
+     * InnerBOJ10996
      * 
      * @throws IOException
      * @throws NumberFormatException

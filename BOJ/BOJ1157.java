@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 
 import java.io.BufferedReader;
@@ -6,9 +6,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ1157
+ * BOJ1157
  */
-public class BJ1157 {
+public class BOJ1157 {
     public static void main(final String[] args) throws IOException {
         // A-a = 32 , A = 65, Z=90
 

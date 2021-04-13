@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 
@@ -6,7 +6,7 @@ import java.util.*;
     1로 만들기 2
     
 */
-public class BJ12852 {
+public class BOJ12852 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

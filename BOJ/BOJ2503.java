@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     숫자 야구
 */
 
-public class BJ2503 {
+public class BOJ2503 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

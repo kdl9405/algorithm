@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class BJ1874 {
+public class BOJ1874 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

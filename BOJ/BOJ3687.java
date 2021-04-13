@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
 
-public class BJ3687 {
+public class BOJ3687 {
 
     static StringBuilder sb, result = new StringBuilder();
     static int min;

@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class BJ5543 {
+public class BOJ5543 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

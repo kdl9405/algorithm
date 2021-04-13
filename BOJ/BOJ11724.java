@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
     연결 요소의 개수
 */
 
-public class BJ11724 {
+public class BOJ11724 {
 
     public static void main(String[] args) throws IOException {
 

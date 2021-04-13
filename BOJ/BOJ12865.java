@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,9 +7,9 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
- * BJ12865
+ * BOJ12865
  */
-public class BJ12865 {
+public class BOJ12865 {
 
     public static void main(String[] args) throws IOException {
         

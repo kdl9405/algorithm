@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -8,7 +8,7 @@ import java.util.Scanner;
     로프
 */
 
-public class BJ2217 {
+public class BOJ2217 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner (System.in);

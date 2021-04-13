@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     로또
 */
 
-public class BJ2758 {
+public class BOJ2758 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

@@ -1,12 +1,12 @@
-package BJ;
+package BOJ;
 
 import java.util.Collections;
 import java.util.*;
 
 /**
- * BJ1300 K번째 수 이분탐색
+ * BOJ1300 K번째 수 이분탐색
  */
-public class BJ1300 {
+public class BOJ1300 {
 
     public static void main(String[] args) {
 

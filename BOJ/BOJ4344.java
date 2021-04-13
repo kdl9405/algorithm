@@ -3,11 +3,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ4344
+ * BOJ4344
  * 
  *
  */
-class BJ4344 {
+class BOJ4344 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

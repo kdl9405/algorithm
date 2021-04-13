@@ -1,7 +1,7 @@
 /**
- * BJ4673
+ * BOJ4673
  */
-public class BJ4673 {
+public class BOJ4673 {
 
     public static void main(String[] args) {
 

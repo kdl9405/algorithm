@@ -7,7 +7,7 @@ import java.util.*;
     
 */
 
-public class BJ2346 {
+public class BOJ2346 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

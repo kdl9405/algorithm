@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
     에라토스테네스의 체
 */
 
-public class BJ2960 {
+public class BOJ2960 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

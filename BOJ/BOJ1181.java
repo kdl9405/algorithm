@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 
 import java.io.BufferedReader;
@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 // 시간초과
-public class BJ1181 {
+public class BOJ1181 {
 
     public static void main(final String[] args) throws NumberFormatException, IOException {
 
@@ -46,7 +46,7 @@ public class BJ1181 {
                     strset.add(item);
                 }
 
-                final Object[] result = strset.toArray();
+                final OBOJect[] result = strset.toArray();
                 Arrays.sort(result);
 
                 for(int j = 0; j<result.length; j++){

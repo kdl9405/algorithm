@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -6,7 +6,7 @@ import java.util.Scanner;
 /* 
     다음 소수
 */
-public class BJ4134 {
+public class BOJ4134 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

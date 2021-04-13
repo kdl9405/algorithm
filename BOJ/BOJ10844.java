@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BJ10844 {
+public class BOJ10844 {
 
     static long mod = 1000000000;
     

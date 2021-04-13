@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BJ10773 {
+public class BOJ10773 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

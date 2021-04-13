@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
     구간 합 구하기 4
 */
 
-public class BJ11659 {
+public class BOJ11659 {
 
     public static void main(String[] args) throws IOException {
         

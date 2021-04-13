@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 /* 
     알바생 강호
 */
-public class BJ1758 {
+public class BOJ1758 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         

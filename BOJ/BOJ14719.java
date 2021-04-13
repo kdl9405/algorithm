@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     빗물
 */
-public class BJ14719 { // left을 찾고 right을 찾아 가운데 값을 계산
+public class BOJ14719 { // left을 찾고 right을 찾아 가운데 값을 계산
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

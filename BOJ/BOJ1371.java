@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 
-public class BJ1371 {
+public class BOJ1371 {
     public static void main(String[] args) throws IOException {
         
         Scanner sc = new Scanner(System.in);

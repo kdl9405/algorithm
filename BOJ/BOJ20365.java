@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
     블로그2
 */
 
-public class BJ20365 {
+public class BOJ20365 {
     public static void main(String[] args) throws NumberFormatException, IOException {
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

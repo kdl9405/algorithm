@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.HashMap;
 /* 
     생태학
 */
-public class BJ4358 {
+public class BOJ4358 {
 
     public static void main(String[] args) throws IOException {
 

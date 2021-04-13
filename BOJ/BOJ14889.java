@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ14889 {
+public class BOJ14889 {
 
     static int n;
     static int[][] map;

@@ -1,8 +1,8 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 
-public class BJ1264 {
+public class BOJ1264 {
     
     public static void main(String[] args) throws IOException {
         

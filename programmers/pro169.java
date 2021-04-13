@@ -28,13 +28,13 @@ public class pro169 {
             genreIndex.get(genres[i]).add(i);
         }
         
-        Object[] arr =  genreCount.keySet().toArray();
+        OBOJect[] arr =  genreCount.keySet().toArray();
         
         Arrays.sort(arr, (a1,a2)->{
             return genreCount.get(a2) - genreCount.get(a1);
         });
             
-        for(Object g : arr){
+        for(OBOJect g : arr){
             String genre = g.toString();
             List<Integer> list = genreIndex.get(genre);
             

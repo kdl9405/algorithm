@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
     구간 합 구하기 5
 */
 
-public class BJ11660 {
+public class BOJ11660 {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

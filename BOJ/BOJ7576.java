@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
 
-public class BJ7576 {
+public class BOJ7576 {
 
     static int[][] map;
     static boolean[][] visit;

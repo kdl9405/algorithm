@@ -3,9 +3,9 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ9663
+ * BOJ9663
  */
-public class BJ9663_copy {
+public class BOJ9663_copy {
 
     static int n;
     static int[] map;

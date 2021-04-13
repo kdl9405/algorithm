@@ -5,9 +5,9 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
- * BJ11399
+ * BOJ11399
  */
-public class BJ11399 {
+public class BOJ11399 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

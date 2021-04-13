@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BJ5622 {
+public class BOJ5622 {
 
     public static void main(String[] args) {
 

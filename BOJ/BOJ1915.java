@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     가장 큰 정사각형
 */
-public class BJ1915 {
+public class BOJ1915 {
     
     public static void main(String[] args) throws IOException {
         

@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     동전 2
 */
 
-public class BJ2294 {
+public class BOJ2294 {
 
     public static void main(String[] args) throws IOException {
 

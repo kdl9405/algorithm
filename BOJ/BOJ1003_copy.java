@@ -1,8 +1,8 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 
-public class BJ1003_copy {
+public class BOJ1003_copy {
     
     static Long[] arr;
     

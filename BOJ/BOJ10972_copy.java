@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -8,7 +8,7 @@ import java.util.*;
 
     시간초과
 */
-public class BJ10972_copy {
+public class BOJ10972_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

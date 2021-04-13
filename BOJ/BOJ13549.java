@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     숨바꼭질 3
 */
-public class BJ13549 {
+public class BOJ13549 {
 
     public static void main(String[] args) throws IOException {
 

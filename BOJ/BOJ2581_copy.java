@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
  
-public class BJ2581_copy {
+public class BOJ2581_copy {
  
 	public static boolean prime[];
 	

@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
 
-public class BJ19598 {
+public class BOJ19598 {
     
     public static void main(String[] args) throws NumberFormatException, IOException {
         

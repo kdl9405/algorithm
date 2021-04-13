@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 
 import java.util.Scanner;
 
-public class BJ10870 {
+public class BOJ10870 {
     
     public static void main(String[] args) {
         

@@ -1,11 +1,11 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 
 //시간초과
-public class BJ2748 {
+public class BOJ2748 {
     
     public static void main(String[] args) throws Exception {
         

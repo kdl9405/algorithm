@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
@@ -6,7 +6,7 @@ import java.util.Scanner;
     최대공약수와 최소공배수
 */
 
-public class BJ2609 {
+public class BOJ2609 {
     
     public static void main(String[] args) {
         

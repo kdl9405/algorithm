@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 
 import java.io.BufferedReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class BJ1149_copy {
+public class BOJ1149_copy {
     final static int Red = 0;
 	final static int Green = 1;
 	final static int Blue = 2;

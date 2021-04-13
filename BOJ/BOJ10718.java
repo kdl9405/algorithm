@@ -1,13 +1,13 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 
 /**
- * BJ10718
+ * BOJ10718
  */
-class BJ10718 {
+class BOJ10718 {
 
     public static void main(String[] args) throws IOException {
 

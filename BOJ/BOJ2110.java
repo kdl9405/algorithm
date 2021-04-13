@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 import java.util.*;
 import java.io.*;
 
-public class BJ2110 {
+public class BOJ2110 {
     
     public static void main(String[] args) throws IOException{
         

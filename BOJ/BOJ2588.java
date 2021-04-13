@@ -1,13 +1,13 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * BJ2588
+ * BOJ2588
  */
-public class BJ2588 {
+public class BOJ2588 {
 
     public static void main(String[] args) throws IOException {
         

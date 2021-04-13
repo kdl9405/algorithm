@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
     
     시간초과
 */
-public class BJ12852 {
+public class BOJ12852 {
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

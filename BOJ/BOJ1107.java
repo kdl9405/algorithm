@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /* 
     리모컨
 */
-public class BJ1107 {
+public class BOJ1107 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

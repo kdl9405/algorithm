@@ -1,8 +1,8 @@
-package BJ;
+package BOJ;
 
 import java.util.Scanner;
 
-public class BJ1929 {
+public class BOJ1929 {
     
 
     public static boolean primeN[];

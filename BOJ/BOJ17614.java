@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /* 
     369
 */
-public class BJ17614 {
+public class BOJ17614 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

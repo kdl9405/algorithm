@@ -1,9 +1,9 @@
-package BJ;
+package BOJ;
 
 
 import java.util.*;
 
-public class BJ1731 {
+public class BOJ1731 {
     
     public static void main(String[] args){
         int answer = 0;

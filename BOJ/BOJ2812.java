@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.math.BigInteger;
@@ -8,7 +8,7 @@ import java.util.*;
     크게 만들기
     
 */
-public class BJ2812 {
+public class BOJ2812 {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

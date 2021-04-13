@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     미세먼지 안녕!
 */
 
-public class BJ17144 {
+public class BOJ17144 {
 
     public static void main(String[] args) throws IOException {
 

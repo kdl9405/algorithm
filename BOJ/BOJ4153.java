@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BJ4153 {
+public class BOJ4153 {
     
     public static void main(String[] args) {
         

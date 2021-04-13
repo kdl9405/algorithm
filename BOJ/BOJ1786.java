@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 
@@ -7,7 +7,7 @@ import java.io.*;
 
     KMP 알고리즘 
 */
-public class BJ1786 {
+public class BOJ1786 {
 
     public static void main(String[] args) throws IOException {
 

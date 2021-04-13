@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     꿈틀꿈틀 호석 애벌레 - 효율성
 */
 
-public class BJ20181 {
+public class BOJ20181 {
     
     public static void main(String[] args) throws IOException {
              

@@ -6,7 +6,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 import java.util.List;
 
-public class BJ5430 {
+public class BOJ5430 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 

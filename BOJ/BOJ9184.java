@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 
 //신나는 함수 실행  
 // 최적화 필요 => arr range 101 => 21변경 필요!!!
-public class BJ9184 {
+public class BOJ9184 {
 
     static int[][][] arr;
 

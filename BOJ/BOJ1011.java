@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,9 +8,9 @@ import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 /**
- * BJ1011
+ * BOJ1011
  */
-public class BJ1011 {
+public class BOJ1011 {
 
     static StringTokenizer st;
     public static void main(String[] args) throws NumberFormatException, IOException {

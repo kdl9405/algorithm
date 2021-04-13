@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 /* 
     듣보잡
 */
-public class BJ1764 {
+public class BOJ1764 {
 
     public static void main(String[] args) throws IOException {
         
@@ -38,11 +38,11 @@ public class BJ1764 {
             }
         }
 
-        Object[] result = duplication.toArray();
+        OBOJect[] result = duplication.toArray();
         Arrays.sort(result);
 
         sb.append(result.length);
-        for(Object o : result){
+        for(OBOJect o : result){
             sb.append("\n").append(o);
         }
 

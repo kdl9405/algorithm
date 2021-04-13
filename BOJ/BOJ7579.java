@@ -1,10 +1,10 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class BJ7579 {
+public class BOJ7579 {
     
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 /* 
     1, 2, 3 더하기
 */
-public class BJ9095 {
+public class BOJ9095 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         

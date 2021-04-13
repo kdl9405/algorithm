@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
     나는야 포켓몬 마스터 이다솜
 */
 
-public class BJ1620 {
+public class BOJ1620 {
     
     public static void main(String[] args) throws IOException {
         

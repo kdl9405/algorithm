@@ -1,4 +1,4 @@
-package BJ;
+package BOJ;
 
 import java.io.*;
 import java.util.*;
@@ -7,7 +7,7 @@ import java.util.*;
     주지수
 */
 
-public class BJ15724 {
+public class BOJ15724 {
 
     public static void main(String[] args) throws IOException {
 

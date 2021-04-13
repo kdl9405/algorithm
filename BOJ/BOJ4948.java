@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class BJ4948 {
+public class BOJ4948 {
 
     public static boolean primeN[];
 
