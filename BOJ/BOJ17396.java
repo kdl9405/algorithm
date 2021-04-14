@@ -1,3 +1,5 @@
+package BOJ;
+
 import java.io.*;
 import java.util.*;
 
@@ -8,7 +10,7 @@ public class BOJ17396 {
 
     static int N, M;
     static int[] possible; // 0은 가능, 1은 불가
-    static ArrayList<ArrayList<road>> roads;
+    static ArrayList<ArrayList<road>> roads; 
     static long[] dist;
     static long INF = (long) Math.pow(100000, 2);
 
