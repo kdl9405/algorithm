@@ -26,7 +26,7 @@ public class BOJ1823_copy {
         max = 0;
         sum = new int[n + 1];
 
-        bottomUp(1, 1, n);
+        dfs(1, 1, n);
 
         System.out.println(max);
     }
@@ -35,7 +35,7 @@ public class BOJ1823_copy {
     static int[] sum;
     static int max;
 
-    static void bottomUp(int index, int left, int right){
+    static void dfs(int index, int left, int right){
         if (left == right) {
             int t = 0;
             for(int i = 1; i<sum.length-1; i++){
@@ -47,10 +47,10 @@ public class BOJ1823_copy {
         }       
 
         sum[index] = arr[left];
-        bottomUp(index+1, left+1, right);
+        dfs(index+1, left+1, right);
 
         sum[index] = arr[right];
-        bottomUp(index+1, left, right-1);
+        dfs(index+1, left, right-1);
     }
 
 }
