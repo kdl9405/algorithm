@@ -4,21 +4,21 @@ import java.util.*;
 
 // 
 
-public class so3_copy {
+public class so3_copy4 {
 
     public static void main(String[] args) {
 
-        int[] a = {2, -4, 2 };
-        int[][] edges = { { 0, 1 }, { 1, 2 }};
-
+        int[] a = { 2, -4, 2 };
+        int[][] edges = { { 0, 1 }, { 1, 2 } };
 
         System.out.println(solution(a, edges));
     }
 
     static HashMap<Integer, HashSet<Integer>> line;
-    static long[] dp;
     static boolean[] leaf;
     static long answer;
+    static int[] link;
+    static long[] w;
 
     public static long solution(int[] a, int[][] edges) {
 
@@ -31,10 +31,15 @@ public class so3_copy {
             return -1;
         }
 
+        w = new long[a.length];
+        for(int i = 0; i<a.length; i++){
+            w[i] = a[i];
+        }
+
         answer = 0;
         line = new HashMap<>();
-        dp = new long[a.length];
         leaf = new boolean[a.length];
+        link = new int[a.length];
 
         for (int[] edge : edges) {
             if (!line.containsKey(edge[0])) {
@@ -48,34 +53,36 @@ public class so3_copy {
             line.get(edge[1]).add(edge[0]);
         }
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>((n1, n2) -> {
-            return line.get(n1).size() - line.get(n2).size();
+        PriorityQueue<Integer> pq = new PriorityQueue<>((x, y) -> {
+            return link[x] - link[y];
         });
 
         for (int i = 0; i < a.length; i++) {
             pq.add(i);
+            link[i] = line.get(i).size();
         }
 
         while (pq.size() > 1) {
 
             int now = pq.poll();
 
-            System.out.println("now  = " + now);
-            
-            for(int root : line.get(now)){
-                // if (leaf[root]) {
-                //     continue;
-                // }
-                System.out.println("before  "+root +" " + line.get(root));
-
-                answer += Math.abs(a[now]);
-                a[root] += a[now];
-                line.get(root).remove(now);
-                System.out.println("after  "+root +" " + line.get(root));
-                // break;
+            if (link[now] == 0) {
+                continue;
             }
 
-            // leaf[now] = true;
+            for (int parent : line.get(now)) {
+
+                if (leaf[parent]) {
+                    continue;
+                }
+
+                link[parent]--;
+                answer += Math.abs(w[now]);
+                w[parent] += w[now];
+
+            }
+            
+            leaf[now] = true;
 
         }
 

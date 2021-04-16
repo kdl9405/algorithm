@@ -2,6 +2,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch so3_test",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so3_test",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so3_copy_fin",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so3_copy_fin",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so3_copy2",
+            "request": "launch",
+            "mainClass": "so3_copy2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so3_copy6",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so3_copy6",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so3_copy5",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so3_copy5",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so3_copy2",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so3_copy2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so3_copy4",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so3_copy4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so3_copy3",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so3_copy3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch so2_copy",
+            "request": "launch",
+            "mainClass": "programmers.month2104.so2_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch so4",
             "request": "launch",
             "mainClass": "programmers.month2104.so4",
