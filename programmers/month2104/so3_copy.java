@@ -15,8 +15,8 @@ public class so3_copy {
         System.out.println(solution(a, edges));
     }
 
-    static HashMap<Integer, HashSet<Integer>> line;
-    static long[] dp;
+    static ArrayList<ArrayList<Integer>> line;
+    static long[] w;
     static boolean[] leaf;
     static long answer;
 
@@ -31,52 +31,26 @@ public class so3_copy {
             return -1;
         }
 
+        w = new long[a.length];
+        line = new ArrayList<>();
+        for (int i = 0; i < a.length; i++) {
+            w[i] = a[i];
+            line.add(new ArrayList<>());
+        }
+
         answer = 0;
-        line = new HashMap<>();
-        dp = new long[a.length];
-        leaf = new boolean[a.length];
-
         for (int[] edge : edges) {
-            if (!line.containsKey(edge[0])) {
-                line.put(edge[0], new HashSet<>());
-            }
-            if (!line.containsKey(edge[1])) {
-                line.put(edge[1], new HashSet<>());
-            }
-
+           
             line.get(edge[0]).add(edge[1]);
             line.get(edge[1]).add(edge[0]);
         }
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>((n1, n2) -> {
-            return line.get(n1).size() - line.get(n2).size();
-        });
-
-        for (int i = 0; i < a.length; i++) {
-            pq.add(i);
-        }
-
-        while (pq.size() > 1) {
-
-            int now = pq.poll();
-
-            System.out.println("now  = " + now);
+       
+        while (true) {
             
-            for(int root : line.get(now)){
-                // if (leaf[root]) {
-                //     continue;
-                // }
-                System.out.println("before  "+root +" " + line.get(root));
+            Queue<Integer> queue = new LinkedList<>();
 
-                answer += Math.abs(a[now]);
-                a[root] += a[now];
-                line.get(root).remove(now);
-                System.out.println("after  "+root +" " + line.get(root));
-                // break;
-            }
-
-            // leaf[now] = true;
-
+            for()
         }
 
         return answer;

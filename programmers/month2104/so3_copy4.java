@@ -2,7 +2,7 @@ package programmers.month2104;
 
 import java.util.*;
 
-// 
+//  통과...
 
 public class so3_copy4 {
 
@@ -14,65 +14,59 @@ public class so3_copy4 {
         System.out.println(solution(a, edges));
     }
 
-    static HashMap<Integer, HashSet<Integer>> line;
-    static boolean[] leaf;
+    static ArrayList<ArrayList<Integer>> line;
+    static boolean[] isleaf;
     static long answer;
     static int[] link;
     static long[] w;
 
     public static long solution(int[] a, int[][] edges) {
 
-        int sum = 0;
+        answer = 0;
+
         for (int x : a) {
-            sum += x;
+            answer += x;
         }
 
-        if (sum != 0) {
+        if (answer != 0) {
             return -1;
         }
 
         w = new long[a.length];
-        for(int i = 0; i<a.length; i++){
+        line = new ArrayList<>();
+        for (int i = 0; i < a.length; i++) {
             w[i] = a[i];
+            line.add(new ArrayList<>());
         }
 
-        answer = 0;
-        line = new HashMap<>();
-        leaf = new boolean[a.length];
+        isleaf = new boolean[a.length];
         link = new int[a.length];
 
         for (int[] edge : edges) {
-            if (!line.containsKey(edge[0])) {
-                line.put(edge[0], new HashSet<>());
-            }
-            if (!line.containsKey(edge[1])) {
-                line.put(edge[1], new HashSet<>());
-            }
-
             line.get(edge[0]).add(edge[1]);
             line.get(edge[1]).add(edge[0]);
         }
 
-        PriorityQueue<Integer> pq = new PriorityQueue<>((x, y) -> {
-            return link[x] - link[y];
-        });
-
-        for (int i = 0; i < a.length; i++) {
-            pq.add(i);
+        for (int i = 0; i < link.length; i++) {
             link[i] = line.get(i).size();
         }
 
-        while (pq.size() > 1) {
+        Queue<Integer> queue = new LinkedList<>();
 
-            int now = pq.poll();
-
-            if (link[now] == 0) {
-                continue;
+        for (int i = 0; i < a.length; i++) {
+            if (link[i] == 1) {
+                queue.add(i);
             }
+        }
+
+        while (!queue.isEmpty()) {
+            int now = queue.poll();
+            isleaf[now] = true;
+
 
             for (int parent : line.get(now)) {
 
-                if (leaf[parent]) {
+                if (isleaf[parent]) {
                     continue;
                 }
 
@@ -80,13 +74,12 @@ public class so3_copy4 {
                 answer += Math.abs(w[now]);
                 w[parent] += w[now];
 
+                if (link[parent] == 1) {
+                    queue.add(parent);
+                }
             }
-            
-            leaf[now] = true;
-
         }
 
         return answer;
     }
-
 }
