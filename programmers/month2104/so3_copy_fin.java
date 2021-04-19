@@ -8,17 +8,42 @@ public class so3_copy_fin {
 
     public static void main(String[] args) {
 
-        long beforeUsedMem = Runtime.getRuntime().freeMemory();
+        // 측정하고싶은 코드
 
-        int[] a = { -6, 1, 2, 1, 2 };
-        int[][] edges = { { 0, 1 }, { 3, 4 }, { 2, 3 }, { 0, 3 } };
+        int[] a = { -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1,
+                -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1,
+                -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1,
+                -1, 1, -1, 1, -1, 1, -1, 1, -1, 1, -1, 1 };
+        // int[][] edges = { { 0, 1 }, { 3, 4 }, { 2, 3 }, { 0, 3 } };
+        int[][] edges = new int[99][2];
+        for (int i = 0; i < 99; i++) {
+            edges[i][0] = i;
+            edges[i][1] = i + 1;
+        }
+
+        // Garbage Collection으로 메모리 초기화
+        System.gc();
+
+        // 실행전 메모리 사용량 조회
+        long before = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
 
         System.out.println(solution(a, edges));
 
-        long afterUsedMem = Runtime.getRuntime().freeMemory();
-        long actualMemUsed = afterUsedMem - beforeUsedMem;
+        // Garbage Collection으로 메모리 정리
+        System.gc();
 
-        System.out.println(actualMemUsed);
+        // 실행 후 메모리 사용량 조회
+        long after = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+
+        // 메모리 사용량 측정
+        long usedMemory = (before - after);
+
+        System.out.println("Used Memory : " + usedMemory);
+
+        // 애플리케이션에 할당돈 힙메모리 사이즈. 이 사이즈를 넘어서면 OOM발생
+        long heapSize = Runtime.getRuntime().maxMemory();
+        System.out.println(heapSize / 1024 / 1024);
+
     }
 
     static ArrayList<ArrayList<Integer>> line;
@@ -57,18 +82,18 @@ public class so3_copy_fin {
 
         long temp = 0;
 
-      /*   for (int next : line.get(n)) {
-            if (next != parent) {
-                temp += dfs(next, n);
-            }
-        } */
-
-        for (int i = 0; i < line.get(n).size(); i++) {
-            int next = line.get(n).get(i);
+        for (int next : line.get(n)) {
             if (next != parent) {
                 temp += dfs(next, n);
             }
         }
+
+        // for (int i = 0; i < line.get(n).size(); i++) {
+        //     int next = line.get(n).get(i);
+        //     if (next != parent) {
+        //         temp += dfs(next, n);
+        //     }
+        // }
 
         if (parent != -1) {
             w[parent] += w[n];
