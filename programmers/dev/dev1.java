@@ -33,11 +33,14 @@ public class dev1 {
         answer[0] = 7 - (mathes + zero);
         answer[1] = 7 - mathes;
 
-        if (answer[0] < 0) {
-            answer[0] = 0;
+        if (answer[0] < 1) {
+            answer[0] = 1;
+        }else if(answer[0] >= 6){
+            answer[0] = 6;
         }
-        if (answer[1] < 0) {
-            answer[0] = 0;
+        
+        if (answer[1] >= 6) {
+            answer[1] = 6;
         }
 
         return answer;
