@@ -3,132 +3,86 @@ package BOJ;
 import java.util.*;
 import java.io.*;
 
+/* 
+    성냥개비
+
+    // max = 자리수를 가장 많게!!
+    // min = 자리수를 가장 적게!!
+*/
+
 public class BOJ3687 {
 
-    static StringBuilder sb, result = new StringBuilder();
-    static int min;
-    static int max;
-    static int[] minarr;
-    static int[] num;
+    static int[] minArr = { 0, 0, 1, 7, 4, 2, 0, 8, 10 };
+    static long[] min_DP;
+    static String max;
+    static long min;
 
     public static void main(String[] args) throws IOException {
+
+        char a = '0';
+        char b = '1';
+
+        System.out.println(b-'0');
+
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        num = new int[] { 6, 2, 5, 5, 4, 5, 6, 3, 7, 6 };
-        minarr = new int[101];
-
-        Arrays.fill(minarr, -1);
-
         int t = Integer.parseInt(br.readLine());
+
+        min_DP = new long[101];
+        min_DP[6] = 6;
+        StringBuilder sb = new StringBuilder();
 
         while (t-- > 0) {
             int n = Integer.parseInt(br.readLine());
 
-            sb = new StringBuilder();
+            // 최소값
 
-            findMin(n);
+            min = findMin(n);
 
-            result.append(sb+" ");
+            max = findMax(n);
 
-            sb = new StringBuilder();
-
-            findMax(n);
-
-            result.append(sb+"\n");
-
+            sb.append(min + " " + max + "\n");
         }
 
-        System.out.println(result);
+        System.out.println(sb.toString());
     }
 
-    static void findMax(int n){
-        if (n == 0) {
-            return;
-        }
-        int temp = 0;
-        int temp_max = 0;
-        max = 0;
+    static long findMin(int n) {
 
-        for(int i = 0; i<10; i++){
-            if (n<num[i]) {
-                continue;
-            }
-            if (sb.length()==0 && i==0) {
-                continue;
-            }
-            temp_max = (n-num[i])/2;
-            if (max <= temp_max) {
-                max = temp_max;
-                temp = i;
-            }
+        if (min_DP[n] != 0) {
+            return min_DP[n];
         }
 
-        sb.append(temp);
-        findMax(n-num[temp]);
+        if (n < 9) {
+            return min_DP[n] = minArr[n];
+        }
 
+        min_DP[n] = findMin(n - 2) * 10 + minArr[2];
+
+        for (int i = 3; i < 8 && n - i >= 2; i++) {
+            min_DP[n] = Math.min(min_DP[n], findMin(n - i) * 10 + minArr[i]);
+        }
+
+        return min_DP[n];
     }
 
-    static void findMin(int n){
-        if (n == 0) {
-            return;
+    static String findMax(int n) {
+
+        StringBuilder temp = new StringBuilder();
+
+        if (n % 2 == 0) {
+            temp.append(1);
+        } else {
+            temp.append(7);
         }
 
-        int temp = 0;
-        int temp_min = 0;
-        min = Integer.MAX_VALUE;
-
-        for(int i = 0; i<10; i++){
-            if (sb.length() == 0 && i==0) {
-                continue;
-            }
-            if (n < num[i]) {
-                continue;
-            }
-
-            temp_min = getMin(n-num[i]);
-
-            if (temp_min == 0) {
-                continue;
-            }
-            if (min > temp_min) {
-                min = temp_min;
-                temp = i;
-            }
+        n /= 2;
+        while (n-- > 1) {
+            temp.append(1);
         }
-        sb.append(temp);
-        findMin(n-num[temp]);
+
+        return temp.toString();
     }
-
-    
-
-    static int getMin(int i){
-        if (i == 0) {
-            return -1;
-        }
-        if (i == 1) {
-            return 0;
-        }
-        if (i <= 7 ) {
-            return 1;
-        }
-
-        if (minarr[i] != -1) {
-            return minarr[i];
-        }
-
-        minarr[i] = Integer.MAX_VALUE;
-        for(int j = 0; j<10; j++){
-            if (i-num[j] < 2) {
-                continue;
-            }
-            minarr[i] = Math.min(minarr[i],getMin(i-num[j])+1);
-        }
-        return minarr[i];
-
-    }
-
-
-   
-
 
 }
