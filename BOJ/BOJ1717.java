@@ -9,7 +9,6 @@ import java.util.*;
 public class BOJ1717 {
 
     static int[] group;
-
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
