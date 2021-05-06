@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch pro110_copy",
+            "request": "launch",
+            "mainClass": "programmers.pro110_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch pro110",
             "request": "launch",
             "mainClass": "programmers.pro110",

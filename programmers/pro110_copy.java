@@ -25,7 +25,7 @@ public class pro110_copy {
         size = banned_id.length;
 
         for (int i = 0; i < size; i++) {
-            banned_id[i] = banned_id[i].replace('*', '.');
+            banned_id[i] = banned_id[i].replaceAll("*", "\\.");    
         }
 
         visit = new boolean[user_id.length];
@@ -34,7 +34,7 @@ public class pro110_copy {
 
         arr = new String[size];
 
-        dfs(0, user_id, banned_id);
+     //   dfs(0, user_id, banned_id);
 
         System.out.println(set);
 
