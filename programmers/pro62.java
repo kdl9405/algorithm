@@ -1,3 +1,5 @@
+package programmers;
+
 import java.util.*;
 
 /**
@@ -26,6 +28,8 @@ public class pro62 {
                 sb.append(" " + expression.charAt(i) + " ");
             }
         }
+
+        System.out.println(sb.toString());
 
         String[] exp = sb.toString().split(" ");        
 
