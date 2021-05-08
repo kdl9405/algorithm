@@ -6,7 +6,7 @@ import java.util.*;
     [카카오 인턴] 동굴 탐험
 
     1) 부모노드 저장,  / order 저장
-    2) 
+    2) order의 앞순서와 
 
 */
 public class pro183 {
@@ -55,7 +55,7 @@ public class pro183 {
             }
         }
 
-        for(int[] o : order){
+        for (int[] o : order) {
             queue = new LinkedList<>();
             if (check[o[1]]) {
                 continue;
@@ -63,9 +63,9 @@ public class pro183 {
 
             visit = new boolean[n];
             visit[o[1]] = true;
-           
+
             while (!queue.isEmpty()) {
-                
+
                 int x = queue.poll();
                 check[x] = true;
 
@@ -78,13 +78,11 @@ public class pro183 {
                 }
 
                 if (answer) {
-                    
+
                 }
-            } 
+            }
 
         }
-
-      
 
         return answer;
     }
@@ -93,8 +91,29 @@ public class pro183 {
     static boolean[] visit, check;
     static HashMap<Integer, Integer> before;
     static boolean answer;
-    static HashSet<Integer> set; 
+    static HashSet<Integer> set;
 
-   
+    static List<Integer> findParent(int x) {
+        List<Integer> list = new LinkedList<>();
+
+        if (before.containsKey(x)) {
+            if (!visit[before.get(x)]) {
+                visit[before.get(x)] = true;
+                list.add(before.get(x));
+            }
+        }
+
+        while (parent[x] != 0) {
+            x = parent[x];
+            if (before.containsKey(x)) {
+                if (!visit[before.get(x)]) {
+                    visit[before.get(x)] = true;
+                    list.add(before.get(x));
+                }
+            }
+        }
+
+        return list;
+    }
 
 }

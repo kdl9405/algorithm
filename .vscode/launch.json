@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch solution5",
+            "request": "launch",
+            "mainClass": "kakao.intern21.solution5",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch solution4",
+            "request": "launch",
+            "mainClass": "kakao.intern21.solution4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch solution3",
+            "request": "launch",
+            "mainClass": "kakao.intern21.solution3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch solution2",
+            "request": "launch",
+            "mainClass": "kakao.intern21.solution2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch pro183",
             "request": "launch",
             "mainClass": "programmers.pro183",
