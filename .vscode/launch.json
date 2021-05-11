@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BOJ10282",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ10282",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BOJ4386",
             "request": "launch",
             "mainClass": "BOJ.BOJ4386",
