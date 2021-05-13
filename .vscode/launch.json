@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch sol3_copy",
+            "request": "launch",
+            "mainClass": "programmers.month2105.sol3_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch sol3",
+            "request": "launch",
+            "mainClass": "programmers.month2105.sol3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch sol2_copy2",
+            "request": "launch",
+            "mainClass": "programmers.month2105.sol2_copy2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch sol2_copy",
+            "request": "launch",
+            "mainClass": "programmers.month2105.sol2_copy",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch sol2",
+            "request": "launch",
+            "mainClass": "programmers.month2105.sol2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch sol1",
+            "request": "launch",
+            "mainClass": "programmers.month2105.sol1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BOJ11444",
             "request": "launch",
             "mainClass": "BOJ.BOJ11444",
