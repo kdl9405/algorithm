@@ -2,6 +2,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BOJ11444",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ11444",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ17219",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ17219",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ16928",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ16928",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ11403",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ11403",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ9019",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ9019",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ2239",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ2239",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BOJ14500",
             "request": "launch",
             "mainClass": "BOJ.BOJ14500",
