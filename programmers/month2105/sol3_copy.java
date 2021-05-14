@@ -6,7 +6,7 @@ public class sol3_copy {
 
     public static void main(String[] args) {
 
-        String[] s = {"0111111010"};
+        String[] s = {"011010"};
 
         String[] answer = solution(s);
 
