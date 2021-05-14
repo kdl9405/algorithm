@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BOJ2042_copy2",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ2042_copy2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ2042",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ2042",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch sol3_copy",
             "request": "launch",
             "mainClass": "programmers.month2105.sol3_copy",
