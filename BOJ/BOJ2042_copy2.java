@@ -6,7 +6,7 @@ import java.util.*;
 /* 
     구간 합 구하기
 
-    // 배열로 구현한 세그먼트 트리
+    // 세그먼트 트리 + 비스마스킹
 */
 public class BOJ2042_copy2 {
 
