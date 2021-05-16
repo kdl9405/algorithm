@@ -8,7 +8,7 @@ import java.io.*;
     x 를 2진수로 표현했을 때의 1의 개수
 */
 
-public class BOJ1094 {
+public class BOJ1094_copy2 {
     
     public static void main(String[] args) throws NumberFormatException, IOException{
 
@@ -16,15 +16,9 @@ public class BOJ1094 {
 
         int x = Integer.parseInt(br.readLine());
 
-        int count = 0;
+        String stick = Integer.toBinaryString(x).replaceAll("0", "");
 
-        while (x>0) {
-            if (x%2 == 1) {
-                count++;
-            }
-            x/=2;
-        }
-
-        System.out.println(count);        
+        System.out.println(stick.length());
+        
     }
 }

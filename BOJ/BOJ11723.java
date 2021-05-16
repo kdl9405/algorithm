@@ -1,66 +1,73 @@
 package BOJ;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
+import java.io.*;
 
 /* 
 
     집합
 
+    비트 마스킹
+
 */
 
 public class BOJ11723 {
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
         int t = Integer.parseInt(br.readLine());
+        int S = 0;
 
-        boolean[] set = new boolean[21];
-        StringBuilder sb= new StringBuilder();
+        while (t-- > 0) {
 
-        for(int i = 0; i<t; i++){
+            String st = br.readLine();
 
-            String operation = br.readLine();
+            String[] str = st.split(" ");
 
-            if (operation.contains("all")) {
-                Arrays.fill(set, true);
-            }else if (operation.contains("empty")) {
-                Arrays.fill(set, false);
-            }else {
-                String[] detail = operation.split(" ");
-                int num = Integer.parseInt(detail[1]);
-                switch (detail[0]) {
-                    case "add":
-                        set[num] = true;
-                        break;
-                
-                    case "remove":
-                        set[num] = false;                  
-                        break;
-                    
-                    case "check":
-                        if (set[num]){
-                            sb.append("1").append("\n");
-                        }else {
-                            sb.append("0").append("\n");
-                        }
-                        break;
-                
-                    case "toggle":
-                        if (set[num]){
-                            set[num] = false;
-                        }else {
-                            set[num] = true;
-                        }
-                        break;
+
+            switch (str[0]) {
+                case "add":
+
+                    S |= (1 << Integer.parseInt(str[1])-1);
+                    break;
+
+                case "remove":
+
+                    S &= ~(1 << Integer.parseInt(str[1])-1);
+                    break;
+
+                case "check":
+
+                    if ((S & (1 << Integer.parseInt(str[1])-1)) != 0) {
+                        sb.append("1\n");
+                    } else {
+                        sb.append("0\n");
                     }
+
+                    break;
+                case "toggle":
+
+                    S ^= (1 << Integer.parseInt(str[1])-1);
+
+                    break;
+
+                case "all":
+
+                    S = (1<<21)-1 ;
+
+                    break;
+                case "empty":
+
+                    S = 0;
+
+                    break;
             }
+
+
         }
+
 
         System.out.println(sb.toString());
     }
 }
-
