@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch g6",
+            "request": "launch",
+            "mainClass": "gooorm.g6",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch g1",
+            "request": "launch",
+            "mainClass": "gooorm.g1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BOJ10775",
             "request": "launch",
             "mainClass": "BOJ.BOJ10775",
