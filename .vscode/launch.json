@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BOJ14267",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ14267",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ9081",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ9081",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch BOJ10025",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ10025",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch test2",
+            "request": "launch",
+            "mainClass": "gooorm.test2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch t1",
             "request": "launch",
             "mainClass": "gooorm.t1",
