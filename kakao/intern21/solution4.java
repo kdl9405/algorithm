@@ -2,6 +2,19 @@ package kakao.intern21;
 
 import java.util.*;
 
+/* 
+
+    함정 밟으면, 길의 방향이 바뀜?
+
+    테스트 케이스 2개 통과 못함.
+
+
+    1) 정상길, 비정상길 두개를 저장
+    2) 함정의 발동 여부를 비트마스크로 저장
+    3) 다익스트라를 통해서 매 함정의 발동여부를 파악하고, 거기에 따라 길을 선택하여 탐색
+
+*/
+
 public class solution4 {
 
     public static void main(String[] args) {
