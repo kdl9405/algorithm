@@ -5,12 +5,19 @@ import java.util.Queue;
 
 public class solution2 {
 
+    // 각 P의 거리가 2 이하면 0 아니면 1?
+    // 체크를 아래바향과, 오른쪽 방향만 했으면 더 좋았을 듯.
+
     public static void main(String[] args) {
         String[][] places = { { "POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP" },
                 { "POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP" }, { "PXOPX", "OXOXP", "OXPXX", "OXXXP", "POOXX" },
                 { "OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO" }, { "PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP" } };
 
-        solution(places);
+        int[] answer = solution(places);
+
+        for(int a: answer){
+            System.out.println(a);
+        }
 
     }
 
@@ -35,12 +42,11 @@ public class solution2 {
             map[i] = place[i].toCharArray();
         }
 
-
         for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 5; j++) {
                 if (map[i][j] == 'P') {
 
-                    System.out.println(i+" "+j);
+                    // System.out.println(i+" "+j);
 
                     Queue<int[]> queue = new LinkedList<>();
                     queue.add(new int[] { i, j });
