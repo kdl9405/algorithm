@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BOJ10819",
+            "request": "launch",
+            "mainClass": "BOJ.BOJ10819",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch solution4_copy",
             "request": "launch",
             "mainClass": "kakao.intern21.solution4_copy",
