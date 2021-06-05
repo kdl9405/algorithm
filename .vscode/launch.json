@@ -2,6 +2,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch finIntern4",
+            "request": "launch",
+            "mainClass": "Line.finIntern4",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch finIntern3",
+            "request": "launch",
+            "mainClass": "Line.finIntern3",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch finIntern2",
+            "request": "launch",
+            "mainClass": "Line.finIntern2",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
+            "name": "Launch finIntern1",
+            "request": "launch",
+            "mainClass": "Line.finIntern1",
+            "projectName": "algo_243e4c54"
+        },
+        {
+            "type": "java",
             "name": "Launch BOJ2234",
             "request": "launch",
             "mainClass": "BOJ.BOJ2234",
