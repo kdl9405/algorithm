@@ -12,6 +12,7 @@ public class pro186 {
 
     public String[] solution(String[] s) {
         String[] answer = {};
+        
         return answer;
     }
 }
