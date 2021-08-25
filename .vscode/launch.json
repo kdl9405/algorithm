@@ -2,13 +2,20 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch pro188",
             "request": "launch",
             "mainClass": "programmers.pro188",
+=======
+            "name": "Launch d1",
+            "request": "launch",
+            "mainClass": "codility.d1",
+>>>>>>> abf67b68205f4738cbedf90a1a76ff119a351670
             "projectName": "algo_243e4c54"
         },
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch pro189",
             "request": "launch",
             "mainClass": "programmers.pro189",
@@ -47,6 +54,11 @@
             "name": "Launch test1",
             "request": "launch",
             "mainClass": "toss.test1",
+=======
+            "name": "Launch StackApp",
+            "request": "launch",
+            "mainClass": "stack.StackApp",
+>>>>>>> abf67b68205f4738cbedf90a1a76ff119a351670
             "projectName": "algo_243e4c54"
         },
         {
