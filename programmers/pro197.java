@@ -45,9 +45,6 @@ public class pro197 {
 
             String c = Character.toString(msg.charAt(i));
 
-            System.out.println(w+" " +c +" "+ dictionary.get(w));
-
-
             if (!dictionary.containsKey(w+c)) {
                 dictionary.put(w+c, x);
                 x++;
@@ -72,8 +69,6 @@ public class pro197 {
                     w += c;
                 }
             }
-
-            System.out.println("w = " + w);
 
         }
 
