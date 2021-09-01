@@ -30,8 +30,6 @@ public class pro198 {
             }else{
                 answer[i] = trie.find(queries[i], 0);
             }
-
-            System.out.println("!!! " + answer[i]);
         }
         
 
@@ -58,15 +56,14 @@ public class pro198 {
                 }
 
                 node = node.child[i];
-                lengthWord.put(len, lengthWord.getOrDefault(len, 0) + 1);
+                node.lengthWord.put(len, node.lengthWord.getOrDefault(len, 0) + 1);
             }
         }
 
+
+
         int find(String s, int i) {
             if (s.charAt(i) == '?') {
-
-                System.out.println(s +" " + i);
-
 
                 return lengthWord.getOrDefault(s.length(), 0);
             }
@@ -75,13 +72,13 @@ public class pro198 {
 
             if (child[c] == null) {
 
-                System.out.println(s +" " + i);
-
                 return 0;
             }else {
                 return child[c].find(s, i+1);
             }
         }
+
+      
     }
 
 }
