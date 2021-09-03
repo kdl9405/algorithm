@@ -20,43 +20,33 @@ public class BOJ3673 {
         while (c-- > 0) {
 
             int[] option = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            int d = option[0];
+            int n = option[1];
 
             long[] number = Arrays.stream(br.readLine().split(" ")).mapToLong(Long::parseLong).toArray();
 
-            sum = new long[option[1]][option[1]];
+            long sum = 0;
+            long[] mod = new long[d];
 
-            for(int i = 0; i<option[1]; i++){
-                sum[i][i] = number[i];
+            for(int i = 0; i<n; i++){
+                sum += number[i];
+                mod[(int)(sum%d)]++;
             }
 
-            int count = 0;
+            long count = mod[0];
+
+            for(int i = 0; i<d; i++){
+                count+= (mod[i] * (mod[i]-1)/2);
+            }
             
-            for(int i = 0; i<option[1]; i++){
-                for(int j = i; j<option[1]; j++){
-                    long s = findSum(i, j);
-                    if (s>=option[0] && s%option[0] == 0) {
-                        count++;
-                    }
-                }
-            }
-             sb.append(count).append("\n");
+            sb.append(count).append("\n");
+
+
         }
 
         System.out.println(sb.toString().trim());
 
     }
 
-
-    static long[][] sum;
-
-    static long findSum(int start, int end){
-
-        if (sum[start][end] != 0) {
-            return sum[start][end];
-        }
-
-        return sum[start][end] = findSum(start, end-1)+sum[end][end];
-
-    }
 
 }

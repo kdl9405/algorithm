@@ -25,39 +25,35 @@ public class BOJ3673_copy {
 
             long[] number = Arrays.stream(br.readLine().split(" ")).mapToLong(Long::parseLong).toArray();
 
-            long sum = 0;
-            for(int i = 0; i<option[1]; i++){
+            long[] sum = new long[option[1]+1];
 
-                sum+= number[i];
+            for(int i = 0; i<option[1]; i++){
+                sum[i+1] = sum[i]+number[i];
             }
 
             int count = 0;
 
             for(int i = 0; i<option[1]; i++){
-                if (i>0) {
-                    sum -= number[i-1];
-                }
+                for(int j = i+1; j<=option[1]; j++){
+                    long temp = sum[j] - sum[i];
 
-                long temp = sum;
-                if (sum>=option[0] &&  sum % option[0] == 0) {
-                    count++;
-                }
-
-                for(int j = option[1]-1; j>i; j--){
-                    temp -= number[j];
-                    if (temp < option[0]) {
-                        break;
-                    }
-                    if (temp >= option[0] && temp % option[0] == 0) {
+                    if (temp>=option[0] && temp%option[0] == 0) {
                         count++;
                     }
                 }
             }
 
             sb.append(count).append("\n");
+
+
         }
 
         System.out.println(sb.toString().trim());
 
     }
+
+
+    static long[] sum;
+
+
 }
