@@ -40,7 +40,7 @@ public class BOJ15989 {
             return 0;
         }
 
-        if (n == 0 && x != 3) {
+        if (n == x) {
             return 1;
         }
 
