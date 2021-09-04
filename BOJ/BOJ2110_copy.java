@@ -3,7 +3,10 @@ package BOJ;
 import java.util.*;
 import java.io.*;
 
-public class BOJ2110 {
+/* 
+    재채점?
+*/
+public class BOJ2110_copy {
     
     public static void main(String[] args) throws IOException{
         
@@ -21,7 +24,7 @@ public class BOJ2110 {
 
         Arrays.sort(house);
 
-        long max = house[n-1]-house[0];
+        long max = house[n-1]/c;
         long min = 1;
         long answer = 1;
 
