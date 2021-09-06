@@ -1,3 +1,5 @@
+package programmers;
+
 import java.util.Arrays;
 
 /**
@@ -26,13 +28,9 @@ public class pro78 {
             double startS = times[i][1];
             double endS = times[i][1] + 1.0 ;
 
-            System.out.println("start  : "+startS +"  end : " + endS);
-
             int count = 1;
             for (int j = 0; j < times.length; j++) {      
                 
-                System.out.println("j0  : "+times[j][0] +"  j1 : " + times[j][1]);
-
                 if (times[j][0] < endS && times[j][1] > startS) {
                     count++;
                 }
@@ -42,10 +40,6 @@ public class pro78 {
             }
             answer = Math.max(answer, count);
 
-        }
-
-        for(double[] d : times){
-            System.out.println(d[0] +"   " + d[1]);
         }
 
         return answer;
