@@ -14,7 +14,7 @@ public class pro199 {
 
     public static void main(String[] args) {
 
-        String[] lines = {"2016-09-15 01:00:04.001 2.0s", "2016-09-15 01:00:07.000 2s"};
+        String[] lines = { "2016-09-15 01:00:04.001 2.0s", "2016-09-15 01:00:07.000 2s" };
 
         System.out.println(solution(lines));
 
@@ -23,78 +23,71 @@ public class pro199 {
     public static int solution(String[] lines) {
         int answer = 1;
 
-        timeTable = new ArrayList<>();
+        double[][] timeTabe = maekTable(lines);
 
-        for (String line : lines) {
-            toTimeTable(line);
-        }
+        Arrays.sort(timeTabe, (t1,t2) ->{
 
-        Collections.sort(timeTable, (t1, t2) -> {
-
-            if (t1[0] == t2[0]) {
-                return (int) (t1[1] - t2[1]);
+            if (t1[0] == t2[0] ) {
+                return (t1[1] - t2[1] > 0)? 1 : -1;
             }
 
-            return (int) (t1[0] * 100 - t2[0] * 100);
+            return (t1[0] - t2[0] > 0)? 1 : -1;
         });
 
 
-        for(double[] t : timeTable){
-            System.out.println(t[0] + " ~ " + t[1]);
+        for(double[] time : timeTabe){
+            System.out.println(time[0] + " ~ "+ time[1]);
         }
 
-        double start = 0;
-        double end = 0;
-        for (int i = 0; i < timeTable.size(); i++) {
-            int count = 0;
 
-            if (timeTable.get(i)[1] == 1) {
+        int count = 0;
 
-                start = timeTable.get(i)[0];
-                end = start + 1;
+        for(int i = 0; i<timeTabe.length; i++){
 
-                System.out.println(start + " " + end);
+            double start = timeTabe[i][1];
+            double end = start+1;
+            count = 0;
 
-                count++;
+            System.out.println("time = " +start +" ~ "+ end);
 
-                for (int j = i + 1; j < timeTable.size(); j++) {
-                    if (timeTable.get(j)[0] >= end) {
-                        break;
-                    }
+            for(int j = 0; j<timeTabe.length; j++){
 
-                    System.out.println(timeTable.get(j)[0] +" > "+ end);
-
-                    if (timeTable.get(j)[1] == 0) {
-                        count++;
-                    }
+                if (timeTabe[j][0] >= end) {
+                    break;
                 }
-                answer = Math.max(answer, count);
+
+                if (timeTabe[j][0] < end && timeTabe[j][1] >= start) {
+
+                    System.out.println("+++ " + j);
+                    count++;
+                }
 
             }
 
+            answer =Math.max(answer, count);
         }
-
+       
         return answer;
     }
 
-    static List<double[]> timeTable;
+    static double[][] maekTable(String[] lines) {
+        double[][] table = new double[lines.length][2];
 
-    static void toTimeTable(String line) {
+        for (int i = 0; i < lines.length; i++) {
+            String[] line = lines[i].split(" ");
 
-        String[] l = line.split(" ");
+            String[] time = line[1].split(":");
+            double end = Double.parseDouble(time[0]) * 60;
+            end = (end + Double.parseDouble(time[1])) * 60;
+            end += Double.parseDouble(time[2]);
 
-        String[] time = l[1].split(":");
+            double start = end - (Double.parseDouble(line[2].replaceAll("s", "")));
 
-        double end = (Integer.parseInt(time[0]) * 360) + (Integer.parseInt(time[1]) * 60) + Double.parseDouble(time[2]);
+            table[i][0] = (start*1000+1)/1000;
+            table[i][1] = end;
+        }
 
-       // double start = end - Double.parseDouble(l[2].substring(0, l[2].length() - 1)) * 1000 +1;
-
-        double start = ((end - Double.parseDouble(l[2].substring(0, l[2].length() - 1)))*1000+1)/1000.0;
-
-        timeTable.add(new double[] { start, 0 });
-        timeTable.add(new double[] { end, 1 });
-
-        return;
+        return table;
     }
 
 }
