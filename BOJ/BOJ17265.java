@@ -26,7 +26,7 @@ public class BOJ17265 {
         min = Integer.MAX_VALUE;
         max = Integer.MIN_VALUE;
 
-        find(0, 0, 0, ' ');
+        find(0, 0, Integer.parseInt(map[0][0]), ' ');
 
         System.out.println(max + " " + min);
 
@@ -43,20 +43,27 @@ public class BOJ17265 {
 
     static void find(int x, int y, int v, char f) {
 
+        if (x == N - 1 && y == N - 1) {
+            min = Math.min(min, v);
+            max = Math.max(max, v);
+
+            return;
+        }
+
         for (int i = 0; i < 2; i++) {
             int nx = x + dx[i];
             int ny = y + dy[i];
 
             if (nx < N && ny < N) {
 
-                if (map[x][y].charAt(0)=='+') {
+                if (map[nx][ny].charAt(0) == '+') {
 
                     find(nx, ny, v, '+');
 
-                } else if (map[x][y].equals("-")) {
+                } else if (map[nx][ny].charAt(0) == '-') {
                     find(nx, ny, v, '-');
 
-                } else if (map[x][y].equals("*")) {
+                } else if (map[nx][ny].charAt(0) == '*') {
                     find(nx, ny, v, '*');
 
                 } else {
@@ -66,29 +73,27 @@ public class BOJ17265 {
                     switch (f) {
                         case '+':
 
-                            v += num;
+                            find(nx, ny, v + num, f);
 
                             break;
 
                         case '-':
 
-                            v -= num;
+                            find(nx, ny, v - num, f);
 
                             break;
                         case '*':
 
-                            v *= num;
+                            find(nx, ny, v * num, f);
                             break;
+
                     }
 
-                    find(nx, ny, v, f);
-
                 }
-            } else if (nx == N && ny == N) {
-                max = Math.max(max, v);
-                min = Math.min(min, v);
             }
         }
+
+        return;
 
     }
 }
