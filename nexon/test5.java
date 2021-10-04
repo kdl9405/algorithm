@@ -2,8 +2,6 @@ package nexon;
 
 import java.util.*;
 
-import javax.security.auth.x500.X500PrivateCredential;
-
 
 public class test5 {
 
