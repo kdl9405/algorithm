@@ -1,68 +1,91 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+package BOJ;
+
+import java.io.*;
+import java.util.*;
 
 /**
  * BOJ18258
+ * 
+ * Deque를 이용해서 구현 -  
+ *      java 8 - 1276ms
+ *      java 11 - 1480ms
  */
 public class BOJ18258 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        int N = Integer.parseInt(br.readLine());
+
         StringBuilder sb = new StringBuilder();
         StringTokenizer st;
 
-        Queue<Integer> queue = new LinkedList<>();
+        Deque<Integer> deque = new LinkedList<>();
 
-        int n = Integer.parseInt(br.readLine());
-        int last = 0;
+        while (N-- > 0) {
 
-        while (n-- > 0) {
             st = new StringTokenizer(br.readLine());
+            String f = st.nextToken();
 
-            switch (st.nextToken()) {
+            switch (f) {
                 case "push":
-                    last = Integer.parseInt(st.nextToken());
-                    queue.offer(last);
+
+                    deque.addLast(Integer.parseInt(st.nextToken()));
+
                     break;
+
                 case "pop":
-                    if (queue.isEmpty()) {
-                        sb.append("-1" + "\n");
+
+                    if (deque.isEmpty()) {
+                        sb.append("-1");
                     } else {
-                        sb.append(queue.poll() + "\n");
+                        sb.append(deque.pollFirst());
                     }
+                    sb.append("\n");
+
                     break;
                 case "size":
-                    sb.append(queue.size() + "\n");
+
+                    sb.append(deque.size()).append("\n");
+
                     break;
                 case "empty":
-                    if (queue.isEmpty()) {
-                        sb.append("1" + "\n");
+
+                    if (deque.isEmpty()) {
+                        sb.append("1");
                     } else {
-                        sb.append("0" + "\n");
+                        sb.append("0");
                     }
+                    sb.append("\n");
+
                     break;
                 case "front":
-                    if (queue.isEmpty()) {
-                        sb.append("-1" + "\n");
+
+                    if (deque.isEmpty()) {
+                        sb.append("-1");
                     } else {
-                        sb.append(queue.peek() + "\n");
+                        sb.append(deque.peekFirst());
                     }
+                    sb.append("\n");
+
                     break;
                 case "back":
-                    if (queue.isEmpty()) {
-                        sb.append("-1" + "\n");
+
+                    if (deque.isEmpty()) {
+                        sb.append("-1");
                     } else {
-                        sb.append(last + "\n");
+                        sb.append(deque.peekLast());
                     }
+
+                    sb.append("\n");
+
                     break;
             }
+
         }
 
-        System.out.println(sb);
+        System.out.println(sb.toString().trim());
+
     }
 }
