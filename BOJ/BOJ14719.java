@@ -25,6 +25,7 @@ public class BOJ14719 { // left을 찾고 right을 찾아 가운데 값을 계�
         int total = 0;
 
         for (int i = 1; i < w - 1; i++) {
+
             int left = 0;
             int right = 0;
             for(int j = 0; j<i; j++){
@@ -32,6 +33,7 @@ public class BOJ14719 { // left을 찾고 right을 찾아 가운데 값을 계�
                     left = arr[j];
                 }
             }
+
             for(int j = i+1; j<w; j++){
                 if (arr[j] > right) {
                     right = arr[j];
