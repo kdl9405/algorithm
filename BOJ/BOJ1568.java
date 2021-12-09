@@ -20,6 +20,7 @@ public class BOJ1568 {
             }            
             n-=k;            
         }
+        sc.close();
         
         System.out.println(c);
         
