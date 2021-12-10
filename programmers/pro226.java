@@ -4,103 +4,85 @@ import java.util.Arrays;
 
 /* 
     공 이동 시뮬레이션
+
+    // 목표지점에 도착할 공들의 범위를 역으로 계산.. 
 */
 public class pro226 {
 
     public static void main(String[] args) {
 
+        int[][] queries = { {3,1},{2,2},{1,1},{2,3},{0,1},{2,1} };
+
+        System.out.println(solution(2, 5, 0, 1, queries));
+
+
+
     }
 
-    public long solution(int n, int m, int x, int y, int[][] queries) {
+    private static long solution(int n, int m, int x, int y, int[][] queries) {
         long answer = -1;
 
-        long[] row = new long[m];
-        long[] col = new long[n];
-
-        Arrays.fill(row, 1L);
-        Arrays.fill(col, 1L);
+        long r1 = x;
+        long r2 = x;
+        long c1 = y;
+        long c2 = y;
 
         for (int i = queries.length - 1; i >= 0; i--) {
 
-            int dx = queries[i][1];
+            System.out.println(r1 + " " + r2 + " " + c1 +" " +c2);
 
-            switch (queries[i][0]) {
-            case 0:
-                for (int j = m - 1; j >= 0; j--) {
+            int dir = queries[i][0];
+            int dist = queries[i][1];
 
-                    if (row[j] == 0) {
-                        continue;
-                    }
-                    // int nj = Math.min(m - 1, j + dx);
-                    // if (j != nj) {
-                    //     row[nj] += row[j];
-                    //     row[j] = 0;
-                    // }
+            switch (dir) {
+                case 0:
 
-                    int nj = j+dx;
-                    if (condition) {
-                        
+                    if (c1 != 0) {
+                        c1 += dist;
                     }
 
+                    c2 = Math.min(c2 + dist, m - 1);
 
-                }
-                break;
+                    break;
 
-            case 1:
+                case 1:
 
-                for (int j = 0; j < m; j++) {
-                    if (row[j] == 0) {
-                        continue;
+                    c1 = Math.max(c1 - dist, 0);
+
+                    if (c2 != m - 1) {
+                        c2 -= dist;
                     }
 
-                    int nj = Math.max(0, j - dx);
-                    if (j != nj) {
-                        row[nj] += row[j];
-                        row[j] = 0;
-                    }
-                }
+                    break;
+                case 2:
 
-                break;
-            case 2:
-
-                for (int j = n - 1; j >= 0; j--) {
-                    if (col[j] == 0) {
-                        continue;
-                    }
-                    int nj = Math.min(n - 1, j + dx);
-                    if (j != nj) {
-                        col[nj] += col[j];
-                        col[j] = 0;
-                    }
-                }
-
-                break;
-            case 3:
-                for (int j = 0; j < n; j++) {
-                    if (col[j] == 0) {
-                        continue;
+                    if (r1 != 0) {
+                        r1 += dist;
                     }
 
-                    int nj = Math.max(0, j - dx);
-                    if (j != nj) {
-                        col[nj] += col[j];
-                        col[j] = 0;
-                    }
-                }
+                    r2 = Math.min(r2 + dist, n - 1);
 
-                break;
+                    break;
+                case 3:
+
+                    r1 = Math.max(r1 - dist, 0);
+
+                    if (r2 != n - 1) {
+                        r2 -= dist;
+                    }
+
+                    break;
             }
+
+            if (r1 >= n || r2 < 0 || c1 >= m || c2 < 0) {
+                return answer;
+            }
+
         }
 
-        for(int i = 0; i<m; i++){
-            System.out.print(row[i]+" ");
-        }
-        System.out.println();
-        for(int i = 0; i<n; i++){
-            System.out.println(col[i]+" ");
-        }
+        answer = (r2 - r1 + 1) * (c2 - c1 + 1);
 
-        return answer = col[x] * row[y];
+        return answer;
 
     }
 }
