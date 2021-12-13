@@ -18,19 +18,26 @@ public class BOJ15684 {
         M = Integer.parseInt(st.nextToken());
         H = Integer.parseInt(st.nextToken());
 
-        board = new boolean[H + 1][N + 1]; // false : 선없음 , true 오른쪽으로 연결
+        board = new int[H + 1][N + 1]; // 0 : 선없음 , 1 : 왼쪽으로 연결, 2 : 오른쪽으로 연결
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            board[a][b] = true;
+            board[a][b] = 2;
+            board[a][b + 1] = 1;
 
         }
 
-        addLine(1, 1, 0);
+        for (int i = 0; i <= 3; i++) {
+            dfs(1, 0, i);
 
-        if (count > 3) {
+            if (count != 5) {
+                break;
+            }
+        }
+
+        if (count == 5) {
             count = -1;
         }
 
@@ -39,66 +46,53 @@ public class BOJ15684 {
     }
 
     static int N, M, H;
-    static boolean[][] board;
+    static int[][] board;
     static int count = 5;
-    static int index = 0;
 
-    static void addLine(int h, int w, int c) {
+    static void dfs(int h, int c, int line) {
 
-        if (c > 3 || c >= count) {
+        System.out.println(h+" "+ c +" " +line);
+
+        if (c >= count) {
             return;
         }
 
-        if (h > H) {
+        if (c == line) {
+            if (check()) {
+
+                count = Math.min(count, c);
+            }
             return;
         }
+        
 
-        if (w > N) {
-            addLine(h + 1, 1, c);
-            return;
-        }
-
-        if (check()) {
-            count = Math.min(count, c);
-            return;
-        }
-
-        if (board[h][w]) {
-            addLine(h, w + 1, c);
-
-        } else {
-
-            if (w == 1 || (!board[h][w - 1])) {
-                if (w<N && !board[h][w + 1]) {
-                    board[h][w] = true;
-                    addLine(h, w + 2, c + 1);
-                    board[h][w] = false;
+        for (int i = h; i <= H; i++) {
+            for (int j = 1; j < N; j++) {
+                if (board[i][j] == 0 && board[i][j + 1] == 0) {
+                    board[i][j] = 2;
+                    board[i][j + 1] = 1;
+                    dfs(i, c + 1, line);
+                    board[i][j] = 0;
+                    board[i][j + 1] = 0;
                 }
             }
-
-            addLine(h, w + 1, c);
-
         }
 
-        // if (!board[h][w] && w<N && !board[h][w+1]) {
-
-        // if (!(w > 1 && board[h][w - 1]) ) {
-
-        // board[h][w] = true;
-        // addLine(h, w + 2, c + 1);
-        // board[h][w] = false;
-        // }
-
-        // }
-
-        // addLine(h, w + 1, c);
     }
 
     static boolean check() {
 
         for (int i = 1; i <= N; i++) {
-            dfs(1, i, i);
-            if (index != i) {
+
+            int w = i;
+            for (int h = 1; h <= H; h++) {
+                if (board[h][w] == 2) {
+                    w++;
+                } else if (board[h][w] == 1) {
+                    w--;
+                }
+            }
+            if (w != i) {
                 return false;
             }
         }
@@ -106,22 +100,4 @@ public class BOJ15684 {
         return true;
     }
 
-    static void dfs(int h, int w, int bw) {
-
-        if (h > H) {
-
-            index = w;
-
-            return;
-        }
-
-        if (board[h][w] && w + 1 != bw) {
-            dfs(h, w + 1, w);
-        } else if (w > 1 && board[h][w - 1] && w - 1 != bw) {
-            dfs(h, w - 1, w);
-        } else {
-            dfs(h + 1, w, w);
-        }
-
-    }
 }
