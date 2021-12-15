@@ -29,23 +29,27 @@ public class BOJ1325 {
             int A = Integer.parseInt(st.nextToken());
             int B = Integer.parseInt(st.nextToken());
 
-            link.get(B).add(A);        }
+            link.get(B).add(A);
+        }
 
-        count = new int[N+1];
-        int max = 0;
         StringBuilder sb = new StringBuilder();
+        check = new boolean[N+1][N+1];
+        count = new int[N + 1];
+        int max = 0;
         for (int i = 1; i <= N; i++) {
-
-
-            int c = findCount(i);
-            if (c > max) {
+            visit = new boolean[N + 1];
+            temp = 0;
+            findCount(i);
+            if (max == temp) {
+                sb.append(i + " ");
+            } else if (max < temp) {
+                max = temp;
                 sb = new StringBuilder();
                 sb.append(i + " ");
-                max = c;
-            } else if (c == max) {
-                sb.append(i + " ");
             }
-
+            count[i] = temp;
+            check[i] = visit;
+            // System.out.println(i+ " = "+ count[i]);
         }
 
         System.out.println(sb.toString().trim());
@@ -54,25 +58,42 @@ public class BOJ1325 {
 
     static List<HashSet<Integer>> link;
     static boolean[] visit;
+    static boolean[][] check;
     static int[] count;
+    static int max;
+    static int temp;
 
-    static int findCount(int x) {
+    static void findCount(int x) {
+
+        // System.out.println(x);
 
         visit[x] = true;
-        if (count[x] != 0) {
-            return count[x];
-        }
-
-        int c = 1;
 
         for (int slave : link.get(x)) {
-            if (!visit[slave]) {
-                visit[slave] = true;
-                c += findCount(slave);
+            if (visit[slave]) {
+                continue;
+            }
+
+            // temp++;
+            // findCount(slave);
+
+            // System.out.println("!!! "+ slave + " "+ count[slave]);
+            if (count[slave] == 0) {
+                temp++;
+                findCount(slave);
+            } else {
+                int t = 0;
+                for (int i = 1; i<visit.length; i++) {
+                    if (check[slave][i]&& !visit[i]) {
+                        visit[i] = true;
+                        t++;
+                    }
+                }
+                System.out.println(x + " " + temp + " " + t);
+                temp += t;
             }
         }
 
-        return count[x] = c;
     }
 
 }
