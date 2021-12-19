@@ -7,7 +7,7 @@ package BOJ;
 import java.io.*;
 import java.util.*;
 
-public class BOJ3193 {
+public class BOJ3190 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -71,6 +71,13 @@ public class BOJ3193 {
                 }
             }
 
+
+            System.out.println(time);
+            for(int i = 1; i<=N; i++){
+                for(int j = 1; j<=N; j++){
+                    System.out.print(board[i][j]? "X": ".");
+                }System.out.println();
+            }
         }
 
         System.out.println(time);
