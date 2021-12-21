@@ -46,6 +46,7 @@ public class BOJ14657 {
         dfs(1, 1, 0);
 
         Arrays.fill(solved, false);
+
         dfs(root, 1, 0);
 
         day = day % T == 0 ? day / T : day / T + 1;
@@ -59,7 +60,8 @@ public class BOJ14657 {
             root = now;
             cnt = c;
             day = t;
-        } else if (cnt == c && day > t) {
+        } 
+        else if (cnt == c && day > t) {
             root = now;
             day = t;
 
