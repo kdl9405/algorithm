@@ -1,12 +1,13 @@
 package BOJ;
 
 import java.io.*;
+import java.util.*;
 
 /* 
     전화번호 목록
 
 */
-public class BOJ5052 {
+public class BOJ5052_copy2 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -48,11 +49,11 @@ public class BOJ5052 {
     private static class TrieNode {
 
         boolean isLast;
-        TrieNode[] children;
+        HashMap<Character, TrieNode> children;
 
-        public TrieNode(boolean isLast) {
-            this.isLast = isLast;
-            this.children = new TrieNode[10];
+        public TrieNode() {
+            isLast = false;
+            children = new HashMap<>();
         }
     }
 
@@ -61,22 +62,20 @@ public class BOJ5052 {
         public TrieNode root;
 
         public Trie() {
-            this.root = new TrieNode(false);
+            this.root = new TrieNode();
         }
 
         public boolean insert(String number) {
 
             TrieNode node = this.root;
 
-            int i = 0;
-            int c;
-            for (; i < number.length() - 1; i++) {
+            for (int i = 0; i < number.length() - 1; i++) {
 
-                c = number.charAt(i)-'0';
-                if (node.children[c] == null) {
-                    node.children[c] = new TrieNode(false);
+                char c = number.charAt(i);
+                if (!node.children.containsKey(c)) {
+                    node.children.put(c, new TrieNode());
                 }
-                node = node.children[c];
+                node = node.children.get(c);
 
                 if (node.isLast) {
                     return false;
@@ -84,12 +83,13 @@ public class BOJ5052 {
 
             }
 
-            c = number.charAt(i)-'0';
-            if (node.children[c] != null) {
+            if (node.children.containsKey(number.charAt(number.length() - 1))) {
                 return false;
             }
 
-            node.children[c] = new TrieNode(true);
+            node.children.put(number.charAt(number.length() - 1), new TrieNode());
+            node.children.get(number.charAt(number.length() - 1)).isLast = true;
+
             return true;
 
         }
