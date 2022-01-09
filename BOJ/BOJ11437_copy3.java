@@ -3,8 +3,6 @@ package BOJ;
 /* 
     LCA
 
-
-    1`. 누가 조상인지 모른다..  단순히 그냥 연결관계인지만 알 수 있을 뿐.
 */
 
 import java.io.*;

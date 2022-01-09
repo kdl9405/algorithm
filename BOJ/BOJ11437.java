@@ -31,7 +31,7 @@ public class BOJ11437 {
         }
 
         parent = new int[N + 1];
-        parent[1] =1;
+        parent[1] = 1;
 
         defineParent(1);
 
