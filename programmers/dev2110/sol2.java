@@ -105,7 +105,6 @@ public class sol2 {
                 e++;
             }
 
-    
             answer = Math.max(answer, e - i + 1);
         }
 
