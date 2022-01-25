@@ -1,7 +1,5 @@
 package programmers;
 
-import java.util.Arrays;
-
 /* 
     양궁대회
 */
@@ -9,38 +7,67 @@ public class pro232 {
 
     public static void main(String[] args) {
 
+        new pro232().test();
+    }
+
+    void test() {
+        int n = 9;
+        int[] info = { 0, 0, 1, 2, 0, 1, 1, 1, 1, 1, 1};
+
+        int[] A = solution(n, info);
+        for (int a : A) {
+            System.out.print(a + " ");
+        }
     }
 
     public int[] solution(int n, int[] info) {
 
-        estimateCost(info);
-
         answer = new int[11];
+        
+        distance = 0;
 
+        temp = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, n };
+        backTracking(1, 0, 0, info);
+
+        if (distance <= 0) {
+            answer = new int[] { -1 };
+        }
         return answer;
     }
 
+    int[] temp;
     int[] answer;
-    double[][] cost;
+    int distance;
 
-    void estimateCost(int[] info) {
+    void backTracking(int point, int apeach, int ryan, int[] info) {
 
-        cost = new double[10][2];
+        if (point == 11) {
 
-        for (int i = 0; i < 10; i++) {
-            cost[i][0] = 10 - i;
-            cost[i][1] = (10 - i) / (double) (info[i] + 1);
+            if (distance <= ryan - apeach) {
+                distance = ryan - apeach;
+
+                for (int i = 0; i <= 10; i++) {
+                    answer[i] = temp[i];
+                }
+            }
+
+            return;
         }
 
-        Arrays.sort(cost, (a, b) -> {
-            return (b[1] - a[1]) > 0 ? 1 : -1;
-        });
-    }
+        if (info[10 - point] == 0) {
+            backTracking(point + 1, apeach, ryan, info);
+        } else {
+            backTracking(point + 1, apeach + point, ryan, info);
+        }
 
-    void backTracking(int arrow, int sum, int index) {
+        if (temp[10] > info[10 - point]) {
+            temp[10 - point] = info[10 - point] + 1;
+            temp[10] -= temp[10 - point];
 
-        if (arrow == 0 || index == 10) {
-            //check
+            backTracking(point + 1, apeach, ryan + point, info);
+
+            temp[10] += temp[10 - point];
+            temp[10 - point] = 0;
         }
 
     }
