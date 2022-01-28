@@ -12,7 +12,7 @@ public class pro232 {
 
     void test() {
         int n = 9;
-        int[] info = { 0, 0, 1, 2, 0, 1, 1, 1, 1, 1, 1};
+        int[] info = { 0, 0, 1, 2, 0, 1, 1, 1, 1, 1, 1 };
 
         int[] A = solution(n, info);
         for (int a : A) {
@@ -23,7 +23,7 @@ public class pro232 {
     public int[] solution(int n, int[] info) {
 
         answer = new int[11];
-        
+
         distance = 0;
 
         temp = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, n };
@@ -67,6 +67,38 @@ public class pro232 {
             backTracking(point + 1, apeach, ryan + point, info);
 
             temp[10] += temp[10 - point];
+            temp[10 - point] = 0;
+        }
+
+    }
+
+    void backTracking2(int arrow, int point, int apeach, int ryan, int[] info) {
+
+        if (point == 11) {
+
+            if (distance <= ryan - apeach) {
+                distance = ryan - apeach;
+
+                for (int i = 0; i <= 10; i++) {
+                    answer[i] = temp[i];
+                }
+            }
+
+            return;
+        }
+
+        if (info[10 - point] == 0) {
+            backTracking(point + 1, apeach, ryan, info);
+        } else {
+            backTracking(point + 1, apeach + point, ryan, info);
+        }
+
+        if (arrow > info[10 - point]) {
+            temp[10 - point] = info[10 - point] + 1;
+            
+
+            backTracking2(arrow - temp[10 - point],point + 1, apeach, ryan + point, info);
+
             temp[10 - point] = 0;
         }
 
