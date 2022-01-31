@@ -33,8 +33,6 @@ public class BOJ1107 {
             count = Math.min(count, n+1);
         }
 
-        System.out.println("111111111   " + count);
-
         if (possible(Integer.toString(n))) {
             count = Math.min(count, Integer.toString(n).length());
         }else{
