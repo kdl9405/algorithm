@@ -36,10 +36,9 @@ public class pro192 {
             arr[i] = place[i].toCharArray();
         }
 
-
         for(int i = 0; i<5; i++){
             for(int j = 0; j<5; j++){
-                if(arr[i][j] == '1'){
+                if(arr[i][j] == 'P'){
                     
                     if(!possible(arr, i, j)){
                         return false;
@@ -57,6 +56,7 @@ public class pro192 {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{x,y});
         visit[x][y] = true;
+        
         int d = 0;
         while (d++ < 2) {
             int size = queue.size();
@@ -71,9 +71,9 @@ public class pro192 {
 
                     if (nx >= 0 && nx<5 && ny >= 0 && ny<5 && !visit[nx][ny]) {
                         
-                        if(arr[nx][ny] == '1'){
+                        if(arr[nx][ny] == 'P'){
                             return false;
-                        }else if(arr[nx][ny] == '0'){
+                        }else if(arr[nx][ny] == 'O'){
                             queue.add(new int[]{nx,ny});
                         }
                     
@@ -83,8 +83,6 @@ public class pro192 {
                 }
             }
         }
-
-
 
         return true;
 
