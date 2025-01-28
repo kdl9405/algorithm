@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    내려가기 
-
-    Dp => 시간초과
-*/
+/*
+ * 내려가기
+ * 
+ * Dp => 시간초과
+ */
 public class BOJ2096_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -25,8 +25,9 @@ public class BOJ2096_copy {
         min = new int[N][3];
 
 
-        System.out.println(Math.max(findMax(N - 1, 0), Math.max(findMax(N - 1, 1), findMax(N - 1, 2))) + " "+
-        Math.min(findMin(N - 1, 0), Math.min(findMin(N - 1, 1), findMin(N - 1, 2))));
+        System.out.println(Math.max(findMax(N - 1, 0),
+                Math.max(findMax(N - 1, 1), findMax(N - 1, 2))) + " "
+                + Math.min(findMin(N - 1, 0), Math.min(findMin(N - 1, 1), findMin(N - 1, 2))));
 
     }
 
@@ -52,7 +53,8 @@ public class BOJ2096_copy {
 
             case 1:
 
-                max[r][c] = Math.max(findMax(r - 1, 0), Math.max(findMax(r - 1, 1), findMax(r - 1, 2)));
+                max[r][c] =
+                        Math.max(findMax(r - 1, 0), Math.max(findMax(r - 1, 1), findMax(r - 1, 2)));
                 break;
             case 2:
 
@@ -81,7 +83,8 @@ public class BOJ2096_copy {
 
             case 1:
 
-                min[r][c] = Math.min(findMin(r - 1, 0), Math.min(findMin(r - 1, 1), findMin(r - 1, 2)));
+                min[r][c] =
+                        Math.min(findMin(r - 1, 0), Math.min(findMin(r - 1, 1), findMin(r - 1, 2)));
                 break;
             case 2:
 

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.util.Collections;
 import java.util.*;

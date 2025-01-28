@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 
@@ -9,9 +9,9 @@ import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class BOJ1920 {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
@@ -20,23 +20,23 @@ public class BOJ1920 {
 
         HashSet<String> set = new HashSet<>();
 
-        while (n-- >0) {
+        while (n-- > 0) {
             set.add(st.nextToken());
         }
 
         int m = Integer.parseInt(br.readLine());
         st = new StringTokenizer(br.readLine());
         StringBuilder sb = new StringBuilder();
-           
-        while (m-- >0) {
+
+        while (m-- > 0) {
             if (set.contains(st.nextToken())) {
-                sb.append(1+"\n");
-            }else{
-                sb.append(0+"\n");
+                sb.append(1 + "\n");
+            } else {
+                sb.append(0 + "\n");
             }
         }
 
         System.out.println(sb);
- 
+
     }
 }

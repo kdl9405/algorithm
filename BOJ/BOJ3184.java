@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,9 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-/* 
-    양
-*/
+/*
+ * 양
+ */
 public class BOJ3184 {
 
     public static void main(String[] args) throws IOException {
@@ -45,8 +45,8 @@ public class BOJ3184 {
     static int R, C;
     static char[][] map;
     static boolean[][] visit;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
     static int sheep, wolf;
 
     static void bfs(int r, int c) {
@@ -55,7 +55,7 @@ public class BOJ3184 {
         var w = 0;
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { r, c });
+        queue.add(new int[] {r, c});
         visit[r][c] = true;
         while (!queue.isEmpty()) {
             int[] now = queue.poll();
@@ -72,8 +72,8 @@ public class BOJ3184 {
 
                 if (x >= 0 && x < R && y >= 0 && y < C) {
                     if (map[x][y] != '#' && !visit[x][y]) {
-                        visit[x][y] = true;                       
-                        queue.add(new int[] { x, y });
+                        visit[x][y] = true;
+                        queue.add(new int[] {x, y});
                     }
                 }
             }

@@ -1,16 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    나무 재테크
-
-    1. 봄 - 나무가 양분을 먹음 / 양분을 못먹은 나무는 죽음.
-    2. 여름 - 죽은 나무가 양분으로 변함  - 나이/2 가 양분으로 추가
-    3. 가을 - 나무의 번식 - 나이가 5의 배수인 나무만 
-    4. 겨울 - 양분 추가
-*/
+/*
+ * 나무 재테크
+ * 
+ * 1. 봄 - 나무가 양분을 먹음 / 양분을 못먹은 나무는 죽음. 2. 여름 - 죽은 나무가 양분으로 변함 - 나이/2 가 양분으로 추가 3. 가을 - 나무의 번식 - 나이가
+ * 5의 배수인 나무만 4. 겨울 - 양분 추가
+ */
 public class BOJ16235_copy {
     public static void main(String[] args) throws IOException {
 
@@ -102,8 +100,8 @@ public class BOJ16235_copy {
     static int[][] map;
     static int[][] A;
 
-    static int[] dx = { -1, -1, -1, 0, 0, 1, 1, 1 };
-    static int[] dy = { -1, 0, 1, -1, 1, -1, 0, 1 };
+    static int[] dx = {-1, -1, -1, 0, 0, 1, 1, 1};
+    static int[] dy = {-1, 0, 1, -1, 1, -1, 0, 1};
 
     private class Tree implements Comparable<Tree> {
 

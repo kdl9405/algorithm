@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -40,17 +40,17 @@ public class BOJ1181 {
                 st_count[i] = st_count[i].trim();
 
                 str = st_count[i].split(" ");
-                
+
                 strset = new HashSet<>();
-                for(final String item : str){
+                for (final String item : str) {
                     strset.add(item);
                 }
 
                 final OBOJect[] result = strset.toArray();
                 Arrays.sort(result);
 
-                for(int j = 0; j<result.length; j++){
-                sb.append(result[j]).append("\n");
+                for (int j = 0; j < result.length; j++) {
+                    sb.append(result[j]).append("\n");
                 }
             }
         }

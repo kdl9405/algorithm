@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 주몽
@@ -24,16 +24,16 @@ public class BOJ1940 {
         }
 
         int answer = 0;
-        for(int i = 1; i<M/2; i++){
+        for (int i = 1; i < M / 2; i++) {
             if (meterial[i] > 0) {
-                answer+=(Math.min(meterial[i], meterial[M-i]));
-           }
+                answer += (Math.min(meterial[i], meterial[M - i]));
+            }
         }
 
-        if(M % 2 == 0){
-            answer += (meterial[M/2]/2); 
-        }else{
-            answer += Math.min(meterial[M/2], meterial[M/2+1]); 
+        if (M % 2 == 0) {
+            answer += (meterial[M / 2] / 2);
+        } else {
+            answer += Math.min(meterial[M / 2], meterial[M / 2 + 1]);
         }
 
         System.out.println(answer);

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
 
-/* 
-    일곱 난쟁이
-*/
+/*
+ * 일곱 난쟁이
+ */
 public class BOJ2309_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -50,7 +50,7 @@ public class BOJ2309_copy {
 
             if (sum == 100) {
                 find = true;
-               
+
             }
             return;
         }

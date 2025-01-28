@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    물병
-
-    시간초과.
-*/
+/*
+ * 물병
+ * 
+ * 시간초과.
+ */
 public class BOJ1052_copy {
     public static void main(String[] args) throws IOException {
 

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    Generations of Tribbles
-*/
+/*
+ * Generations of Tribbles
+ */
 
 import java.io.*;
 

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 public class BOJ1697 {
-    
-    public static void main(String[] args) throws IOException{
-        
+
+    public static void main(String[] args) throws IOException {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -15,8 +15,8 @@ public class BOJ1697 {
 
         boolean[] visit = new boolean[1000001];
 
-        if (k<=n) {
-            System.out.println(n-k);
+        if (k <= n) {
+            System.out.println(n - k);
             System.out.close();
         }
 
@@ -29,7 +29,7 @@ public class BOJ1697 {
         int day = 0;
 
         while (true) {
-            
+
             if (queue.contains(k)) {
                 break;
             }
@@ -42,14 +42,14 @@ public class BOJ1697 {
                 int now = queue.poll();
                 visit[now] = true;
 
-                if (now-1 >=0 && !visit[now-1]) {
-                    tempQ.offer(now-1);
+                if (now - 1 >= 0 && !visit[now - 1]) {
+                    tempQ.offer(now - 1);
                 }
-                if (now+1 <= 1000000 && !visit[now+1]) {
-                    tempQ.offer(now+1);
+                if (now + 1 <= 1000000 && !visit[now + 1]) {
+                    tempQ.offer(now + 1);
                 }
-                if (now * 2 <=1000000 && !visit[now*2]) {
-                    tempQ.offer(now*2);
+                if (now * 2 <= 1000000 && !visit[now * 2]) {
+                    tempQ.offer(now * 2);
                 }
             }
 

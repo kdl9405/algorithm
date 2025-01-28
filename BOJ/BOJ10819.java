@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
 
-/* 
-    차이를 최대로
-*/
+/*
+ * 차이를 최대로
+ */
 public class BOJ10819 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 

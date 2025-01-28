@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    모든 순열
-
-*/
+/*
+ * 모든 순열
+ * 
+ */
 
 import java.io.*;
 
@@ -41,12 +41,12 @@ public class BOJ10974 {
         }
 
         for (int i = 1; i <= N; i++) {
-            if (visit[i] ) {
+            if (visit[i]) {
                 continue;
             }
             visit[i] = true;
             arr[depth] = i;
-            dfs(depth+1);
+            dfs(depth + 1);
             visit[i] = false;
         }
     }

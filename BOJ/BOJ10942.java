@@ -1,20 +1,20 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 public class BOJ10942 {
-    
+
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
 
-        StringTokenizer st= new StringTokenizer(br.readLine());
+        StringTokenizer st = new StringTokenizer(br.readLine());
 
-        int[] num = new int[n+1];
+        int[] num = new int[n + 1];
 
-        for(int i = 1; i<=n; i++){
+        for (int i = 1; i <= n; i++) {
             num[i] = Integer.parseInt(st.nextToken());
         }
 
@@ -22,18 +22,18 @@ public class BOJ10942 {
 
         StringBuilder sb = new StringBuilder();
 
-        while (m-- >0) {
+        while (m-- > 0) {
             st = new StringTokenizer(br.readLine());
 
             int s = Integer.parseInt(st.nextToken());
             int e = Integer.parseInt(st.nextToken());
 
             boolean check = true;
-        
-            while (s<=e) {
+
+            while (s <= e) {
 
 
-                if (num[s] != num[e] ) {
+                if (num[s] != num[e]) {
                     check = false;
                     break;
                 }
@@ -42,9 +42,9 @@ public class BOJ10942 {
             }
 
             if (check) {
-                sb.append(1+"\n");
-            }else{
-                sb.append(0+"\n");
+                sb.append(1 + "\n");
+            } else {
+                sb.append(0 + "\n");
             }
         }
 

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    최소비용 구하기 2
-
-*/
+/*
+ * 최소비용 구하기 2
+ * 
+ */
 public class BOJ11779 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -45,10 +45,10 @@ public class BOJ11779 {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(stack.size()+"\n");
+        sb.append(stack.size() + "\n");
 
         while (!stack.isEmpty()) {
-            sb.append(stack.pop()+" ");
+            sb.append(stack.pop() + " ");
         }
 
         System.out.println(sb.toString());
@@ -66,7 +66,7 @@ public class BOJ11779 {
         distance = new int[n + 1];
         Arrays.fill(distance, Integer.MAX_VALUE);
         distance[start] = 0;
-        before = new int[n+1];
+        before = new int[n + 1];
 
         PriorityQueue<bus> pq = new PriorityQueue<>((a, b) -> {
             return a.cost - b.cost;
@@ -89,10 +89,10 @@ public class BOJ11779 {
             }
             visit[now.to] = true;
 
-            for(bus next : root[now.to]){
+            for (bus next : root[now.to]) {
 
-                if (distance[next.to] > distance[now.to]+next.cost) {
-                    distance[next.to] = distance[now.to]+next.cost;
+                if (distance[next.to] > distance[now.to] + next.cost) {
+                    distance[next.to] = distance[now.to] + next.cost;
                     before[next.to] = now.to;
                     pq.add(new bus(next.to, distance[next.to]));
                 }
@@ -103,6 +103,7 @@ public class BOJ11779 {
 
     }
 }
+
 
 class bus {
 

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    이전 순열
-*/
+/*
+ * 이전 순열
+ */
 public class BOJ10973_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -60,15 +60,15 @@ public class BOJ10973_copy {
         num[j] = temp;
 
         StringBuilder answer = new StringBuilder();
-        for(int idx = 0; idx <i; idx++){
+        for (int idx = 0; idx < i; idx++) {
             answer.append(num[idx]).append(" ");
         }
 
-        for(int idx = N-1; idx>=i; idx--){
+        for (int idx = N - 1; idx >= i; idx--) {
             answer.append(num[idx]).append(" ");
         }
 
         System.out.println(answer.toString().trim());
     }
-    
+
 }

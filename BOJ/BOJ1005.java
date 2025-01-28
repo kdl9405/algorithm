@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    ACM Craft
-*/
+/*
+ * ACM Craft
+ */
 public class BOJ1005 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -33,7 +33,7 @@ public class BOJ1005 {
                 int build = Integer.parseInt(st.nextToken());
 
                 if (!before.containsKey(build)) {
-                  before.put(build, new ArrayList<>());
+                    before.put(build, new ArrayList<>());
                 }
                 before.get(build).add(b);
             }

@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    작업 
-
-    작업이 선행순서에 뒤집히는 일 없이 입력됨!!!!
-*/
+/*
+ * 작업
+ * 
+ * 작업이 선행순서에 뒤집히는 일 없이 입력됨!!!!
+ */
 
 public class BOJ2056 {
     public static void main(String[] args) throws NumberFormatException, IOException {

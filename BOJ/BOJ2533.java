@@ -1,10 +1,10 @@
 
-package BOJ;
+package boj;
 
 /**
- 
-    사회망 서비스(SNS)
-
+ * 
+ * 사회망 서비스(SNS)
+ * 
  */
 
 import java.io.*;
@@ -72,7 +72,7 @@ public class BOJ2533 {
 
         visit[x] = true;
         dp[x][1] = 1;
-        
+
         for (Node f = sns[x]; f != null; f = f.friend) {
 
             if (visit[f.num]) {

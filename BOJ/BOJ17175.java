@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /*
-    피보나치는 지겨웡~
-*/
+ * 피보나치는 지겨웡~
+ */
 
 import java.io.*;
 

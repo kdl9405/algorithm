@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.regex.Pattern;
 
-/* 
-    단어 개수 세기
-*/
+/*
+ * 단어 개수 세기
+ */
 
 public class BOJ19844 {
 
@@ -19,8 +19,8 @@ public class BOJ19844 {
 
         int count = arr.length;
 
-       Pattern p = Pattern.compile("^(c|j|n|m|t|s|l|d|qu)'[aeiouh]");
-        for(String a : arr){
+        Pattern p = Pattern.compile("^(c|j|n|m|t|s|l|d|qu)'[aeiouh]");
+        for (String a : arr) {
             if (p.matcher(a).find()) {
                 count++;
             }

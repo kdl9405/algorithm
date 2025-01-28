@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    사이클 게임
-*/
+/*
+ * 사이클 게임
+ */
 
 import java.io.*;
 import java.util.*;

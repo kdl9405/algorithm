@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    문자열
-*/
+/*
+ * 문자열
+ */
 
 import java.io.*;
 
@@ -20,7 +20,7 @@ public class BOJ1120 {
 
             int count = 0;
             for (int j = 0; j < str[0].length(); j++) {
-                if (str[0].charAt(j) != str[1].charAt(j+i)) {
+                if (str[0].charAt(j) != str[1].charAt(j + i)) {
                     count++;
                 }
             }

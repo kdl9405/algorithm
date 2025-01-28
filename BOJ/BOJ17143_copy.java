@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    낚시왕
-*/
+/*
+ * 낚시왕
+ */
 
 import java.io.*;
 import java.util.*;
@@ -29,10 +29,10 @@ public class BOJ17143_copy {
             int d = Integer.parseInt(st.nextToken());
             int z = Integer.parseInt(st.nextToken());
 
-            if (d <=2) {
-                s %= ((R-1)*2);
-            }else{
-                s %= ((C-1)*2);
+            if (d <= 2) {
+                s %= ((R - 1) * 2);
+            } else {
+                s %= ((C - 1) * 2);
             }
 
             queue.add(new Shark(r, c, s, d, z));
@@ -85,7 +85,7 @@ public class BOJ17143_copy {
 
     static int R, C, M;
     static int[][][] map;
-    static int[][] dir = { { 0, 0 }, { -1, 0 }, { 1, 0 }, { 0, 1 }, { 0, -1 } };
+    static int[][] dir = {{0, 0}, {-1, 0}, {1, 0}, {0, 1}, {0, -1}};
 
     private static class Shark {
         int r;

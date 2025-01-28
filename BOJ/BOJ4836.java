@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /*
-    춤
-*/
+ * 춤
+ */
 
 public class BOJ4836 {
 
@@ -20,7 +20,7 @@ public class BOJ4836 {
 
             String[] d = s.split(" ");
 
-            
+
         }
 
     }

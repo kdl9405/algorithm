@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 
 import java.util.Scanner;
 
 public class BOJ1436 {
-    
+
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
@@ -23,7 +23,7 @@ public class BOJ1436 {
             }
         }
 
-        System.out.println(num);               
+        System.out.println(num);
 
     }
 }

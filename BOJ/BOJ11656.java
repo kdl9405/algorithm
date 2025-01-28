@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    접미사 배열
-
-*/
+/*
+ * 접미사 배열
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -17,7 +17,7 @@ public class BOJ11656 {
         String S = br.readLine();
         int len = S.length();
 
-        String[] sArr = new String[len]; 
+        String[] sArr = new String[len];
 
         for (int i = 0; i < len; i++) {
             sArr[i] = S.substring(i);
@@ -26,8 +26,8 @@ public class BOJ11656 {
         Arrays.sort(sArr);
 
         StringBuilder sb = new StringBuilder();
-        
-        for(int i = 0; i<len; i++){
+
+        for (int i = 0; i < len; i++) {
             sb.append(sArr[i]).append("\n");
         }
 

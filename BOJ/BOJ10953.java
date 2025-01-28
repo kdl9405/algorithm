@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/*  
-A+B - 6
-
-*/
+/*
+ * A+B - 6
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -27,8 +27,8 @@ public class BOJ10953 {
             int A = Integer.parseInt(st.nextToken());
             int B = Integer.parseInt(st.nextToken());
 
-            sb.append((A+B)).append("\n");
-            
+            sb.append((A + B)).append("\n");
+
         }
         System.out.println(sb.toString().trim());
     }

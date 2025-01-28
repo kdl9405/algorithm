@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    좋은수열
-*/
+/*
+ * 좋은수열
+ */
 
 import java.io.*;
 

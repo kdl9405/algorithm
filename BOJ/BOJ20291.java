@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    파일 정리
-*/
+/*
+ * 파일 정리
+ */
 
 import java.io.*;
 import java.util.*;
@@ -24,13 +24,13 @@ public class BOJ20291 {
 
             // String extension = st.nextToken();
             String input = br.readLine();
-            String extension = input.substring(input.indexOf(".")+1);
+            String extension = input.substring(input.indexOf(".") + 1);
 
             extensionMap.put(extension, extensionMap.getOrDefault(extension, 0) + 1);
         }
 
         StringBuilder sb = new StringBuilder();
-        for(String extension : extensionMap.keySet()){
+        for (String extension : extensionMap.keySet()) {
             sb.append(extension).append(" ").append(extensionMap.get(extension)).append("\n");
         }
         System.out.println(sb.toString().trim());

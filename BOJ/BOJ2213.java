@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    트리의 독립집합
-*/
+/*
+ * 트리의 독립집합
+ */
 
 import java.io.*;
 import java.util.*;
@@ -17,17 +17,17 @@ public class BOJ2213 {
 
         StringBuilder answer = new StringBuilder();
         group = new ArrayList<>();
-        visit = new boolean[n+1];
-        if (dp[1][0]> dp[1][1]) { 
-            answer.append(dp[1][0]).append("\n");           
+        visit = new boolean[n + 1];
+        if (dp[1][0] > dp[1][1]) {
+            answer.append(dp[1][0]).append("\n");
             trace(1, false);
-        }else{
-            answer.append(dp[1][1]).append("\n");           
+        } else {
+            answer.append(dp[1][1]).append("\n");
             trace(1, true);
         }
 
         Collections.sort(group);
-        for(int v : group){
+        for (int v : group) {
             answer.append(v).append(" ");
         }
 
@@ -130,7 +130,7 @@ public class BOJ2213 {
 
                 v = v.parent;
             }
-           
+
 
         } else {
 

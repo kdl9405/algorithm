@@ -1,16 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/* 
-    오리
-
-    실패.. = > 예외조건 !!  
-                1. 입력이 5로 나누어져야함.
-                2. 오리의 개수가 0보다 커야함
-                3. 모든 입력을 방문해야함
+/*
+ * 오리
+ * 
+ * 실패.. = > 예외조건 !! 1. 입력이 5로 나누어져야함. 2. 오리의 개수가 0보다 커야함 3. 모든 입력을 방문해야함
  */
 
 public class BOJ12933_copy {
@@ -62,21 +59,21 @@ public class BOJ12933_copy {
         int i = 0;
 
         switch (c) {
-        case 'q':
-            i = 0;
-            break;
-        case 'u':
-            i = 1;
-            break;
-        case 'a':
-            i = 2;
-            break;
-        case 'c':
-            i = 3;
-            break;
-        case 'k':
-            i = 4;
-            break;
+            case 'q':
+                i = 0;
+                break;
+            case 'u':
+                i = 1;
+                break;
+            case 'a':
+                i = 2;
+                break;
+            case 'c':
+                i = 3;
+                break;
+            case 'k':
+                i = 4;
+                break;
 
         }
 

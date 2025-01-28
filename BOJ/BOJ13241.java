@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
-    최소공배수
+ * 최소공배수
  */
 
 import java.io.*;
@@ -17,7 +17,7 @@ public class BOJ13241 {
         long A = Long.parseLong(st.nextToken());
         long B = Long.parseLong(st.nextToken());
 
-        System.out.println((A*B)/GCD(A, B));
+        System.out.println((A * B) / GCD(A, B));
     }
 
     static long GCD(long A, long B) {

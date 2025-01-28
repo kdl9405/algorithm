@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    테트로미노
-*/
+ * 테트로미노
+ */
 
 public class BOJ14500 {
 
@@ -41,8 +41,8 @@ public class BOJ14500 {
 
     static int N, M;
     static int[][] map;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
     static int[] arr;
     static int max = 0;
     static boolean[][] visit;

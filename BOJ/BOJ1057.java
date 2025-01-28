@@ -1,5 +1,5 @@
 
-package BOJ;
+package boj;
 
 /**
  * 토너먼트

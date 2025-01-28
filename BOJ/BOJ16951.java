@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    블록 놀이
-*/
+/*
+ * 블록 놀이
+ */
 
 import java.io.*;
 import java.util.*;

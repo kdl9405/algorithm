@@ -1,19 +1,19 @@
-package BOJ;
+package boj;
 
 import java.util.Scanner;
 
-/* 
-    2×n 타일링
-
-*/
+/*
+ * 2×n 타일링
+ * 
+ */
 public class BOJ11726 {
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         int n = Integer.parseInt(sc.nextLine());
 
-        dp = new int[n+1];
+        dp = new int[n + 1];
 
         System.out.println(findDP(n));
 
@@ -21,7 +21,7 @@ public class BOJ11726 {
 
     static int[] dp;
 
-    static int findDP(int n){
+    static int findDP(int n) {
         if (n <= 2) {
             return n;
         }
@@ -30,7 +30,7 @@ public class BOJ11726 {
             return dp[n];
         }
 
-        dp[n] = (findDP(n-1) + findDP(n-2))%10007;
+        dp[n] = (findDP(n - 1) + findDP(n - 2)) % 10007;
 
         return dp[n];
     }

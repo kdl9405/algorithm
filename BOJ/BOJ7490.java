@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    0 만들기
-*/
+/*
+ * 0 만들기
+ */
 
 import java.io.*;
 import java.util.*;

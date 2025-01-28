@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    피보나치 수 6
-
-    행렬제곰 활용!!
-*/
+/*
+ * 피보나치 수 6
+ * 
+ * 행렬제곰 활용!!
+ */
 public class BOJ11444 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -24,7 +24,7 @@ public class BOJ11444 {
     }
 
     static int MOD = 1000000007;
-    static long[][] arr = { { 1, 1 }, { 1, 0 } };
+    static long[][] arr = {{1, 1}, {1, 0}};
 
     static long[][] arrPow(long n) {
         long[][] temp = new long[2][2];

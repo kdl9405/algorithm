@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    순열 사이클
-*/
+/*
+ * 순열 사이클
+ */
 
 import java.io.*;
 import java.util.*;

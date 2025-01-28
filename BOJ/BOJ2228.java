@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    구간 나누기
-*/
+ * 구간 나누기
+ */
 
 public class BOJ2228 {
     public static void main(String[] args) throws IOException {
@@ -16,7 +16,7 @@ public class BOJ2228 {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
 
-        arr = new int[n+1];
+        arr = new int[n + 1];
         for (int i = 1; i <= n; i++) {
             arr[i] = Integer.parseInt(br.readLine());
         }
@@ -25,13 +25,13 @@ public class BOJ2228 {
         for (int i = 1; i <= n; i++) {
             sum[i] = sum[i - 1] + arr[i];
         }
-      
+
         dp = new int[n + 1][n + 1];
         for (int[] d : dp) {
             Arrays.fill(d, -4000000);
         }
 
-        visit = new boolean[n+1][n+1];
+        visit = new boolean[n + 1][n + 1];
 
 
         System.out.println(findDP(n, m));

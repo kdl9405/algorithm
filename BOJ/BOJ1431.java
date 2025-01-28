@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    시리얼 번호
-
-*/
+/*
+ * 시리얼 번호
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -33,7 +33,7 @@ public class BOJ1431 {
         Arrays.sort(guitars);
 
         StringBuilder answer = new StringBuilder();
-        for(Guitar g : guitars){
+        for (Guitar g : guitars) {
             answer.append(g.serial).append("\n");
         }
 

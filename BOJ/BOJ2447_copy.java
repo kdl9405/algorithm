@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.util.Scanner;
 
@@ -50,7 +50,7 @@ public class BOJ2447_copy {
 
         int size = N / 3;
         int count = 0;
-        
+
         for (int i = x; i < x + N; i += size) {
             for (int j = y; j < y + N; j += size) {
                 count++;

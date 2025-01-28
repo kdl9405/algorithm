@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    2048 (Easy)
-
-*/
+/*
+ * 2048 (Easy)
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -54,90 +54,90 @@ public class BOJ12100_copy {
 
     public static void move(int dir) {
         switch (dir) {
-        // 위로 몰기
-        case 3:
-            for (int i = 0; i < n; i++) {
-                int index = 0;
-                int block = 0;
-                for (int j = 0; j < n; j++) {
-                    if (map[j][i] != 0) {
-                        if (block == map[j][i]) {
-                            map[index - 1][i] = block * 2;
-                            block = 0;
-                            map[j][i] = 0;
-                        } else {
-                            block = map[j][i];
-                            map[j][i] = 0;
-                            map[index][i] = block;
-                            index++;
+            // 위로 몰기
+            case 3:
+                for (int i = 0; i < n; i++) {
+                    int index = 0;
+                    int block = 0;
+                    for (int j = 0; j < n; j++) {
+                        if (map[j][i] != 0) {
+                            if (block == map[j][i]) {
+                                map[index - 1][i] = block * 2;
+                                block = 0;
+                                map[j][i] = 0;
+                            } else {
+                                block = map[j][i];
+                                map[j][i] = 0;
+                                map[index][i] = block;
+                                index++;
+                            }
                         }
                     }
                 }
-            }
-            break;
-        // 왼쪽으로 몰기
-        case 2:
-            for (int i = 0; i < n; i++) {
-                int index = n - 1;
-                int block = 0;
-                for (int j = n - 1; j >= 0; j--) {
-                    if (map[j][i] != 0) {
-                        if (block == map[j][i]) {
-                            map[index + 1][i] = block * 2;
-                            block = 0;
-                            map[j][i] = 0;
-                        } else {
-                            block = map[j][i];
-                            map[j][i] = 0;
-                            map[index][i] = block;
-                            index--;
+                break;
+            // 왼쪽으로 몰기
+            case 2:
+                for (int i = 0; i < n; i++) {
+                    int index = n - 1;
+                    int block = 0;
+                    for (int j = n - 1; j >= 0; j--) {
+                        if (map[j][i] != 0) {
+                            if (block == map[j][i]) {
+                                map[index + 1][i] = block * 2;
+                                block = 0;
+                                map[j][i] = 0;
+                            } else {
+                                block = map[j][i];
+                                map[j][i] = 0;
+                                map[index][i] = block;
+                                index--;
+                            }
                         }
                     }
                 }
-            }
-            break;
-        // 왼쪽으로 몰기
-        case 0:
-            for (int i = 0; i < n; i++) {
-                int index = 0;
-                int block = 0;
-                for (int j = 0; j < n; j++) {
-                    if (map[i][j] != 0) {
-                        if (block == map[i][j]) {
-                            map[i][index - 1] = block * 2;
-                            block = 0;
-                            map[i][j] = 0;
-                        } else {
-                            block = map[i][j];
-                            map[i][j] = 0;
-                            map[i][index] = block;
-                            index++;
+                break;
+            // 왼쪽으로 몰기
+            case 0:
+                for (int i = 0; i < n; i++) {
+                    int index = 0;
+                    int block = 0;
+                    for (int j = 0; j < n; j++) {
+                        if (map[i][j] != 0) {
+                            if (block == map[i][j]) {
+                                map[i][index - 1] = block * 2;
+                                block = 0;
+                                map[i][j] = 0;
+                            } else {
+                                block = map[i][j];
+                                map[i][j] = 0;
+                                map[i][index] = block;
+                                index++;
+                            }
                         }
                     }
                 }
-            }
-            break;
-        // 오른쪽으로 몰기
-        case 1:
-            for (int i = 0; i < n; i++) {
-                int index = n - 1;
-                int block = 0;
-                for (int j = n - 1; j >= 0; j--) {
-                    if (map[i][j] != 0) {
-                        if (block == map[i][j]) {
-                            map[i][index + 1] = block * 2;
-                            block = 0;
-                            map[i][j] = 0;
-                        } else {
-                            block = map[i][j];
-                            map[i][j] = 0;
-                            map[i][index] = block;
-                            index--;
+                break;
+            // 오른쪽으로 몰기
+            case 1:
+                for (int i = 0; i < n; i++) {
+                    int index = n - 1;
+                    int block = 0;
+                    for (int j = n - 1; j >= 0; j--) {
+                        if (map[i][j] != 0) {
+                            if (block == map[i][j]) {
+                                map[i][index + 1] = block * 2;
+                                block = 0;
+                                map[i][j] = 0;
+                            } else {
+                                block = map[i][j];
+                                map[i][j] = 0;
+                                map[i][index] = block;
+                                index--;
+                            }
                         }
                     }
                 }
-            }
-            break;
+                break;
         }
     }
 
@@ -145,7 +145,7 @@ public class BOJ12100_copy {
 
         boolean check = false;
 
-        for (int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 if (map[i][j] == 1024 && map[i][j] > answer) {
                     check = true;
@@ -155,10 +155,10 @@ public class BOJ12100_copy {
         }
 
         if (check) {
-            for(int i = 0; i<n; i++){
-                for(int j = 0; j<n; j++){
-                    System.out.print(map[i][j]+" ");
-    
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    System.out.print(map[i][j] + " ");
+
                 }
                 System.out.println();
             }

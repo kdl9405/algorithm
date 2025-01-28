@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -26,7 +26,7 @@ public class BOJ1149 {
                 house[i][j] = Integer.parseInt(st.nextToken());
             }
         }
-        
+
         color = new int[n][3];
 
         color[0][0] = house[0][0];

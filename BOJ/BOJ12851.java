@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    숨바꼭질 2
-*/
+/*
+ * 숨바꼭질 2
+ */
 public class BOJ12851 {
 
     public static void main(String[] args) throws IOException {
@@ -16,8 +16,8 @@ public class BOJ12851 {
         int n = Integer.parseInt(st.nextToken());
         int k = Integer.parseInt(st.nextToken());
 
-        if (n==k) {
-            System.out.println(0+"\n"+1);
+        if (n == k) {
+            System.out.println(0 + "\n" + 1);
             return;
         }
 
@@ -38,21 +38,21 @@ public class BOJ12851 {
 
                 visit[now] = true;
 
-                int a = now-1;
-                int b = now+1;
-                int c = now*2;
+                int a = now - 1;
+                int b = now + 1;
+                int c = now * 2;
 
-                if (a == k || b == k || c==k) {
+                if (a == k || b == k || c == k) {
                     finish = true;
                 }
 
-                if (a>=0 && !visit[a]) {
+                if (a >= 0 && !visit[a]) {
                     queue.add(a);
                 }
-                if (b<=100000 && !visit[b]) {
+                if (b <= 100000 && !visit[b]) {
                     queue.add(b);
                 }
-                if (c>=0 && c<=100000 && !visit[c]) {
+                if (c >= 0 && c <= 100000 && !visit[c]) {
                     queue.add(c);
                 }
 
@@ -69,7 +69,7 @@ public class BOJ12851 {
             }
         }
 
-        System.out.println(time + "\n"+count);
+        System.out.println(time + "\n" + count);
 
     }
 

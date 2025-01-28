@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    극장 좌석
-
-*/
+/*
+ * 극장 좌석
+ * 
+ */
 
 import java.io.*;
 

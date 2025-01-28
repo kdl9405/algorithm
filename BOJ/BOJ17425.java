@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    약수의 합
-
-*/
+/*
+ * 약수의 합
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -34,8 +34,8 @@ public class BOJ17425 {
         while (T-- > 0) {
             int n = Integer.parseInt(br.readLine());
 
-            sb.append(gx[n]+"\n");
-            
+            sb.append(gx[n] + "\n");
+
         }
 
         br.close();

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 /*
-    합이 0인 네 정수
-
-
-    해쉬맵 - 해쉬충돌
-*/
+ * 합이 0인 네 정수
+ * 
+ * 
+ * 해쉬맵 - 해쉬충돌
+ */
 
 import java.io.*;
 import java.util.*;

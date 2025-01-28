@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-    피보나치 수 4
-*/
+ * 피보나치 수 4
+ */
 
 import java.io.*;
 import java.math.BigInteger;

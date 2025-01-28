@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -40,7 +40,7 @@ public class BOJ15650 {
             return;
         }
 
-        for(int i = x; i<=n; i++){
+        for (int i = x; i <= n; i++) {
 
             arr[depth] = i;
             dfs(i + 1, depth + 1);

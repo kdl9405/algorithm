@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-/* 
-    구간 합 구하기 5
-*/
+/*
+ * 구간 합 구하기 5
+ */
 
 public class BOJ11660 {
 
@@ -21,7 +21,8 @@ public class BOJ11660 {
         for (int i = 1; i <= n; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 1; j <= n; j++) {
-                dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1] + Integer.parseInt(st.nextToken());
+                dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1]
+                        + Integer.parseInt(st.nextToken());
             }
         }
 

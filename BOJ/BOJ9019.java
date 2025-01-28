@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/*  
-    DSLR 
-
-    2016ms
-*/
+/*
+ * DSLR
+ * 
+ * 2016ms
+ */
 public class BOJ9019 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -25,7 +25,7 @@ public class BOJ9019 {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            sb.append(BFS(a, b)+"\n");
+            sb.append(BFS(a, b) + "\n");
         }
 
         System.out.println(sb.toString());
@@ -43,9 +43,9 @@ public class BOJ9019 {
         while (!queue.isEmpty()) {
             int now = queue.poll();
 
-                if (parent[b] != -1) {
-                    break;
-                }
+            if (parent[b] != -1) {
+                break;
+            }
 
             int x = now * 2;
             if (x > 9999) {
@@ -86,10 +86,10 @@ public class BOJ9019 {
         }
 
         StringBuilder sb = new StringBuilder();
-        
+
         while (b != a) {
 
-            sb.append(process[b]); 
+            sb.append(process[b]);
             b = parent[b];
         }
 

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    암호코드
-*/
+/*
+ * 암호코드
+ */
 
 import java.io.*;
 
@@ -25,7 +25,7 @@ public class BOJ2011 {
         for (int i = 1; i <= N.length(); i++) {
 
             if (num[i] != 0) {
-                dp[i] = dp[i-1];
+                dp[i] = dp[i - 1];
             }
 
             int x = num[i] + num[i - 1] * 10;

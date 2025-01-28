@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    다리 만들기 2
-
-*/
+/*
+ * 다리 만들기 2
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -27,7 +27,7 @@ public class BOJ17472 {
     static int N, M, land;
     static int[][] map;
     static boolean[][] visit;
-    static int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     static List<int[]> bridge;
     static int[] group;
 
@@ -93,7 +93,7 @@ public class BOJ17472 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 if (map[i][j] != 0) {
-                    queue.add(new int[] { i, j, map[i][j] });
+                    queue.add(new int[] {i, j, map[i][j]});
                 }
             }
         }
@@ -114,7 +114,7 @@ public class BOJ17472 {
 
                     if (map[x][y] > now[2]) {
                         if (count >= 2) {
-                            bridge.add(new int[] { now[2], map[x][y], count });
+                            bridge.add(new int[] {now[2], map[x][y], count});
                         }
                         break;
                     }

@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    리모컨
-
-    2. bfs
-*/
+/*
+ * 리모컨
+ * 
+ * 2. bfs
+ */
 public class BOJ1107_refactoring2 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -52,7 +52,7 @@ public class BOJ1107_refactoring2 {
             return a[1] - b[1];
         });
 
-        pq.add(new int[] { 100, 0 });
+        pq.add(new int[] {100, 0});
         visit[100] = true;
 
         int answer = 0;
@@ -70,10 +70,11 @@ public class BOJ1107_refactoring2 {
                 visit[now[0] + 1] = true;
 
                 if (isPossible(now[0] + 1)) {
-                    pq.add(new int[] { now[0] + 1, Math.min(now[1] + 1, Integer.toString(now[0] + 1).length()) });
+                    pq.add(new int[] {now[0] + 1,
+                            Math.min(now[1] + 1, Integer.toString(now[0] + 1).length())});
 
                 } else {
-                    pq.add(new int[] { now[0] + 1, now[1] + 1 });
+                    pq.add(new int[] {now[0] + 1, now[1] + 1});
 
                 }
 
@@ -83,10 +84,11 @@ public class BOJ1107_refactoring2 {
                 visit[now[0] - 1] = true;
 
                 if (isPossible(now[0] - 1)) {
-                    pq.add(new int[] { now[0] - 1, Math.min(now[1] + 1, Integer.toString(now[0] - 1).length()) });
+                    pq.add(new int[] {now[0] - 1,
+                            Math.min(now[1] + 1, Integer.toString(now[0] - 1).length())});
 
                 } else {
-                    pq.add(new int[] { now[0] - 1, now[1] + 1 });
+                    pq.add(new int[] {now[0] - 1, now[1] + 1});
                 }
 
             }

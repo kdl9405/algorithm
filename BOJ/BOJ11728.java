@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    배열 합치기
-*/
+/*
+ * 배열 합치기
+ */
 
 import java.io.*;
 import java.util.*;

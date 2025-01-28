@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    귀여운 라이언
-*/
+/*
+ * 귀여운 라이언
+ */
 
 public class BOJ15565 {
 

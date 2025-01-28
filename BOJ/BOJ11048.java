@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    이동하기
-*/
+/*
+ * 이동하기
+ */
 
 import java.io.*;
 import java.util.*;

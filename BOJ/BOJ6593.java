@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    상범 빌딩
-*/
+/*
+ * 상범 빌딩
+ */
 public class BOJ6593 {
 
     public static void main(String[] args) throws IOException {
@@ -33,7 +33,7 @@ public class BOJ6593 {
     char[][][] building;
     int[] start;
     StringBuilder answer;
-    int[][] move = { { 1, 0, 0 }, { -1, 0, 0 }, { 0, 1, 0 }, { 0, -1, 0 }, { 0, 0, 1 }, { 0, 0, -1 } };
+    int[][] move = {{1, 0, 0}, {-1, 0, 0}, {0, 1, 0}, {0, -1, 0}, {0, 0, 1}, {0, 0, -1}};
 
     boolean init() throws IOException {
 
@@ -55,7 +55,7 @@ public class BOJ6593 {
                 char[] line = br.readLine().toCharArray();
                 for (int c = 0; c < C; c++) {
                     if (line[c] == 'S') {
-                        start = new int[] { l, r, c };
+                        start = new int[] {l, r, c};
                     }
                     building[l][r][c] = line[c];
                 }
@@ -71,7 +71,7 @@ public class BOJ6593 {
         boolean[][][] isVisted = new boolean[L][R][C];
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { start[0], start[1], start[2] });
+        queue.add(new int[] {start[0], start[1], start[2]});
         isVisted[start[0]][start[1]][start[2]] = true;
 
         int min = 0;
@@ -100,7 +100,7 @@ public class BOJ6593 {
 
                     if (!isVisted[nl][nr][nc] && building[nl][nr][nc] == '.') {
                         isVisted[nl][nr][nc] = true;
-                        queue.add(new int[] { nl, nr, nc });
+                        queue.add(new int[] {nl, nr, nc});
                     }
                 }
             }

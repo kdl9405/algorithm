@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /*
-    달팽이
+ * 달팽이
  */
 
 import java.io.*;
@@ -60,6 +60,6 @@ public class BOJ1913 {
 
     }
 
-    static int[][] dir = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
+    static int[][] dir = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 
 }

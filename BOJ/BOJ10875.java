@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.*;
@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class BOJ10875 {
 
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         int N = sc.nextInt();
@@ -18,10 +18,10 @@ public class BOJ10875 {
 
         StringBuilder sb = new StringBuilder();
 
-        for(int i=0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             A[i] = sc.nextInt();
 
-            if(A[i]<X){
+            if (A[i] < X) {
                 sb.append(A[i]).append(" ");
             }
         }
@@ -32,5 +32,5 @@ public class BOJ10875 {
 
 
     }
-    
+
 }

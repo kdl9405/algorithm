@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    녹색 옷 입은 애가 젤다지?
-*/
+/*
+ * 녹색 옷 입은 애가 젤다지?
+ */
 
 import java.io.*;
 import java.util.*;
@@ -19,7 +19,7 @@ public class BOJ4485_copy {
     int N;
     int[][] cave;
     int[][] visit;
-    int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     void solution() throws NumberFormatException, IOException {
 

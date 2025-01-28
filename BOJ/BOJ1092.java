@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    배
-*/
+/*
+ * 배
+ */
 
 public class BOJ1092 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -27,7 +27,7 @@ public class BOJ1092 {
         }
 
         Arrays.sort(crane);
-        
+
         Arrays.sort(box);
 
         if (box[m - 1] > crane[n - 1]) {
@@ -42,7 +42,7 @@ public class BOJ1092 {
                 cranePart[j]++;
             }
 
-              int max = 0;
+            int max = 0;
             for (int i = 0; i < n; i++) {
                 max = Math.max(cranePart[i], max);
             }
@@ -70,7 +70,7 @@ public class BOJ1092 {
                             temp++;
                         }
                         max = Math.max(max, temp);
-                       
+
                     }
                 }
                 System.out.println(max);

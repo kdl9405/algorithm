@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.util.Scanner;
@@ -19,7 +19,7 @@ public class BOJ1712 {
             System.out.println(-1);
 
         } else {
-            System.out.println(A / (C-B) + 1);
+            System.out.println(A / (C - B) + 1);
 
         }
 

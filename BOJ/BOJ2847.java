@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    게임을 만든 동준이
-*/
+/*
+ * 게임을 만든 동준이
+ */
 
 import java.io.*;
 

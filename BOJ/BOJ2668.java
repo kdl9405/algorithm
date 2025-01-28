@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    숫자고르기
-*/
+/*
+ * 숫자고르기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -21,7 +21,7 @@ public class BOJ2668 {
 
         for (int i = 1; i <= N; i++) {
 
-            if(answer.contains(i)){
+            if (answer.contains(i)) {
                 continue;
             }
 
@@ -33,7 +33,7 @@ public class BOJ2668 {
 
         StringBuilder sb = new StringBuilder();
         sb.append(answer.size()).append("\n");
-        for(int a : answer){
+        for (int a : answer) {
             sb.append(a).append("\n");
         }
 

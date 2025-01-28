@@ -1,16 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    톱니바퀴 
-
-    1. 회전 전에, 마주보는 부분 확인 후 회전방식 지정(1,-1,0)
-    2. 
-
-
-*/
+/*
+ * 톱니바퀴
+ * 
+ * 1. 회전 전에, 마주보는 부분 확인 후 회전방식 지정(1,-1,0) 2.
+ * 
+ * 
+ */
 public class BOJ14891 {
 
     public static void main(String[] args) throws IOException {
@@ -59,7 +58,7 @@ public class BOJ14891 {
                 break;
             }
             nd *= -1;
-            queue.add(new int[] { i + 1, nd });
+            queue.add(new int[] {i + 1, nd});
         }
 
         // 왼쪽 체크
@@ -69,7 +68,7 @@ public class BOJ14891 {
                 break;
             }
             nd *= -1;
-            queue.add(new int[] { i - 1, nd });
+            queue.add(new int[] {i - 1, nd});
         }
 
         rotate(n, d);

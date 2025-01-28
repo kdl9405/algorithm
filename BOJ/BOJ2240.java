@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    자두나무
-*/
+/*
+ * 자두나무
+ */
 
 import java.io.*;
 import java.util.*;
@@ -35,7 +35,7 @@ public class BOJ2240 {
                     } else {
                         dp[i][j] = Math.max(dp[i - 1][j - 1] + 1, dp[i - 1][j]);
                     }
-                }else{
+                } else {
                     if (tree == 1) {
                         dp[i][j] = Math.max(dp[i - 1][j - 1] + 1, dp[i - 1][j]);
                     } else {
@@ -46,7 +46,7 @@ public class BOJ2240 {
         }
 
         int max = 0;
-        for(int i = 0; i<=W; i++){
+        for (int i = 0; i <= W; i++) {
             max = Math.max(max, dp[T][i]);
         }
 

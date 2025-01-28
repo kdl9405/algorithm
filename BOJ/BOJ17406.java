@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    배열 돌리기 4
-*/
+/*
+ * 배열 돌리기 4
+ */
 
 import java.io.*;
 import java.util.*;

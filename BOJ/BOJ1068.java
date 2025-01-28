@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    트리
-*/
+/*
+ * 트리
+ */
 
 import java.io.*;
 import java.util.*;
@@ -40,7 +40,8 @@ public class BOJ1068 {
                 continue;
             }
 
-            if (children.get(i).isEmpty()||(children.get(i).size() == 1 && removed[children.get(i).get(0)])) {
+            if (children.get(i).isEmpty()
+                    || (children.get(i).size() == 1 && removed[children.get(i).get(0)])) {
                 count++;
             }
 

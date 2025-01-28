@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    준오는 최종인재야!!
-
-*/
+/*
+ * 준오는 최종인재야!!
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -34,8 +34,8 @@ public class BOJ14657 {
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
 
-            links.get(a).add(new int[] { b, c });
-            links.get(b).add(new int[] { a, c });
+            links.get(a).add(new int[] {b, c});
+            links.get(b).add(new int[] {a, c});
         }
 
         cnt = 1;
@@ -60,8 +60,7 @@ public class BOJ14657 {
             root = now;
             cnt = c;
             day = t;
-        } 
-        else if (cnt == c && day > t) {
+        } else if (cnt == c && day > t) {
             root = now;
             day = t;
 

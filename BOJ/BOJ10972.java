@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    다음 순열
-*/
+/*
+ * 다음 순열
+ */
 public class BOJ10972 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -19,7 +19,7 @@ public class BOJ10972 {
         boolean change = false;
         for (int i = arr.length - 1; i > 0; i--) {
             max = Math.max(max, arr[i]);
-            if (arr[i - 1] < max) { 
+            if (arr[i - 1] < max) {
                 change = true;
                 int index = i;
                 for (int j = i; j < arr.length; j++) {

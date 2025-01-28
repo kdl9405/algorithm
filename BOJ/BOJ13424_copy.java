@@ -1,3 +1,4 @@
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -70,7 +71,8 @@ public class BOJ13424_copy {
                 List<TNode> adjList = map[current.node];
                 for (int j = 0, size = adjList.size(); j < size; j++) {
                     TNode nextNode = adjList.get(j);
-                    if (!visited[nextNode.node] && distance[nextNode.node] > distance[current.node] + nextNode.cost) {
+                    if (!visited[nextNode.node]
+                            && distance[nextNode.node] > distance[current.node] + nextNode.cost) {
                         distance[nextNode.node] = distance[current.node] + nextNode.cost;
                         pq.add(new TNode(nextNode.node, distance[nextNode.node]));
                     }
@@ -87,11 +89,12 @@ public class BOJ13424_copy {
             if (roomDistance > answerArr[i]) {
                 answer = i;
                 roomDistance = answerArr[i];
-            } 
+            }
         }
         return answer;
     }
 }
+
 
 class TNode implements Comparable<TNode> {
     int node;

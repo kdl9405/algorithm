@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,10 +19,10 @@ public class BOJ2751 {
             arr[Integer.parseInt(br.readLine()) + 10000000] = true;
         }
 
-        for(int i = 0; i < 20000001; i++){
+        for (int i = 0; i < 20000001; i++) {
 
-            if(arr[i]){
-                sb.append(i-10000000).append("\n");
+            if (arr[i]) {
+                sb.append(i - 10000000).append("\n");
             }
         }
 

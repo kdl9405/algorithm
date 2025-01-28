@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*
-    나머지 합 
-*/
+ * 나머지 합
+ */
 
 public class BOJ10986 {
 

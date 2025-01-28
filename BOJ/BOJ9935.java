@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/* 
-    문자열 폭발
-*/
+/*
+ * 문자열 폭발
+ */
 public class BOJ9935 {
 
     public static void main(String[] args) throws IOException {
@@ -40,7 +40,7 @@ public class BOJ9935 {
         if (idx == 0) {
             System.out.println("FRULA");
         } else {
-            System.out.println(String.valueOf(arr,0,idx));
+            System.out.println(String.valueOf(arr, 0, idx));
         }
     }
 

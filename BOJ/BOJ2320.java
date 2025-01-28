@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    끝말잇기 
-*/
+/*
+ * 끝말잇기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -20,7 +20,7 @@ public class BOJ2320 {
             words[i] = br.readLine();
         }
 
-        dp = new int[5][(1 << N+1)]; // i부터 시작해야 하는데, j를 사용한 상태에서의 최대 길이.
+        dp = new int[5][(1 << N + 1)]; // i부터 시작해야 하는데, j를 사용한 상태에서의 최대 길이.
 
         alphabet = new HashMap<>();
         alphabet.put('A', 0);
@@ -31,7 +31,7 @@ public class BOJ2320 {
 
         max = 0;
 
-        for(int i= 0; i<5; i++){
+        for (int i = 0; i < 5; i++) {
             max = Math.max(max, sol(i, 0));
         }
         System.out.println(max);

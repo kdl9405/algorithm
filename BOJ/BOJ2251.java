@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/*  
-    물통
-*/
+/*
+ * 물통
+ */
 
 import java.io.*;
 import java.util.*;
@@ -21,7 +21,7 @@ public class BOJ2251 {
         boolean[][][] state = new boolean[201][201][201];
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { 0, 0, C });
+        queue.add(new int[] {0, 0, C});
 
         Set<Integer> answerSet = new TreeSet<>();
         answerSet.add(C);
@@ -34,7 +34,7 @@ public class BOJ2251 {
                 int d = Math.min(now[0], B - now[1]);
                 if (!state[now[0] - d][now[1] + d][now[2]]) {
                     state[now[0] - d][now[1] + d][now[2]] = true;
-                    queue.add(new int[] { now[0] - d, now[1] + d, now[2] });
+                    queue.add(new int[] {now[0] - d, now[1] + d, now[2]});
                     if (now[0] - d == 0) {
                         answerSet.add(now[2]);
                     }
@@ -43,7 +43,7 @@ public class BOJ2251 {
                 d = Math.min(now[0], C - now[2]);
                 if (!state[now[0] - d][now[1]][now[2] + d]) {
                     state[now[0] - d][now[1]][now[2] + d] = true;
-                    queue.add(new int[] { now[0] - d, now[1], now[2] + d });
+                    queue.add(new int[] {now[0] - d, now[1], now[2] + d});
                     if (now[0] - d == 0) {
                         answerSet.add(now[2] + d);
                     }
@@ -54,13 +54,13 @@ public class BOJ2251 {
                 int d = Math.min(now[1], A - now[0]);
                 if (!state[now[0] + d][now[1] - d][now[2]]) {
                     state[now[0] + d][now[1] - d][now[2]] = true;
-                    queue.add(new int[] { now[0] + d, now[1] - d, now[2] });
+                    queue.add(new int[] {now[0] + d, now[1] - d, now[2]});
                 }
 
                 d = Math.min(now[1], C - now[2]);
                 if (!state[now[0]][now[1] - d][now[2] + d]) {
                     state[now[0]][now[1] - d][now[2] + d] = true;
-                    queue.add(new int[] { now[0], now[1] - d, now[2] + d });
+                    queue.add(new int[] {now[0], now[1] - d, now[2] + d});
                     if (now[0] == 0) {
                         answerSet.add(now[2] + d);
                     }
@@ -71,13 +71,13 @@ public class BOJ2251 {
                 int d = Math.min(now[2], A - now[0]);
                 if (!state[now[0] + d][now[1]][now[2] - d]) {
                     state[now[0] + d][now[1]][now[2] - d] = true;
-                    queue.add(new int[] { now[0] + d, now[1], now[2] - d });
+                    queue.add(new int[] {now[0] + d, now[1], now[2] - d});
                 }
 
                 d = Math.min(now[2], B - now[1]);
                 if (!state[now[0]][now[1] + d][now[2] - d]) {
                     state[now[0]][now[1] + d][now[2] - d] = true;
-                    queue.add(new int[] { now[0], now[1] + d, now[2] - d });
+                    queue.add(new int[] {now[0], now[1] + d, now[2] - d});
                     if (now[0] == 0) {
                         answerSet.add(now[2] - d);
                     }

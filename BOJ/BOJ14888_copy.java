@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -39,7 +41,7 @@ public class BOJ14888_copy {
 
         dfs(number[0], 1);
 
-        System.out.println(max+" "+min);
+        System.out.println(max + " " + min);
 
     }
 
@@ -86,30 +88,38 @@ public class BOJ14888_copy {
     }
 
     public static void dfs(int num, int idx) {
-		if (idx == n) {
-			max = Math.max(max, num);
-			min = Math.min(min, num);
-			return;
-		}
- 
-		for (int i = 0; i < 4; i++) {
-			// 연산자 개수가 1개 이상인 경우
-			if (operator[i] > 0) {
- 
-				// 해당 연산자를 1 감소시킨다.
-				operator[i]--;
- 
-				switch (i) {
- 
-				case 0:	dfs(num + number[idx], idx + 1);	break;
-				case 1:	dfs(num - number[idx], idx + 1);	break;
-				case 2:	dfs(num * number[idx], idx + 1);	break;
-				case 3:	dfs(num / number[idx], idx + 1);	break;
- 
-				}
-				// 재귀호출이 종료되면 다시 해당 연산자 개수를 복구한다.
-				operator[i]++;
-			}
-		}
-	}
+        if (idx == n) {
+            max = Math.max(max, num);
+            min = Math.min(min, num);
+            return;
+        }
+
+        for (int i = 0; i < 4; i++) {
+            // 연산자 개수가 1개 이상인 경우
+            if (operator[i] > 0) {
+
+                // 해당 연산자를 1 감소시킨다.
+                operator[i]--;
+
+                switch (i) {
+
+                    case 0:
+                        dfs(num + number[idx], idx + 1);
+                        break;
+                    case 1:
+                        dfs(num - number[idx], idx + 1);
+                        break;
+                    case 2:
+                        dfs(num * number[idx], idx + 1);
+                        break;
+                    case 3:
+                        dfs(num / number[idx], idx + 1);
+                        break;
+
+                }
+                // 재귀호출이 종료되면 다시 해당 연산자 개수를 복구한다.
+                operator[i]++;
+            }
+        }
+    }
 }

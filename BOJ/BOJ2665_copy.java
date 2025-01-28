@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
-/* 
-    미로만들기
+/*
+ * 미로만들기
  */
 
 import java.io.*;
@@ -24,7 +24,7 @@ public class BOJ2665_copy {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
             return a[2] - b[2];
         });
-        pq.add(new int[] { 0, 0, 0 });
+        pq.add(new int[] {0, 0, 0});
 
         while (!pq.isEmpty()) {
             int[] now = pq.poll();
@@ -49,15 +49,15 @@ public class BOJ2665_copy {
                 }
 
                 if (map[x][y] == '0') {
-                    pq.add(new int[] { x, y, now[2] + 1 });
+                    pq.add(new int[] {x, y, now[2] + 1});
 
                 } else {
-                    pq.add(new int[] { x, y, now[2] });
+                    pq.add(new int[] {x, y, now[2]});
 
                 }
             }
         }
     }
 
-    public static int[][] move = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+    public static int[][] move = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 }

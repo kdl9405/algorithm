@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    로봇 청소기
-
+/*
+ * 로봇 청소기
+ * 
  */
 
 import java.io.*;
@@ -60,7 +60,7 @@ public class BOJ14503 {
             r -= dr[d];
             c -= dc[d];
 
-            if (r < 0 || r>=N || c<0 || c>=M || map[r][c] == 1) {
+            if (r < 0 || r >= N || c < 0 || c >= M || map[r][c] == 1) {
                 break;
             }
 
@@ -70,6 +70,6 @@ public class BOJ14503 {
 
     }
 
-    static int[] dr = { -1, 0, 1, 0 };
-    static int[] dc = { 0, 1, 0, -1 };
+    static int[] dr = {-1, 0, 1, 0};
+    static int[] dc = {0, 1, 0, -1};
 }

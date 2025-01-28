@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    경사로
-*/
+/*
+ * 경사로
+ */
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -34,9 +34,9 @@ public class BOJ2776 {
                 int num = Integer.parseInt(st.nextToken());
 
                 if (one.contains(num)) {
-                    sb.append(1+"\n");
-                }else{
-                    sb.append(0+"\n");
+                    sb.append(1 + "\n");
+                } else {
+                    sb.append(0 + "\n");
                 }
             }
 

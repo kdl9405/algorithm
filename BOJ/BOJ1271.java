@@ -1,16 +1,16 @@
-package BOJ;
+package boj;
 
 import java.math.*;
 import java.util.*;
 
-/* 
-    엄청난 부자2
-
-*/
+/*
+ * 엄청난 부자2
+ * 
+ */
 public class BOJ1271 {
-    
+
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         BigInteger n = sc.nextBigInteger();

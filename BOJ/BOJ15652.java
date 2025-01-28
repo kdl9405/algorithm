@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -35,12 +37,12 @@ public class BOJ15652 {
             return;
         }
 
-        for (int i = x; i <=n; i++) {
+        for (int i = x; i <= n; i++) {
 
-           
-                arr[depth] = i;
-                dfs(i, depth + 1);
-            
+
+            arr[depth] = i;
+            dfs(i, depth + 1);
+
 
         }
     }

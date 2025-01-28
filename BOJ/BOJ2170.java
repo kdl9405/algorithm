@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    선 긋기
-*/
+/*
+ * 선 긋기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -45,7 +45,7 @@ public class BOJ2170 {
             }
         }
 
-        length += (y-x);
+        length += (y - x);
 
         System.out.println(length);
 

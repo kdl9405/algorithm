@@ -1,3 +1,4 @@
+package boj;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,29 +28,29 @@ public class BOJ10828 {
             } else if (s.contains("pop")) {
                 if (list.isEmpty()) {
                     sb.append("-1" + "\n");
-                } else {
-                    sb.append(list.get(index-1) + "\n");
+                } else {  
+                    sb.append(list.ge t (index-1) + "\n");
                     list.remove(index-1);
                     index--;
                 }
             } else if (s.contains("top")) {
                 if (list.isEmpty()) {
                     sb.append("-1" + "\n");
-                } else {
+                } else {  
                     sb.append(list.get(index-1) + "\n");
-                }
-            } else if(s.contains("size")){
-                sb.append(list.size()+"\n");
+                }  
+            } else if(s.contains("siz e ")){
+                 sb.a ppend(list.size()+"\n ");
             }else if(s.contains("empty")){
                 if (list.isEmpty()) {
-                    sb.append("1" + "\n");
+                     s b.append("1" + "\n");
                 }else{
                     sb.append("0" + "\n");
                 }
             }
 
-            i++;
-        }
+         
+
 
         
         System.out.println(sb);

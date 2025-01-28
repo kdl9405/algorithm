@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    RGB거리 2
-
-*/
+/*
+ * RGB거리 2
+ * 
+ */
 public class BOJ17404 {
 
     static int[][] color;

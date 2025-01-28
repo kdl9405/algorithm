@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
- * 생일 
+ * 생일
  */
 
 import java.io.*;
@@ -21,11 +21,12 @@ public class BOJ5635_copy {
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
 
-            birthdays[i] = new Info(st.nextToken(), Integer.parseInt(st.nextToken()),Integer.parseInt(st.nextToken()),Integer.parseInt(st.nextToken()));
+            birthdays[i] = new Info(st.nextToken(), Integer.parseInt(st.nextToken()),
+                    Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
         }
 
         Arrays.sort(birthdays);
-        System.out.println(birthdays[N-1].name + "\n" + birthdays[0].name);
+        System.out.println(birthdays[N - 1].name + "\n" + birthdays[0].name);
     }
 
     private static class Info implements Comparable<Info> {

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-    수 이어 쓰기 1
-*/
+ * 수 이어 쓰기 1
+ */
 
 import java.io.*;
 

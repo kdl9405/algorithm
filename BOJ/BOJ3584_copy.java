@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    가장 가까운 공통 조상
-*/
+/*
+ * 가장 가까운 공통 조상
+ */
 
 import java.io.*;
 import java.util.*;
@@ -21,7 +21,7 @@ public class BOJ3584_copy {
             N = Integer.parseInt(br.readLine());
             parent = new int[N + 1];
             depth = new int[N + 1];
-            boolean[] isNotRoot  = new boolean[N+1];
+            boolean[] isNotRoot = new boolean[N + 1];
 
             children = new ArrayList<>();
             for (int i = 0; i <= N; i++) {

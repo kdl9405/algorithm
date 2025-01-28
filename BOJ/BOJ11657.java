@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    타임머신 
-
-    벨만 포드
-*/
+/*
+ * 타임머신
+ * 
+ * 벨만 포드
+ */
 public class BOJ11657 {
 
     static int N;
@@ -100,7 +100,7 @@ public class BOJ11657 {
                 }
                 for (nextStation root : next[i]) {
 
-                    if (dp[root.station] > dp[i]+root.time) {
+                    if (dp[root.station] > dp[i] + root.time) {
                         return true;
                     }
                 }
@@ -111,11 +111,12 @@ public class BOJ11657 {
     }
 }
 
-class nextStation{
+
+class nextStation {
     int station;
     int time;
 
-    nextStation(int station, int time){
+    nextStation(int station, int time) {
         this.station = station;
         this.time = time;
     }

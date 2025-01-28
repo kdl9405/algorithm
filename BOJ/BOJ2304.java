@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    창고 다각형
-*/
+/*
+ * 창고 다각형
+ */
 
 import java.io.*;
 import java.util.*;
@@ -19,12 +19,13 @@ public class BOJ2304 {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        List<int[]>polygon = new ArrayList<>();
+        List<int[]> polygon = new ArrayList<>();
 
         StringTokenizer st;
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
-            polygon.add(new int[] { Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()) });
+            polygon.add(
+                    new int[] {Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())});
         }
 
         Collections.sort(polygon, (a, b) -> {

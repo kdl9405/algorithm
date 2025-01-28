@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    센서 
-*/
+/*
+ * 센서
+ */
 public class BOJ2212 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 

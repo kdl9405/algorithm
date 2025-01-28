@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
-/* 
-    선물
-*/
+/*
+ * 선물
+ */
 
 public class BOJ1166 {
 
@@ -38,7 +38,7 @@ public class BOJ1166 {
             }
             duplicate.put(mid, duplicate.getOrDefault(mid, 0) + 1);
 
-        //    System.out.println(mid + " " + min + " " + max);
+            // System.out.println(mid + " " + min + " " + max);
 
             if ((long) (L / mid) * (long) (W / mid) * (long) (H / mid) >= N) {
                 min = mid;
@@ -47,7 +47,7 @@ public class BOJ1166 {
             }
         }
 
-    //    System.out.println(max);
+        // System.out.println(max);
 
     }
 }

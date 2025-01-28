@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,17 +25,17 @@ public class BOJ12015 {
             int a = Integer.parseInt(st.nextToken());
             if (arr[index] < a) {
                 if (answer >= index && arr[answer] < a) {
-                    index = answer+1;                    
-                }else{
-                    index = serchIndex(arr,answer, a);                    
+                    index = answer + 1;
+                } else {
+                    index = serchIndex(arr, answer, a);
                 }
-            }else{
+            } else {
                 answer = Math.max(answer, index);
                 index = serchIndex(arr, answer, a);
             }
             answer = Math.max(answer, index);
             arr[index] = a;
-        }        
+        }
 
         answer = Math.max(answer, index);
 
@@ -49,17 +49,17 @@ public class BOJ12015 {
         while (min <= max) {
             int mid = (min + max) / 2;
 
-            if (arr[mid] == a) {                
+            if (arr[mid] == a) {
                 return mid;
-            }else if (arr[mid] > a) {
+            } else if (arr[mid] > a) {
                 now = mid;
-                max = mid-1;
-            }else{
-                min = mid+1;
-            }           
+                max = mid - 1;
+            } else {
+                min = mid + 1;
+            }
         }
         return now;
     }
 
-   
+
 }

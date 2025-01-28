@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    주유소 
-*/
+/*
+ * 주유소
+ */
 
 import java.io.*;
 import java.util.*;
@@ -30,10 +30,10 @@ public class BOJ13305 {
         int min = price[0];
         long total = distance[0] * price[0];
 
-        for(int i = 1; i<N-1; i++){
+        for (int i = 1; i < N - 1; i++) {
             min = Math.min(price[i], min);
 
-            total+=(distance[i]*min);
+            total += (distance[i] * min);
         }
 
         System.out.println(total);

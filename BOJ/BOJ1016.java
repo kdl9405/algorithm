@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    제곱 ㄴㄴ 수
-
-*/
+/*
+ * 제곱 ㄴㄴ 수
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -41,7 +41,7 @@ public class BOJ1016 {
         }
 
         int count = 0;
-        for(int i = 0; i<=dif; i++){
+        for (int i = 0; i <= dif; i++) {
 
             if (!check[i]) {
                 count++;
@@ -54,16 +54,7 @@ public class BOJ1016 {
 /*
  * 1 ~ 10
  * 
- * 1 X
- * 2 X
- * 3 X
- * 4 4로 나눠짐
- * 5 X
- * 6 X
- * 7 X
- * 8 4로 나눠짐
- * 9 9로 나눠짐
- * 10 X
+ * 1 X 2 X 3 X 4 4로 나눠짐 5 X 6 X 7 X 8 4로 나눠짐 9 9로 나눠짐 10 X
  * 
  * 
  * 

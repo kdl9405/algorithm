@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    알고스팟
-*/
+/*
+ * 알고스팟
+ */
 
 import java.io.*;
 import java.util.*;
@@ -27,7 +27,7 @@ public class BOJ1261 {
         boolean[][] visit = new boolean[N][M];
         visit[0][0] = true;
         Deque<int[]> deque = new ArrayDeque<>();
-        deque.add(new int[] { 0, 0, 0 });
+        deque.add(new int[] {0, 0, 0});
 
         while (!deque.isEmpty()) {
 
@@ -50,9 +50,9 @@ public class BOJ1261 {
 
                 visit[x][y] = true;
                 if (maze[x][y] == '1') {
-                    deque.addLast(new int[] { x, y, now[2] + 1 });
+                    deque.addLast(new int[] {x, y, now[2] + 1});
                 } else {
-                    deque.addFirst(new int[] { x, y, now[2] });
+                    deque.addFirst(new int[] {x, y, now[2]});
                 }
 
             }
@@ -61,5 +61,5 @@ public class BOJ1261 {
 
     }
 
-    static int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 }

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.util.Scanner;
 
 public class BOJ1343 {
-    
+
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         String board = sc.nextLine();
@@ -13,30 +13,29 @@ public class BOJ1343 {
         StringBuilder sb = new StringBuilder();
         int count = 0;
 
-        loop:
-        for(int i = 0; i<board.length(); i++){
+        loop: for (int i = 0; i < board.length(); i++) {
             char c = board.charAt(i);
 
-            if (i == board.length()-1 && c == 'X') {
+            if (i == board.length() - 1 && c == 'X') {
                 count++;
             }
 
-            if (c == '.' || i == board.length()-1) {
-               
+            if (c == '.' || i == board.length() - 1) {
+
                 if (count > 0) {
-                    if (count >=4) {
-                        int x = count/4;
-                        count -= (x*4);
+                    if (count >= 4) {
+                        int x = count / 4;
+                        count -= (x * 4);
                         while (x-- > 0) {
                             sb.append("AAAA");
                         }
                     }
-                    if(count % 2 == 0){
-                        int x = count/2;
+                    if (count % 2 == 0) {
+                        int x = count / 2;
                         while (x-- > 0) {
                             sb.append("BB");
                         }
-                    }else {
+                    } else {
                         sb = new StringBuilder();
                         sb.append(-1);
                         break loop;
@@ -46,11 +45,11 @@ public class BOJ1343 {
                 if (c == '.') {
                     sb.append(c);
                 }
-            }else {
+            } else {
                 count++;
             }
         }
-        
+
         System.out.println(sb.toString());
     }
 }

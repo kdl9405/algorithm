@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,10 +29,10 @@ public class BOJ11651 {
 
         }
 
-        Arrays.sort(position, (p1,p2) ->{
+        Arrays.sort(position, (p1, p2) -> {
 
-            if(p1[1] == p2[1]){
-                return p1[0] - p2[0]; 
+            if (p1[1] == p2[1]) {
+                return p1[0] - p2[0];
             } else {
                 return p1[1] - p2[1];
             }
@@ -39,11 +41,11 @@ public class BOJ11651 {
 
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i<n; i++){
-            sb.append(position[i][0]+" "+position[i][1]).append("\n");
+        for (int i = 0; i < n; i++) {
+            sb.append(position[i][0] + " " + position[i][1]).append("\n");
         }
 
         System.out.println(sb);
-        
+
     }
 }

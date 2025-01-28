@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    주지수
-*/
+/*
+ * 주지수
+ */
 
 public class BOJ15724 {
 
@@ -23,7 +23,8 @@ public class BOJ15724 {
             st = new StringTokenizer(br.readLine());
 
             for (int j = 1; j <= m; j++) {
-                arr[i][j] = arr[i - 1][j] + arr[i][j - 1] - arr[i - 1][j - 1] + Integer.parseInt(st.nextToken());
+                arr[i][j] = arr[i - 1][j] + arr[i][j - 1] - arr[i - 1][j - 1]
+                        + Integer.parseInt(st.nextToken());
             }
         }
 
@@ -39,7 +40,7 @@ public class BOJ15724 {
             int r2 = Integer.parseInt(st.nextToken());
             int c2 = Integer.parseInt(st.nextToken());
 
-            int sum = arr[r2][c2] - (arr[r1-1][c2] + arr[r2][c1-1])+arr[r1-1][c1-1];
+            int sum = arr[r2][c2] - (arr[r1 - 1][c2] + arr[r2][c1 - 1]) + arr[r1 - 1][c1 - 1];
 
             sb.append(sum).append("\n");
         }

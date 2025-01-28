@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    이분 그래프
-
-   최적화 필요
-*/
+/*
+ * 이분 그래프
+ * 
+ * 최적화 필요
+ */
 
 import java.io.*;
 import java.util.*;
@@ -78,7 +78,7 @@ public class BOJ1707 {
 
             if (check) {
                 sb.append("YES" + "\n");
-            }else{
+            } else {
                 sb.append("NO" + "\n");
             }
 

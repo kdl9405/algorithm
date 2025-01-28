@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 1, 2, 3 더하기 3

@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    효율적인 해킹
-
-*/
+/*
+ * 효율적인 해킹
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -33,7 +33,7 @@ public class BOJ1325 {
         }
 
         StringBuilder sb = new StringBuilder();
-        check = new boolean[N+1][N+1];
+        check = new boolean[N + 1][N + 1];
         count = new int[N + 1];
         int max = 0;
         for (int i = 1; i <= N; i++) {
@@ -83,8 +83,8 @@ public class BOJ1325 {
                 findCount(slave);
             } else {
                 int t = 0;
-                for (int i = 1; i<visit.length; i++) {
-                    if (check[slave][i]&& !visit[i]) {
+                for (int i = 1; i < visit.length; i++) {
+                    if (check[slave][i] && !visit[i]) {
                         visit[i] = true;
                         t++;
                     }

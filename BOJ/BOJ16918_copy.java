@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 봄버맨
@@ -96,6 +96,6 @@ public class BOJ16918_copy {
     }
 
     static boolean[][] map;
-    static int[][] dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
 }

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    부분수열의 합
-
-*/
+/*
+ * 부분수열의 합
+ * 
+ */
 public class BOJ1182 {
 
     public static void main(String[] args) throws IOException {
@@ -43,8 +43,8 @@ public class BOJ1182 {
             return;
         }
 
-        find(idx+1, sum, zero);
-        find(idx+1, sum+arr[idx], true);
+        find(idx + 1, sum, zero);
+        find(idx + 1, sum + arr[idx], true);
 
     }
 }

@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 /**
-
-기타리스트
-
-*/
+ * 
+ * 기타리스트
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

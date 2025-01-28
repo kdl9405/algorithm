@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    돌 그룹
-
-    988ms
-*/
+/*
+ * 돌 그룹
+ * 
+ * 988ms
+ */
 public class BOJ12886_copy {
     public static void main(String[] args) throws IOException {
 
@@ -24,12 +24,11 @@ public class BOJ12886_copy {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(stoneGroup);
         HashSet<String> loopCheck = new HashSet<>();
-        loopCheck.add(stoneGroup[0]+" "+stoneGroup[1]+" "+stoneGroup[2]);
+        loopCheck.add(stoneGroup[0] + " " + stoneGroup[1] + " " + stoneGroup[2]);
 
         int answer = 0;
 
-        loop:
-        while (!queue.isEmpty()) {
+        loop: while (!queue.isEmpty()) {
             int size = queue.size();
 
             while (size-- > 0) {
@@ -40,17 +39,17 @@ public class BOJ12886_copy {
                     break loop;
                 }
 
-                for(int i = 0; i<2; i++){
-                    for(int j = i+1; j<3;j++){
+                for (int i = 0; i < 2; i++) {
+                    for (int j = i + 1; j < 3; j++) {
                         if (stone[i] != stone[j]) {
                             int[] temp = stone.clone();
 
                             temp[j] -= temp[i];
                             temp[i] *= 2;
                             Arrays.sort(temp);
-        
-                            if (!loopCheck.contains(temp[0]+" "+temp[1]+" "+temp[2])) {
-                                loopCheck.add(temp[0]+" "+temp[1]+" "+temp[2]);
+
+                            if (!loopCheck.contains(temp[0] + " " + temp[1] + " " + temp[2])) {
+                                loopCheck.add(temp[0] + " " + temp[1] + " " + temp[2]);
                                 queue.add(temp);
                             }
 

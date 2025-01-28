@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    패션왕 신해빈
-
-*/
+ * 패션왕 신해빈
+ * 
+ */
 public class BOJ9375 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -36,7 +36,7 @@ public class BOJ9375 {
 
             count -= 1;
 
-            sb.append(count+"\n");
+            sb.append(count + "\n");
         }
 
         System.out.println(sb.toString());

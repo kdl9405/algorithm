@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -53,19 +53,19 @@ public class BOJ13424 {
 
             int room = 0;
             int min = Integer.MAX_VALUE;
-            for(int i = 1; i<=N; i++){
+            for (int i = 1; i <= N; i++) {
                 int d = 0;
-                for(int friend : friends){
+                for (int friend : friends) {
                     d += dist[i][friend];
                 }
 
                 if (min > d) {
                     min = d;
                     room = i;
-                }                
+                }
             }
 
-            sb.append(room+"\n");
+            sb.append(room + "\n");
         }
 
         System.out.println(sb.toString().trim());

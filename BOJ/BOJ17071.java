@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,9 +8,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-/* 
-    숨바꼭질 5
-*/
+/*
+ * 숨바꼭질 5
+ */
 public class BOJ17071 {
     public static void main(String[] args) throws IOException {
 
@@ -39,7 +39,7 @@ public class BOJ17071 {
                     time = -1;
                     break;
                 }
-                
+
                 int size = queue.size();
 
                 for (int i = 0; i < size; i++) {
@@ -65,8 +65,8 @@ public class BOJ17071 {
 
                 }
 
-                System.out.println("time = "+ time + " k = " + k + " n = "+queue);
-               
+                System.out.println("time = " + time + " k = " + k + " n = " + queue);
+
                 if (visit[x][k]) {
                     break;
                 }

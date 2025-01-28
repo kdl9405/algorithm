@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
-/* 
-    사전
+/*
+ * 사전
  */
 
 import java.io.*;
@@ -21,11 +21,11 @@ public class BOJ1256 {
 
         count = new int[N + 1][M + 1];
 
-        if (getCount(N,M) < K) {
+        if (getCount(N, M) < K) {
             System.out.println(-1);
         } else {
             number = new StringBuilder();
-            getNumber(N,M,K);
+            getNumber(N, M, K);
             System.out.println(number.toString());
         }
 
@@ -47,29 +47,29 @@ public class BOJ1256 {
         return count[a][z] = Math.min(getCount(a - 1, z) + getCount(a, z - 1), 1000000001);
     }
 
-    static void getNumber(int a, int z, int k){
-        if(a==0){
-            while(z-- > 0){
+    static void getNumber(int a, int z, int k) {
+        if (a == 0) {
+            while (z-- > 0) {
                 number.append("z");
             }
             return;
         }
 
-        if(z==0){
-            while(a-- > 0){
+        if (z == 0) {
+            while (a-- > 0) {
                 number.append("a");
             }
             return;
         }
 
-        int x = getCount(a-1,z);
+        int x = getCount(a - 1, z);
 
-        if(k > x){
+        if (k > x) {
             number.append("z");
-            getNumber(a,z-1,k-x);
-        }else{
+            getNumber(a, z - 1, k - x);
+        } else {
             number.append("a");
-            getNumber(a-1,z,k);
+            getNumber(a - 1, z, k);
         }
     }
 }

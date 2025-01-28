@@ -1,18 +1,18 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    사다리타기
-
-     
-        55%
-
-
-        copy_2 = 성공
-    
-*/
+/*
+ * 사다리타기
+ * 
+ * 
+ * 55%
+ * 
+ * 
+ * copy_2 = 성공
+ * 
+ */
 
 public class BOJ2469 {
 
@@ -76,12 +76,12 @@ public class BOJ2469 {
         for (int i = 0; i < k - 1; i++) {
             if (position[i] == result[i]) {
                 sb.append('*');
-            } else if (position[i] == result[i + 1] && position[i+1] == result[i]) {
+            } else if (position[i] == result[i + 1] && position[i + 1] == result[i]) {
                 sb.append('-');
 
                 char temp = position[i];
-                    position[i] = position[i + 1];
-                    position[i + 1] = temp;
+                position[i] = position[i + 1];
+                position[i + 1] = temp;
 
             } else {
 

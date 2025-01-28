@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -32,7 +34,7 @@ public class BOJ16968 {
 
                 if (i > 0 && str.charAt(i - 1) == str.charAt(i)) {
 
-                    result = result * (x-1);
+                    result = result * (x - 1);
 
                     return cal(str, i + 1);
                 } else {
@@ -43,8 +45,8 @@ public class BOJ16968 {
 
             case 'd':
                 if (i > 0 && str.charAt(i - 1) == str.charAt(i)) {
-                    
-                    result = result * (y-1);
+
+                    result = result * (y - 1);
 
                     return cal(str, i + 1);
                 } else {

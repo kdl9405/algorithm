@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    부분합 
-*/
+/*
+ * 부분합
+ */
 public class BOJ1806 {
 
     public static void main(String[] args) throws IOException {
@@ -29,21 +29,20 @@ public class BOJ1806 {
         int left = 0;
         int right = 0;
 
-        while (true) {           
+        while (true) {
 
-            if (sum >=s) {
-                min = Math.min(right-left, min);
+            if (sum >= s) {
+                min = Math.min(right - left, min);
                 sum -= arr[left];
                 left++;
-            }else if (right == n) {
+            } else if (right == n) {
                 break;
-            }           
-            else{
+            } else {
                 sum += arr[right];
                 right++;
-            }            
+            }
         }
-        
+
         if (min == 100001) {
             System.out.println(0);
         } else {

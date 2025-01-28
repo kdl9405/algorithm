@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    크게 만들기
-    메모리초과
-*/
+/*
+ * 크게 만들기 메모리초과
+ */
 public class BOJ2812_copy2 {
     public static void main(String[] args) throws IOException {
 
@@ -19,24 +18,23 @@ public class BOJ2812_copy2 {
         String num = br.readLine();
 
         ArrayList<ArrayList<Integer>> numIndex = new ArrayList<>();
-        for(int i = 0; i<10; i++){
+        for (int i = 0; i < 10; i++) {
             numIndex.add(new ArrayList<>());
         }
 
-        for(int i = 0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             int x = Integer.parseInt(Character.toString(num.charAt(i)));
             numIndex.get(x).add(i);
         }
-      
+
         char[] chN = num.toCharArray();
         int count = 0;
 
-        loop:
-        for(int i = 0; i<10; i++){
+        loop: for (int i = 0; i < 10; i++) {
             ArrayList<Integer> temp = numIndex.get(i);
             Collections.sort(temp);
 
-            for(Integer e : temp){
+            for (Integer e : temp) {
                 if (deleteCheck(chN, e)) {
                     chN[e] = 'D';
                     count++;
@@ -52,10 +50,10 @@ public class BOJ2812_copy2 {
         temp = temp.replaceAll("D", "");
 
         System.out.println(temp);
-        
+
     }
 
-    static boolean deleteCheck(char[] chN , int index){
+    static boolean deleteCheck(char[] chN, int index) {
         chN[index] = 'D';
         String temp = new String(chN);
         temp = temp.replaceAll("D", "");

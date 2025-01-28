@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.*;
@@ -20,15 +20,15 @@ public class BOJ1912 {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-            
+
 
         dp[0] = arr[0];
-        for(int i =1; i<n; i++){
-            dp[i] = Math.max(dp[i-1]+arr[i], arr[i]);
+        for (int i = 1; i < n; i++) {
+            dp[i] = Math.max(dp[i - 1] + arr[i], arr[i]);
         }
 
         int max = Integer.MIN_VALUE;
-        for(int d:dp){
+        for (int d : dp) {
             max = Math.max(max, d);
         }
 

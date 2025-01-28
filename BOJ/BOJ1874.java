@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -29,26 +29,26 @@ public class BOJ1874 {
 
             while (true) {
 
-                if (x>n) {
+                if (x > n) {
                     if (num.peek() != arr[i]) {
                         check = false;
                         break;
-                    }else{
+                    } else {
                         num.pop();
                         list.add("-");
                         break;
                     }
-                }else{
+                } else {
                     if (num.size() == 0) {
                         num.push(x);
                         list.add("+");
                         x++;
-                    }else{
-                        if (num.peek() == arr[i]){
+                    } else {
+                        if (num.peek() == arr[i]) {
                             num.pop();
                             list.add("-");
                             break;
-                        }else{
+                        } else {
                             num.push(x);
                             list.add("+");
                             x++;
@@ -64,7 +64,7 @@ public class BOJ1874 {
         }
 
         if (check) {
-            for(int i = 0; i<list.size();i++){
+            for (int i = 0; i < list.size(); i++) {
                 System.out.println(list.get(i));
             }
         }

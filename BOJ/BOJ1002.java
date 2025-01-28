@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,17 +23,17 @@ public class BOJ1002 {
             int y2 = Integer.parseInt(str[4]);
             int r2 = Integer.parseInt(str[5]);
 
-            double DPow = Math.pow(x1-x2, 2) + Math.pow(y1-y2, 2); 
+            double DPow = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
 
-            if (x1==x2 && y1==y2 && r1==r2) {
+            if (x1 == x2 && y1 == y2 && r1 == r2) {
                 System.out.println(-1);
-            } else if (DPow < Math.pow(r1-r2, 2)){
+            } else if (DPow < Math.pow(r1 - r2, 2)) {
                 System.out.println(0);
-            } else if (DPow == Math.pow(r1-r2, 2)){
+            } else if (DPow == Math.pow(r1 - r2, 2)) {
                 System.out.println(1);
-            } else if (DPow == Math.pow(r1+r2, 2)){
+            } else if (DPow == Math.pow(r1 + r2, 2)) {
                 System.out.println(1);
-            } else if (DPow > Math.pow(r1+r2, 2)){
+            } else if (DPow > Math.pow(r1 + r2, 2)) {
                 System.out.println(0);
             } else {
                 System.out.println(2);

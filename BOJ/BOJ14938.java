@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    서강그라운드 
-*/
+/*
+ * 서강그라운드
+ */
 
 public class BOJ14938 {
 
@@ -42,7 +42,7 @@ public class BOJ14938 {
         max = 0;
 
         for (int i = 1; i <= n; i++) {
-            visit = new boolean[n+1];
+            visit = new boolean[n + 1];
             max = Math.max(max, getItem(i, 0));
         }
 

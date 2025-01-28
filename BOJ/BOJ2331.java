@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    반복수열
-*/
+/*
+ * 반복수열
+ */
 public class BOJ2331 {
 
     public static void main(String[] args) throws IOException {

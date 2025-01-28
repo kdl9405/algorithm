@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    기타줄
-
-*/
+/*
+ * 기타줄
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

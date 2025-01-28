@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    N과 M (11)
-
-    772ms
-*/
+/*
+ * N과 M (11)
+ * 
+ * 772ms
+ */
 public class BOJ15665_copy {
 
     public static void main(String[] args) throws IOException {

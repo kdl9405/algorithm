@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    공주님을 구해라!
-*/
+/*
+ * 공주님을 구해라!
+ */
 
 import java.io.*;
 import java.util.*;
@@ -31,7 +31,7 @@ public class BOJ17836 {
         boolean[][][] visit = new boolean[N + 1][M + 1][2];
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { 1, 1, 0 });
+        queue.add(new int[] {1, 1, 0});
         visit[1][1][0] = true;
 
         int t = 0;
@@ -64,7 +64,7 @@ public class BOJ17836 {
 
                     visit[x][y][now[2]] = true;
 
-                    queue.add(new int[] { x, y, now[2] });
+                    queue.add(new int[] {x, y, now[2]});
                 }
 
             }
@@ -74,5 +74,5 @@ public class BOJ17836 {
 
     }
 
-    static int[][] dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 }

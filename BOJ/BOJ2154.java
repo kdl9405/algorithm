@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    수 이어 쓰기 3
-*/
+/*
+ * 수 이어 쓰기 3
+ */
 
 import java.io.*;
 
@@ -24,7 +24,7 @@ public class BOJ2154 {
             num.append(i);
         }
 
-        int answer = num.toString().indexOf(String.valueOf(N))+1;
+        int answer = num.toString().indexOf(String.valueOf(N)) + 1;
 
         System.out.println(answer);
 

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /*
-    오아시스 재결합
-*/
+ * 오아시스 재결합
+ */
 
 import java.io.*;
 import java.util.*;
@@ -24,8 +24,8 @@ public class BOJ3015 {
         long count = 0;
         Stack<int[]> stack = new Stack<>();
         for (int i = 0; i < N; i++) {
-        
-            int[] now = new int[] { height[i], 1 };
+
+            int[] now = new int[] {height[i], 1};
             while (!stack.isEmpty()) {
                 if (stack.peek()[0] <= now[0]) {
                     if (stack.peek()[0] == now[0]) {

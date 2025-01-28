@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    입국심사 
-
-    메모리 초과
-*/
+/*
+ * 입국심사
+ * 
+ * 메모리 초과
+ */
 
 import java.io.*;
 import java.util.*;
@@ -25,14 +25,14 @@ public class BOJ3079_copy {
 
         for (int i = 0; i < N; i++) {
             int t = Integer.parseInt(br.readLine());
-            queue.add(new int[] { t, t });
+            queue.add(new int[] {t, t});
         }
 
         int time = 0;
         for (int i = 0; i < M; i++) {
             int[] now = queue.poll();
             time = now[1];
-            queue.add(new int[] { now[0], now[0] + now[1] });
+            queue.add(new int[] {now[0], now[0] + now[1]});
         }
 
         System.out.println(time);

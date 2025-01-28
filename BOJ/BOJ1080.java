@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    행렬
-*/
+/*
+ * 행렬
+ */
 
 import java.io.*;
 import java.util.*;
@@ -39,7 +39,7 @@ public class BOJ1080 {
                 if (matrixA[i][j] != matrixB[i][j]) {
                     if (convert(i, j)) {
                         count++;
-                    }else{
+                    } else {
                         System.out.println(-1);
                         return;
                     }

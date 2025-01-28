@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    불! 
-*/
+/*
+ * 불!
+ */
 
 import java.io.*;
 import java.util.*;
@@ -28,16 +28,16 @@ public class BOJ4179 {
 
             for (int j = 0; j < C; j++) {
                 if (map[i][j] == 'J') {
-                    jihun.add(new int[] { i, j });
+                    jihun.add(new int[] {i, j});
                     map[i][j] = '.';
                     visit[i][j] = true;
                 } else if (map[i][j] == 'F') {
-                    fire.add(new int[] { i, j });
+                    fire.add(new int[] {i, j});
                 }
             }
         }
 
-        int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+        int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
 
         int count = 0;
@@ -59,7 +59,7 @@ public class BOJ4179 {
                     }
 
                     map[nr][nc] = 'F';
-                    fire.add(new int[] { nr, nc });
+                    fire.add(new int[] {nr, nc});
                 }
             }
 
@@ -81,7 +81,7 @@ public class BOJ4179 {
                     }
 
                     visit[nr][nc] = true;
-                    jihun.add(new int[] { nr, nc });
+                    jihun.add(new int[] {nr, nc});
 
                 }
             }

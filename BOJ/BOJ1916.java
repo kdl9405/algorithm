@@ -1,9 +1,11 @@
+package boj;
+
 import java.io.*;
 import java.util.*;
 
-/* 
-    최소비용 구하기
-*/
+/*
+ * 최소비용 구하기
+ */
 public class BOJ1916 {
 
     static int INF = 200000000;
@@ -40,16 +42,16 @@ public class BOJ1916 {
 
         total_cost = new int[N + 1];
         Arrays.fill(total_cost, INF);
-        visit = new boolean[N+1];
+        visit = new boolean[N + 1];
 
         System.out.println(dijkstra(start, end));
 
     }
 
-    static int dijkstra(int start, int end){
+    static int dijkstra(int start, int end) {
 
-        total_cost[start] = 0;        
-        
+        total_cost[start] = 0;
+
         PriorityQueue<bus> pq = new PriorityQueue<>((b1, b2) -> {
             return b1.cost - b2.cost;
         });
@@ -69,14 +71,14 @@ public class BOJ1916 {
                 break;
             }
 
-            for(bus nBus : root.get(now.next)){
+            for (bus nBus : root.get(now.next)) {
 
-                int temp = total_cost[now.next]+nBus.cost;
+                int temp = total_cost[now.next] + nBus.cost;
 
                 if (!visit[nBus.next] && total_cost[nBus.next] > temp) {
                     total_cost[nBus.next] = temp;
                     pq.add(new bus(nBus.next, temp));
-                }                
+                }
             }
         }
 
@@ -86,6 +88,7 @@ public class BOJ1916 {
 
 
 }
+
 
 class bus {
     int next;

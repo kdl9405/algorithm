@@ -1,13 +1,12 @@
-package BOJ;
+package boj;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-/* 
-    2+1 세일
-    메모리 초과
-*/
+/*
+ * 2+1 세일 메모리 초과
+ */
 public class BOJ11508_copy {
     public static void main(String[] args) {
 

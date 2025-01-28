@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    스위치와 램프
-*/
+/*
+ * 스위치와 램프
+ */
 public class BOJ16960 {
 
     public static void main(String[] args) throws IOException {

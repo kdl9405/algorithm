@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    숨바꼭질 2
-
-    시간초과
-*/
+/*
+ * 숨바꼭질 2
+ * 
+ * 시간초과
+ */
 public class BOJ12851_copy {
 
     public static void main(String[] args) throws IOException {
@@ -51,7 +51,7 @@ public class BOJ12851_copy {
                     }
                     temp[b] += dp[now];
                 }
-                if (c>=0 && c < 100000) {
+                if (c >= 0 && c < 100000) {
                     if (temp[c] == 0) {
                         queue.add(c);
                     }

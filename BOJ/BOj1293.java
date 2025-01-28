@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    이친수
-*/
+/*
+ * 이친수
+ */
 
 import java.io.*;
 
@@ -13,7 +13,7 @@ public class BOj1293 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
 
-        dp = new long[N+1];
+        dp = new long[N + 1];
 
         System.out.println(pinaryNum(N));
 

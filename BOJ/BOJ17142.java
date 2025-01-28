@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    연구소 3
-*/
+/*
+ * 연구소 3
+ */
 
 import java.io.*;
 import java.util.*;
@@ -24,7 +24,7 @@ public class BOJ17142 {
             for (int j = 0; j < N; j++) {
                 lab[i][j] = Integer.parseInt(st.nextToken());
                 if (lab[i][j] == 2) {
-                    virus.add(new int[] { i, j });
+                    virus.add(new int[] {i, j});
                 } else if (lab[i][j] == 0) {
                     S++;
                 }
@@ -47,7 +47,7 @@ public class BOJ17142 {
     static int[][] lab;
     static List<int[]> virus;
     static int[] active;
-    static int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     static void choiceVirus(int index, int depth) {
         if (depth == M) {
@@ -79,7 +79,7 @@ public class BOJ17142 {
 
             int[] v = virus.get(active[i]);
             visit[v[0]][v[1]] = true;
-            queue.add(new int[] { v[0], v[1], 0 });
+            queue.add(new int[] {v[0], v[1], 0});
         }
 
         int space = S;
@@ -112,7 +112,7 @@ public class BOJ17142 {
                 }
 
                 visit[nx][ny] = true;
-                queue.add(new int[] { nx, ny, v[2] + 1 });
+                queue.add(new int[] {nx, ny, v[2] + 1});
 
             }
         }

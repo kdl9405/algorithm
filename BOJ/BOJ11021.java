@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -33,9 +33,9 @@ public class BOJ11021 {
 
         for (int j = 0; j < T; j++) {
 
-            System.out.println("Case #"+(j+1)+": "+result[j]);
+            System.out.println("Case #" + (j + 1) + ": " + result[j]);
         }
 
-       
+
     }
 }

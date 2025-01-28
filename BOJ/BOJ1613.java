@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    역사
-*/
+/*
+ * 역사
+ */
 
 import java.io.*;
 import java.util.*;
@@ -32,7 +32,7 @@ public class BOJ1613 {
         for (int m = 1; m <= n; m++) {
             for (int a = 1; a <= n; a++) {
 
-                if(a==m){
+                if (a == m) {
                     continue;
                 }
 
@@ -42,9 +42,9 @@ public class BOJ1613 {
                         continue;
                     }
 
-                    if (sequence[a][b] == 0 ) {
-                        
-                    if (sequence[a][m] == sequence[m][b] && sequence[a][m] != 0) {
+                    if (sequence[a][b] == 0) {
+
+                        if (sequence[a][m] == sequence[m][b] && sequence[a][m] != 0) {
                             sequence[a][b] = sequence[a][m];
                             sequence[b][a] = sequence[m][a];
                         }

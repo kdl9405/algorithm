@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    링
-*/
+/*
+ * 링
+ */
 
 import java.io.*;
 import java.util.*;
@@ -25,7 +25,7 @@ public class BOJ2026 {
 
             int g = gcd(first, ring);
 
-            sb.append((first/g) +"/"+(ring/g)+"\n");
+            sb.append((first / g) + "/" + (ring / g) + "\n");
         }
 
         System.out.println(sb.toString().trim());

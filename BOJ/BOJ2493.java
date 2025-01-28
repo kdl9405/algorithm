@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,6 +50,7 @@ public class BOJ2493 {
         System.out.println(sb.toString().trim());
     }
 }
+
 
 class Tower {
     int num;

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -18,10 +18,10 @@ class BOJ10718 {
         bw.write(s);
         bw.newLine();
         bw.write(s);
-        
+
         bw.flush();
         bw.close();
 
     }
-    
+
 }

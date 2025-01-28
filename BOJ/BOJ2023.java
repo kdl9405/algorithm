@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    신기한 소수
-*/
+/*
+ * 신기한 소수
+ */
 
 import java.io.*;
 

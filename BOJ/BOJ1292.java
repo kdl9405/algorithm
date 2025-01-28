@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    쉽게 푸는 문제
-
-*/
+/*
+ * 쉽게 푸는 문제
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -18,21 +18,20 @@ public class BOJ1292 {
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
 
-       
+
         int n = 1;
         int sum = 0;
         int idx = 0;
-      
-        loop:
-        while (true) {
 
-            for(int i = 0; i<n; i++){
+        loop: while (true) {
+
+            for (int i = 0; i < n; i++) {
                 idx++;
                 sum += n;
                 if (idx == A) {
                     sum = n;
                 }
-                if(idx == B){
+                if (idx == B) {
                     break loop;
                 }
             }

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -26,25 +26,25 @@ public class BOJ11053 {
         }
 
         for (int i = 0; i < l; i++) {
-            A[i] = Integer.parseInt(st.nextToken());          
+            A[i] = Integer.parseInt(st.nextToken());
         }
 
-        for(int i = 0; i< l; i++){
+        for (int i = 0; i < l; i++) {
             dp[i] = 1;
-            for(int j = 0; j<i; j++){
-                if (A[j] < A[i] && dp[i] < dp[j]+1) {
-                    dp[i] = dp[j]+1;
+            for (int j = 0; j < i; j++) {
+                if (A[j] < A[i] && dp[i] < dp[j] + 1) {
+                    dp[i] = dp[j] + 1;
                 }
             }
         }
 
         int max = 0;
 
-        for(int d : dp){
+        for (int d : dp) {
             if (max < d) {
                 max = d;
             }
-        }       
+        }
         System.out.println(max);
 
     }

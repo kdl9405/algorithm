@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    수 이어 쓰기
-
-*/
+/*
+ * 수 이어 쓰기
+ * 
+ */
 
 import java.io.*;
 
@@ -20,8 +20,7 @@ public class BOJ1515 {
 
         int index = 0;
 
-        loop:
-        while (true) {
+        loop: while (true) {
 
             n++;
             num = Integer.toString(n);
@@ -34,7 +33,7 @@ public class BOJ1515 {
                     break loop;
                 }
             }
-           
+
 
         }
 

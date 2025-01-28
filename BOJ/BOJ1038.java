@@ -1,17 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-/* 
-    감소하는 수
-
-    1. 1자리부터 10자리까지 만들자..
-    2. 자리수가 넘어갈때, 이전에 만들어놓은 것을 갖져와서 체크하고 뒤에 붙임.
-    3. 전체 인덱스가 N일때 멈추고 출력.
-*/
+/*
+ * 감소하는 수
+ * 
+ * 1. 1자리부터 10자리까지 만들자.. 2. 자리수가 넘어갈때, 이전에 만들어놓은 것을 갖져와서 체크하고 뒤에 붙임. 3. 전체 인덱스가 N일때 멈추고 출력.
+ */
 public class BOJ1038 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {

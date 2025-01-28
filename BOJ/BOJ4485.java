@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    녹색 옷 입은 애가 젤다지?
-*/
+/*
+ * 녹색 옷 입은 애가 젤다지?
+ */
 
 import java.io.*;
 import java.util.*;
@@ -19,7 +19,7 @@ public class BOJ4485 {
     int N;
     int[][] cave;
     int[][] visit;
-    int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     void solution() throws NumberFormatException, IOException {
 
@@ -34,7 +34,8 @@ public class BOJ4485 {
 
             findMinRupee();
 
-            answer.append("Problem ").append(testNumber).append(": ").append(visit[N - 1][N - 1]).append("\n");
+            answer.append("Problem ").append(testNumber).append(": ").append(visit[N - 1][N - 1])
+                    .append("\n");
             testNumber++;
         }
 
@@ -69,7 +70,7 @@ public class BOJ4485 {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
             return a[2] - b[2];
         });
-        pq.add(new int[] { 0, 0, cave[0][0] });
+        pq.add(new int[] {0, 0, cave[0][0]});
 
         while (!pq.isEmpty()) {
             int[] now = pq.poll();
@@ -84,7 +85,7 @@ public class BOJ4485 {
 
                 if (visit[nx][ny] > cave[nx][ny] + now[2]) {
                     visit[nx][ny] = cave[nx][ny] + now[2];
-                    pq.add(new int[] { nx, ny, visit[nx][ny] });
+                    pq.add(new int[] {nx, ny, visit[nx][ny]});
 
                 }
             }

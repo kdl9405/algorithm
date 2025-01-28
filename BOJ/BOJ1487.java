@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    물건 팔기
-*/
+/*
+ * 물건 팔기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -35,14 +35,15 @@ public class BOJ1487 {
             }
         }
 
-        int[] customer_price = Arrays.stream(customer.keySet().toArray()).mapToInt(i->(int)i).toArray();
+        int[] customer_price =
+                Arrays.stream(customer.keySet().toArray()).mapToInt(i -> (int) i).toArray();
         Arrays.sort(customer_price);
 
-        for(int i = 0; i<customer_price.length; i++){
-            
+        for (int i = 0; i < customer_price.length; i++) {
+
             int v = 0;
-            for(int j = i; j<customer_price.length; j++){
-                for(int m : customer.get(customer_price[j])){
+            for (int j = i; j < customer_price.length; j++) {
+                for (int m : customer.get(customer_price[j])) {
                     if (customer_price[i] > m) {
                         v += (customer_price[i] - m);
                     }

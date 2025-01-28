@@ -1,13 +1,12 @@
-package BOJ;
+package boj;
 
-/* 
-    미확인 도착지
-
-    1. 각 도로의 거리를 *2해서 저장. g-h 사이의 거리는 +1  
-        => 나중에 최단거리를 %2 했을 때, 1이 나오면 g-h 도로를 지나갔다는 것! 
-    2. 다익스트라로 최단거리 산출
-
-*/
+/*
+ * 미확인 도착지
+ * 
+ * 1. 각 도로의 거리를 *2해서 저장. g-h 사이의 거리는 +1 => 나중에 최단거리를 %2 했을 때, 1이 나오면 g-h 도로를 지나갔다는 것! 2. 다익스트라로 최단거리
+ * 산출
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -28,8 +27,8 @@ public class BOJ9370 {
             int t = Integer.parseInt(st.nextToken());
 
             roads = new int[n + 1][n + 1];
-            dist = new int[n+1];
-            visit = new boolean[n+1];
+            dist = new int[n + 1];
+            visit = new boolean[n + 1];
             for (int i = 1; i <= n; i++) {
                 Arrays.fill(roads[i], 10000000);
             }
@@ -60,14 +59,14 @@ public class BOJ9370 {
             }
 
             dijkstra(s);
-        
+
             Collections.sort(dest);
 
             StringBuilder temp = new StringBuilder();
 
-            for(int d : dest){
-                if (dist[d]%2 == 1) {
-                    temp.append(d+" ");
+            for (int d : dest) {
+                if (dist[d] % 2 == 1) {
+                    temp.append(d + " ");
                 }
             }
 
@@ -87,7 +86,7 @@ public class BOJ9370 {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
             return a[1] - b[1];
         });
-        pq.add(new int[] { start, 0 });
+        pq.add(new int[] {start, 0});
         dist[start] = 0;
 
 
@@ -102,7 +101,7 @@ public class BOJ9370 {
             for (int i = 1; i < roads.length; i++) {
                 if (!visit[i] && dist[i] > dist[now[0]] + roads[now[0]][i]) {
                     dist[i] = dist[now[0]] + roads[now[0]][i];
-                    pq.add(new int[] { i, dist[i] });
+                    pq.add(new int[] {i, dist[i]});
                 }
             }
         }

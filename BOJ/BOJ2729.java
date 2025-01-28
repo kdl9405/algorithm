@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    이진수 덧셈
-*/
+/*
+ * 이진수 덧셈
+ */
 
 public class BOJ2729 {
 

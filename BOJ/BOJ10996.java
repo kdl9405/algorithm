@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -32,7 +32,7 @@ class BOJ10996 {
                 line2.append(star);
         }
 
-        for (int i = 0; i < N; i++) {            
+        for (int i = 0; i < N; i++) {
 
             System.out.println(line1);
             System.out.println(line2);

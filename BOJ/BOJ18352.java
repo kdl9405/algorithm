@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    특정 거리의 도시 찾기
-
-*/
+/*
+ * 특정 거리의 도시 찾기
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -72,8 +72,8 @@ public class BOJ18352 {
 
             StringBuilder sb = new StringBuilder();
 
-            for(int n : list){
-                sb.append(n+"\n");
+            for (int n : list) {
+                sb.append(n + "\n");
             }
             System.out.println(sb.toString().trim());
         }

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -19,7 +19,7 @@ public class BOJ1157 {
         count = new int[27];
         int max = 0;
 
-        char result='?';
+        char result = '?';
 
         for (int i = 0; i < str.length; i++) {
 
@@ -29,7 +29,7 @@ public class BOJ1157 {
                 n = n - 32;
             }
 
-            count[n - 64] += 1;          
+            count[n - 64] += 1;
 
         }
 
@@ -37,9 +37,8 @@ public class BOJ1157 {
 
             if (max < count[j]) {
                 max = count[j];
-                result = (char)(j+64);
-            }
-            else if( max == count[j]){
+                result = (char) (j + 64);
+            } else if (max == count[j]) {
                 result = '?';
             }
 
@@ -47,7 +46,7 @@ public class BOJ1157 {
 
         System.out.println(result);
 
-      
+
     }
 
 }

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    도영이가 만든 맛있는 음식
-*/
+/*
+ * 도영이가 만든 맛있는 음식
+ */
 
 import java.io.*;
 import java.util.*;
@@ -48,8 +48,8 @@ public class BOJ2961 {
             return;
         }
 
-        cook(index+1, bit, sour, bitter);
-        cook(index+1, bit | (1<<index), sour*taste[index][0], bitter+taste[index][1]);
+        cook(index + 1, bit, sour, bitter);
+        cook(index + 1, bit | (1 << index), sour * taste[index][0], bitter + taste[index][1]);
 
     }
 

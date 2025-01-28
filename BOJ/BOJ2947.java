@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    나무 조각
-*/
+/*
+ * 나무 조각
+ */
 
 import java.io.*;
 import java.util.*;

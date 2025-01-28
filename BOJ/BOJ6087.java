@@ -1,18 +1,18 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    레이저 통신
-
-*/
+/*
+ * 레이저 통신
+ * 
+ */
 public class BOJ6087 {
 
     static int W, H;
     static char[][] map;
     static boolean[][] visit;
-    static int[][] dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     public static void main(String[] args) throws IOException {
 
@@ -76,7 +76,7 @@ public class BOJ6087 {
                             if (map[nh][nw] == 'C') {
                                 break loop;
                             }
-                            queue.add(new int[] { nh, nw });
+                            queue.add(new int[] {nh, nw});
                         }
                         nh += dir[i][0];
                         nw += dir[i][1];

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    결혼식 
-*/
+/*
+ * 결혼식
+ */
 
 import java.io.*;
 import java.util.*;

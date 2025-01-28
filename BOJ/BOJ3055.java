@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
-/* 
-    탈출 
-*/
+/*
+ * 탈출
+ */
 
 import java.io.*;
 import java.util.*;
 
 public class BOJ3055 {
 
-    static int[][] move = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+    static int[][] move = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
     public static void main(String[] args) throws IOException {
 
@@ -31,12 +31,12 @@ public class BOJ3055 {
                 forest[i][j] = input.charAt(j);
 
                 if (input.charAt(j) == 'S') {
-                    hedgehog.add(new int[] { i, j });
+                    hedgehog.add(new int[] {i, j});
                     forest[i][j] = '.';
                     visit[i][j] = true;
 
                 } else if (input.charAt(j) == '*') {
-                    water.add(new int[] { i, j });
+                    water.add(new int[] {i, j});
                 }
 
             }
@@ -63,7 +63,7 @@ public class BOJ3055 {
                     }
 
                     forest[wr][wc] = '*';
-                    water.add(new int[] { wr, wc });
+                    water.add(new int[] {wr, wc});
                 }
             }
 
@@ -77,8 +77,8 @@ public class BOJ3055 {
                     int hr = h[0] + move[i][0];
                     int hc = h[1] + move[i][1];
 
-                    if (hr < 0 || hr >= R || hc < 0 || hc >= C || visit[hr][hc] || forest[hr][hc] == '*'
-                            || forest[hr][hc] == 'X') {
+                    if (hr < 0 || hr >= R || hc < 0 || hc >= C || visit[hr][hc]
+                            || forest[hr][hc] == '*' || forest[hr][hc] == 'X') {
                         continue;
                     }
 
@@ -88,7 +88,7 @@ public class BOJ3055 {
                     }
 
                     visit[hr][hc] = true;
-                    hedgehog.add(new int[] { hr, hc });
+                    hedgehog.add(new int[] {hr, hc});
 
                 }
             }

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
-/* 
-    동전
-*/
+/*
+ * 동전
+ */
 public class BOJ9084 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {

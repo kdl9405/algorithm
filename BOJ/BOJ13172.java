@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    Σ
-*/
+/*
+ * Σ
+ */
 public class BOJ13172 {
 
     public static void main(String[] args) throws IOException {
@@ -61,7 +61,7 @@ public class BOJ13172 {
         }
 
         // if (x%2 == 1) {
-        //     return b*findPow(b, x-1) % MOD;
+        // return b*findPow(b, x-1) % MOD;
         // }
 
         long temp = findPow(b, x / 2);

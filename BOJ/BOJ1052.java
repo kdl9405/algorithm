@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    물병
-*/
+/*
+ * 물병
+ */
 public class BOJ1052 {
     public static void main(String[] args) throws IOException {
 

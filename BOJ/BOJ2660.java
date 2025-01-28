@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    회장뽑기
-*/
+/*
+ * 회장뽑기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -41,7 +41,8 @@ public class BOJ2660 {
                         continue;
                     }
 
-                    if (friendship[i][j] == 0 || friendship[i][j] > friendship[i][k] + friendship[k][j]) {
+                    if (friendship[i][j] == 0
+                            || friendship[i][j] > friendship[i][k] + friendship[k][j]) {
                         friendship[i][j] = friendship[i][k] + friendship[k][j];
                         friendship[j][i] = friendship[i][j];
                     }

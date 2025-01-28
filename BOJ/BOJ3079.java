@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    입국심사 
-*/
+/*
+ * 입국심사
+ */
 
 import java.io.*;
 import java.util.*;
@@ -36,7 +36,7 @@ public class BOJ3079 {
             int pass = 0;
             for (int time : times) {
                 pass += mid / time;
-                if(pass>=M){
+                if (pass >= M) {
                     break;
                 }
             }

@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    단어 나누기
-
-    응~ 그리디 안돼 
-*/
+/*
+ * 단어 나누기
+ * 
+ * 응~ 그리디 안돼
+ */
 
 import java.io.*;
 
@@ -37,12 +37,12 @@ public class BOJ1251_copy {
         for (int i = start; i < s.length() - depth + 1; i++) {
 
             if (s.charAt(i) - 'a' < min) {
-                min = s.charAt(i)-'a';
+                min = s.charAt(i) - 'a';
                 index = i;
             }
         }
 
-        sb.append(new StringBuilder(s.substring(start, index+1)).reverse());
+        sb.append(new StringBuilder(s.substring(start, index + 1)).reverse());
 
         find(index + 1, depth - 1);
     }

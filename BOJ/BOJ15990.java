@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    1, 2, 3 더하기 5
-*/
+/*
+ * 1, 2, 3 더하기 5
+ */
 public class BOJ15990 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -51,7 +51,8 @@ public class BOJ15990 {
         } else if (last == 3) {
             dp[n][last] = (findDP(n - 3, 1) + findDP(n - 3, 2)) % 1000000009;
         } else {
-            dp[n][last] = (((findDP(n, 1) + findDP(n, 2)) % 1000000009) + findDP(n, 3)) % 1000000009;
+            dp[n][last] =
+                    (((findDP(n, 1) + findDP(n, 2)) % 1000000009) + findDP(n, 3)) % 1000000009;
         }
 
         return dp[n][last];

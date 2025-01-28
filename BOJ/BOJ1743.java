@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /*
-음식물 피하기
-*/
+ * 음식물 피하기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -17,18 +17,18 @@ public class BOJ1743 {
 
     int N, M;
     boolean[][] isTrash;
-    int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     int max;
 
     void solution() throws IOException {
 
         init();
 
-        for(int r = 1; r<=N; r++){
-            for(int c = 1; c<=M; c++){
+        for (int r = 1; r <= N; r++) {
+            for (int c = 1; c <= M; c++) {
                 if (isTrash[r][c]) {
                     max = Math.max(max, dfs(r, c));
-                    System.out.println(r+" " +c +" "+ max );
+                    System.out.println(r + " " + c + " " + max);
                 }
             }
         }
@@ -55,7 +55,7 @@ public class BOJ1743 {
     }
 
     int dfs(int r, int c) {
-     
+
         isTrash[r][c] = false;
         int cnt = 1;
         for (int i = 0; i < 4; i++) {

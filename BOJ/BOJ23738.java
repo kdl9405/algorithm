@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    Ресторан
-*/
+/*
+ * Ресторан
+ */
 public class BOJ23738 {
 
     public static void main(String[] args) throws IOException {
@@ -51,7 +51,7 @@ public class BOJ23738 {
                 s = "h";
                 break;
 
-            
+
 
         }
 

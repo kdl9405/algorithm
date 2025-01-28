@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    연구소 3
-*/
+/*
+ * 연구소 3
+ */
 
 import java.io.*;
 import java.util.*;
@@ -35,7 +35,7 @@ public class BOJ17142_copy {
         st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
-        
+
         arr = new int[N][N];
         active = new Virus[M];
 
@@ -93,8 +93,10 @@ public class BOJ17142_copy {
                 int nx = virus.x + dx[i];
                 int ny = virus.y + dy[i];
 
-                if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
-                if (infected[nx][ny] || arr[nx][ny] == 1) continue;
+                if (nx < 0 || nx >= N || ny < 0 || ny >= N)
+                    continue;
+                if (infected[nx][ny] || arr[nx][ny] == 1)
+                    continue;
 
                 if (arr[nx][ny] == 0) {
                     emptySpace--;

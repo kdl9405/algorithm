@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    이항 계수 2
-*/
+/*
+ * 이항 계수 2
+ */
 import java.io.*;
 import java.util.*;
 

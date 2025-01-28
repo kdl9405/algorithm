@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,10 +30,10 @@ public class BOJ1966 {
             for (int i = 0; i < n; i++) {
                 int num = Integer.parseInt(st.nextToken());
                 arr[i] = num;
-                if (i==index) {
+                if (i == index) {
                     target_value = num;
                     queue.offer(0);
-                }else{
+                } else {
                     queue.offer(num);
                 }
             }
@@ -46,13 +46,13 @@ public class BOJ1966 {
                     if (queue.peek() == 0) {
                         if (arr[i] == target_value) {
                             queue.poll();
-                            count ++;
-                            sb.append(count+"\n");
+                            count++;
+                            sb.append(count + "\n");
                             break;
-                        }else{
+                        } else {
                             queue.offer(queue.poll());
                         }
-                    }else{
+                    } else {
                         if (queue.peek() == arr[i]) {
                             queue.poll();
                             count++;
@@ -60,7 +60,7 @@ public class BOJ1966 {
                         } else {
                             queue.offer(queue.poll());
                         }
-                    }                   
+                    }
                 }
             }
 

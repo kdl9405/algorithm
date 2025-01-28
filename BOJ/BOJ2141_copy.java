@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.math.BigInteger;
 import java.util.StringTokenizer;
 
-/* 
-    우체국
-
-    틀림
-*/
+/*
+ * 우체국
+ * 
+ * 틀림
+ */
 public class BOJ2141_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
 

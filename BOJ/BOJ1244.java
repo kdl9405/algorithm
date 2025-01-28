@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    스위치 켜고 끄기
-*/
+/*
+ * 스위치 켜고 끄기
+ */
 
 
 import java.io.*;

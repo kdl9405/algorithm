@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.util.Scanner;
 import java.util.Stack;
 
-/* 
-    후위 표기식2
-*/
+/*
+ * 후위 표기식2
+ */
 
 public class BOJ1935 {
 
@@ -41,7 +41,7 @@ public class BOJ1935 {
                         break;
 
                     case '/':
-                        x = (a*100 / b) / (double)100 ;
+                        x = (a * 100 / b) / (double) 100;
                         break;
                     case '+':
                         x = a + b;
@@ -58,6 +58,6 @@ public class BOJ1935 {
         double result = stack.pop();
 
 
-        System.out.printf("%.2f",result);
+        System.out.printf("%.2f", result);
     }
 }

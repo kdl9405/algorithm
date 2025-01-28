@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.util.Scanner;
 
-/* 
-    타일 채우기
-*/
+/*
+ * 타일 채우기
+ */
 
 public class BOJ2133 {
     public static void main(String[] args) {
@@ -20,9 +20,10 @@ public class BOJ2133 {
         System.out.println(findDP(n));
 
     }
+
     static long[] dp;
 
-    static long findDP(int n){
+    static long findDP(int n) {
 
         if (n < 0) {
             return 0;
@@ -32,15 +33,15 @@ public class BOJ2133 {
             return dp[n];
         }
 
-        dp[n] = findDP(n-2)*3;
+        dp[n] = findDP(n - 2) * 3;
 
-        if (n>=4) {
-            for(int i = 0; i<=n-4; i+=2){
-                dp[n] += (findDP(i)*2);
-            }   
+        if (n >= 4) {
+            for (int i = 0; i <= n - 4; i += 2) {
+                dp[n] += (findDP(i) * 2);
+            }
         }
-        
+
         return dp[n];
     }
-    
+
 }

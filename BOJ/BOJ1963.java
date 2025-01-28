@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    소수 경로
-
-
-    좋진 않음....  리팩토링 필요.
-*/
+/*
+ * 소수 경로
+ * 
+ * 
+ * 좋진 않음.... 리팩토링 필요.
+ */
 public class BOJ1963 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {

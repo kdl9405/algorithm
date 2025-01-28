@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    색종이 붙이기
-*/
+/*
+ * 색종이 붙이기
+ */
 public class BOJ17136 {
 
     public static void main(String[] args) throws IOException {
@@ -107,5 +107,5 @@ public class BOJ17136 {
         }
     }
 
-   
+
 }

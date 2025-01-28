@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    수도요금 
-*/
+/*
+ * 수도요금
+ */
 
 import java.io.*;
 
@@ -18,7 +18,7 @@ public class BOJ10707 {
         int D = Integer.parseInt(br.readLine());
         int P = Integer.parseInt(br.readLine());
 
-        int X = A*P;
+        int X = A * P;
 
         int Y = B;
         if (P > C) {

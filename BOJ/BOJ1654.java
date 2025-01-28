@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
@@ -20,7 +20,7 @@ public class BOJ1654 {
             sum += line[i];
         }
 
-        System.out.println(cut(line, n, 1, sum/n));
+        System.out.println(cut(line, n, 1, sum / n));
 
     }
 
@@ -30,17 +30,17 @@ public class BOJ1654 {
 
         while (min <= max) {
 
-            long mid = (min+max)/2;
+            long mid = (min + max) / 2;
             long count = 0;
 
-            for(int i = 0; i<line.length; i++){
-                count += line[i]/mid;
+            for (int i = 0; i < line.length; i++) {
+                count += line[i] / mid;
             }
 
             if (count >= n) {
                 result = Math.max(result, mid);
-                min = mid  + 1;
-            }else{
+                min = mid + 1;
+            } else {
                 max = mid - 1;
             }
         }

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
@@ -20,10 +20,10 @@ public class BOJ1927 {
             if (x == 0) {
                 if (pq.isEmpty()) {
                     sb.append(0 + "\n");
-                }else{
-                    sb.append(pq.poll()+"\n");
+                } else {
+                    sb.append(pq.poll() + "\n");
                 }
-            }else{
+            } else {
                 pq.offer(x);
             }
         }

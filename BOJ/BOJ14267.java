@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    회사 문화 1
-
-    java 11: 612ms
-*/
+ * 회사 문화 1
+ * 
+ * java 11: 612ms
+ */
 public class BOJ14267 {
 
     public static void main(String[] args) throws IOException {
@@ -39,9 +39,9 @@ public class BOJ14267 {
         StringBuilder sb = new StringBuilder();
         sb.append("0 ");
 
-        for(i = 2; i<=n; i++){
+        for (i = 2; i <= n; i++) {
             point[i] += point[boss[i]];
-            sb.append(point[i]+" ");
+            sb.append(point[i] + " ");
         }
 
         System.out.println(sb.toString());

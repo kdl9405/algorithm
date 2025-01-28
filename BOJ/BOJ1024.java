@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    수열의 합
-*/
+/*
+ * 수열의 합
+ */
 
 import java.io.*;
 import java.util.*;

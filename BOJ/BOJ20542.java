@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    받아쓰기 
-*/
+/*
+ * 받아쓰기
+ */
 
 public class BOJ20542 {
     public static void main(String[] args) throws IOException {
@@ -29,27 +29,27 @@ public class BOJ20542 {
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= m; j++) {
-                
-                if (checkEqual(answer.charAt(i-1), correct.charAt(j-1))) {
-                    dp[i][j] = dp[i-1][j-1];
-                }else{
-                    dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i-1][j]))+1;
+
+                if (checkEqual(answer.charAt(i - 1), correct.charAt(j - 1))) {
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else {
+                    dp[i][j] = Math.min(dp[i - 1][j - 1], Math.min(dp[i][j - 1], dp[i - 1][j])) + 1;
                 }
-            }         
+            }
         }
 
         System.out.println(dp[n][m]);
 
     }
 
-    static boolean checkEqual(char a, char c){
+    static boolean checkEqual(char a, char c) {
 
         if (a == c) {
             return true;
         }
 
         if (a == 'i') {
-            if (c == 'j' || c=='l') {
+            if (c == 'j' || c == 'l') {
                 return true;
             }
         }

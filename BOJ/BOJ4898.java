@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /*
-    안정적인 문자열
+ * 안정적인 문자열
  */
 
 import java.io.*;
@@ -34,25 +34,25 @@ public class BOJ4898 {
         System.out.println(answer.toString().trim());
     }
 
-    static int findCount(String S){
+    static int findCount(String S) {
 
         int count = 0;
 
         Stack<Character> stack = new Stack<>();
 
-        for(char c : S.toCharArray()){
+        for (char c : S.toCharArray()) {
             if (c == '{') {
                 stack.add(c);
-            }else{
+            } else {
                 if (stack.isEmpty()) {
                     stack.add('{');
                     count++;
-                }else if(stack.peek() == '{'){
+                } else if (stack.peek() == '{') {
                     stack.pop();
                 }
             }
         }
 
-        return count+stack.size()/2;
+        return count + stack.size() / 2;
     }
 }

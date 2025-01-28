@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    주사위 굴리기
-
+/*
+ * 주사위 굴리기
+ * 
  */
 
 import java.io.*;
@@ -108,6 +108,6 @@ public class BOJ14499 {
 
     }
 
-    static int[] dx = { 0, 0, 0, -1, 1 };
-    static int[] dy = { 0, 1, -1, 0, 0 };
+    static int[] dx = {0, 0, 0, -1, 1};
+    static int[] dy = {0, 1, -1, 0, 0};
 }

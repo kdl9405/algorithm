@@ -1,21 +1,21 @@
-package BOJ;
+package boj;
 
-/* 
-    말이 되고픈 원숭이
-
-*/
+/*
+ * 말이 되고픈 원숭이
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
 
 public class BOJ1600 {
 
-    static int[][] move = { { 0, -1 }, { 0, 1 }, { -1, 0 }, { 1, 0 } };
-    static int[][] jump = { { -1, -2 }, { -2, -1 }, { -2, 1 }, { -1, 2 }, { 1, 2 }, { 2, 1 }, { 2, -1 }, { 1, -2 } };
+    static int[][] move = {{0, -1}, {0, 1}, {-1, 0}, {1, 0}};
+    static int[][] jump = {{-1, -2}, {-2, -1}, {-2, 1}, {-1, 2}, {1, 2}, {2, 1}, {2, -1}, {1, -2}};
 
     public static void main(String[] args) throws IOException {
 
-        int a = 1<<31;
+        int a = 1 << 31;
         System.out.println(a);
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -38,7 +38,7 @@ public class BOJ1600 {
         }
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { 0, 0, K });
+        queue.add(new int[] {0, 0, K});
 
         int count = 0;
         while (!queue.isEmpty()) {
@@ -57,17 +57,18 @@ public class BOJ1600 {
                     continue;
                 }
                 visit[monkey[0]][monkey[1]] = monkey[2];
-               
+
 
                 for (int i = 0; i < 4; i++) {
                     int nr = monkey[0] + move[i][0];
                     int nc = monkey[1] + move[i][1];
 
-                    if (nr < 0 || nr >= H || nc < 0 || nc >= W || map[nr][nc] == 1 || visit[nr][nc] > monkey[2]) {
+                    if (nr < 0 || nr >= H || nc < 0 || nc >= W || map[nr][nc] == 1
+                            || visit[nr][nc] > monkey[2]) {
                         continue;
                     }
 
-                    queue.add(new int[] { nr, nc, monkey[2] });
+                    queue.add(new int[] {nr, nc, monkey[2]});
 
                 }
 
@@ -81,7 +82,7 @@ public class BOJ1600 {
                             continue;
                         }
 
-                        queue.add(new int[] { nr, nc, monkey[2] - 1 });
+                        queue.add(new int[] {nr, nc, monkey[2] - 1});
 
                     }
                 }

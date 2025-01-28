@@ -1,13 +1,14 @@
-package BOJ;
+package boj;
 
 import java.util.Scanner;
 
 public class BOJ1929 {
-    
+
 
     public static boolean primeN[];
+
     public static void main(String[] args) {
-        
+
         Scanner sc = new Scanner(System.in);
 
         int m = sc.nextInt();
@@ -15,12 +16,12 @@ public class BOJ1929 {
 
         sc.close();
 
-        primeN = new boolean[n+1];
+        primeN = new boolean[n + 1];
 
         check_prime();
 
-        for(int i = m; i<=n; i++){
-            if(primeN[i] == false){
+        for (int i = m; i <= n; i++) {
+            if (primeN[i] == false) {
                 System.out.println(i);
             }
         }
@@ -28,20 +29,20 @@ public class BOJ1929 {
 
     }
 
-    public static void check_prime(){
+    public static void check_prime() {
         primeN[0] = true;
         primeN[1] = true;
 
-        for(int i = 2; i<=Math.sqrt(primeN.length); i++){
+        for (int i = 2; i <= Math.sqrt(primeN.length); i++) {
 
-            if(primeN[i]){
+            if (primeN[i]) {
                 continue;
             }
 
-            for(int j = i*i; j<primeN.length; j+=i){
+            for (int j = i * i; j < primeN.length; j += i) {
                 primeN[j] = true;
             }
-            
+
         }
     }
 }

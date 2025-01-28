@@ -1,15 +1,12 @@
-package BOJ;
+package boj;
 
-/* 
-    보석 도둑
-
-    1. 보석의 정보를 저장. 
-    2. 값이 무게는 작은 순서로 정렬.
-    3. 가방을 무게가 작은순으로 정렬하고, 순회
-    4. 해당 무게까지 담을 수 있는 보석을 우선순위 큐에 담음 (우선순위 큐는 가격이 큰 순으로 정렬)
-    5. 가능한 보석을 우선순위 큐에 모두 담은 후,  가장 큰 것을 할당.
-    
-*/
+/*
+ * 보석 도둑
+ * 
+ * 1. 보석의 정보를 저장. 2. 값이 무게는 작은 순서로 정렬. 3. 가방을 무게가 작은순으로 정렬하고, 순회 4. 해당 무게까지 담을 수 있는 보석을 우선순위 큐에 담음
+ * (우선순위 큐는 가격이 큰 순으로 정렬) 5. 가능한 보석을 우선순위 큐에 모두 담은 후, 가장 큰 것을 할당.
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -45,7 +42,7 @@ public class BOJ1202 {
         long total = 0;
         int index = 0;
 
-                PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
 
         for (int b : bag) {
 

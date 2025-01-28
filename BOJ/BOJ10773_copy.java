@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -25,7 +25,7 @@ public class BOJ10773_copy {
 
         int sum = 0;
         while (!stack.isEmpty()) {
-            sum+=stack.pop();
+            sum += stack.pop();
         }
 
         System.out.println(sum);

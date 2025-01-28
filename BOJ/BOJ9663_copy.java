@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,26 +36,25 @@ public class BOJ9663_copy {
             return;
         }
 
-        for(int i = 0; i<n; i++){
-            
+        for (int i = 0; i < n; i++) {
+
             map[depth] = i;
 
-            if(poosible(depth)){
-                set_quean(depth+1);
+            if (poosible(depth)) {
+                set_quean(depth + 1);
             }
         }
     }
 
-    static boolean poosible(int col){
+    static boolean poosible(int col) {
 
-        for(int i =0; i<col; i++){
-            if(map[col] == map[i]){
+        for (int i = 0; i < col; i++) {
+            if (map[col] == map[i]) {
+                return false;
+            } else if (Math.abs(col - i) == Math.abs(map[col] - map[i])) {
                 return false;
             }
-            else if(Math.abs(col -i) == Math.abs(map[col] - map[i])){
-                return false;
-            }
-            
+
         }
 
         return true;

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.IOException;
 import java.util.Scanner;
 import java.util.Stack;
 
-/* 
-    괄호의 값
-*/
+/*
+ * 괄호의 값
+ */
 public class BOJ2504 {
 
     public static void main(String[] args) throws IOException {

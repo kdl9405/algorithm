@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    구간 합 구하기
-
-    // 배열로 구현한 세그먼트 트리
-*/
+/*
+ * 구간 합 구하기
+ * 
+ * // 배열로 구현한 세그먼트 트리
+ */
 public class BOJ2042 {
 
     public static void main(String[] args) throws IOException {
@@ -33,17 +33,17 @@ public class BOJ2042 {
         init(1, n, 1);
 
 
-        for(int i = 0; i<m+k; i++){
+        for (int i = 0; i < m + k; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             long c = Long.parseLong(st.nextToken());
 
             if (a == 1) {
-                long d = c-arr[b];
+                long d = c - arr[b];
                 update(1, n, 1, b, d);
-            }else{
-                sb.append(sum(1, n, 1, b, (int)c)+"\n");
+            } else {
+                sb.append(sum(1, n, 1, b, (int) c) + "\n");
             }
         }
 
@@ -91,7 +91,8 @@ public class BOJ2042 {
             return tree[node];
         }
 
-        int mid = (start+end)/2;
-        return sum(start, mid, node*2, left, right) + sum(mid+1, end, node*2+1, left, right);
+        int mid = (start + end) / 2;
+        return sum(start, mid, node * 2, left, right)
+                + sum(mid + 1, end, node * 2 + 1, left, right);
     }
 }

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    숫자놀이
-*/
+/*
+ * 숫자놀이
+ */
 
 import java.io.*;
 import java.util.*;
@@ -32,11 +32,11 @@ public class BOJ1755 {
         });
 
         StringBuilder answer = new StringBuilder();
-        for(int i = 0; i<numbers.size(); i++){
+        for (int i = 0; i < numbers.size(); i++) {
             answer.append(numbers.get(i).num);
-            if ((i+1)%10 == 0) {
+            if ((i + 1) % 10 == 0) {
                 answer.append("\n");
-            }else{
+            } else {
                 answer.append(" ");
             }
         }

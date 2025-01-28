@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    빙산
-*/
+/*
+ * 빙산
+ */
 
 import java.io.*;
 import java.util.*;
@@ -14,8 +14,8 @@ public class BOJ2573_copy {
     static Queue<Iceberg> queue;
     static Queue<Iceberg> melt;
     static boolean[][] visit;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
     public static void main(String[] args) throws IOException {
 
@@ -58,7 +58,7 @@ public class BOJ2573_copy {
 
                 check(ice.x, ice.y);
                 count++;
-                
+
 
             }
 
@@ -78,7 +78,7 @@ public class BOJ2573_copy {
                 break;
             }
 
-         
+
             year++;
 
         }

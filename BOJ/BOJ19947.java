@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -30,14 +30,14 @@ public class BOJ19947 {
             return dp[y];
         }
 
-        int temp = (int) (findDP(y-1) * 1.05);
+        int temp = (int) (findDP(y - 1) * 1.05);
 
         if (y >= 3) {
-            temp = Math.max(temp, (int) (findDP(y-3) * 1.20));
+            temp = Math.max(temp, (int) (findDP(y - 3) * 1.20));
         }
 
         if (y >= 5) {
-            temp = Math.max(temp, (int) (findDP(y-5) * 1.35));
+            temp = Math.max(temp, (int) (findDP(y - 5) * 1.35));
         }
 
         return dp[y] = temp;

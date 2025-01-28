@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -8,22 +8,23 @@ import java.util.StringTokenizer;
 
 public class BOJ10950 {
 
-    public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
- 
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 		int T = Integer.parseInt(br.readLine());
-        
+
 		StringTokenizer st;
 		StringBuilder sb = new StringBuilder();
-        
+
 		for (int i = 0; i < T; i++) {
-			st = new StringTokenizer(br.readLine()," ");
-			sb.append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken())).append('\n');
+			st = new StringTokenizer(br.readLine(), " ");
+			sb.append(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()))
+					.append('\n');
 		}
 		br.close();
- 
+
 		System.out.println(sb);
- 
+
 	}
 }

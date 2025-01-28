@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    이전 순열
-*/
+/*
+ * 이전 순열
+ */
 public class BOJ10973 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -42,7 +42,7 @@ public class BOJ10973 {
         for (int i = N - 1; i > 0; i--) {
             if (num[i - 1] > num[i]) {
 
-                for (int j = N - 1; j >= 0 ; j--) {
+                for (int j = N - 1; j >= 0; j--) {
                     if (num[j] < num[i - 1]) {
                         int temp = num[i - 1];
                         num[i - 1] = num[j];
@@ -56,7 +56,7 @@ public class BOJ10973 {
             }
         }
 
-        num = new Integer[] { -1 };
+        num = new Integer[] {-1};
     }
 
     void print() {

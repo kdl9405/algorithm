@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 /*
-    음악프로그램 
-
-
-    메모리초과
-*/
+ * 음악프로그램
+ * 
+ * 
+ * 메모리초과
+ */
 
 import java.io.*;
 import java.util.*;
@@ -41,21 +41,21 @@ public class BOJ2623_copy1 {
             }
         }
 
-        PriorityQueue<Integer> pq =new PriorityQueue<>((a,b)->{
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> {
             return afterNums.get(b).size() - afterNums.get(a).size();
         });
 
-        for(int i = 1; i<=N; i++){
+        for (int i = 1; i <= N; i++) {
             findAfter(i, i);
             pq.add(i);
         }
 
         if (impossible) {
             System.out.println(0);
-        }else{
+        } else {
             StringBuilder sb = new StringBuilder();
             while (!pq.isEmpty()) {
-                sb.append(pq.poll()+"\n");
+                sb.append(pq.poll() + "\n");
             }
             System.out.println(sb.toString().trim());
         }

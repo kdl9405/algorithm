@@ -1,11 +1,13 @@
+package boj;
+
 import java.io.*;
 import java.util.*;
 
-/* 
-    풍선 터뜨리기
-
-    
-*/
+/*
+ * 풍선 터뜨리기
+ * 
+ * 
+ */
 
 public class BOJ2346 {
 
@@ -18,7 +20,7 @@ public class BOJ2346 {
 
         Deque<Integer[]> deque = new ArrayDeque<>();
         for (int i = 1; i <= n; i++) {
-            deque.add(new Integer[] { i, Integer.parseInt(st.nextToken()) });
+            deque.add(new Integer[] {i, Integer.parseInt(st.nextToken())});
         }
 
         StringBuilder sb = new StringBuilder();

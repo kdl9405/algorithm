@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    PPAP
-
-
-    가능할 때까지. PPAP를 P로 치환.. 
-*/
+/*
+ * PPAP
+ * 
+ * 
+ * 가능할 때까지. PPAP를 P로 치환..
+ */
 
 public class BOJ16120_copy2 {
 
@@ -42,7 +42,7 @@ public class BOJ16120_copy2 {
 
             if (x == 'P' && y == 'P' && z == 'A') {
                 stack.add(c);
-            }else{
+            } else {
                 stack.add(x);
                 stack.add(y);
                 stack.add(z);
@@ -52,7 +52,7 @@ public class BOJ16120_copy2 {
 
         if (stack.size() == 1 && stack.pop() == 'P') {
             System.out.println("PPAP");
-        }else{
+        } else {
             System.out.println("NP");
         }
     }

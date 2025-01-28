@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
 
-/* 
-    ⚾ 
+/*
+ * ⚾
  */
 
 // 이닝과 타자의 득점은 배열로 구현
-// 순열은 다음순열을 구하는 함수로 구함  .. 순열을 어떤 자료구조에 담을 것인가
+// 순열은 다음순열을 구하는 함수로 구함 .. 순열을 어떤 자료구조에 담을 것인가
 // 이닝 진행하여 득점 계산..
 public class BOJ17281_copy {
 
@@ -26,10 +26,11 @@ public class BOJ17281_copy {
         points = new int[N][9];
 
         for (int i = 0; i < N; i++) {
-            points[i] = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            points[i] =
+                    Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         }
 
-        lineUp = new int[] { 2, 3, 4, 1, 5, 6, 7, 8, 9 };
+        lineUp = new int[] {2, 3, 4, 1, 5, 6, 7, 8, 9};
         last = false;
         max = Integer.MIN_VALUE;
 
@@ -54,57 +55,57 @@ public class BOJ17281_copy {
 
             while (out < 3) {
 
-                switch (points[i][lineUp[player]-1]) {
-                case 0:
-                    out++;
-                    break;
-                case 1:
-                    if (position[2]) {
-                        point++;
-                        position[2] = false;
-                    }
-                    for (int p = 1; p >= 0; p--) {
-                        if (position[p]) {
-                            position[p + 1] = true;
-                            position[p] = false;
+                switch (points[i][lineUp[player] - 1]) {
+                    case 0:
+                        out++;
+                        break;
+                    case 1:
+                        if (position[2]) {
+                            point++;
+                            position[2] = false;
                         }
-                    }
-                    position[0] = true;
-                    break;
-                case 2:
-                    if (position[2]) {
-                        position[2] = false;
-                        point++;
-                    }
-                    if (position[1]) {
-                        position[1] = false;
-                        point++;
-                    }
-                    if (position[0]) {
-                        position[0] = false;
+                        for (int p = 1; p >= 0; p--) {
+                            if (position[p]) {
+                                position[p + 1] = true;
+                                position[p] = false;
+                            }
+                        }
+                        position[0] = true;
+                        break;
+                    case 2:
+                        if (position[2]) {
+                            position[2] = false;
+                            point++;
+                        }
+                        if (position[1]) {
+                            position[1] = false;
+                            point++;
+                        }
+                        if (position[0]) {
+                            position[0] = false;
+                            position[2] = true;
+                        }
+                        position[1] = true;
+                        break;
+                    case 3:
+                        for (int p = 2; p >= 0; p--) {
+                            if (position[p]) {
+                                position[p] = false;
+                                point++;
+                            }
+                        }
                         position[2] = true;
-                    }
-                    position[1] = true;
-                    break;
-                case 3:
-                    for (int p = 2; p >= 0; p--) {
-                        if (position[p]) {
-                            position[p] = false;
-                            point++;
-                        }
-                    }
-                    position[2] = true;
 
-                    break;
-                case 4:
-                    for (int p = 2; p >= 0; p--) {
-                        if (position[p]) {
-                            position[p] = false;
-                            point++;
+                        break;
+                    case 4:
+                        for (int p = 2; p >= 0; p--) {
+                            if (position[p]) {
+                                position[p] = false;
+                                point++;
+                            }
                         }
-                    }
-                    point++;
-                    break;
+                        point++;
+                        break;
 
                 }
 

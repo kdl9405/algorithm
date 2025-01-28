@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    그림
-*/
+/*
+ * 그림
+ */
 
 public class BOJ1926 {
 
@@ -35,7 +35,7 @@ public class BOJ1926 {
                 }
             }
         }
-          
+
 
         System.out.println(count + "\n" + max);
 
@@ -44,14 +44,14 @@ public class BOJ1926 {
     static int N, M;
     static String[][] map;
     static boolean[][] visit;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
     static int max;
 
     static void BFS(int x, int y) {
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { x, y });
+        queue.add(new int[] {x, y});
         visit[x][y] = true;
         int count = 1;
 
@@ -66,7 +66,7 @@ public class BOJ1926 {
                 if (nx >= 0 && nx < N && ny >= 0 && ny < M) {
                     if (map[nx][ny].equals("1") && !visit[nx][ny]) {
                         visit[nx][ny] = true;
-                        queue.add(new int[] { nx, ny });
+                        queue.add(new int[] {nx, ny});
                         count++;
                     }
                 }

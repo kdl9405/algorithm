@@ -1,16 +1,16 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    비밀번호 찾기 
-*/
+/*
+ * 비밀번호 찾기
+ */
 public class BOJ17219 {
-    
+
     public static void main(String[] args) throws IOException {
-        
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int N = Integer.parseInt(st.nextToken());
@@ -23,9 +23,9 @@ public class BOJ17219 {
             password.put(st.nextToken(), st.nextToken());
         }
 
-        StringBuilder sb= new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         while (M-- > 0) {
-            sb.append(password.get(br.readLine())+"\n");
+            sb.append(password.get(br.readLine()) + "\n");
         }
 
         System.out.println(sb.toString());

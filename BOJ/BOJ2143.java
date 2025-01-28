@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    두 배열의 합
-*/
+/*
+ * 두 배열의 합
+ */
 
 import java.io.*;
 import java.util.*;
@@ -37,7 +37,7 @@ public class BOJ2143 {
 
         for (int a : mapA.keySet()) {
             if (mapB.containsKey(T - a)) {
-                answer += (mapA.get(a)*(mapB.get(T-a)));
+                answer += (mapA.get(a) * (mapB.get(T - a)));
             }
         }
 

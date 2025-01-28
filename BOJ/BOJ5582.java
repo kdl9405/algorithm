@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    공통 부분 문자열
-*/
+/*
+ * 공통 부분 문자열
+ */
 public class BOJ5582 {
     public static void main(String[] args) throws IOException {
 

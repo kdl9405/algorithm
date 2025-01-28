@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-/* 
-    신입사원
-*/
+/*
+ * 신입사원
+ */
 public class BOJ1946 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -42,7 +42,7 @@ public class BOJ1946 {
 
                 if (b > arr[i][1]) {
                     c++;
-                    b = arr[i][1]; 
+                    b = arr[i][1];
                 }
 
             }

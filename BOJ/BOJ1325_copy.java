@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    효율적인 해킹
-
-*/
+/*
+ * 효율적인 해킹
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

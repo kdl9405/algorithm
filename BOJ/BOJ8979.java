@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    올림픽 
-*/
+/*
+ * 올림픽
+ */
 
 import java.io.*;
 import java.util.*;

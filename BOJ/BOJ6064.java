@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    카잉 달력
-*/
+/*
+ * 카잉 달력
+ */
 public class BOJ6064 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -31,12 +31,12 @@ public class BOJ6064 {
             int answer = -1;
             while (i * M <= lcm) {
                 if ((i * M + x - y) % N == 0) {
-                    answer = i*M+x;
+                    answer = i * M + x;
                 }
                 i++;
             }
 
-            sb.append(answer +" \n");
+            sb.append(answer + " \n");
 
         }
 

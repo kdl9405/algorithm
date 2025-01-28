@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    달빛 여우
-
-    시간초과
-*/
+/*
+ * 달빛 여우
+ * 
+ * 시간초과
+ */
 public class BOJ16118 {
 
     static final int INF = 2000000000;
@@ -37,8 +37,8 @@ public class BOJ16118 {
             int b = Integer.parseInt(st.nextToken());
             int d = Integer.parseInt(st.nextToken());
 
-            roads[a].add(new int[] { b, 2 * d });
-            roads[b].add(new int[] { a, 2 * d });
+            roads[a].add(new int[] {b, 2 * d});
+            roads[b].add(new int[] {a, 2 * d});
         }
 
         // fox
@@ -106,7 +106,7 @@ public class BOJ16118 {
 
                 if (Dp_wolf[to][ns] > time) {
                     Dp_wolf[to][ns] = time;
-                    qWolves.add(new wolf(to,time,ns));
+                    qWolves.add(new wolf(to, time, ns));
                 }
             }
 
@@ -123,6 +123,7 @@ public class BOJ16118 {
     }
 }
 
+
 class wolf {
 
     int state;
@@ -135,6 +136,7 @@ class wolf {
         this.state = state;
     }
 }
+
 
 class fox {
     int to;

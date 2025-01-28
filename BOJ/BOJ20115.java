@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-/* 
-    에너지 드링크
-*/
+/*
+ * 에너지 드링크
+ */
 
 public class BOJ20115 {
 
@@ -21,7 +21,7 @@ public class BOJ20115 {
 
         Double[] arr = new Double[n];
 
-        for(int i = 0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             arr[i] = Double.parseDouble(st.nextToken());
         }
 
@@ -29,8 +29,8 @@ public class BOJ20115 {
 
         Double sum = arr[0];
 
-        for(int i = 1; i<n; i++){
-            sum += (arr[i]/2);
+        for (int i = 1; i < n; i++) {
+            sum += (arr[i] / 2);
         }
 
         System.out.println(sum);

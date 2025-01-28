@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
-/* 
-    KCM Travel
-
-    1. 티켓정보 저장 - List<List<int[]>>  // DP[][] i공항에 j머니로 도착하는 최소 시간 
-    2. 1번을 pq에 담아서 가장 시간순으로 뽑아서 다음 경로를 추적
-    
-*/
+/*
+ * KCM Travel
+ * 
+ * 1. 티켓정보 저장 - List<List<int[]>> // DP[][] i공항에 j머니로 도착하는 최소 시간 2. 1번을 pq에 담아서 가장 시간순으로 뽑아서 다음 경로를
+ * 추적
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -45,7 +45,7 @@ public class BOJ10217 {
                 c = Integer.parseInt(st.nextToken());
                 d = Integer.parseInt(st.nextToken());
 
-                tickets.get(u).add(new int[] { v, c, d });
+                tickets.get(u).add(new int[] {v, c, d});
             }
 
             dijkstra();
@@ -54,11 +54,11 @@ public class BOJ10217 {
 
             int answer = dp[n][0];
 
-           
+
             // int answer = Integer.MAX_VALUE;
 
             // for (int i = 1; i <= m; i++) {
-            //     answer = Math.min(answer, dp[n][i]);
+            // answer = Math.min(answer, dp[n][i]);
             // }
 
             if (answer == INF) {
@@ -89,7 +89,7 @@ public class BOJ10217 {
             // }
             return a[1] - b[1];
         });
-        pq.add(new int[] { 1, 0 });
+        pq.add(new int[] {1, 0});
 
         dp[1][0] = 0;
 
@@ -119,11 +119,12 @@ public class BOJ10217 {
                         continue;
                     }
 
-                    dp[ticket[0]][i + ticket[1]] = Math.min(dp[ticket[0]][i + ticket[1]], dp[now[0]][i] + ticket[2]);
-                    time = Math.min(time, dp[ticket[0]][i + ticket[1]] );
+                    dp[ticket[0]][i + ticket[1]] =
+                            Math.min(dp[ticket[0]][i + ticket[1]], dp[now[0]][i] + ticket[2]);
+                    time = Math.min(time, dp[ticket[0]][i + ticket[1]]);
                 }
 
-                pq.add(new int[]{ticket[0],time});
+                pq.add(new int[] {ticket[0], time});
 
                 // int cost = now[1] + ticket[1];
                 // int time = now[2] + ticket[2];

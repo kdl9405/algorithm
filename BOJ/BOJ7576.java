@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
@@ -7,8 +7,8 @@ public class BOJ7576 {
 
     static int[][] map;
     static boolean[][] visit;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -47,7 +47,7 @@ public class BOJ7576 {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (map[i][j] == 1 && !visit[i][j]) {
-                    queue.offer(new Integer[] { i, j });
+                    queue.offer(new Integer[] {i, j});
                 }
             }
         }
@@ -76,12 +76,12 @@ public class BOJ7576 {
                     if (nx >= 0 && nx < n && ny >= 0 && ny < m) {
                         if (map[nx][ny] == 0) {
                             map[nx][ny] = 1;
-                            cloneQ.offer(new Integer[] {nx,ny});
+                            cloneQ.offer(new Integer[] {nx, ny});
                         }
                     }
                 }
             }
-           
+
             day++;
             queue.addAll(cloneQ);
 

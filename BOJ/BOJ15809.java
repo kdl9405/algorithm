@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -9,9 +9,7 @@ import java.util.*;
  * 1) root로 그룹을 묶어서 표현 2) root을 찾은 후 전투 및 병력 계산.
  * 
  * 
- *  정렬 시 PQ 활용
- *      java 8 : 568ms
- *      java 11 : 556ms
+ * 정렬 시 PQ 활용 java 8 : 568ms java 11 : 556ms
  */
 public class BOJ15809 {
 
@@ -68,19 +66,19 @@ public class BOJ15809 {
         }
 
         PriorityQueue<Integer> pq = new PriorityQueue<>();
-        for(int i = 1; i<=N; i++){
+        for (int i = 1; i <= N; i++) {
             if (militaly[i] != -1) {
                 pq.add(militaly[i]);
             }
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(pq.size()+"\n");
+        sb.append(pq.size() + "\n");
 
         while (!pq.isEmpty()) {
-            sb.append(pq.poll()+" ");
+            sb.append(pq.poll() + " ");
         }
-        
+
         System.out.println(sb.toString());
     }
 

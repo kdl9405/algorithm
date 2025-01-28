@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    외판원 순회 2
-*/
+/*
+ * 외판원 순회 2
+ */
 
 import java.io.*;
 import java.util.*;
@@ -39,11 +39,11 @@ public class BOJ10971 {
 
     static void travel(int start, int now, int visit, int cost) {
 
-        if(cost > minCost){
+        if (cost > minCost) {
             return;
         }
 
-        if (visit == (1 << N)-1 && start == now) {
+        if (visit == (1 << N) - 1 && start == now) {
             minCost = Math.min(minCost, cost);
             return;
         }

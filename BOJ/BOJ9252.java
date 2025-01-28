@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Stack;
 
-/* 
-    LCS 2
-*/
+/*
+ * LCS 2
+ */
 public class BOJ9252 {
     public static void main(String[] args) throws IOException {
 
@@ -36,14 +36,14 @@ public class BOJ9252 {
 
             int j = B.length;
             int i = A.length;
-            
+
             while (size > 0) {
-                if (dp[i][j] == dp[i-1][j]) {
+                if (dp[i][j] == dp[i - 1][j]) {
                     i--;
-                }else if (dp[i][j] == dp[i][j-1]){
+                } else if (dp[i][j] == dp[i][j - 1]) {
                     j--;
-                }else{
-                    stack.push(A[i-1]);
+                } else {
+                    stack.push(A[i - 1]);
                     i--;
                     j--;
                     size--;

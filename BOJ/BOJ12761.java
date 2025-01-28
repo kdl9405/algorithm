@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    돌다리
-*/
+/*
+ * 돌다리
+ */
 
 import java.io.*;
 import java.util.*;
@@ -20,7 +20,7 @@ public class BOJ12761 {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        int[] d = { 1, -1, A, -A, B, -B };
+        int[] d = {1, -1, A, -A, B, -B};
 
         Queue<Integer> queue = new LinkedList<>();
         queue.add(N);
@@ -50,14 +50,14 @@ public class BOJ12761 {
                     }
                 }
 
-                if (now*A<=100000 && !visit[now*A]) {
-                    visit[now*A] = true;
-                    queue.offer(now*A);
+                if (now * A <= 100000 && !visit[now * A]) {
+                    visit[now * A] = true;
+                    queue.offer(now * A);
                 }
-                
-                if (now*B<=100000 && !visit[now*B]) {
-                    visit[now*B] = true;
-                    queue.offer(now*B);
+
+                if (now * B <= 100000 && !visit[now * B]) {
+                    visit[now * B] = true;
+                    queue.offer(now * B);
                 }
 
             }

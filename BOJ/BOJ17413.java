@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Stack;
 
-/* 
-    단어 뒤집기 2
-*/
+/*
+ * 단어 뒤집기 2
+ */
 
 public class BOJ17413 {
 

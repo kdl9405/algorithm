@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    단축키
-*/
+/*
+ * 단축키
+ */
 
 import java.io.*;
 import java.util.*;
@@ -33,10 +33,10 @@ public class BOJ1283 {
             }
 
             if (done) {
-                arr[i] = "["+arr[i].charAt(0)+"]"+arr[i].substring(1);
+                arr[i] = "[" + arr[i].charAt(0) + "]" + arr[i].substring(1);
 
-                for(String a : arr){
-                    sb.append(a+" ");
+                for (String a : arr) {
+                    sb.append(a + " ");
                 }
                 sb.append("\n");
                 continue;
@@ -51,17 +51,17 @@ public class BOJ1283 {
                 }
             }
 
-            if (done){
-                for(int j = 0; j<s.length(); j++){
+            if (done) {
+                for (int j = 0; j < s.length(); j++) {
                     if (j == i) {
-                        sb.append("["+s.charAt(j)+"]");
-                    }else{
+                        sb.append("[" + s.charAt(j) + "]");
+                    } else {
                         sb.append(s.charAt(j));
                     }
                 }
                 sb.append("\n");
-            }else{
-                sb.append(s+"\n");
+            } else {
+                sb.append(s + "\n");
             }
 
         }

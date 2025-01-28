@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    다음 순열
-
-    시간초과
-*/
+/*
+ * 다음 순열
+ * 
+ * 시간초과
+ */
 public class BOJ10972_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -54,11 +54,12 @@ public class BOJ10972_copy {
         {
             System.out.println(-1);
         } else {
-            // String s = stack.toString().replaceAll(", ", "0").replaceAll("[^0-9]", "").replaceAll("0", " ");
+            // String s = stack.toString().replaceAll(", ", "0").replaceAll("[^0-9]",
+            // "").replaceAll("0", " ");
 
             String s = "";
             while (!stack.isEmpty()) {
-            s = stack.pop()+" "+s;
+                s = stack.pop() + " " + s;
             }
 
             StringBuffer sb = new StringBuffer();

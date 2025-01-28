@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    사다리 조작
-
-*/
+/*
+ * 사다리 조작
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -51,7 +51,7 @@ public class BOJ15684 {
 
     static void dfs(int h, int c, int line) {
 
-        System.out.println(h+" "+ c +" " +line);
+        System.out.println(h + " " + c + " " + line);
 
         if (c >= count) {
             return;
@@ -64,7 +64,7 @@ public class BOJ15684 {
             }
             return;
         }
-        
+
 
         for (int i = h; i <= H; i++) {
             for (int j = 1; j < N; j++) {

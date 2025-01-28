@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-/* 
-    단어 맞추기
-*/
+/*
+ * 단어 맞추기
+ */
 public class BOJ9081 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -32,16 +32,15 @@ public class BOJ9081 {
         int min = 0;
         int index = 0;
 
-        loop:
-        for(index = s.length()-2; index>=0; index--){
-            for(min = s.length()-1; min>index; min--){
+        loop: for (index = s.length() - 2; index >= 0; index--) {
+            for (min = s.length() - 1; min > index; min--) {
                 if (s.charAt(index) < s.charAt(min)) {
                     break loop;
                 }
             }
         }
 
-      //  System.out.println("index  " + index+"  min = " + min);
+        // System.out.println("index " + index+" min = " + min);
         if (index == -1) {
             return s;
         }

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /*
-    나이트의 이동
-*/
+ * 나이트의 이동
+ */
 
 import java.io.*;
 import java.util.*;
@@ -30,7 +30,7 @@ public class BOJ7562 {
             int y2 = Integer.parseInt(st.nextToken());
 
             Queue<int[]> queue = new LinkedList<>();
-            queue.add(new int[] { x1, y1 });
+            queue.add(new int[] {x1, y1});
 
             int count = 0;
             boolean find = false;
@@ -56,7 +56,7 @@ public class BOJ7562 {
                         }
 
                         visit[nx][ny] = true;
-                        queue.add(new int[] { nx, ny });
+                        queue.add(new int[] {nx, ny});
                     }
 
                 }
@@ -75,6 +75,6 @@ public class BOJ7562 {
         System.out.println(sb.toString().trim());
     }
 
-    static int[] dx = { -1, -2, -2, -1, 1, 2, 2, 1 };
-    static int[] dy = { -2, -1, 1, 2, 2, 1, -1, -2 };
+    static int[] dx = {-1, -2, -2, -1, 1, 2, 2, 1};
+    static int[] dy = {-2, -1, 1, 2, 2, 1, -1, -2};
 }

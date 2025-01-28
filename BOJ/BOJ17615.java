@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/* 
-    볼 모으기
-
-    개선 핖요
-*/
+/*
+ * 볼 모으기
+ * 
+ * 개선 핖요
+ */
 public class BOJ17615 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {

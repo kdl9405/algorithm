@@ -1,21 +1,21 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    뱀과 사다리 게임
-*/
+ * 뱀과 사다리 게임
+ */
 
 
 public class BOJ16928 {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st= new StringTokenizer(br.readLine());
-        
-        int n = Integer.parseInt(st.nextToken())+Integer.parseInt(st.nextToken());
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int n = Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken());
 
         HashMap<Integer, Integer> move = new HashMap<>();
 
@@ -25,28 +25,28 @@ public class BOJ16928 {
             move.put(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()));
         }
 
-        boolean[] visit= new boolean[101];
+        boolean[] visit = new boolean[101];
         Queue<Integer> queue = new LinkedList<>();
         queue.add(1);
         visit[1] = true;
 
-        int count = 0; 
+        int count = 0;
         while (!queue.isEmpty()) {
 
             if (visit[100]) {
                 break;
             }
-            
+
             int size = queue.size();
 
-            while (size-- >0) {
+            while (size-- > 0) {
                 int now = queue.poll();
 
-                for(int i = 1; i<=6; i++){
+                for (int i = 1; i <= 6; i++) {
 
-                    int next = now+i;
+                    int next = now + i;
 
-                    if (next>100) {
+                    if (next > 100) {
                         break;
                     }
 
@@ -59,7 +59,7 @@ public class BOJ16928 {
                         queue.add(next);
                     }
                 }
-            } 
+            }
 
             count++;
         }

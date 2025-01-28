@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    개똥벌레
-*/
+/*
+ * 개똥벌레
+ */
 
 import java.io.*;
 import java.util.*;
@@ -29,7 +29,7 @@ public class BOJ3020 {
             }
         }
 
-        System.out.println(min +" " +count);
+        System.out.println(min + " " + count);
 
     }
 

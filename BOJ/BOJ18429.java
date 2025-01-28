@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
 
-/* 
-    근손실
-*/
+/*
+ * 근손실
+ */
 import java.io.*;
 import java.util.*;
 

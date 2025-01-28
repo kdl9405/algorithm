@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    텀 프로젝트
-
-    개선 필요!
-
-    
-*/
+/*
+ * 텀 프로젝트
+ * 
+ * 개선 필요!
+ * 
+ * 
+ */
 public class BOJ9466 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -63,7 +63,7 @@ public class BOJ9466 {
 
         if (visit[n]) {
             if (n == start) {
-                check = true;              
+                check = true;
             }
 
             if (stack.contains(n)) {

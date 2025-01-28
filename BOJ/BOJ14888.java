@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -30,7 +32,7 @@ public class BOJ14888 {
         }
 
         result = number[0];
-        calulator(number[0],0);
+        calulator(number[0], 0);
 
         System.out.println(max);
         System.out.println(min);
@@ -44,7 +46,7 @@ public class BOJ14888 {
             max = Math.max(max, result);
             min = Math.min(min, result);
 
-            
+
             return;
         }
 

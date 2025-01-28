@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    가장 긴 감소하는 부분 수열
-
-    메모라이즈
-*/
+/*
+ * 가장 긴 감소하는 부분 수열
+ * 
+ * 메모라이즈
+ */
 
 import java.io.*;
 import java.util.*;
@@ -34,15 +34,15 @@ public class BOJ11722 {
                 }
             }
 
-            for(int x = 0; x<N; x++){
-                System.out.print(dp[x]+" ");
-               
+            for (int x = 0; x < N; x++) {
+                System.out.print(dp[x] + " ");
+
             }
             System.out.println();
         }
 
         int max = 0;
-        for(int i = 0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             System.out.println(dp[i]);
             if (dp[i] > 0) {
                 max++;

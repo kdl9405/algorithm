@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    Puyo Puyo
-*/
+/*
+ * Puyo Puyo
+ */
 
 import java.util.*;
 
@@ -28,7 +28,7 @@ public class BOJ11559 {
             answer++;
 
             drop();
-          
+
         }
 
         System.out.println(answer);
@@ -37,7 +37,7 @@ public class BOJ11559 {
 
     char[][] field;
     boolean[][] visit;
-    int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     void init() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -75,10 +75,10 @@ public class BOJ11559 {
         char color = field[r][c];
 
         List<int[]> candidate = new ArrayList<>();
-        candidate.add(new int[] { r, c });
+        candidate.add(new int[] {r, c});
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { r, c });
+        queue.add(new int[] {r, c});
         visit[r][c] = true;
 
         while (!queue.isEmpty()) {
@@ -97,8 +97,8 @@ public class BOJ11559 {
                 }
 
                 visit[nr][nc] = true;
-                queue.add(new int[] { nr, nc });
-                candidate.add(new int[] { nr, nc });
+                queue.add(new int[] {nr, nc});
+                candidate.add(new int[] {nr, nc});
             }
         }
 

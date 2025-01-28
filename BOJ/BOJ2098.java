@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    외판원 순회 
-
-*/
+/*
+ * 외판원 순회
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -46,7 +46,7 @@ public class BOJ2098 {
             }
             return map[now][0];
         }
-        
+
         if (dp[now][visit] != INF) {
             return dp[now][visit];
         }

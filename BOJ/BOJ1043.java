@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -11,8 +11,8 @@ import java.util.StringTokenizer;
 /**
  * 거짓말
  * 
- * 1) 사람별로 참여하는 party를 등록하고 2) 진실을 아는 사람부터 진실을 전염시킨다는 개념으로 체크 (사람 -> 파티 / 파티 ->
- * 사람의 탐색이 가능해야함) 3) 체크 안된 party의 개수가 답.
+ * 1) 사람별로 참여하는 party를 등록하고 2) 진실을 아는 사람부터 진실을 전염시킨다는 개념으로 체크 (사람 -> 파티 / 파티 -> 사람의 탐색이 가능해야함) 3) 체크
+ * 안된 party의 개수가 답.
  * 
  */
 public class BOJ1043 {
@@ -51,12 +51,12 @@ public class BOJ1043 {
 
         check_party = new boolean[m];
 
-        for(Integer t : truth){
+        for (Integer t : truth) {
             speakTruth(t);
         }
 
         int count = 0;
-        for(boolean check : check_party){
+        for (boolean check : check_party) {
             if (!check) {
                 count++;
             }

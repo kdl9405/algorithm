@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    사다리타기
-
-    성공
-*/
+/*
+ * 사다리타기
+ * 
+ * 성공
+ */
 
 public class BOJ2469_copy2 {
 
@@ -41,12 +41,12 @@ public class BOJ2469_copy2 {
             }
         }
 
-        for(int i = n-1; i>index; i--){
-            for(int j = 0; j<k-1; j++){
+        for (int i = n - 1; i > index; i--) {
+            for (int j = 0; j < k - 1; j++) {
                 if (line[i][j] == '-') {
                     char c = end[j];
-                    end[j] = end[j+1];
-                    end[j+1] = c;
+                    end[j] = end[j + 1];
+                    end[j + 1] = c;
                 }
             }
         }
@@ -54,15 +54,15 @@ public class BOJ2469_copy2 {
         boolean posible = true;
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i<k-1; i++){
+        for (int i = 0; i < k - 1; i++) {
             if (start[i] == end[i]) {
                 sb.append('*');
-            }else if(start[i] == end[i+1] && start[i+1] == end[i]){
+            } else if (start[i] == end[i + 1] && start[i + 1] == end[i]) {
                 sb.append('-');
                 char c = start[i];
-                start[i] = start[i+1];
-                start[i+1] = c;
-            }else{
+                start[i] = start[i + 1];
+                start[i + 1] = c;
+            } else {
                 posible = false;
                 break;
             }
@@ -70,7 +70,7 @@ public class BOJ2469_copy2 {
 
         if (!posible) {
             sb = new StringBuilder();
-            for(int i = 0; i<k-1; i++){
+            for (int i = 0; i < k - 1; i++) {
                 sb.append('x');
             }
         }

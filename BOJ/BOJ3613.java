@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    Java vs C++
-*/
+/*
+ * Java vs C++
+ */
 public class BOJ3613 {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String parameter = br.readLine();
@@ -20,19 +20,20 @@ public class BOJ3613 {
         sb.append(parameter.charAt(0));
 
 
-        if (!Character.isLowerCase(parameter.charAt(0)) || parameter.charAt(parameter.length()-1) == '_') {
+        if (!Character.isLowerCase(parameter.charAt(0))
+                || parameter.charAt(parameter.length() - 1) == '_') {
             isJava = true;
             isCpp = true;
-        }else{
+        } else {
 
-            for(int i = 1; i<parameter.length(); i++){
+            for (int i = 1; i < parameter.length(); i++) {
 
                 char c = parameter.charAt(i);
 
                 if (Character.isUpperCase(c)) {
                     isJava = true;
                     sb.append('_').append(Character.toLowerCase(c));
-                }else if(c == '_'){
+                } else if (c == '_') {
                     isCpp = true;
                     i++;
                     c = parameter.charAt(i);
@@ -41,7 +42,7 @@ public class BOJ3613 {
                         break;
                     }
                     sb.append(Character.toUpperCase(c));
-                }else{
+                } else {
                     sb.append(c);
                 }
             }
@@ -50,11 +51,11 @@ public class BOJ3613 {
 
         if (isJava && isCpp) {
             System.out.println("Error!");
-        }else{
+        } else {
             System.out.println(sb.toString());
         }
 
 
-        
+
     }
 }

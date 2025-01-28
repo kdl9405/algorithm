@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 
-/* 
-    쇠막대기
-*/
+/*
+ * 쇠막대기
+ */
 public class BOJ10799 {
 
     public static void main(String[] args) {
@@ -31,12 +31,12 @@ public class BOJ10799 {
         int count = 0;
 
         while (!deque.isEmpty()) {
-            char c = deque.pollFirst();            
+            char c = deque.pollFirst();
             if (c == '*') {
                 count += stack.size();
-            }else if (c == '(') {                
+            } else if (c == '(') {
                 stack.push(c);
-            }else {
+            } else {
                 stack.pop();
                 count++;
             }

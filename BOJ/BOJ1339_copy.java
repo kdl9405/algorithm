@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    단어 수학
-
-*/
+/*
+ * 단어 수학
+ * 
+ */
 import java.io.*;
 import java.util.*;
 
@@ -23,8 +23,8 @@ public class BOJ1339_copy {
             String s = br.readLine();
 
             for (int i = 0; i < s.length(); i++) {
-                alphabet.put(s.charAt(i),
-                        alphabet.getOrDefault(s.charAt(i), 0) + (int) Math.pow(10, s.length() - i - 1));
+                alphabet.put(s.charAt(i), alphabet.getOrDefault(s.charAt(i), 0)
+                        + (int) Math.pow(10, s.length() - i - 1));
             }
         }
 

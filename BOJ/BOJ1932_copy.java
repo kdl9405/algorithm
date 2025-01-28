@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/* 
-    재채점??
-*/
+/*
+ * 재채점??
+ */
 
 public class BOJ1932_copy {
 
@@ -52,7 +52,7 @@ public class BOJ1932_copy {
         for (int i = 1; i < n; i++) {
             max = Math.max(max, arr[n - 1][i]);
         }
-        
+
         System.out.println(max);
 
     }

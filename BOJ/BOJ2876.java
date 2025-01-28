@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class BOJ2876 {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            for(int j = 1; j<=5; j++){
+            for (int j = 1; j <= 5; j++) {
                 if (a == j || b == j) {
                     arr[j]++;
 
@@ -33,7 +33,7 @@ public class BOJ2876 {
                         count = arr[j];
                         grade = j;
                     }
-                }else{
+                } else {
                     arr[j] = 0;
                 }
             }

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    섬의 개수
-
-*/
+/*
+ * 섬의 개수
+ * 
+ */
 
 public class BOJ4963_copy3 {
 
@@ -31,7 +31,7 @@ public class BOJ4963_copy3 {
             for (int i = 1; i <= h; i++) {
                 st = new StringTokenizer(br.readLine());
                 for (int j = 1; j <= w; j++) {
-                    if(Integer.parseInt(st.nextToken())==1){
+                    if (Integer.parseInt(st.nextToken()) == 1) {
                         map[i][j] = true;
                     }
                 }
@@ -55,7 +55,7 @@ public class BOJ4963_copy3 {
 
     static int w, h;
     static boolean[][] map;
-    static int[][] d = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
+    static int[][] d = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
     static void dfs(int x, int y) {
 

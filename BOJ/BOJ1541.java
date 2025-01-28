@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -21,7 +21,7 @@ public class BOJ1541 {
                 break;
             }
         }
-        
+
         if (index == 0) {
             String[] str = s.split("[+-]");
             int sum = 0;

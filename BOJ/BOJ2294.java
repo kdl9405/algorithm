@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/*  
-    동전 2
-*/
+/*
+ * 동전 2
+ */
 
 public class BOJ2294 {
 

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
@@ -22,7 +22,7 @@ public class BOJ1157_copy2 {
 
             if (Character.isLowerCase(c)) {
                 alphabet[c - 'a'][1]++;
-            }else{
+            } else {
                 alphabet[c - 'A'][1]++;
             }
         }

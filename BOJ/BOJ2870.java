@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    수학숙제
-*/
+/*
+ * 수학숙제
+ */
 
 import java.io.*;
 import java.math.BigInteger;
@@ -23,17 +23,17 @@ public class BOJ2870 {
             String input = br.readLine();
 
             StringBuilder sb = new StringBuilder();
-            for(char c : input.toCharArray()){
+            for (char c : input.toCharArray()) {
                 if (Character.isLowerCase(c)) {
-                    if (sb.length()>0) {
+                    if (sb.length() > 0) {
                         numbers.add(new BigInteger(sb.toString()));
                         sb = new StringBuilder();
                     }
-                }else{
+                } else {
                     sb.append(c);
                 }
             }
-            if (sb.length()>0) {
+            if (sb.length() > 0) {
                 numbers.add(new BigInteger(sb.toString()));
             }
         }

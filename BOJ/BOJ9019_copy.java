@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/*  
-    DSLR 
-
-    4172ms
-*/
+/*
+ * DSLR
+ * 
+ * 4172ms
+ */
 public class BOJ9019_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -25,7 +25,7 @@ public class BOJ9019_copy {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            sb.append(BFS(a, b)+"\n");
+            sb.append(BFS(a, b) + "\n");
 
 
         }
@@ -88,6 +88,7 @@ public class BOJ9019_copy {
 
     }
 }
+
 
 class DSLR {
     int num;

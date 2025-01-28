@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    최솟값
-*/
+/*
+ * 최솟값
+ */
 
 import java.io.*;
 import java.util.*;
@@ -23,8 +23,8 @@ public class BOJ10868 {
             number[i] = Integer.parseInt(br.readLine());
         }
 
-        int height = (int) Math.ceil(Math.log(N)/Math.log(2));
-        segmentTree = new int[1<<(height+1)];
+        int height = (int) Math.ceil(Math.log(N) / Math.log(2));
+        segmentTree = new int[1 << (height + 1)];
 
         setSegmentTree(1, N, 1);
 
@@ -73,7 +73,8 @@ public class BOJ10868 {
 
         int mid = (left + right) / 2;
 
-        return Math.min(findMinNumber(left, mid, node * 2, a, b), findMinNumber(mid + 1, right, node * 2 + 1, a, b));
+        return Math.min(findMinNumber(left, mid, node * 2, a, b),
+                findMinNumber(mid + 1, right, node * 2 + 1, a, b));
     }
 
 }

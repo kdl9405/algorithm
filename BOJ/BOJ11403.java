@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    경로찾기
-*/
+/*
+ * 경로찾기
+ */
 public class BOJ11403 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {

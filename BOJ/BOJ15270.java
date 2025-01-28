@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    친구 팰린드롬
-
-*/
+/*
+ * 친구 팰린드롬
+ * 
+ */
 public class BOJ15270 {
 
     public static void main(String[] args) throws IOException {
@@ -30,7 +30,7 @@ public class BOJ15270 {
 
         find(0, 0);
 
-        max *=2;
+        max *= 2;
 
         if (max < N) {
             max++;

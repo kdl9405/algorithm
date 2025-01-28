@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    저울
-*/
+/*
+ * 저울
+ */
 
 import java.io.*;
 import java.util.*;
@@ -44,9 +44,9 @@ public class BOJ10159 {
         }
 
         StringBuilder sb = new StringBuilder();
-        for(int i = 1; i<=N; i++){
+        for (int i = 1; i <= N; i++) {
             int count = 0;
-            for(int j = 1; j<=N; j++){
+            for (int j = 1; j <= N; j++) {
 
                 if (i == j) {
                     continue;
@@ -57,7 +57,7 @@ public class BOJ10159 {
             }
             sb.append(count).append("\n");
         }
-    
+
         System.out.println(sb.toString().trim());
     }
 }

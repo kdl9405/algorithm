@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.math.BigInteger;
 import java.util.Scanner;
 
-/* 
-    다음 소수
-*/
+/*
+ * 다음 소수
+ */
 public class BOJ4134 {
     public static void main(String[] args) {
 

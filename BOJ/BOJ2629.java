@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    양팔저울     
-   
-*/
+/*
+ * 양팔저울
+ * 
+ */
 
 public class BOJ2629 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -25,31 +25,31 @@ public class BOJ2629 {
 
         boolean[] possible = new boolean[15001];
         boolean[] temp = new boolean[15001];
-        
+
         possible[0] = true;
-        for(int w : weight){
-            for(int i = 0; i<=15000; i++){
+        for (int w : weight) {
+            for (int i = 0; i <= 15000; i++) {
                 if (possible[i]) {
-                    int left = Math.abs(w-i);
-                    int right = Math.abs(w+i);
-                    
+                    int left = Math.abs(w - i);
+                    int right = Math.abs(w + i);
+
                     temp[left] = true;
                     temp[right] = true;
                     temp[w] = true;
                 }
             }
 
-            for(int i = 0; i<=15000; i++){
+            for (int i = 0; i <= 15000; i++) {
                 possible[i] = temp[i];
             }
         }
 
         StringBuilder sb = new StringBuilder();
-        for(int t : test){
-           
-            if (t<=15000 && possible[t]) {
+        for (int t : test) {
+
+            if (t <= 15000 && possible[t]) {
                 sb.append("Y ");
-            }else{
+            } else {
                 sb.append("N ");
             }
         }
@@ -59,5 +59,5 @@ public class BOJ2629 {
 
     }
 
-   
+
 }

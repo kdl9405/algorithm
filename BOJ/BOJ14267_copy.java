@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    회사 문화 1
-
-    시간초과
-*/
+ * 회사 문화 1
+ * 
+ * 시간초과
+ */
 public class BOJ14267_copy {
 
     public static void main(String[] args) throws IOException {

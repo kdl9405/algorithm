@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 봄버맨
@@ -12,7 +12,7 @@ public class BOJ16918 {
     public static void main(String[] args) throws IOException {
 
         new BOJ16918().solution();
-   }
+    }
 
     void solution() throws IOException {
 
@@ -26,7 +26,7 @@ public class BOJ16918 {
 
     int R, C, N;
     char[][] map;
-    int[][] dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    int[][] dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     StringBuilder answer = new StringBuilder();
 
     void init() throws IOException {

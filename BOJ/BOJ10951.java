@@ -1,25 +1,25 @@
-package BOJ;
+package boj;
 
 
 import java.io.*;
 import java.util.Scanner;
 
 public class BOJ10951 {
-    
+
     public static void main(String[] args) {
-        
-       Scanner sc = new Scanner(System.in);
+
+        Scanner sc = new Scanner(System.in);
 
 
-       while (sc.hasNextInt()) {
+        while (sc.hasNextInt()) {
 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
+            int a = sc.nextInt();
+            int b = sc.nextInt();
 
-        System.out.println(a+b);
-           
-       }
+            System.out.println(a + b);
 
-       sc.close();
+        }
+
+        sc.close();
     }
 }

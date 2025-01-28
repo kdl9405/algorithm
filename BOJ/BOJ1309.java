@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    동물원
-*/
+/*
+ * 동물원
+ */
 
 import java.io.*;
 

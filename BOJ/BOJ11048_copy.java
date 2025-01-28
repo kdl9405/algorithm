@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    이동하기
-*/
+/*
+ * 이동하기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -50,6 +50,7 @@ public class BOJ11048_copy {
             return dp[r][c];
         }
 
-        return dp[r][c] = maze[r][c] + (Math.max(findDP(r - 1, c), Math.max(findDP(r, c - 1), findDP(r - 1, c - 1))));
+        return dp[r][c] = maze[r][c]
+                + (Math.max(findDP(r - 1, c), Math.max(findDP(r, c - 1), findDP(r - 1, c - 1))));
     }
 }

@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    가장 긴 감소하는 부분 수열
-
-    메모라이즈
-*/
+/*
+ * 가장 긴 감소하는 부분 수열
+ * 
+ * 메모라이즈
+ */
 
 import java.io.*;
 import java.util.*;

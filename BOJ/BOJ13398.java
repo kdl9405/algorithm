@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
- 연속합 2
+ * 연속합 2
  */
 
 import java.io.*;

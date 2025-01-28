@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    예산
-*/
+/*
+ * 예산
+ */
 
 import java.io.*;
 import java.util.*;
@@ -27,7 +27,7 @@ public class BOJ2512 {
 
         int money = Integer.parseInt(br.readLine());
 
-        
+
         int mid;
 
         int answer = 0;

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    드래곤 커브
-*/
+/*
+ * 드래곤 커브
+ */
 public class BOJ15685_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -17,7 +17,7 @@ public class BOJ15685_copy {
         map = new boolean[101][101];
         genration = new int[4][1024];
 
-        for(int i = 0; i<4; i++){
+        for (int i = 0; i < 4; i++) {
             Arrays.fill(genration[i], -1);
             genration[i][0] = i;
         }
@@ -50,40 +50,40 @@ public class BOJ15685_copy {
 
     static boolean[][] map;
     static int[][] genration;
-    static int[][] direction = { { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 0 } };
+    static int[][] direction = {{0, 1}, {-1, 0}, {0, -1}, {1, 0}};
 
     static void drawing(int x, int y, int d, int g) {
 
         fill(d, g);
 
-        int last = (int)Math.pow(2, g);
+        int last = (int) Math.pow(2, g);
 
         map[x][y] = true;
-        for(int i = 0; i<last; i++){
-            x+=direction[genration[d][i]][0];
-            y+=direction[genration[d][i]][1];
-            
+        for (int i = 0; i < last; i++) {
+            x += direction[genration[d][i]][0];
+            y += direction[genration[d][i]][1];
+
             map[x][y] = true;
         }
         return;
     }
 
     static void fill(int d, int g) {
-        
-        if (genration[d][(int)Math.pow(2, g)-1] != -1) {
+
+        if (genration[d][(int) Math.pow(2, g) - 1] != -1) {
             return;
         }
 
-        fill(d, g-1);
+        fill(d, g - 1);
 
-        int i = (int)Math.pow(2, g-1)-1;
-        int j = i+1;
+        int i = (int) Math.pow(2, g - 1) - 1;
+        int j = i + 1;
 
-        for(; i>=0; i--){
+        for (; i >= 0; i--) {
             if (genration[d][i] == 3) {
                 genration[d][j] = 0;
-            }else{
-                genration[d][j] = genration[d][i]+1;
+            } else {
+                genration[d][j] = genration[d][i] + 1;
             }
             j++;
         }

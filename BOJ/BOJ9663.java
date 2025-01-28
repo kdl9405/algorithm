@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -45,12 +47,12 @@ public class BOJ9663 {
 
                     } else {
                         map[i][j] = false;
-                        
-                        if(y<n-1){
+
+                        if (y < n - 1) {
                             y++;
-                        }else if(x<n-1){
+                        } else if (x < n - 1) {
                             x++;
-                        }                        
+                        }
                     }
 
                     map[i][j] = false;
@@ -62,7 +64,7 @@ public class BOJ9663 {
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                
+
                 System.out.print(map[i][j] + " ");
 
             }
@@ -108,12 +110,12 @@ public class BOJ9663 {
         }
 
         if (n - depth > posi_count) {
-            System.out.println(x +","+y + "불가능" + depth);
+            System.out.println(x + "," + y + "불가능" + depth);
             return false;
         }
 
         map = temp_map;
-        System.out.println(x +","+y + " 가능"+ depth);
+        System.out.println(x + "," + y + " 가능" + depth);
         return true;
     }
 

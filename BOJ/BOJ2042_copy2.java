@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    구간 합 구하기
-
-    // 세그먼트 트리 + 비스마스킹
-*/
+/*
+ * 구간 합 구하기
+ * 
+ * // 세그먼트 트리 + 비스마스킹
+ */
 public class BOJ2042_copy2 {
 
     static int N, M, K; // N: 수열 길이 , M : 업데이트 횟수 , K: 쿼리 횟수
@@ -17,7 +17,7 @@ public class BOJ2042_copy2 {
     private static void update(int i, long diff) {
         while (i <= N) {
             tree[i] += diff;
-            System.out.println(i+" "+-i+" "+(i&-i));
+            System.out.println(i + " " + -i + " " + (i & -i));
             i += (i & -i);
         }
     }
@@ -58,8 +58,8 @@ public class BOJ2042_copy2 {
                 update(b, c - nums[b]);
                 nums[b] = c;
             } else {
-                long answer = query((int)c) - query(b - 1);
-                bw.write(String.valueOf(answer) );
+                long answer = query((int) c) - query(b - 1);
+                bw.write(String.valueOf(answer));
                 bw.newLine();
             }
         }

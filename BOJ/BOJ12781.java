@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    PIZZA ALVOLOC
-*/
+/*
+ * PIZZA ALVOLOC
+ */
 public class BOJ12781 {
 
 
@@ -28,12 +28,7 @@ public class BOJ12781 {
     }
 
     public static int ccw(Pair a, Pair b, Pair c) {
-        int cal = (a.x * b.y 
-                    + b.x * c.y
-                     + c.x * a.y) 
-                        - (a.y * b.x 
-                            + b.y * c.x 
-                                + c.y * a.x);
+        int cal = (a.x * b.y + b.x * c.y + c.x * a.y) - (a.y * b.x + b.y * c.x + c.y * a.x);
 
         if (cal > 0)
             return 1; // 세 점이 반시계 방향

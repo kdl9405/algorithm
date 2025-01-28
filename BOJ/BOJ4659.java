@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /*
-    비밀번호 발음하기
+ * 비밀번호 발음하기
  */
 
 import java.io.*;
@@ -82,7 +82,7 @@ public class BOJ4659 {
             }
         }
 
-        for(char v : vowels){
+        for (char v : vowels) {
             if (set.contains(v)) {
                 return true;
             }

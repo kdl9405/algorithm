@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    비슷한 단어
-*/
+/*
+ * 비슷한 단어
+ */
 
 import java.io.*;
 import java.util.*;
@@ -27,7 +27,7 @@ public class BOJ2607 {
         for (int i = 1; i < n; i++) {
             String targetWord = br.readLine();
 
-            if (Math.abs(targetWord.length()-originWord.length())>1) {
+            if (Math.abs(targetWord.length() - originWord.length()) > 1) {
                 continue;
             }
 

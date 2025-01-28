@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    저항
-*/
+/*
+ * 저항
+ */
 
 import java.util.Scanner;
 
@@ -12,13 +12,13 @@ public class BOJ1076 {
 
         Scanner sc = new Scanner(System.in);
 
-        long num = change(sc.next())*10;
+        long num = change(sc.next()) * 10;
         num += change(sc.next());
 
-        num*=(long)Math.pow(10, change(sc.next()));
+        num *= (long) Math.pow(10, change(sc.next()));
 
         System.out.println(num);
-        
+
 
     }
 

@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,7 +8,7 @@ import java.util.StringTokenizer;
 public class BOJ6603 {
 
     static int k;
-    static int[] s, arr; 
+    static int[] s, arr;
     static boolean[] visit;
     static StringBuilder sb = new StringBuilder();
 
@@ -32,7 +34,7 @@ public class BOJ6603 {
                 s[i] = Integer.parseInt(st.nextToken());
             }
 
-            dfs(0,0);
+            dfs(0, 0);
 
             sb.append("\n");
 
@@ -41,19 +43,19 @@ public class BOJ6603 {
 
     }
 
-    public static void dfs(int x, int depth){
+    public static void dfs(int x, int depth) {
 
-        if(depth == 6){
-            for(int val : arr){
-                sb.append(val+" ");
+        if (depth == 6) {
+            for (int val : arr) {
+                sb.append(val + " ");
             }
             sb.append("\n");
             return;
         }
 
-        for(int i = x; i<k; i++){
+        for (int i = x; i < k; i++) {
 
-            if(!visit[i]){
+            if (!visit[i]) {
                 visit[i] = true;
                 arr[depth] = s[i];
                 dfs(i + 1, depth + 1);

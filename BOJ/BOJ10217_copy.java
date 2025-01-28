@@ -1,11 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    KCM Travel
-
-    1. 티켓정보 저장 - List<List<int[]>>
-    2. 1번을 pq에 담아서 가장 시간순으로 뽑아서 다음 경로를 추적
-*/
+/*
+ * KCM Travel
+ * 
+ * 1. 티켓정보 저장 - List<List<int[]>> 2. 1번을 pq에 담아서 가장 시간순으로 뽑아서 다음 경로를 추적
+ */
 
 import java.io.*;
 import java.util.*;
@@ -41,7 +40,7 @@ public class BOJ10217_copy {
                 c = Integer.parseInt(st.nextToken());
                 d = Integer.parseInt(st.nextToken());
 
-                tickets.get(u).add(new int[] { v, c, d, i });
+                tickets.get(u).add(new int[] {v, c, d, i});
             }
 
             visit = new boolean[n + 1];

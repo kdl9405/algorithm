@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    카카오머니 
-*/
+/*
+ * 카카오머니
+ */
 public class BOJ15998 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -44,8 +44,8 @@ public class BOJ15998 {
                 if (m <= b || m < min) {
                     impossible = true;
                 }
-              
-                budget = budget+charge+a;
+
+                budget = budget + charge + a;
 
             }
 
@@ -74,8 +74,8 @@ public class BOJ15998 {
 
         if (b == 0) {
             return a;
-        }else{
-            return GCD(b, a%b);
+        } else {
+            return GCD(b, a % b);
         }
     }
 }

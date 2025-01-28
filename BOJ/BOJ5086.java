@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    배수와 약수
-*/
+/*
+ * 배수와 약수
+ */
 
 import java.io.*;
 import java.util.*;
@@ -24,11 +24,11 @@ public class BOJ5086 {
                 break;
             }
 
-            if (b%a == 0) {
+            if (b % a == 0) {
                 sb.append("factor");
-            }else if(a%b == 0){
+            } else if (a % b == 0) {
                 sb.append("multiple");
-            }else{
+            } else {
                 sb.append("neither");
             }
             sb.append("\n");

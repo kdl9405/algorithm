@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-    친구
-*/
+ * 친구
+ */
 
 import java.io.*;
 
@@ -55,7 +55,7 @@ public class BOJ1058 {
             int count = 0;
             for (int j = 0; j < N; j++) {
 
-                if (friends[i][j]>=1) {
+                if (friends[i][j] >= 1) {
                     count++;
                 }
             }

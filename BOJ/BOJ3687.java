@@ -1,18 +1,17 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
-/* 
-    성냥개비
-
-    // max = 자리수를 가장 많게!!
-    // min = 자리수를 가장 적게!!
-*/
+/*
+ * 성냥개비
+ * 
+ * // max = 자리수를 가장 많게!! // min = 자리수를 가장 적게!!
+ */
 
 public class BOJ3687 {
 
-    static int[] minArr = { 0, 0, 1, 7, 4, 2, 0, 8, 10 };
+    static int[] minArr = {0, 0, 1, 7, 4, 2, 0, 8, 10};
     static long[] min_DP;
     static String max;
     static long min;
@@ -22,7 +21,7 @@ public class BOJ3687 {
         char a = '0';
         char b = '1';
 
-        System.out.println(b-'0');
+        System.out.println(b - '0');
 
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

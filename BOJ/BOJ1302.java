@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-
-    베스트셀러
-
-*/
+/*
+ * 
+ * 베스트셀러
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

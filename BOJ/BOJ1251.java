@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    단어 나누기
-*/
+/*
+ * 단어 나누기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -36,7 +36,8 @@ public class BOJ1251 {
 
         for (int i = start; i < s.length() - depth + 1; i++) {
 
-            find(i + 1, depth - 1, new StringBuilder(temp).append(new StringBuilder(s.substring(start, i + 1)).reverse()));
+            find(i + 1, depth - 1, new StringBuilder(temp)
+                    .append(new StringBuilder(s.substring(start, i + 1)).reverse()));
         }
 
     }

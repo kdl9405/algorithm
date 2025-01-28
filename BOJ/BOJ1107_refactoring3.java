@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    리모컨
-
-    2. DP
-*/
+/*
+ * 리모컨
+ * 
+ * 2. DP
+ */
 public class BOJ1107_refactoring3 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -21,7 +21,7 @@ public class BOJ1107_refactoring3 {
 
         System.out.println(Math.min(findUpDP(N), findDownDP(N)));
 
-    //  System.out.println(findUpDP(N));
+        // System.out.println(findUpDP(N));
     }
 
     int N;
@@ -47,7 +47,7 @@ public class BOJ1107_refactoring3 {
             isBroken[Integer.parseInt(st.nextToken())] = true;
         }
 
-        INF = Math.abs(N-100);
+        INF = Math.abs(N - 100);
 
         upDp = new int[1000001];
         downDp = new int[N * 2 + 1];
@@ -61,8 +61,8 @@ public class BOJ1107_refactoring3 {
 
     int findUpDP(int n) {
 
-        if (n > N+INF) {
-            return INF-1;
+        if (n > N + INF) {
+            return INF - 1;
         }
 
         if (upDp[n] != -1) {
@@ -73,7 +73,7 @@ public class BOJ1107_refactoring3 {
             upDp[n] = Integer.toString(n).length();
         }
 
-        return upDp[n] = Math.min(upDp[n], findUpDP(n+1)+1);
+        return upDp[n] = Math.min(upDp[n], findUpDP(n + 1) + 1);
     }
 
     int findDownDP(int n) {
@@ -90,7 +90,7 @@ public class BOJ1107_refactoring3 {
             downDp[n] = Integer.toString(n).length();
         }
 
-        return downDp[n] = Math.min(downDp[n], findDownDP(n-1)+1);
+        return downDp[n] = Math.min(downDp[n], findDownDP(n - 1) + 1);
     }
 
     boolean isPossible(int ch) {

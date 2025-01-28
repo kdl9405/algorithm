@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    숫자 정사각형
-*/
+/*
+ * 숫자 정사각형
+ */
 
 import java.io.*;
 import java.util.*;
@@ -32,11 +32,13 @@ public class BOJ1051 {
 
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
-                int len = Math.min(N-i, M-j);  
+                int len = Math.min(N - i, M - j);
 
-                for(int x = 1; x<len; x++){
-                    if (rectangle[i][j] == rectangle[i][j+x] && rectangle[i][j] == rectangle[i+x][j] && rectangle[i][j] == rectangle[i+x][j+x]) {
-                        size = Math.max(size, (int)Math.pow(x+1, 2));
+                for (int x = 1; x < len; x++) {
+                    if (rectangle[i][j] == rectangle[i][j + x]
+                            && rectangle[i][j] == rectangle[i + x][j]
+                            && rectangle[i][j] == rectangle[i + x][j + x]) {
+                        size = Math.max(size, (int) Math.pow(x + 1, 2));
                     }
                 }
             }

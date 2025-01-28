@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    욕심쟁이 판다
-
-*/
+/*
+ * 욕심쟁이 판다
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -42,7 +42,7 @@ public class BOJ1397 {
     static int N, answer;
     static int[][] forest;
     static int[][] dp;
-    static int[][] move = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+    static int[][] move = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
     static int dfs(int i, int j) {
 
@@ -56,14 +56,14 @@ public class BOJ1397 {
             int x = i + move[d][0];
             int y = j + move[d][1];
 
-            if (x<0 || x>=N || y<0 || y>=N || forest[i][j] >= forest[x][y]) {
+            if (x < 0 || x >= N || y < 0 || y >= N || forest[i][j] >= forest[x][y]) {
                 continue;
             }
 
             cnt = Math.max(cnt, dfs(x, y));
         }
 
-        return dp[i][j] = cnt+1;
+        return dp[i][j] = cnt + 1;
     }
 
 }

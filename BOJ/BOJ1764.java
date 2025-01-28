@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,13 +8,13 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-/* 
-    듣보잡
-*/
+/*
+ * 듣보잡
+ */
 public class BOJ1764 {
 
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         int n = Integer.parseInt(st.nextToken());
@@ -23,15 +23,15 @@ public class BOJ1764 {
         StringBuilder sb = new StringBuilder();
         // HashMap<Character, HashSet<String>> dictionary = new HashMap<>();
         HashSet<String> set = new HashSet<>();
-        
-        for(int i = 0; i<n; i++){
+
+        for (int i = 0; i < n; i++) {
             String name = br.readLine();
             set.add(name);
         }
 
         HashSet<String> duplication = new HashSet<>();
-        
-        for(int i = 0; i<m; i++){
+
+        for (int i = 0; i < m; i++) {
             String name = br.readLine();
             if (set.contains(name)) {
                 duplication.add(name);
@@ -42,7 +42,7 @@ public class BOJ1764 {
         Arrays.sort(result);
 
         sb.append(result.length);
-        for(OBOJect o : result){
+        for (OBOJect o : result) {
             sb.append("\n").append(o);
         }
 

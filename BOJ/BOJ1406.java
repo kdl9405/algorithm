@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    에디터
-*/
+/*
+ * 에디터
+ */
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.HashMap;
 
-/* 
-    생태학
-*/
+/*
+ * 생태학
+ */
 public class BOJ4358 {
 
     public static void main(String[] args) throws IOException {
@@ -36,7 +36,7 @@ public class BOJ4358 {
         int i = 0;
 
         for (String name : hashMap.keySet()) {
-            double per = hashMap.get(name)*100;
+            double per = hashMap.get(name) * 100;
 
             per /= count;
 

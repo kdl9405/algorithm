@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    Byte Coin
-*/
+/*
+ * Byte Coin
+ */
 public class BOJ17521 {
 
     public static void main(String[] args) throws IOException {
@@ -37,12 +37,12 @@ public class BOJ17521 {
             money %= now;
 
             while (day < input[0] && now <= value[day]) {
-              
+
                 now = value[day];
                 day++;
             }
 
-            money += (coin*now);
+            money += (coin * now);
         }
 
         System.out.println(money);

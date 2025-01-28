@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    돌 그룹
-
-    // 언제까지 단계를 반복하느냐가 관건...  아직 잘 모르겠음
-*/
+/*
+ * 돌 그룹
+ * 
+ * // 언제까지 단계를 반복하느냐가 관건... 아직 잘 모르겠음
+ */
 public class BOJ12886 {
     public static void main(String[] args) throws IOException {
 
@@ -43,13 +43,13 @@ public class BOJ12886 {
                 }
 
                 if (stone[0] != stone[1]) {
-                    queue.add(new int[] { stone[0] * 2, stone[1] - stone[0], stone[2] });
+                    queue.add(new int[] {stone[0] * 2, stone[1] - stone[0], stone[2]});
                 }
                 if (stone[0] != stone[2]) {
-                    queue.add(new int[] { stone[0] * 2, stone[1], stone[2] - stone[0] });
+                    queue.add(new int[] {stone[0] * 2, stone[1], stone[2] - stone[0]});
                 }
                 if (stone[1] != stone[2]) {
-                    queue.add(new int[] { stone[0], stone[1] * 2, stone[2] - stone[1] });
+                    queue.add(new int[] {stone[0], stone[1] * 2, stone[2] - stone[1]});
                 }
             }
         }

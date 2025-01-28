@@ -1,15 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    치즈
-
-    1. 0이면 이동가능 -> 이동하면서 주위가 1인걸 저장
-    2. 1인걸 0으로 바꾸고 거기서부터 이동
-    
-*/
+/*
+ * 치즈
+ * 
+ * 1. 0이면 이동가능 -> 이동하면서 주위가 1인걸 저장 2. 1인걸 0으로 바꾸고 거기서부터 이동
+ * 
+ */
 public class BOJ2636 {
 
     public static void main(String[] args) throws IOException {
@@ -29,8 +28,8 @@ public class BOJ2636 {
 
         visit = new boolean[r][c];
         queue = new LinkedList<>();
-        queue.add(new int[] { 0, 0 });
-        check(0,0);
+        queue.add(new int[] {0, 0});
+        check(0, 0);
 
         int time = 0;
         int count = 0;
@@ -41,7 +40,7 @@ public class BOJ2636 {
 
             count = 0;
 
-            for(int[] now : queue){
+            for (int[] now : queue) {
                 if (map[now[0]][now[1]] == 1) {
                     map[now[0]][now[1]] = 0;
                     count++;
@@ -57,11 +56,11 @@ public class BOJ2636 {
                 }
 
                 check(now[0], now[1]);
-            }            
+            }
 
 
             time++;
-            
+
         }
 
         System.out.println(time);
@@ -73,8 +72,8 @@ public class BOJ2636 {
     static int[][] map;
     static boolean[][] visit;
     static Queue<int[]> queue;
-    static int[] dx = { 0, 0, -1, 1 };
-    static int[] dy = { -1, 1, 0, 0 };
+    static int[] dx = {0, 0, -1, 1};
+    static int[] dy = {-1, 1, 0, 0};
 
     static void check(int x, int y) {
 
@@ -94,7 +93,7 @@ public class BOJ2636 {
             if (map[nx][ny] == 0) {
                 check(nx, ny);
             } else {
-                queue.add(new int[] { nx, ny });
+                queue.add(new int[] {nx, ny});
             }
 
         }

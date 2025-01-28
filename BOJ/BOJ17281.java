@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
 
-/* 
-    ⚾ 
+/*
+ * ⚾
  */
 
 // 이닝과 타자의 득점은 배열로 구현
-// 순열은 다음순열을 구하는 함수로 구함  .. 순열을 어떤 자료구조에 담을 것인가
+// 순열은 다음순열을 구하는 함수로 구함 .. 순열을 어떤 자료구조에 담을 것인가
 // 이닝 진행하여 득점 계산..
 // => 다음 순열을 구하는 함수에서 순열 복사 부분을 바꾸면 리펙토링 가능!
 
@@ -28,10 +28,11 @@ public class BOJ17281 {
         points = new int[N][9];
 
         for (int i = 0; i < N; i++) {
-            points[i] = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            points[i] =
+                    Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         }
 
-        lineUp = new int[] { 2, 3, 4, 1, 5, 6, 7, 8, 9 };
+        lineUp = new int[] {2, 3, 4, 1, 5, 6, 7, 8, 9};
         last = false;
         max = Integer.MIN_VALUE;
 
@@ -58,56 +59,56 @@ public class BOJ17281 {
             while (out < 3) {
 
                 switch (points[i][lineUp[player] - 1]) {
-                case 0:
-                    out++;
-                    break;
-                case 1:
-                    if (position[3]) {
-                        point++;
-                        position[3] = false;
-                    }
-                    for (int p = 2; p >= 1; p--) {
-                        if (position[p]) {
-                            position[p + 1] = true;
-                            position[p] = false;
+                    case 0:
+                        out++;
+                        break;
+                    case 1:
+                        if (position[3]) {
+                            point++;
+                            position[3] = false;
                         }
-                    }
-                    position[1] = true;
-                    break;
-                case 2:
-                    if (position[3]) {
-                        position[3] = false;
-                        point++;
-                    }
-                    if (position[2]) {
-                        position[2] = false;
-                        point++;
-                    }
-                    if (position[1]) {
-                        position[1] = false;
+                        for (int p = 2; p >= 1; p--) {
+                            if (position[p]) {
+                                position[p + 1] = true;
+                                position[p] = false;
+                            }
+                        }
+                        position[1] = true;
+                        break;
+                    case 2:
+                        if (position[3]) {
+                            position[3] = false;
+                            point++;
+                        }
+                        if (position[2]) {
+                            position[2] = false;
+                            point++;
+                        }
+                        if (position[1]) {
+                            position[1] = false;
+                            position[3] = true;
+                        }
+                        position[2] = true;
+                        break;
+                    case 3:
+                        for (int p = 3; p >= 1; p--) {
+                            if (position[p]) {
+                                position[p] = false;
+                                point++;
+                            }
+                        }
                         position[3] = true;
-                    }
-                    position[2] = true;
-                    break;
-                case 3:
-                    for (int p = 3; p >= 1; p--) {
-                        if (position[p]) {
-                            position[p] = false;
-                            point++;
-                        }
-                    }
-                    position[3] = true;
 
-                    break;
-                case 4:
-                    for (int p = 3; p >= 1; p--) {
-                        if (position[p]) {
-                            position[p] = false;
-                            point++;
+                        break;
+                    case 4:
+                        for (int p = 3; p >= 1; p--) {
+                            if (position[p]) {
+                                position[p] = false;
+                                point++;
+                            }
                         }
-                    }
-                    point++;
-                    break;
+                        point++;
+                        break;
 
                 }
 
@@ -119,7 +120,7 @@ public class BOJ17281 {
             }
 
         }
-       
+
         max = Math.max(max, point);
 
     }

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,10 +7,10 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /*
-    게으른 백곰
-
-    java 11 : 544ms
-*/
+ * 게으른 백곰
+ * 
+ * java 11 : 544ms
+ */
 
 public class BOJ10025_copy {
 

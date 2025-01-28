@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    Four Squares
-*/
+/*
+ * Four Squares
+ */
 
 public class BOJ17626 {
 

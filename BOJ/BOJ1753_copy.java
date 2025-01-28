@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    최단경로 
-
-    다익스트라 순서...
-    
-*/
+/*
+ * 최단경로
+ * 
+ * 다익스트라 순서...
+ * 
+ */
 
 public class BOJ1753_copy {
 
@@ -58,14 +58,14 @@ public class BOJ1753_copy {
 
             visit[from] = true;
 
-            for(cost cost : road.get(from)){
+            for (cost cost : road.get(from)) {
                 if (!visit[cost.to]) {
-                    if (route[cost.to] > min+cost.weight) {
-                        route[cost.to] = min+cost.weight;
+                    if (route[cost.to] > min + cost.weight) {
+                        route[cost.to] = min + cost.weight;
                     }
                 }
             }
-        
+
         }
 
         StringBuilder sb = new StringBuilder();
@@ -80,6 +80,7 @@ public class BOJ1753_copy {
         System.out.println(sb.toString());
     }
 }
+
 
 class cost {
     int from;

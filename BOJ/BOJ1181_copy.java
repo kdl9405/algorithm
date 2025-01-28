@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -36,8 +36,8 @@ public class BOJ1181_copy {
 
         sb.append(str[0]).append("\n");
 
-        for(int i =1; i<n; i++){
-            if(!str[i].equals(str[i-1])){
+        for (int i = 1; i < n; i++) {
+            if (!str[i].equals(str[i - 1])) {
                 sb.append(str[i]).append("\n");
             }
         }

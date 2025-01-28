@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    중복 제거
-
-*/
+/*
+ * 중복 제거
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

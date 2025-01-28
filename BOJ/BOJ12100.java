@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    2048 (Easy)
-
-*/
+/*
+ * 2048 (Easy)
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -47,12 +47,12 @@ public class BOJ12100 {
 
             for (int i = 0; i < N; i++) {
                 for (int j = 0; j < N; j++) {
-                  
+
                     max = Math.max(max, board[i][j]);
 
                 }
             }
-           
+
             return;
         }
 
@@ -75,137 +75,137 @@ public class BOJ12100 {
     static int[][] move(int d) {
 
         switch (d) {
-        case 0:
-
-            for (int i = 0; i < N; i++) {
-
-                int index = 0;
-                int block = 0;
-
-                for (int j = 0; j < N; j++) {
-
-                    if (board[i][j] == 0) {
-                        continue;
-                    }
-
-                    if (board[i][j] == block) {
-                        board[i][index - 1] = block * 2;
-                        block = 0;
-                        board[i][j] = 0;
-                    } else {
-                        block = board[i][j];
-                        board[i][j] = 0;
-                        board[i][index] = block;
-                        index++;
-                    }
-
-                    // if (board[i][j] == 0 || board[i][j] == board[i][j + 1]) {
-                    // board[i][j] += board[i][j + 1];
-                    // board[i][j + 1] = 0;
-                    // }
-                }
-            }
-
-            break;
-
-        case 1:
-
-            for (int i = 0; i < N; i++) {
-
-                int index = N-1;
-                int block = 0;
-
-                for (int j = N - 1; j >= 0; j--) {
-
-                    if (board[i][j] == 0) {
-                        continue;
-                    }
-
-                    if (board[i][j] == block) {
-                        board[i][index + 1] = block * 2;
-                        block = 0;
-                        board[i][j] = 0;
-                    } else {
-                        block = board[i][j];
-                        board[i][j] = 0;
-                        board[i][index] = block;
-                        index--;
-                    }
-
-                    // if (board[i][j] == 0 || board[i][j] == board[i][j - 1]) {
-                    // board[i][j] += board[i][j - 1];
-                    // board[i][j - 1] = 0;
-                    // }
-                }
-            }
-
-            break;
-        case 2:
-
-            for (int j = 0; j < N; j++) {
-
-                int index = N-1;
-                int block = 0;
-
-                for (int i = N - 1; i >= 0; i--) {
-
-                    if (board[i][j] == 0) {
-                        continue;
-                    }
-
-                    if (board[i][j] == block) {
-                        board[index+1][j] = block * 2;
-                        block = 0;
-                        board[i][j] = 0;
-                    } else {
-                        block = board[i][j];
-                        board[i][j] = 0;
-                        board[index][j] = block;
-                        index--;
-                    }
-
-                    
-                    // if (board[i][j] == 0 || board[i - 1][j] == board[i][j]) {
-                    //     board[i][j] += board[i - 1][j];
-                    //     board[i - 1][j] = 0;
-                    // }
-                }
-            }
-
-            break;
-        case 3:
-
-            for (int j = 0; j < N; j++) {
-
-                int index = 0;
-                int block = 0;
+            case 0:
 
                 for (int i = 0; i < N; i++) {
 
-                    if (board[i][j] == 0) {
-                        continue;
-                    }
+                    int index = 0;
+                    int block = 0;
 
-                    if (board[i][j] == block) {
-                        board[index-1][j] = block * 2;
-                        block = 0;
-                        board[i][j] = 0;
-                    } else {
-                        block = board[i][j];
-                        board[i][j] = 0;
-                        board[index][j] = block;
-                        index++;
-                    }
-                    
-                    // if (board[i][j] == 0 || board[i][j] == board[i + 1][j]) {
-                    //     board[i][j] += board[i + 1][j];
-                    //     board[i + 1][j] = 0;
-                    // }
+                    for (int j = 0; j < N; j++) {
 
+                        if (board[i][j] == 0) {
+                            continue;
+                        }
+
+                        if (board[i][j] == block) {
+                            board[i][index - 1] = block * 2;
+                            block = 0;
+                            board[i][j] = 0;
+                        } else {
+                            block = board[i][j];
+                            board[i][j] = 0;
+                            board[i][index] = block;
+                            index++;
+                        }
+
+                        // if (board[i][j] == 0 || board[i][j] == board[i][j + 1]) {
+                        // board[i][j] += board[i][j + 1];
+                        // board[i][j + 1] = 0;
+                        // }
+                    }
                 }
-            }
 
-            break;
+                break;
+
+            case 1:
+
+                for (int i = 0; i < N; i++) {
+
+                    int index = N - 1;
+                    int block = 0;
+
+                    for (int j = N - 1; j >= 0; j--) {
+
+                        if (board[i][j] == 0) {
+                            continue;
+                        }
+
+                        if (board[i][j] == block) {
+                            board[i][index + 1] = block * 2;
+                            block = 0;
+                            board[i][j] = 0;
+                        } else {
+                            block = board[i][j];
+                            board[i][j] = 0;
+                            board[i][index] = block;
+                            index--;
+                        }
+
+                        // if (board[i][j] == 0 || board[i][j] == board[i][j - 1]) {
+                        // board[i][j] += board[i][j - 1];
+                        // board[i][j - 1] = 0;
+                        // }
+                    }
+                }
+
+                break;
+            case 2:
+
+                for (int j = 0; j < N; j++) {
+
+                    int index = N - 1;
+                    int block = 0;
+
+                    for (int i = N - 1; i >= 0; i--) {
+
+                        if (board[i][j] == 0) {
+                            continue;
+                        }
+
+                        if (board[i][j] == block) {
+                            board[index + 1][j] = block * 2;
+                            block = 0;
+                            board[i][j] = 0;
+                        } else {
+                            block = board[i][j];
+                            board[i][j] = 0;
+                            board[index][j] = block;
+                            index--;
+                        }
+
+
+                        // if (board[i][j] == 0 || board[i - 1][j] == board[i][j]) {
+                        // board[i][j] += board[i - 1][j];
+                        // board[i - 1][j] = 0;
+                        // }
+                    }
+                }
+
+                break;
+            case 3:
+
+                for (int j = 0; j < N; j++) {
+
+                    int index = 0;
+                    int block = 0;
+
+                    for (int i = 0; i < N; i++) {
+
+                        if (board[i][j] == 0) {
+                            continue;
+                        }
+
+                        if (board[i][j] == block) {
+                            board[index - 1][j] = block * 2;
+                            block = 0;
+                            board[i][j] = 0;
+                        } else {
+                            block = board[i][j];
+                            board[i][j] = 0;
+                            board[index][j] = block;
+                            index++;
+                        }
+
+                        // if (board[i][j] == 0 || board[i][j] == board[i + 1][j]) {
+                        // board[i][j] += board[i + 1][j];
+                        // board[i + 1][j] = 0;
+                        // }
+
+                    }
+                }
+
+                break;
         }
 
         return board;

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
@@ -24,20 +24,20 @@ public class BOJ2565 {
             line[i][1] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(line, (l1,l2) ->{
-            return l1[0] - l2[0]; 
+        Arrays.sort(line, (l1, l2) -> {
+            return l1[0] - l2[0];
         });
 
 
         for (int i = 0; i < n; i++) {
 
-           dp[i] = 1;
+            dp[i] = 1;
 
-           for(int j = 0; j < i; j++){
-               if (line[i][1] > line[j][1]) {
-                   dp[i] = Math.max(dp[i], dp[j] + 1);
-               }
-           }
+            for (int j = 0; j < i; j++) {
+                if (line[i][1] > line[j][1]) {
+                    dp[i] = Math.max(dp[i], dp[j] + 1);
+                }
+            }
 
         }
 

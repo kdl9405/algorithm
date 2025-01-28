@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    LCA
-*/
+/*
+ * LCA
+ */
 
 import java.io.*;
 import java.util.*;
@@ -59,9 +59,9 @@ public class BOJ11437 {
     static int[] parent;
     static BitSet parentSet;
 
-    static void defineParent(int p){
+    static void defineParent(int p) {
 
-        for(int c : links.get(p)){
+        for (int c : links.get(p)) {
             if (parent[c] != 0) {
                 continue;
             }

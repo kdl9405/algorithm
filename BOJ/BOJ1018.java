@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class BOJ1018 {
         int n = Integer.parseInt(st.nextToken());
 
         board = new boolean[m][n];
-        
+
         for (int i = 0; i < m; i++) {
             String str = br.readLine();
             for (int j = 0; j < n; j++) {
@@ -29,7 +29,7 @@ public class BOJ1018 {
             }
         }
 
-        
+
 
         int min = 64;
         for (int i = 0; i < m - 7; i++) {
@@ -37,7 +37,7 @@ public class BOJ1018 {
 
                 int temp = boardcheck(i, j);
 
-                if(temp < min){
+                if (temp < min) {
                     min = temp;
                 }
             }
@@ -51,10 +51,10 @@ public class BOJ1018 {
         int count = 0;
 
         boolean def = board[x][y];
-        
-        for(int i = x; i< x+8; i++){
-            for(int j = y; j < y+8; j++){
-                if(board[i][j] != def){
+
+        for (int i = x; i < x + 8; i++) {
+            for (int j = y; j < y + 8; j++) {
+                if (board[i][j] != def) {
                     count++;
 
                 }
@@ -65,7 +65,7 @@ public class BOJ1018 {
 
         }
 
-        count = Math.min(count,64-count);
+        count = Math.min(count, 64 - count);
 
         return count;
     }

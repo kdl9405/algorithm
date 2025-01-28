@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    히스토그램에서 가장 큰 직사각형 
-*/
+/*
+ * 히스토그램에서 가장 큰 직사각형
+ */
 
 import java.io.*;
 import java.util.*;

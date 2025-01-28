@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    좋은 단어
-*/
+/*
+ * 좋은 단어
+ */
 
 import java.io.*;
 import java.util.*;
@@ -32,7 +32,7 @@ public class BOJ3986 {
 
     boolean isPositive(char[] word) {
 
-        if (word.length %2 == 1) {
+        if (word.length % 2 == 1) {
             return false;
         }
 

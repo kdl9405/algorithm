@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    해킹 
-
-    시작지점부터 시작해서 가장 먼 시간의 지점을 찾음.
-
-    메모리초과
-*/
+ * 해킹
+ * 
+ * 시작지점부터 시작해서 가장 먼 시간의 지점을 찾음.
+ * 
+ * 메모리초과
+ */
 
 public class BOJ10282_copy {
 
@@ -39,14 +39,14 @@ public class BOJ10282_copy {
                 link[b][a] = s;
             }
 
-            for(int k = 1; k<=n; k++){
-                for(int i = 1; i<=n; i++){
-                    for(int j = 1; j<=n; j++){
-                        if(link[i][k] != 0 && link[k][j] != 0){
+            for (int k = 1; k <= n; k++) {
+                for (int i = 1; i <= n; i++) {
+                    for (int j = 1; j <= n; j++) {
+                        if (link[i][k] != 0 && link[k][j] != 0) {
                             if (link[i][j] == 0) {
                                 link[i][j] = link[i][k] + link[k][j];
-                            }else{
-                                link[i][j] = Math.min(link[i][j] ,link[i][k] + link[k][j]);
+                            } else {
+                                link[i][j] = Math.min(link[i][j], link[i][k] + link[k][j]);
                             }
                         }
                     }
@@ -54,14 +54,14 @@ public class BOJ10282_copy {
             }
 
             int max = 0;
-            for(int t : link[c]){
+            for (int t : link[c]) {
                 if (t == 0) {
                     n--;
                 }
-                max = Math.max(max,t);
+                max = Math.max(max, t);
             }
 
-            sb.append((n+2)+" "+max+"\n");
+            sb.append((n + 2) + " " + max + "\n");
 
         }
 

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /*
-카드 문자열
-*/
+ * 카드 문자열
+ */
 
 import java.io.*;
 import java.util.*;

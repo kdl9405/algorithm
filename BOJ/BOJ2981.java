@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    검문
-*/
+/*
+ * 검문
+ */
 
 import java.io.*;
 import java.util.*;
@@ -44,8 +44,8 @@ public class BOJ2981 {
 
         StringBuilder sb = new StringBuilder();
 
-        for(int a : list){
-            sb.append(a+" ");
+        for (int a : list) {
+            sb.append(a + " ");
         }
         sb.append(x);
 

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    최단경로 
-    
-*/
+/*
+ * 최단경로
+ * 
+ */
 
 public class BOJ1753 {
 
@@ -36,17 +36,17 @@ public class BOJ1753 {
 
         // Queue<Integer> queue = new LinkedList<>();
 
-        PriorityQueue<Integer[]> queue = new PriorityQueue<>(new Comparator<Integer[]>(){
+        PriorityQueue<Integer[]> queue = new PriorityQueue<>(new Comparator<Integer[]>() {
 
             @Override
             public int compare(Integer[] o1, Integer[] o2) {
-                return o1[1]-o2[1];
+                return o1[1] - o2[1];
             }
-            
+
 
         });
 
-        queue.offer(new Integer[]{start,0});
+        queue.offer(new Integer[] {start, 0});
 
         int[] route = new int[v + 1];
         Arrays.fill(route, Integer.MAX_VALUE);
@@ -65,7 +65,7 @@ public class BOJ1753 {
                     if (route[cost.to] > route[from[0]] + cost.weight) {
                         route[cost.to] = route[from[0]] + cost.weight;
                     }
-                    queue.offer(new Integer[]{cost.to,route[cost.to]});
+                    queue.offer(new Integer[] {cost.to, route[cost.to]});
                 }
             }
         }
@@ -82,6 +82,7 @@ public class BOJ1753 {
         System.out.println(sb.toString());
     }
 }
+
 
 class cost {
     int from;

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    감시
-*/
+/*
+ * 감시
+ */
 
 import java.io.*;
 import java.util.*;
@@ -46,7 +46,7 @@ public class BOJ15683 {
     static int[][] office;
     static List<Cctv> cctvList;
 
-    static int[][] dir = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } };
+    static int[][] dir = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
 
     private static class Cctv {
         int r;

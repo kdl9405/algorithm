@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    자상의 경로
-*/
+/*
+ * 자상의 경로
+ */
 
 import java.io.*;
 import java.util.*;
@@ -18,7 +18,7 @@ public class BOJ10164 {
         int M = Integer.parseInt(st.nextToken());
         int K = Integer.parseInt(st.nextToken());
 
-        dp = new int[N+1][M+1];
+        dp = new int[N + 1][M + 1];
         dp[1][1] = 1;
 
         if (K == 0) {

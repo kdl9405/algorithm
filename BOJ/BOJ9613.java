@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/* 
-    GCD 합
-*/
+/*
+ * GCD 합
+ */
 public class BOJ9613 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 

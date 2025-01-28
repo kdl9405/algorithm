@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    전화번호 목록
-
-*/
+/*
+ * 전화번호 목록
+ * 
+ */
 public class BOJ5052 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -72,7 +72,7 @@ public class BOJ5052 {
             int c;
             for (; i < number.length() - 1; i++) {
 
-                c = number.charAt(i)-'0';
+                c = number.charAt(i) - '0';
                 if (node.children[c] == null) {
                     node.children[c] = new TrieNode(false);
                 }
@@ -84,7 +84,7 @@ public class BOJ5052 {
 
             }
 
-            c = number.charAt(i)-'0';
+            c = number.charAt(i) - '0';
             if (node.children[c] != null) {
                 return false;
             }

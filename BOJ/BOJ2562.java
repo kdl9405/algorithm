@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,23 +25,23 @@ class BOJ2562 {
         int max = 0;
         int count = 0;
 
-        for (int i = 0; i < 9; i++ ){
+        for (int i = 0; i < 9; i++) {
 
-                num[i] = Integer.parseInt(br.readLine());
+            num[i] = Integer.parseInt(br.readLine());
 
-                if(num[i] > max){
-                    max = num[i];
-                    count = i+1;
-                }
-                    
+            if (num[i] > max) {
+                max = num[i];
+                count = i + 1;
+            }
+
 
         }
 
-        System.out.println(max);        
+        System.out.println(max);
         System.out.println(count);
 
-        
+
     }
 
-    
+
 }

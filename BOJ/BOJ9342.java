@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    염색체 
-*/
+/*
+ * 염색체
+ */
 
 public class BOJ9342 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -12,14 +12,14 @@ public class BOJ9342 {
         StringBuilder sb = new StringBuilder();
         String regex = "^[A-F]?A+F+C+[A-F]?$";
 
-      
+
         int t = Integer.parseInt(br.readLine());
         while (t-- > 0) {
             String s = br.readLine();
 
             if (s.matches(regex)) {
                 sb.append("Infected!\n");
-            }else {
+            } else {
                 sb.append("Good\n");
             }
         }
@@ -27,5 +27,5 @@ public class BOJ9342 {
         System.out.println(sb.toString());
     }
 
-    
+
 }

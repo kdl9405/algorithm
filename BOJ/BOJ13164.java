@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class BOJ13164 {
 
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -19,10 +19,10 @@ public class BOJ13164 {
         st = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st.nextToken());
 
-        int[] arr = new int[n-1];
-        for(int i = 0; i<n-1; i++){
+        int[] arr = new int[n - 1];
+        for (int i = 0; i < n - 1; i++) {
             int b = Integer.parseInt(st.nextToken());
-            arr[i] = b-a;
+            arr[i] = b - a;
             a = b;
         }
 
@@ -30,11 +30,11 @@ public class BOJ13164 {
 
         int sum = 0;
 
-        for(int i = 0; i<n-k; i++){
+        for (int i = 0; i < n - k; i++) {
             sum += arr[i];
         }
 
         System.out.println(sum);
-               
+
     }
 }

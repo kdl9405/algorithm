@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    홀수 홀릭 호석
-*/
+/*
+ * 홀수 홀릭 호석
+ */
 
 public class BOJ20164 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -25,17 +25,17 @@ public class BOJ20164 {
         int len = num.length();
 
         count += countFunc(num);
-        
-        if (len == 1) {            
+
+        if (len == 1) {
             min = Math.min(count, min);
             max = Math.max(count, max);
 
             return;
         }
 
-        if (len == 2) {       
-           int n = Integer.parseInt(num);
-           devide(String.valueOf((n/10)+(n%10)), count);      
+        if (len == 2) {
+            int n = Integer.parseInt(num);
+            devide(String.valueOf((n / 10) + (n % 10)), count);
         }
 
         if (len > 2) {

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,7 +12,7 @@ public class BOJ2876_copy {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
-        int[][] arr = new int[N+1][6];
+        int[][] arr = new int[N + 1][6];
 
         int count = 0;
         int grade = 0;
@@ -25,20 +25,20 @@ public class BOJ2876_copy {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            arr[i][a] = arr[i-1][a]+1;
+            arr[i][a] = arr[i - 1][a] + 1;
 
-            if (arr[i][a] > count ) {
+            if (arr[i][a] > count) {
                 count = arr[i][a];
                 grade = a;
             }
 
             if (a != b) {
-                arr[i][b] = arr[i-1][b]+1;
-                if (arr[i][b] > count ) {
+                arr[i][b] = arr[i - 1][b] + 1;
+                if (arr[i][b] > count) {
                     count = arr[i][b];
                     grade = b;
                 }
-    
+
             }
 
         }

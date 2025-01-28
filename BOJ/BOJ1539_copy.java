@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    중량제한
-*/
+/*
+ * 중량제한
+ */
 
 import java.io.*;
 import java.util.*;
@@ -29,8 +29,8 @@ public class BOJ1539_copy {
             int B = Integer.parseInt(st.nextToken());
             int C = Integer.parseInt(st.nextToken());
 
-            bridge.get(A).add(new int[] { B, C });
-            bridge.get(B).add(new int[] { A, C });
+            bridge.get(A).add(new int[] {B, C});
+            bridge.get(B).add(new int[] {A, C});
 
             max = Math.max(max, C);
 

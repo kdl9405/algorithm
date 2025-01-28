@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 /*
-
-    키로거 
-
-*/
+ * 
+ * 키로거
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

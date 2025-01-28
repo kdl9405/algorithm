@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    빙산
-*/
+/*
+ * 빙산
+ */
 
 import java.io.*;
 import java.util.*;
@@ -14,8 +14,8 @@ public class BOJ2573 {
     static Queue<int[]> queue;
     static Queue<int[]> melt;
     static boolean[][] visit;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
     public static void main(String[] args) throws IOException {
 
@@ -42,7 +42,7 @@ public class BOJ2573 {
             for (int j = 0; j < M; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
                 if (map[i][j] != 0) {
-                    queue.offer(new int[] { i, j });
+                    queue.offer(new int[] {i, j});
                 }
             }
         }
@@ -114,9 +114,9 @@ public class BOJ2573 {
         }
 
         if (map[x][y] <= near) {
-            melt.offer(new int[] { x, y });
+            melt.offer(new int[] {x, y});
         } else {
-            queue.offer(new int[] { x, y });
+            queue.offer(new int[] {x, y});
             map[x][y] = map[x][y] - near;
         }
 

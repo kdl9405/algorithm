@@ -1,16 +1,15 @@
-package BOJ;
+package boj;
 
-/* 
-    곡예 비행
-
-    1. 해당 좌표까지 상승으로 얻을 수 있는 최대 값 
-    2.  + 해당 좌표부터 하강으로 얻을 수 있는 최대 값
-
-
-
-    !! 시간초과 !!
-
-*/
+/*
+ * 곡예 비행
+ * 
+ * 1. 해당 좌표까지 상승으로 얻을 수 있는 최대 값 2. + 해당 좌표부터 하강으로 얻을 수 있는 최대 값
+ * 
+ * 
+ * 
+ * !! 시간초과 !!
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -34,7 +33,7 @@ public class BOJ21923_copy {
             }
         }
 
-        up(N-1, 0, board[N-1][0]);
+        up(N - 1, 0, board[N - 1][0]);
 
         System.out.println(max);
 
@@ -42,7 +41,7 @@ public class BOJ21923_copy {
 
     static int N, M;
     static int[][] board;
-    static int max = -3000*10000;
+    static int max = -3000 * 10000;
 
     static void up(int r, int c, int p) {
 

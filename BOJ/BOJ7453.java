@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
 /*
-    합이 0인 네 정수
-
-*/
+ * 합이 0인 네 정수
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

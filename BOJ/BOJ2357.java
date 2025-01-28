@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    최솟값과 최댓값
-*/
+/*
+ * 최솟값과 최댓값
+ */
 
 import java.io.*;
 import java.util.*;
@@ -38,9 +38,11 @@ public class BOJ2357 {
 
 
             if (a <= b) {
-                answer.append(findMin(1, N, 1, a, b)).append(" ").append(findMax(1, N, 1, a, b)).append("\n");
+                answer.append(findMin(1, N, 1, a, b)).append(" ").append(findMax(1, N, 1, a, b))
+                        .append("\n");
             } else {
-                answer.append(findMin(1, N, 1, b, a)).append(" ").append(findMax(1, N, 1, b, a)).append("\n");
+                answer.append(findMin(1, N, 1, b, a)).append(" ").append(findMax(1, N, 1, b, a))
+                        .append("\n");
             }
         }
 
@@ -59,7 +61,8 @@ public class BOJ2357 {
 
         int mid = (left + right) / 2;
 
-        return minSegmentTree[node] = Math.min(setMinTree(left, mid, node * 2), setMinTree(mid + 1, right, node*2+1));
+        return minSegmentTree[node] =
+                Math.min(setMinTree(left, mid, node * 2), setMinTree(mid + 1, right, node * 2 + 1));
     }
 
     static int setMaxTree(int left, int right, int node) {
@@ -69,7 +72,8 @@ public class BOJ2357 {
 
         int mid = (left + right) / 2;
 
-        return maxSegmentTree[node] = Math.max(setMaxTree(left, mid, node * 2), setMaxTree(mid + 1, right, node*2+1));
+        return maxSegmentTree[node] =
+                Math.max(setMaxTree(left, mid, node * 2), setMaxTree(mid + 1, right, node * 2 + 1));
     }
 
     static int findMin(int left, int right, int node, int a, int b) {
@@ -84,7 +88,8 @@ public class BOJ2357 {
 
         int mid = (left + right) / 2;
 
-        return Math.min(findMin(left, mid, node * 2, a, b), findMin(mid + 1, right, node * 2 + 1, a, b));
+        return Math.min(findMin(left, mid, node * 2, a, b),
+                findMin(mid + 1, right, node * 2 + 1, a, b));
     }
 
     static int findMax(int left, int right, int node, int a, int b) {
@@ -99,7 +104,8 @@ public class BOJ2357 {
 
         int mid = (left + right) / 2;
 
-        return Math.max(findMax(left, mid, node * 2, a, b), findMax(mid + 1, right, node * 2 + 1, a, b));
+        return Math.max(findMax(left, mid, node * 2, a, b),
+                findMax(mid + 1, right, node * 2 + 1, a, b));
     }
 
 }

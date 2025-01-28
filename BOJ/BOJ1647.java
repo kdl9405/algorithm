@@ -1,17 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    도시 분할 계획
-
-    1. 모든 비용을 계산해놓고 시작. => 필요없음
-    2. 비용이 작은 것 부터  길 연결
-    3. 연결된 마을의 부모 마을을 조회.
-    4. 부모 마을이 2개면 종료.?  => 병합 횟수로 조회 가능??
-
-*/
+/*
+ * 도시 분할 계획
+ * 
+ * 1. 모든 비용을 계산해놓고 시작. => 필요없음 2. 비용이 작은 것 부터 길 연결 3. 연결된 마을의 부모 마을을 조회. 4. 부모 마을이 2개면 종료.? => 병합
+ * 횟수로 조회 가능??
+ * 
+ */
 public class BOJ1647 {
 
     public static void main(String[] args) throws IOException {
@@ -40,7 +38,7 @@ public class BOJ1647 {
         }
 
         int totalCost = 0;
-        
+
 
         while (!pq.isEmpty()) {
 
@@ -49,13 +47,13 @@ public class BOJ1647 {
             int a = findRoot(now.a);
             int b = findRoot(now.b);
 
-            if(a == b){
+            if (a == b) {
                 continue;
             }
 
             root[b] = a;
 
-            totalCost+= now.cost;
+            totalCost += now.cost;
             N--;
 
             if (N == 2) {
@@ -78,6 +76,7 @@ public class BOJ1647 {
         return root[n] = findRoot(root[n]);
     }
 }
+
 
 class roadC {
 

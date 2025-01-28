@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
 /*
-    음악프로그램 
-
-*/
+ * 음악프로그램
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -45,8 +45,8 @@ public class BOJ2623 {
 
         Queue<Integer> queue = new LinkedList<>();
 
-        for(int i = 1; i<=N; i++){
-            if (level[i]==0) {
+        for (int i = 1; i <= N; i++) {
+            if (level[i] == 0) {
                 queue.offer(i);
             }
         }
@@ -55,10 +55,10 @@ public class BOJ2623 {
         StringBuilder sb = new StringBuilder();
         while (!queue.isEmpty()) {
             int now = queue.poll();
-            sb.append(now+"\n");
+            sb.append(now + "\n");
             count++;
 
-            for(int a : afterNums.get(now)){
+            for (int a : afterNums.get(now)) {
                 level[a]--;
 
                 if (level[a] == 0) {
@@ -67,9 +67,9 @@ public class BOJ2623 {
             }
         }
 
-        if (count!=N) {
-            System.out.println(0+"\n");
-        }else{            
+        if (count != N) {
+            System.out.println(0 + "\n");
+        } else {
             System.out.println(sb.toString());
         }
 

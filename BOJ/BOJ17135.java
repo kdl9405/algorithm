@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    캐슬 디펜스
-
-*/
+/*
+ * 캐슬 디펜스
+ * 
+ */
 public class BOJ17135 {
 
     static int N, M, D;
@@ -81,7 +81,7 @@ public class BOJ17135 {
             for (; nc <= c; nc++) {
                 if (nc >= 0 && nc < M && nr < N && nr >= 0) {
                     if (testMap[nr][nc] == 1) {
-                        queue.add(new int[] { nr, nc });
+                        queue.add(new int[] {nr, nc});
                         return;
                     }
                 }
@@ -93,7 +93,7 @@ public class BOJ17135 {
                 nr++;
                 if (nc >= 0 && nc < M && nr < N && nr >= 0) {
                     if (testMap[nr][nc] == 1) {
-                        queue.add(new int[] { nr, nc });
+                        queue.add(new int[] {nr, nc});
                         return;
                     }
                 }

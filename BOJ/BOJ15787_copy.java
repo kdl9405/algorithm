@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    기차가 어둠을 헤치고 은하수를
-
-    문자열 처리 - > 540ms
-*/
+/*
+ * 기차가 어둠을 헤치고 은하수를
+ * 
+ * 문자열 처리 - > 540ms
+ */
 
 public class BOJ15787_copy {
     public static void main(String[] args) throws IOException {
@@ -34,30 +34,30 @@ public class BOJ15787_copy {
             String t = "";
 
             switch (oper) {
-            case 1:
-                x = Integer.parseInt(st.nextToken());
-                train[i][x - 1] = '1';
+                case 1:
+                    x = Integer.parseInt(st.nextToken());
+                    train[i][x - 1] = '1';
 
-                break;
-            case 2:
-                x = Integer.parseInt(st.nextToken());
-                train[i][x - 1] = '0';
-                break;
+                    break;
+                case 2:
+                    x = Integer.parseInt(st.nextToken());
+                    train[i][x - 1] = '0';
+                    break;
 
-            case 3:
-                t = new String(train[i]);
-                t = t.substring(0, 19);
-                t = "0" + t;
-                train[i] = t.toCharArray();
+                case 3:
+                    t = new String(train[i]);
+                    t = t.substring(0, 19);
+                    t = "0" + t;
+                    train[i] = t.toCharArray();
 
-                break;
-            case 4:
-                t = new String(train[i]);
-                t = t.substring(1, 20);
-                t = t + "0";
-                train[i] = t.toCharArray();
+                    break;
+                case 4:
+                    t = new String(train[i]);
+                    t = t.substring(1, 20);
+                    t = t + "0";
+                    train[i] = t.toCharArray();
 
-                break;
+                    break;
             }
         }
 
@@ -65,7 +65,7 @@ public class BOJ15787_copy {
 
         for (int i = 1; i <= n; i++) {
             trains.add(new String(train[i]));
-       }
+        }
         System.out.println(trains.size());
 
     }

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    벽 부수고 이동하기 2
-*/
+/*
+ * 벽 부수고 이동하기 2
+ */
 
 import java.io.*;
 import java.util.*;
@@ -23,7 +23,7 @@ public class BOJ14442 {
         for (int i = 1; i <= N; i++) {
             String line = br.readLine();
             for (int j = 1; j <= M; j++) {
-                map[i][j][0] = line.charAt(j-1) == '1' ? 1 : 0;
+                map[i][j][0] = line.charAt(j - 1) == '1' ? 1 : 0;
                 map[i][j][1] = -1;
             }
         }
@@ -34,7 +34,7 @@ public class BOJ14442 {
         }
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { 1, 1, K });
+        queue.add(new int[] {1, 1, K});
 
         int distance = 1;
         while (!queue.isEmpty()) {
@@ -62,12 +62,12 @@ public class BOJ14442 {
                         if (map[x][y][0] == 1) {
                             if (now[2] > 0 && map[x][y][1] < now[2] - 1) {
                                 map[x][y][1] = now[2] - 1;
-                                queue.add(new int[] { x, y, now[2] - 1 });
+                                queue.add(new int[] {x, y, now[2] - 1});
                             }
                         } else {
                             if (map[x][y][1] < now[2]) {
                                 map[x][y][1] = now[2];
-                                queue.add(new int[] { x, y, now[2]});
+                                queue.add(new int[] {x, y, now[2]});
                             }
                         }
                     }
@@ -80,5 +80,5 @@ public class BOJ14442 {
 
     }
 
-    static int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 }

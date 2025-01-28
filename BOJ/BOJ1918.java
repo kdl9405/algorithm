@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 
-/* 
-    후위 표기식
-*/
+/*
+ * 후위 표기식
+ */
 
 public class BOJ1918 {
 
@@ -14,7 +14,7 @@ public class BOJ1918 {
 
         String s = sc.nextLine();
 
- 
+
 
         StringBuilder sb = new StringBuilder();
 
@@ -31,7 +31,7 @@ public class BOJ1918 {
                         break;
 
                     case ')':
-                        while (!stack.isEmpty() && stack.peek()!='(') {
+                        while (!stack.isEmpty() && stack.peek() != '(') {
                             sb.append(stack.pop());
                         }
                         stack.pop();
@@ -57,7 +57,7 @@ public class BOJ1918 {
         if (c == '(' || c == ')') {
             return 0;
         }
-      
+
 
         if (c == '+' || c == '-') {
             return 2;

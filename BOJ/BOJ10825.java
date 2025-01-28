@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    국영수
-*/
+/*
+ * 국영수
+ */
 
 import java.io.*;
 import java.util.*;
@@ -14,10 +14,10 @@ public class BOJ10825 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         int N = Integer.parseInt(br.readLine());
-        
+
         PriorityQueue<score> pq = new PriorityQueue<>();
 
-        for(int i = 0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             String name = st.nextToken();
             int korean = Integer.parseInt(st.nextToken());
@@ -25,10 +25,10 @@ public class BOJ10825 {
             int math = Integer.parseInt(st.nextToken());
 
             pq.add(new score(name, korean, english, math));
-            
+
         }
 
-        StringBuilder sb= new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         while (!pq.isEmpty()) {
             sb.append(pq.poll().name).append("\n");
         }

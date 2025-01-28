@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    숫자 야구
-*/
+ * 숫자 야구
+ */
 
 public class BOJ2503 {
 
@@ -14,7 +14,7 @@ public class BOJ2503 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
-        num = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        num = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
         arr = new int[3];
         visit = new boolean[9];
         set = new HashSet<>();

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    녹색 옷 입은 애가 젤다지?
-*/
+/*
+ * 녹색 옷 입은 애가 젤다지?
+ */
 
 import java.io.*;
 import java.util.*;
@@ -18,7 +18,7 @@ public class BOJ4485_copy2 {
     StringTokenizer st;
     int N;
     int[][] cave;
-    int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     void solution() throws NumberFormatException, IOException {
 
@@ -65,7 +65,7 @@ public class BOJ4485_copy2 {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
             return a[2] - b[2];
         });
-        pq.add(new int[] { 0, 0, cave[0][0] });
+        pq.add(new int[] {0, 0, cave[0][0]});
 
         boolean[][] visit = new boolean[N][N];
         visit[0][0] = true;
@@ -87,7 +87,7 @@ public class BOJ4485_copy2 {
                 }
 
                 visit[nx][ny] = true;
-                pq.add(new int[] { nx, ny, cave[nx][ny] + now[2] });
+                pq.add(new int[] {nx, ny, cave[nx][ny] + now[2]});
             }
         }
 

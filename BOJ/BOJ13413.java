@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    오셀로 재배치
-*/
+/*
+ * 오셀로 재배치
+ */
 
 import java.io.*;
 
@@ -23,17 +23,17 @@ public class BOJ13413 {
             String from = br.readLine();
             String to = br.readLine();
 
-            for(int i = 0; i<N; i++){
-                if (from.charAt(i) != to.charAt(i) ) {
+            for (int i = 0; i < N; i++) {
+                if (from.charAt(i) != to.charAt(i)) {
                     if (from.charAt(i) == 'B') {
                         black++;
-                    }else{
+                    } else {
                         white++;
                     }
                 }
             }
 
-            answer.append(black+white-Math.min(black, white)).append("\n");
+            answer.append(black + white - Math.min(black, white)).append("\n");
         }
 
         System.out.println(answer.toString());

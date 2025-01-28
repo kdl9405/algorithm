@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
 
-/* 
-    수들의 합
-
-*/
+/*
+ * 수들의 합
+ * 
+ */
 
 import java.io.*;
 
 public class BOJ1789 {
-    
+
     public static void main(String[] args) throws NumberFormatException, IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -23,7 +23,7 @@ public class BOJ1789 {
             sum += n;
 
             if (sum > S) {
-                break;   
+                break;
             }
             n++;
         }

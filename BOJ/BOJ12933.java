@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/* 
-오리
+/*
+ * 오리
  */
 
 public class BOJ12933 {

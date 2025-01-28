@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 좋은 구간
@@ -42,7 +42,7 @@ public class BOJ1059 {
 
         int max = S.get(i);
 
-        int ans = (n-min)*(max-n)-1;
+        int ans = (n - min) * (max - n) - 1;
 
         System.out.println(ans);
     }

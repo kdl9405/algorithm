@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    N과 M (9)
-    336ms
-*/
+/*
+ * N과 M (9) 336ms
+ */
 public class BOJ15663_copy {
     public static void main(String[] args) throws IOException {
 
@@ -37,14 +36,14 @@ public class BOJ15663_copy {
 
     static int[] num;
     static int[] arr;
-    static boolean[] visit;    
+    static boolean[] visit;
     static HashSet<String> set;
     static StringBuilder result;
 
-    static void nPr(int depth, int r){
+    static void nPr(int depth, int r) {
         if (depth == r) {
             StringBuffer sb = new StringBuffer();
-            for(int a : arr){
+            for (int a : arr) {
                 sb.append(a).append(" ");
             }
             String s = sb.toString().trim();
@@ -59,11 +58,11 @@ public class BOJ15663_copy {
             return;
         }
 
-        for(int i = 0; i<num.length; i++){
+        for (int i = 0; i < num.length; i++) {
             if (!visit[i]) {
                 visit[i] = true;
                 arr[depth] = num[i];
-                nPr(depth+1, r);
+                nPr(depth + 1, r);
                 visit[i] = false;
             }
         }

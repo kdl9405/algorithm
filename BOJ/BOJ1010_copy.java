@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
-/* 
-    다리 놓기
-*/
+/*
+ * 다리 놓기
+ */
 public class BOJ1010_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -18,10 +18,10 @@ public class BOJ1010_copy {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder answer = new StringBuilder();
-        
+
         int T = Integer.parseInt(br.readLine());
         dp = new int[30][30];
-        
+
 
         while (T-- > 0) {
             st = new StringTokenizer(br.readLine());
@@ -47,8 +47,8 @@ public class BOJ1010_copy {
             return dp[l][r];
         }
 
-        for(int i = r-1; i>=l-1; i--){
-            dp[l][r] += findDP(l-1, i);
+        for (int i = r - 1; i >= l - 1; i--) {
+            dp[l][r] += findDP(l - 1, i);
         }
 
         return dp[l][r];

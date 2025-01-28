@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    틱택토 
-*/
+/*
+ * 틱택토
+ */
 public class BOJ7682 {
     public static void main(String[] args) throws IOException {
 
@@ -78,8 +78,9 @@ public class BOJ7682 {
             return false;
         }
 
-        if (map[4] != '.' && (map[0] == map[4] && map[4] == map[8]) || (map[2] == map[4] && map[4] == map[6])) {
-           
+        if (map[4] != '.' && (map[0] == map[4] && map[4] == map[8])
+                || (map[2] == map[4] && map[4] == map[6])) {
+
             cross++;
             if (map[4] == 'X') {
                 winner = 0;

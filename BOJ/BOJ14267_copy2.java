@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    회사 문화 1
-
-    java 11: 740ms
-*/
+ * 회사 문화 1
+ * 
+ * java 11: 740ms
+ */
 public class BOJ14267_copy2 {
 
     public static void main(String[] args) throws IOException {
@@ -40,7 +40,7 @@ public class BOJ14267_copy2 {
             int i = Integer.parseInt(st.nextToken());
             int w = Integer.parseInt(st.nextToken());
 
-            point[i] += w;            
+            point[i] += w;
         }
 
         sumPoint(1);
@@ -57,10 +57,10 @@ public class BOJ14267_copy2 {
     static List<List<Integer>> junior;
     static int[] point;
 
-    static void sumPoint(int boss){
+    static void sumPoint(int boss) {
 
-        for(Integer j : junior.get(boss)){
-            point[j]+= point[boss];
+        for (Integer j : junior.get(boss)) {
+            point[j] += point[boss];
             sumPoint(j);
         }
         return;

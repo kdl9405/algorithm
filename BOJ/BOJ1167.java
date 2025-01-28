@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    트리의 지름
-
-*/
+/*
+ * 트리의 지름
+ * 
+ */
 public class BOJ1167 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -56,9 +56,9 @@ public class BOJ1167 {
 
         visit[current] = true;
 
-        for(Integer h : nodes.get(current).keySet()){
+        for (Integer h : nodes.get(current).keySet()) {
             if (!visit[h]) {
-                dfs(h, r+nodes.get(current).get(h));
+                dfs(h, r + nodes.get(current).get(h));
             }
         }
 

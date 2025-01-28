@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    네트워크 연결
-*/
+/*
+ * 네트워크 연결
+ */
 
 import java.io.*;
 import java.util.*;
@@ -30,7 +30,7 @@ public class BOJ1922 {
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
 
-            pq.add(new int[] { a, b, c });
+            pq.add(new int[] {a, b, c});
         }
 
         System.out.println(linkNetwork());
@@ -67,7 +67,7 @@ public class BOJ1922 {
             cost += link[2];
             network[b] = a;
             cnt++;
-            if (cnt == N-1) {
+            if (cnt == N - 1) {
                 break;
             }
         }

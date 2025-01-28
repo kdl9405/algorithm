@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    행성 터널
-*/
+/*
+ * 행성 터널
+ */
 
 public class BOJ2887 {
 
@@ -22,7 +22,7 @@ public class BOJ2887 {
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
             int z = Integer.parseInt(st.nextToken());
-            point.add(new int[] { i, x, y, z });
+            point.add(new int[] {i, x, y, z});
         }
 
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
@@ -36,7 +36,8 @@ public class BOJ2887 {
             });
 
             for (int j = 0; j < n - 1; j++) {
-                pq.add(new int[] { point.get(j)[0], point.get(j+1)[0], Math.abs(point.get(j)[x] - point.get(j+1)[x]) });
+                pq.add(new int[] {point.get(j)[0], point.get(j + 1)[0],
+                        Math.abs(point.get(j)[x] - point.get(j + 1)[x])});
             }
         }
 

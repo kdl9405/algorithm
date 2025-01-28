@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    마인크래프트
-*/
+/*
+ * 마인크래프트
+ */
 
 public class BOJ18111 {
 
@@ -36,7 +36,7 @@ public class BOJ18111 {
         int min = total * 2;
         int inven = B + total;
 
-        
+
         int checkd = 0;
         if (map.containsKey(0)) {
             checkd = map.get(0);
@@ -44,9 +44,9 @@ public class BOJ18111 {
 
         int temp = min;
 
-        for (int i = 1; i <=256; i++) {
+        for (int i = 1; i <= 256; i++) {
 
-            int count = N*M-checkd;
+            int count = N * M - checkd;
 
             // System.out.println(count);
 
@@ -59,7 +59,7 @@ public class BOJ18111 {
             temp += (checkd);
 
             if (map.containsKey(i)) {
-                checkd+=map.get(i);
+                checkd += map.get(i);
             }
 
             if (inven < 0) {
@@ -71,7 +71,7 @@ public class BOJ18111 {
                 h = i;
             }
 
-            // System.out.println(height[i]  +" "+ temp );
+            // System.out.println(height[i] +" "+ temp );
         }
 
         System.out.println(min + " " + h);

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
 
-/* 
-    락스타 락동호
-*/
+/*
+ * 락스타 락동호
+ */
 
 public class BOJ1581 {
 
@@ -18,7 +18,7 @@ public class BOJ1581 {
         int s = num[0] + num[1] + num[2] + num[3];
         int c = num[0] * num[1] * num[2] * num[3] - 1;
 
-        System.out.println(s*c);
+        System.out.println(s * c);
 
     }
 

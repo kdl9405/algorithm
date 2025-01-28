@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/* 
-    스도쿠
-    
-*/
+/*
+ * 스도쿠
+ * 
+ */
 
 public class BOJ2580 {
 
@@ -61,11 +61,11 @@ public class BOJ2580 {
                 if (checkRow(i, j, x) && checkCol(i, j, x) && checkRect(i, j, x)) {
                     arr[i][j] = x;
                     fillArr(i, j + 1);
-                }                   
+                }
             }
             arr[i][j] = 0;
             return;
-        }       
+        }
 
         fillArr(i, j + 1);
     }

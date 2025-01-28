@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    맥주 마시면서 걸어가기
-
-*/
+/*
+ * 맥주 마시면서 걸어가기
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -29,20 +29,21 @@ public class BOJ9205 {
             int n = Integer.parseInt(br.readLine());
 
             st = new StringTokenizer(br.readLine());
-            int[] home = { Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()) };
+            int[] home = {Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
 
             List<int[]> stores = new ArrayList<>();
             while (n-- > 0) {
                 st = new StringTokenizer(br.readLine());
-                stores.add(new int[] { Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()) });
+                stores.add(new int[] {Integer.parseInt(st.nextToken()),
+                        Integer.parseInt(st.nextToken())});
             }
 
             st = new StringTokenizer(br.readLine());
-            int[] festival = { Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()) };
+            int[] festival = {Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken())};
 
             if (bfs(home, stores, festival)) {
                 answer.append("happy\n");
-            }else{
+            } else {
                 answer.append("sad\n");
             }
 
@@ -75,7 +76,7 @@ public class BOJ9205 {
                     continue;
                 }
                 visit[i] = b;
-                queue.add(new int[] { stores.get(i)[0], stores.get(i)[1] });
+                queue.add(new int[] {stores.get(i)[0], stores.get(i)[1]});
             }
 
         }

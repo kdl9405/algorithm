@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    달빛 여우
-
-    시간초과
-*/
+/*
+ * 달빛 여우
+ * 
+ * 시간초과
+ */
 public class BOJ16118_copy {
     public static void main(String[] args) throws IOException {
 

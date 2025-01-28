@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    숨바꼭질 4
-*/
+/*
+ * 숨바꼭질 4
+ */
 public class BOJ13913 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -55,10 +55,10 @@ public class BOJ13913 {
         }
 
         StringBuilder sb = new StringBuilder();
-        sb.append(stack.size()).append("\n").append(N+" ");
+        sb.append(stack.size()).append("\n").append(N + " ");
 
         while (!stack.isEmpty()) {
-            sb.append(stack.pop()+" ");
+            sb.append(stack.pop() + " ");
         }
 
         System.out.println(sb.toString());

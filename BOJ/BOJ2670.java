@@ -1,7 +1,7 @@
-package BOJ;
-/* 
-    연속부분최대곱
-*/
+package boj;
+/*
+ * 연속부분최대곱
+ */
 
 import java.io.*;
 

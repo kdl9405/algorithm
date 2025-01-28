@@ -1,15 +1,13 @@
-package BOJ;
+package boj;
 
-/* 
-    보석 도둑
-
-    1. 보석의 정보를 저장.
-    2. 값이 비싼 순서로, 무게는 작은 순서로 정렬.
-    3. 가방을 무게가 작은 순으로 정렬하고, 보석을 가방의 무게가 적은 것부터 할당.
-
-    => 시간초과
-    
-*/
+/*
+ * 보석 도둑
+ * 
+ * 1. 보석의 정보를 저장. 2. 값이 비싼 순서로, 무게는 작은 순서로 정렬. 3. 가방을 무게가 작은 순으로 정렬하고, 보석을 가방의 무게가 적은 것부터 할당.
+ * 
+ * => 시간초과
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -26,7 +24,8 @@ public class BOJ1202_copy {
         int[][] jewel = new int[N][2];
 
         for (int i = 0; i < N; i++) {
-            jewel[i] = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            jewel[i] =
+                    Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
         }
 
         List<Integer> bag = new LinkedList<>();

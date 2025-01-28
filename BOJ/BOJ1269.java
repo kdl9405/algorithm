@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,7 +31,7 @@ public class BOJ1269 {
 
         int x = a + b - set.size();
 
-        System.out.println((a-x)+(b-x));
+        System.out.println((a - x) + (b - x));
 
     }
 

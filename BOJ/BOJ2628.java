@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /*
-    종이자르기
-*/
+ * 종이자르기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -41,7 +41,7 @@ public class BOJ2628 {
             Collections.sort(row);
             maxR = row.get(0);
             for (int i = 1; i < row.size(); i++) {
-                maxR = Math.max(maxR, row.get(i) - row.get(i-1));
+                maxR = Math.max(maxR, row.get(i) - row.get(i - 1));
             }
         }
 
@@ -49,11 +49,11 @@ public class BOJ2628 {
             Collections.sort(col);
             maxC = col.get(0);
             for (int i = 1; i < col.size(); i++) {
-                maxC = Math.max(maxC, col.get(i) - col.get(i-1));
+                maxC = Math.max(maxC, col.get(i) - col.get(i - 1));
             }
         }
 
-        System.out.println(maxR*maxC);
+        System.out.println(maxR * maxC);
 
     }
 }

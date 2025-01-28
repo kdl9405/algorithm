@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class BOJ1085 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -20,24 +20,24 @@ public class BOJ1085 {
 
         int dx = 0, dy = 0;
 
-        if(x <= (w-x)){
+        if (x <= (w - x)) {
             dx = x;
-        }else {
-            dx = w-x;
+        } else {
+            dx = w - x;
         }
 
-        if(y <= (h-y)){
+        if (y <= (h - y)) {
             dy = y;
-        }else {
-            dy = h-y;
+        } else {
+            dy = h - y;
         }
 
-        if(dx <= dy){
+        if (dx <= dy) {
             System.out.println(dx);
-        }else {
+        } else {
             System.out.println(dy);
-        }      
+        }
 
-        
+
     }
 }

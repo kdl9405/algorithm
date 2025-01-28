@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    섬의 개수
-
-    BFS 192ms
-*/
+/*
+ * 섬의 개수
+ * 
+ * BFS 192ms
+ */
 
 public class BOJ4963_copy {
 
@@ -55,14 +55,14 @@ public class BOJ4963_copy {
 
     static int w, h;
     static int[][] map;
-    static int[][] d = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
+    static int[][] d = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
     static void bfs(int x, int y) {
 
         map[x][y] = 0;
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.offer(new int[] { x, y });
+        queue.offer(new int[] {x, y});
 
         while (!queue.isEmpty()) {
 
@@ -77,7 +77,7 @@ public class BOJ4963_copy {
                     if (nx >= 0 && nx < h && ny >= 0 && ny < w) {
                         if (map[nx][ny] == 1) {
                             map[nx][ny] = 0;
-                            queue.offer(new int[] { nx, ny });
+                            queue.offer(new int[] {nx, ny});
                         }
                     }
                 }

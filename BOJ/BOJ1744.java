@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    수 묶기
-*/
+/*
+ * 수 묶기
+ */
 public class BOJ1744 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -35,7 +35,7 @@ public class BOJ1744 {
         long sum = 0;
 
         if (negative.size() > 1) {
-            for (int i = 0; i <negative.size()-1; i+=2) {
+            for (int i = 0; i < negative.size() - 1; i += 2) {
                 sum += (negative.get(i) * negative.get(i + 1));
             }
         }
@@ -45,8 +45,8 @@ public class BOJ1744 {
         }
 
         if (positive.size() > 1) {
-            for (int i = 0; i < positive.size()-1; i+=2) {
-                System.out.println(positive.get(i)+ " "+positive.get(i+1));
+            for (int i = 0; i < positive.size() - 1; i += 2) {
+                System.out.println(positive.get(i) + " " + positive.get(i + 1));
                 sum += (positive.get(i) * positive.get(i + 1));
             }
         }

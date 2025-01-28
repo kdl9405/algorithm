@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-    친구
-*/
+ * 친구
+ */
 
 import java.io.*;
 
@@ -27,18 +27,18 @@ public class BOJ1058_copy {
                 }
             }
         }
-        
+
         int max = 0;
 
         for (int i = 0; i < N; i++) {
             int count = 0;
             for (int j = 0; j < N; j++) {
 
-                if (friends[i][j]>=1) {
+                if (friends[i][j] >= 1) {
                     count++;
-                }else if(i!=j){
-                    for(int k = 0; k<N; k++){
-                        if(k == i || k == j){
+                } else if (i != j) {
+                    for (int k = 0; k < N; k++) {
+                        if (k == i || k == j) {
                             continue;
                         }
 
@@ -47,7 +47,7 @@ public class BOJ1058_copy {
                             friends[j][i] = 1;
                             count++;
                         }
-    
+
                     }
                 }
             }

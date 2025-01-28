@@ -1,16 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    스도쿠
-
-    1) 빈칸마다, 들어갈 수 있는 숫자를 조회해서 대입.
-    2) 올바른 대입이 모두 끝나면, String으로 만들어서 list에 저장
-    3) list 정렬
-    4) 9자리씩 끊어서 출력.
-*/
+/*
+ * 스도쿠
+ * 
+ * 1) 빈칸마다, 들어갈 수 있는 숫자를 조회해서 대입. 2) 올바른 대입이 모두 끝나면, String으로 만들어서 list에 저장 3) list 정렬 4) 9자리씩 끊어서
+ * 출력.
+ */
 public class BOJ2239 {
 
     public static void main(String[] args) throws IOException {
@@ -71,7 +69,7 @@ public class BOJ2239 {
                     if (!num[k]) {
                         check = true;
                         board[x][y] = k;
-                        
+
                         dfs(x, y + 1);
 
                         board[x][y] = 0;

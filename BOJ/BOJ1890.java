@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    점프
-
-*/
+/*
+ * 점프
+ * 
+ */
 
 public class BOJ1890 {
     public static void main(String[] args) throws NumberFormatException, IOException {

@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
-/* 
-    부등호
+/*
+ * 부등호
  */
 
 import java.io.*;

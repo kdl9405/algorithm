@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,14 +22,14 @@ public class BOJ7568 {
             person[i][1] = Integer.parseInt(st.nextToken());
 
         }
-      
+
         StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < n; i++) {
             int rank = 1;
             for (int j = 0; j < n; j++) {
 
-                if(i == j){
+                if (i == j) {
                     continue;
                 }
 

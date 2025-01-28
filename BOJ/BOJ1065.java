@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -17,40 +17,40 @@ public class BOJ1065 {
         int n = Integer.parseInt(br.readLine());
         int number = 0;
 
-        if(n<100){
+        if (n < 100) {
             number = n;
         }
 
-        else if(n>=100){
+        else if (n >= 100) {
 
             number = 99;
 
-            for (int i = 100; i<=n; i++){
+            for (int i = 100; i <= n; i++) {
 
-                if(Number(i) == true){
+                if (Number(i) == true) {
 
-                    number +=1;
+                    number += 1;
                 }
 
             }
         }
 
         System.out.println(number);
-        
+
     }
 
-    public static boolean Number(int n){
+    public static boolean Number(int n) {
 
         int a = n / 100;
         int b = n % 100 / 10;
-        int c=  n % 100 % 10;
+        int c = n % 100 % 10;
 
-        if(a-b == b-c)
+        if (a - b == b - c)
             return true;
 
         else
             return false;
 
     }
-    
+
 }

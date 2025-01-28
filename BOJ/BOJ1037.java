@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    약수 
-*/
+/*
+ * 약수
+ */
 
 import java.io.*;
 import java.util.*;

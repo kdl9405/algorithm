@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    통신망 분할
-*/
+/*
+ * 통신망 분할
+ */
 public class BOJ17398 {
 
     public static void main(String[] args) throws IOException {

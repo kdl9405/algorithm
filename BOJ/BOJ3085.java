@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    사탕 게임
-*/
+/*
+ * 사탕 게임
+ */
 
 import java.io.*;
 
@@ -52,7 +52,7 @@ public class BOJ3085 {
         for (int j = 0; j < N; j++) {
             int c = 1;
             for (int i = 1; i < N; i++) {
-                if (board[i][j] == board[i-1][j]) {
+                if (board[i][j] == board[i - 1][j]) {
                     c++;
                     if (c > answer) {
                         answer = c;

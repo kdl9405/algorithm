@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -20,12 +20,12 @@ public class BOJ1912_copy {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        
-        for(int i = 0; i<n; i++){
+
+        for (int i = 0; i < n; i++) {
             dp[i] = arr[i];
             int max = Integer.MIN_VALUE;
 
-            for(int j = i; j<n; j++){
+            for (int j = i; j < n; j++) {
                 dp[i] += arr[j];
                 max = Math.max(max, dp[i]);
             }
@@ -34,7 +34,7 @@ public class BOJ1912_copy {
         }
 
         int max = Integer.MIN_VALUE;
-        for(final int d:dp){
+        for (final int d : dp) {
             max = Math.max(max, d);
         }
 

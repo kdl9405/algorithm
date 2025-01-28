@@ -1,14 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    집합의 표현
-*/
+/*
+ * 집합의 표현
+ */
 public class BOJ1717 {
 
     static int[] group;
+
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

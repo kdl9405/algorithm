@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
 /**
-타일 장식물
-
-*/
+ * 타일 장식물
+ * 
+ */
 
 import java.util.*;
 

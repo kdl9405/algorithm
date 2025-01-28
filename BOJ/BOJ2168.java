@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
-/* 
-    타일 위의 대각선
-*/
+/*
+ * 타일 위의 대각선
+ */
 public class BOJ2168 {
 
     public static void main(String[] args) throws IOException {
@@ -19,7 +19,7 @@ public class BOJ2168 {
 
         int g = GCD(x, y);
 
-        System.out.println((x+y)-g);
+        System.out.println((x + y) - g);
 
     }
 

@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    다리 만들기
-
-*/
+/*
+ * 다리 만들기
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -35,13 +35,13 @@ public class BOJ2146 {
 
     static int N;
     static int[][] map;
-    static int[][] d = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] d = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     static Queue<int[]> queue;
 
     static void findIsland(int r, int c, int num) {
 
         map[r][c] = num;
-        queue.add(new int[] { r, c, num });
+        queue.add(new int[] {r, c, num});
 
         for (int i = 0; i < 4; i++) {
             int nr = r + d[i][0];
@@ -81,7 +81,7 @@ public class BOJ2146 {
             while (size-- > 0) {
                 int[] now = queue.poll();
 
-           
+
                 for (int i = 0; i < 4; i++) {
                     int nr = now[0] + d[i][0];
                     int nc = now[1] + d[i][1];
@@ -101,7 +101,7 @@ public class BOJ2146 {
                     if (map[nr][nc] != 0) {
                         break loop;
                     }
-                    queue.add(new int[] { nr, nc, now[2] });
+                    queue.add(new int[] {nr, nc, now[2]});
                 }
             }
 

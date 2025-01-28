@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    양팔저울     
-
-    시간초과
-*/
+/*
+ * 양팔저울
+ * 
+ * 시간초과
+ */
 
 public class BOJ2629_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -25,7 +25,7 @@ public class BOJ2629_copy {
         }
 
         possible = new boolean[15001];
-        boolean[][] done = new boolean[weight.length+1][weight.length+1];
+        boolean[][] done = new boolean[weight.length + 1][weight.length + 1];
 
         for (int i = 0; i < weight.length; i++) {
             if ((2 * i) > weight.length) {

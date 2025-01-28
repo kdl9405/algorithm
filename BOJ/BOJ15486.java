@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    퇴사 2
-*/
+/*
+ * 퇴사 2
+ */
 
 public class BOJ15486 {
 
@@ -26,10 +26,10 @@ public class BOJ15486 {
         int[] dp = new int[n + 2];
         int sum = 0;
 
-        for (int i = 1; i <= n+1; i++) {
+        for (int i = 1; i <= n + 1; i++) {
             dp[i] = Math.max(dp[i], sum);
 
-            if (arr[i][0] + i <= n+1) {
+            if (arr[i][0] + i <= n + 1) {
                 dp[arr[i][0] + i] = Math.max(dp[arr[i][0] + i], arr[i][1] + dp[i]);
             }
 

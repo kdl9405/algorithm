@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    LCA
-*/
+/*
+ * LCA
+ */
 
 import java.io.*;
 import java.util.*;

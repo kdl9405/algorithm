@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-
-    집합
-
-    비트 마스킹
-
-*/
+/*
+ * 
+ * 집합
+ * 
+ * 비트 마스킹
+ * 
+ */
 
 public class BOJ11723 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -29,17 +29,17 @@ public class BOJ11723 {
             switch (str[0]) {
                 case "add":
 
-                    S |= (1 << Integer.parseInt(str[1])-1);
+                    S |= (1 << Integer.parseInt(str[1]) - 1);
                     break;
 
                 case "remove":
 
-                    S &= ~(1 << Integer.parseInt(str[1])-1);
+                    S &= ~(1 << Integer.parseInt(str[1]) - 1);
                     break;
 
                 case "check":
 
-                    if ((S & (1 << Integer.parseInt(str[1])-1)) != 0) {
+                    if ((S & (1 << Integer.parseInt(str[1]) - 1)) != 0) {
                         sb.append("1\n");
                     } else {
                         sb.append("0\n");
@@ -48,13 +48,13 @@ public class BOJ11723 {
                     break;
                 case "toggle":
 
-                    S ^= (1 << Integer.parseInt(str[1])-1);
+                    S ^= (1 << Integer.parseInt(str[1]) - 1);
 
                     break;
 
                 case "all":
 
-                    S = (1<<21)-1 ;
+                    S = (1 << 21) - 1;
 
                     break;
                 case "empty":

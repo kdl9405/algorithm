@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    트리
-*/
+/*
+ * 트리
+ */
 
 import java.io.*;
 import java.util.*;
@@ -11,7 +11,7 @@ public class BOJ4803 {
 
     public static void main(String[] args) throws IOException {
 
-     
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         StringBuilder sb = new StringBuilder();

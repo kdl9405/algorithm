@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    카잉 달력
-    632ms
-*/
+/*
+ * 카잉 달력 632ms
+ */
 public class BOJ6064_copy {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -33,25 +32,25 @@ public class BOJ6064_copy {
             }
 
             while (true) {
-               
+
                 if (x % N == y) {
-                    sb.append(x+"\n");
+                    sb.append(x + "\n");
                     break;
                 }
 
-                x+=M;
+                x += M;
 
-                if (x>max) {
-                    sb.append(-1+"\n");
+                if (x > max) {
+                    sb.append(-1 + "\n");
                     break;
-                }                
-            }            
+                }
+            }
         }
 
         System.out.println(sb.toString());
     }
 
-    static int GCD(int x, int y){
+    static int GCD(int x, int y) {
 
         if (x < y) {
             int temp = y;
@@ -61,7 +60,7 @@ public class BOJ6064_copy {
 
         int n;
         while (y != 0) {
-            n = x%y;
+            n = x % y;
             x = y;
             y = n;
         }
@@ -69,9 +68,9 @@ public class BOJ6064_copy {
         return x;
     }
 
-    static int LCM(int x, int y){
+    static int LCM(int x, int y) {
         int g = GCD(x, y);
 
-        return (x*y)/g;
+        return (x * y) / g;
     }
 }

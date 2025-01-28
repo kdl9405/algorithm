@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    드래곤 커브
-*/
+/*
+ * 드래곤 커브
+ */
 public class BOJ15685 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -61,14 +61,14 @@ public class BOJ15685 {
 
     static List<List<List<Integer>>> dp;
     static boolean[][] map;
-    static int[][] direction = { { 0, 1 }, { -1, 0 }, { 0, -1 }, { 1, 0 } };
+    static int[][] direction = {{0, 1}, {-1, 0}, {0, -1}, {1, 0}};
 
     static void drawing(int x, int y, int d, int g) {
 
         List<Integer> list = findDP(d, g);
 
         map[y][x] = true;
-        for(int i = 0; i<list.size(); i++){
+        for (int i = 0; i < list.size(); i++) {
             y += direction[list.get(i)][0];
             x += direction[list.get(i)][1];
 
@@ -79,15 +79,15 @@ public class BOJ15685 {
         // int ny = y;
         // map[nx][ny] = true;
         // for (int l : list) {
-        //     nx += direction[l][0];
-        //     ny += direction[l][1];
+        // nx += direction[l][0];
+        // ny += direction[l][1];
 
-        //     if (nx<0 || nx >100 || ny<0 || ny>100) {
-        //         System.out.println("!!!!!!!!!!!!!!!");
-        //         continue;
-        //     }
+        // if (nx<0 || nx >100 || ny<0 || ny>100) {
+        // System.out.println("!!!!!!!!!!!!!!!");
+        // continue;
+        // }
 
-        //     map[nx][ny] = true;
+        // map[nx][ny] = true;
         // }
     }
 
@@ -109,7 +109,7 @@ public class BOJ15685 {
         }
 
         dp.get(d).add(list);
-      //  System.out.println(dp.get(d).size() + " " + list.size());
+        // System.out.println(dp.get(d).size() + " " + list.size());
 
         return list;
     }

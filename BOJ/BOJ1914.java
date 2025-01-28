@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    하노이 탑
-*/
+/*
+ * 하노이 탑
+ */
 
 import java.io.*;
 import java.math.BigInteger;
@@ -22,7 +22,7 @@ public class BOJ1914 {
 
         if (N <= 20) {
             answer = new StringBuilder();
-            answer.append((int)Math.pow(2, N) - 1).append("\n");
+            answer.append((int) Math.pow(2, N) - 1).append("\n");
             hanoi(N, 1, 3, 2);
             System.out.println(answer.toString().trim());
 
@@ -46,9 +46,9 @@ public class BOJ1914 {
         if (n == 1) {
             answer.append(from).append(" ").append(to).append("\n");
         } else {
-            hanoi(n-1, from, mid, to);
+            hanoi(n - 1, from, mid, to);
             answer.append(from).append(" ").append(to).append("\n");
-            hanoi(n-1, mid, to, from);
+            hanoi(n - 1, mid, to, from);
         }
     }
 }

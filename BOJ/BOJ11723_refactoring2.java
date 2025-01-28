@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    집합 
-*/
+/*
+ * 집합
+ */
 
 import java.io.*;
 import java.util.*;

@@ -1,22 +1,20 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    소가 길을 건너간 이유 6 
-
-    1) 길을 '이동 못하는 길'로 간주하고 구간을 나눔.
-    2) 길의 정보는 fense[][]에  좌표값은 (i-1)*N + j으로 계산하여 저장
-    3) partition에 r,c에 따른 구간의 값을 저장
-    4) 소들의 r,c값으로 partition을 조회해서 값이 다르면 ++;
-*/
+/*
+ * 소가 길을 건너간 이유 6
+ * 
+ * 1) 길을 '이동 못하는 길'로 간주하고 구간을 나눔. 2) 길의 정보는 fense[][]에 좌표값은 (i-1)*N + j으로 계산하여 저장 3) partition에 r,c에
+ * 따른 구간의 값을 저장 4) 소들의 r,c값으로 partition을 조회해서 값이 다르면 ++;
+ */
 public class BOJ14466 {
 
     static int N, K, R;
     static boolean[][] fense;
     static int[][] partition;
-    static int[][] direction = { { 0, -1 }, { -1, 0 }, { 0, 1 }, { 1, 0 } };
+    static int[][] direction = {{0, -1}, {-1, 0}, {0, 1}, {1, 0}};
 
     public static void main(String[] args) throws IOException {
 

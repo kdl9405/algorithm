@@ -1,20 +1,20 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    레이저 통신
-
-    java11 - 300ms
-*/
+/*
+ * 레이저 통신
+ * 
+ * java11 - 300ms
+ */
 public class BOJ6087_copy {
 
     static int W, H;
     static String[][] map;
     static int[][] dp; // 0-상 1-하 2-좌 3-우
     static boolean[][] visit;
-    static int[][] dir = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] dir = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     public static void main(String[] args) throws IOException {
 
@@ -36,7 +36,7 @@ public class BOJ6087_copy {
         for (int i = 0; i < H; i++) {
             for (int j = 0; j < W; j++) {
                 if (map[i][j].equals("C")) {
-                    queue.add(new int[] { i, j });
+                    queue.add(new int[] {i, j});
                 }
             }
         }
@@ -52,18 +52,18 @@ public class BOJ6087_copy {
     static int findRoot(int[] start, int[] end) {
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { start[0], start[1]});
+        queue.add(new int[] {start[0], start[1]});
 
-        int count = -1 ;
+        int count = -1;
 
         loop: while (!queue.isEmpty()) {
 
             int size = queue.size();
 
-           /*  System.out.print(count +" = ");
-            for(int[] q : queue){
-                System.out.print(q[0]+" "+q[1]+" / ");
-            }System.out.println(); */
+            /*
+             * System.out.print(count +" = "); for(int[] q : queue){
+             * System.out.print(q[0]+" "+q[1]+" / "); }System.out.println();
+             */
 
             while (size-- > 0) {
 
@@ -85,7 +85,7 @@ public class BOJ6087_copy {
 
                     while (nh >= 0 && nh < H && nw >= 0 && nw < W && !map[nh][nw].equals("*")) {
                         if (!visit[nh][nw]) {
-                            queue.add(new int[] { nh, nw});
+                            queue.add(new int[] {nh, nw});
                         }
                         nh += dir[i][0];
                         nw += dir[i][1];

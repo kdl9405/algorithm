@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class BOJ2748_copy {
 
         arr[0] = 0L;
         arr[1] = 1L;
-        
+
         System.out.println(fibonacci(n));
 
     }

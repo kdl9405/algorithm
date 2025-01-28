@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
-점프 점프
+ * 점프 점프
  */
 
 import java.io.*;
@@ -46,17 +46,17 @@ public class BOJ11060 {
 
                 int now = queue.poll();
 
-                for (int i = 1; i <= A[now] && now+i < N; i++) {
-                    if (visit[now+i]) {
+                for (int i = 1; i <= A[now] && now + i < N; i++) {
+                    if (visit[now + i]) {
                         continue;
                     }
 
-                    if (now+i == N - 1) {
+                    if (now + i == N - 1) {
                         return count;
                     }
 
-                    visit[now+i] = true;
-                    queue.add(now+i);
+                    visit[now + i] = true;
+                    queue.add(now + i);
                 }
             }
 

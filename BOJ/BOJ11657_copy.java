@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    타임머신 
-*/
+/*
+ * 타임머신
+ */
 public class BOJ11657_copy {
 
     static int N, M;
@@ -114,6 +114,7 @@ public class BOJ11657_copy {
     }
 
 }
+
 
 class City {
     int end;

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    트리의 부모 찾기
-*/
+/*
+ * 트리의 부모 찾기
+ */
 
 public class BOJ11725 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -15,7 +15,7 @@ public class BOJ11725 {
         int N = Integer.parseInt(br.readLine());
         int[] parent = new int[N + 1];
         parent[1] = 1;
-        
+
         List<ArrayList<Integer>> list = new ArrayList<>();
         for (int i = 0; i <= N; i++) {
             list.add(new ArrayList<Integer>());
@@ -36,10 +36,10 @@ public class BOJ11725 {
         while (!queue.isEmpty()) {
             int p = queue.poll();
 
-            for(Integer n : list.get(p)){
+            for (Integer n : list.get(p)) {
                 if (parent[n] == 0) {
                     parent[n] = p;
-                    queue.add(n); 
+                    queue.add(n);
                 }
             }
         }

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    조합 0의 개수
-
-*/
+/*
+ * 조합 0의 개수
+ * 
+ */
 
 public class BOJ2004 {
 
@@ -19,8 +19,8 @@ public class BOJ2004 {
         long n = Long.parseLong(st.nextToken());
         long m = Long.parseLong(st.nextToken());
 
-        long two = findTwo(n) - findTwo(n-m) - findTwo(m);
-        long five = findFive(n) - findFive(n-m) - findFive(m);
+        long two = findTwo(n) - findTwo(n - m) - findTwo(m);
+        long five = findFive(n) - findFive(n - m) - findFive(m);
 
         System.out.println(Math.min(two, five));
 

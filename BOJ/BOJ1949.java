@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    우수 마을
-
-*/
+/*
+ * 우수 마을
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

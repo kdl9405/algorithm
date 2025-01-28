@@ -1,3 +1,5 @@
+package boj;
+
 import java.util.Scanner;
 
 public class BOJ3009 {
@@ -42,17 +44,17 @@ public class BOJ3009 {
         sc.close();
 
         for (int i = 0; i < 2; i++) {
-            
-            if (squ[i][0] != -1){
+
+            if (squ[i][0] != -1) {
                 x = squ[i][0];
             }
-            
-            if (squ[i][1] != -1){
+
+            if (squ[i][1] != -1) {
                 y = squ[i][1];
             }
         }
 
-        System.out.println(x+" "+y);
+        System.out.println(x + " " + y);
     }
 
 }

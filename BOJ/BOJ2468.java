@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    안전 영역
-
-*/
+/*
+ * 안전 영역
+ * 
+ */
 
 import java.io.*;
 
@@ -57,8 +57,8 @@ public class BOJ2468 {
     }
 
     static int N;
-    static int[] dx = { 1, -1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {1, -1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
     static int[][] arr;
     static boolean[][] visit;
 

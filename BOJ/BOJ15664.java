@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 /*
-
-    N과 M (10)
-
-*/
+ * 
+ * N과 M (10)
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

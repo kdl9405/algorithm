@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    DNA 
-*/
+/*
+ * DNA
+ */
 
 import java.io.*;
 import java.util.*;
@@ -36,12 +36,12 @@ public class BOJ1969 {
             for (int j = 0; j < 26; j++) {
                 if (alphabet[i][j] > cnt) {
                     cnt = alphabet[i][j];
-                    alp = (char)('A'+j);
+                    alp = (char) ('A' + j);
                 }
             }
 
             answer.append(alp);
-            sum +=(N-cnt);
+            sum += (N - cnt);
         }
 
         answer.append("\n").append(sum);

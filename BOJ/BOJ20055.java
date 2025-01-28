@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    컨베이어 벨트 위의 로봇
-*/
+/*
+ * 컨베이어 벨트 위의 로봇
+ */
 
 import java.io.*;
 import java.util.*;
@@ -37,7 +37,7 @@ public class BOJ20055 {
             position.remove(len - 1);
             position.add(0, last);
 
-            int down = position.get(N-1);
+            int down = position.get(N - 1);
             if (isRobot[down]) {
                 isRobot[down] = false;
             }
@@ -58,7 +58,7 @@ public class BOJ20055 {
 
             if (isRobot[down]) {
                 isRobot[down] = false;
-            }            
+            }
 
             int now = position.get(0);
 
@@ -70,7 +70,7 @@ public class BOJ20055 {
                 }
             }
 
-            if(count >= K){
+            if (count >= K) {
                 break;
             }
 

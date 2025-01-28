@@ -1,14 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    RGB거리 2
-
-    java 8 : 96ms
-    java 11 : 228ms
-*/
+/*
+ * RGB거리 2
+ * 
+ * java 8 : 96ms java 11 : 228ms
+ */
 public class BOJ17404_copy {
 
     static int[][] color;

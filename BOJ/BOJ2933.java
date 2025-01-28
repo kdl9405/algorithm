@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    미네랄
-*/
+/*
+ * 미네랄
+ */
 
 public class BOJ2933 {
     public static void main(String[] args) throws IOException {
@@ -59,8 +59,8 @@ public class BOJ2933 {
     static int r, c;
     static char[][] map;
     static boolean[][] visit;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
     static void remove(int x, int y) {
 
@@ -78,7 +78,7 @@ public class BOJ2933 {
                     boolean check = false;
 
                     Queue<int[]> queue = new LinkedList<>();
-                    queue.add(new int[] { xx, yy });
+                    queue.add(new int[] {xx, yy});
 
                     loop: while (!queue.isEmpty()) {
 
@@ -91,7 +91,7 @@ public class BOJ2933 {
                             if (nx >= 0 && nx < r && ny >= 0 && ny < c) {
                                 if (map[nx][ny] == 'x' && !visit[nx][ny]) {
                                     visit[nx][ny] = true;
-                                    queue.add(new int[] { nx, ny });
+                                    queue.add(new int[] {nx, ny});
                                     if (nx == r - 1) {
                                         check = true;
                                         break loop;
@@ -122,7 +122,7 @@ public class BOJ2933 {
 
                 if (visit[i][j]) {
 
-                    for (int k = i + 1; k < r; k++) {                        
+                    for (int k = i + 1; k < r; k++) {
 
                         if (map[k][j] == 'x' && !visit[k][j]) {
                             height = Math.min(height, k - i - 1);
@@ -147,7 +147,7 @@ public class BOJ2933 {
                 }
             }
         }
-     
+
         return;
     }
 }

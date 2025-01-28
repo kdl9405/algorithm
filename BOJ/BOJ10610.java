@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    30
-*/
+/*
+ * 30
+ */
 
 import java.io.*;
 import java.util.*;
@@ -27,10 +27,10 @@ public class BOJ10610 {
 
         if (!zero || sum % 3 != 0) {
             System.out.println(-1);
-        }else{
+        } else {
             Arrays.sort(numbers);
             StringBuilder sb = new StringBuilder();
-          
+
             System.out.println(sb.append(new String(numbers)).reverse());
         }
 

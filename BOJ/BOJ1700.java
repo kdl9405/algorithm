@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    멀티탭 스케줄링
-*/
+/*
+ * 멀티탭 스케줄링
+ */
 
 import java.io.*;
 import java.util.*;
@@ -27,8 +27,8 @@ public class BOJ1700 {
         int change = 0;
 
         if (N == 1) {
-            for(int i = 1; i<K; i++){
-                if (tool[i] != tool[i-1]) {
+            for (int i = 1; i < K; i++) {
+                if (tool[i] != tool[i - 1]) {
                     change++;
                 }
             }

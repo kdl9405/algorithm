@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.util.Scanner;
 
@@ -45,7 +45,7 @@ public class BOJ2447 {
         int count = 0;
 
         for (int i = x; i < x + n; i += size) {
-            for (int j = y; j < y+n; j += size) {
+            for (int j = y; j < y + n; j += size) {
                 count++;
 
                 if (count == 5) {

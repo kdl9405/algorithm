@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,9 +10,7 @@ import java.util.StringTokenizer;
 /**
  * BOJ18258
  * 
- * LinkedList 큐를 이용해서 구현 -  
- *      java 8 - 1904ms
- *      java 11 - 1640ms
+ * LinkedList 큐를 이용해서 구현 - java 8 - 1904ms java 11 - 1640ms
  */
 public class BOJ18258_copy {
 
@@ -29,7 +29,7 @@ public class BOJ18258_copy {
             st = new StringTokenizer(br.readLine());
 
             switch (st.nextToken()) {
-                case "push":    
+                case "push":
                     last = Integer.parseInt(st.nextToken());
                     queue.offer(last);
                     break;

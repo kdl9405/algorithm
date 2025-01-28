@@ -1,11 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    KCM Travel
-
-    1. 티켓정보 저장 - List<List<int[]>>
-    2. 1번을 pq에 담아서 가장 시간순으로 뽑아서 다음 경로를 추적
-*/
+/*
+ * KCM Travel
+ * 
+ * 1. 티켓정보 저장 - List<List<int[]>> 2. 1번을 pq에 담아서 가장 시간순으로 뽑아서 다음 경로를 추적
+ */
 
 import java.io.*;
 import java.util.*;
@@ -42,19 +41,19 @@ public class BOJ10217_copy1 {
                 c = Integer.parseInt(st.nextToken());
                 d = Integer.parseInt(st.nextToken());
 
-                tickets.get(u).add(new int[] { v, c, d });
+                tickets.get(u).add(new int[] {v, c, d});
             }
 
             boolean[] visit = new boolean[n + 1];
 
             PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
 
-                if(a[2] == b[2]){
-                    return a[1]-b[1];
+                if (a[2] == b[2]) {
+                    return a[1] - b[1];
                 }
                 return a[2] - b[2];
             });
-            pq.add(new int[] { 1, 0, 0 });
+            pq.add(new int[] {1, 0, 0});
 
             int[] dist = new int[n + 1];
             Arrays.fill(dist, INF);
@@ -67,7 +66,7 @@ public class BOJ10217_copy1 {
                     continue;
                 }
 
-                if(now[1] > m){
+                if (now[1] > m) {
                     continue;
                 }
 
@@ -80,14 +79,15 @@ public class BOJ10217_copy1 {
                     if (ticket[1] + now[1] > m) {
                         continue;
                     }
-                    
-                    if (dist[ticket[0]] > dist[now[0]]+ ticket[2]) {
-                        dist[ticket[0]] = dist[now[0]]+ ticket[2];
 
-                        System.out.println("from = "+now[0] +"  to = " +ticket[0] + "  cost = "+(ticket[1]+now[1])+ " dist = " + dist[ticket[0]]);
+                    if (dist[ticket[0]] > dist[now[0]] + ticket[2]) {
+                        dist[ticket[0]] = dist[now[0]] + ticket[2];
+
+                        System.out.println("from = " + now[0] + "  to = " + ticket[0] + "  cost = "
+                                + (ticket[1] + now[1]) + " dist = " + dist[ticket[0]]);
 
                         if (ticket[0] != n) {
-                            pq.add(new int[]{ticket[0],ticket[1]+now[1],dist[ticket[0]]});
+                            pq.add(new int[] {ticket[0], ticket[1] + now[1], dist[ticket[0]]});
                         }
                     }
                 }

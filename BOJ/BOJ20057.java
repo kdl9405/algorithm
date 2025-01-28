@@ -1,17 +1,16 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-/* 
-    마법사 상어와 토네이도
-
-    //
-    소수점 관련 정의가 부족. 모호.
-
-*/
+/*
+ * 마법사 상어와 토네이도
+ * 
+ * // 소수점 관련 정의가 부족. 모호.
+ * 
+ */
 public class BOJ20057 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -51,16 +50,16 @@ public class BOJ20057 {
                     d = 0;
                 }
             }
-          
+
             count++;
 
         }
 
         System.out.println(out);
 
-        for(int i = 0; i<N; i++){
-            for(int j = 0; j<N; j++){
-                System.out.print(a[i][j]+" ");
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                System.out.print(a[i][j] + " ");
             }
             System.out.println();
         }
@@ -68,13 +67,16 @@ public class BOJ20057 {
     }
 
     static int[][] a;
-    static int[] dx = { 0, 1, 0, -1 };
-    static int[] dy = { -1, 0, 1, 0 };
-    static int[][] dsx = { { -1, 1, -2, -1, 1, 2, -1, 1, 0 }, { -1, -1, 0, 0, 0, 0, 1, 1, 2 }, // 모래가 퍼지는 x방향
-            { 1, -1, 2, 1, -1, -2, 1, -1, 0 }, { 1, 1, 0, 0, 0, 0, -1, -1, -2 } };
-    static int[][] dsy = { { 1, 1, 0, 0, 0, 0, -1, -1, -2 }, { -1, 1, -2, -1, 1, 2, -1, 1, 0 }, // 모래가 퍼지는 y방향
-            { -1, -1, 0, 0, 0, 0, 1, 1, 2 }, { 1, -1, 2, 1, -1, -2, 1, -1, 0 } };
-    static int[] ratio = { 1, 1, 2, 7, 7, 2, 10, 10, 5 };
+    static int[] dx = {0, 1, 0, -1};
+    static int[] dy = {-1, 0, 1, 0};
+    static int[][] dsx = {{-1, 1, -2, -1, 1, 2, -1, 1, 0}, {-1, -1, 0, 0, 0, 0, 1, 1, 2}, // 모래가 퍼지는
+                                                                                          // x방향
+            {1, -1, 2, 1, -1, -2, 1, -1, 0}, {1, 1, 0, 0, 0, 0, -1, -1, -2}};
+    static int[][] dsy = {{1, 1, 0, 0, 0, 0, -1, -1, -2}, {-1, 1, -2, -1, 1, 2, -1, 1, 0}, // 모래가
+                                                                                           // 퍼지는
+                                                                                           // y방향
+            {-1, -1, 0, 0, 0, 0, 1, 1, 2}, {1, -1, 2, 1, -1, -2, 1, -1, 0}};
+    static int[] ratio = {1, 1, 2, 7, 7, 2, 10, 10, 5};
     static int out;
 
     static void spread(int r, int c, int d) {
@@ -88,7 +90,7 @@ public class BOJ20057 {
             int nr = r + dsx[d][i];
             int nc = c + dsy[d][i];
 
-            int temp = (sand * ratio[i])/100;
+            int temp = (sand * ratio[i]) / 100;
 
             move += temp;
 
@@ -102,13 +104,13 @@ public class BOJ20057 {
 
         System.out.println(move);
 
-        int ax = r+dx[d];
-        int ay = c+dy[d];
+        int ax = r + dx[d];
+        int ay = c + dy[d];
 
         if (ax < 0 || ax >= a.length || ay < 0 || ay >= a.length) {
-            out += (sand-move);
-        }else {
-            a[ax][ay] += (sand-move);
+            out += (sand - move);
+        } else {
+            a[ax][ay] += (sand - move);
         }
 
     }

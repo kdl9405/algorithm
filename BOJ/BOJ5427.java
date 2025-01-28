@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    불
-*/
+/*
+ * 불
+ */
 
 import java.io.*;
 import java.util.*;
@@ -16,7 +16,7 @@ public class BOJ5427 {
 
         int T = Integer.parseInt(br.readLine());
 
-        int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+        int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
         StringBuilder sb = new StringBuilder();
         while (T-- > 0) {
@@ -32,10 +32,10 @@ public class BOJ5427 {
                 map[i] = br.readLine().toCharArray();
                 for (int j = 0; j < w; j++) {
                     if (map[i][j] == '@') {
-                        point.add(new int[] { i, j });
+                        point.add(new int[] {i, j});
                         map[i][j] = '.';
                     } else if (map[i][j] == '*') {
-                        fire.add(new int[] { i, j });
+                        fire.add(new int[] {i, j});
                     }
                 }
             }
@@ -45,8 +45,7 @@ public class BOJ5427 {
             boolean[][] visit = new boolean[h][w];
             visit[point.peek()[0]][point.peek()[1]] = true;
 
-            loop:
-            while (true) {
+            loop: while (true) {
 
                 int size = fire.size();
 
@@ -67,7 +66,7 @@ public class BOJ5427 {
                         }
 
                         map[nh][nw] = '*';
-                        fire.add(new int[] { nh, nw });
+                        fire.add(new int[] {nh, nw});
                     }
                 }
 
@@ -93,7 +92,7 @@ public class BOJ5427 {
 
                         if (map[nh][nw] == '.') {
                             visit[nh][nw] = true;
-                            point.add(new int[] { nh, nw });
+                            point.add(new int[] {nh, nw});
                         }
 
                     }
@@ -107,7 +106,7 @@ public class BOJ5427 {
 
             if (escape) {
                 sb.append(count).append("\n");
-            }else{
+            } else {
                 sb.append("IMPOSSIBLE\n");
             }
 

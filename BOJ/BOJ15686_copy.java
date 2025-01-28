@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    치킨 배달
-*/
+/*
+ * 치킨 배달
+ */
 public class BOJ15686_copy {
 
     public static void main(String[] args) throws IOException {
@@ -27,9 +27,9 @@ public class BOJ15686_copy {
                 String x = st.nextToken();
 
                 if (x.equals("1")) {
-                    house.add(new int[] { i, j });
+                    house.add(new int[] {i, j});
                 } else if (x.equals("2")) {
-                    chicken.add(new int[] { i, j });
+                    chicken.add(new int[] {i, j});
                 }
             }
         }
@@ -41,7 +41,7 @@ public class BOJ15686_copy {
         nCr(M, 0, 0);
 
         System.out.println(min);
-       
+
     }
 
     static List<int[]> house;
@@ -50,14 +50,15 @@ public class BOJ15686_copy {
     static int[] candidate;
     static int min;
 
-    static void nCr(int m, int depth, int x){
+    static void nCr(int m, int depth, int x) {
 
         if (depth == m) {
             int distance = 0;
-            for(int[] h : house){
+            for (int[] h : house) {
                 int temp = Integer.MAX_VALUE;
-                for(int c : candidate){
-                    temp = Math.min(temp, Math.abs(h[0] - chicken.get(c)[0]) + Math.abs(h[1] - chicken.get(c)[1]));
+                for (int c : candidate) {
+                    temp = Math.min(temp, Math.abs(h[0] - chicken.get(c)[0])
+                            + Math.abs(h[1] - chicken.get(c)[1]));
                 }
                 distance += temp;
             }
@@ -65,11 +66,11 @@ public class BOJ15686_copy {
             return;
         }
 
-        for(int i = x; i<chicken.size(); i++){
+        for (int i = x; i < chicken.size(); i++) {
             if (!visit[i]) {
                 visit[i] = true;
                 candidate[depth] = i;
-                nCr(m, depth+1, i+1);
+                nCr(m, depth + 1, i + 1);
                 visit[i] = false;
             }
         }

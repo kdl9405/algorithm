@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    구간 곱 구하기
-*/
+/*
+ * 구간 곱 구하기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -32,7 +32,7 @@ public class BOJ11505 {
         init(1, N, 1);
 
         answer = new StringBuilder();
-        for (int i = M+K; i > 0; i--) {
+        for (int i = M + K; i > 0; i--) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
@@ -41,7 +41,7 @@ public class BOJ11505 {
             if (a == 1) {
                 num[b] = c;
                 change(1, N, 1, b, c);
-            }else{
+            } else {
                 answer.append(getValue(1, N, 1, b, c)).append("\n");
             }
         }
@@ -79,7 +79,8 @@ public class BOJ11505 {
 
         int mid = (start + end) / 2;
 
-        return tree[now] = (change(start, mid, now * 2, b, c) * change(mid + 1, end, now * 2 + 1, b, c)) % MOD;
+        return tree[now] =
+                (change(start, mid, now * 2, b, c) * change(mid + 1, end, now * 2 + 1, b, c)) % MOD;
     }
 
     long getValue(int start, int end, int now, int b, int c) {
@@ -94,7 +95,8 @@ public class BOJ11505 {
 
         int mid = (start + end) / 2;
 
-        return (getValue(start, mid, now * 2, b, c) * getValue(mid + 1, end, now * 2 + 1, b, c)) % MOD; 
+        return (getValue(start, mid, now * 2, b, c) * getValue(mid + 1, end, now * 2 + 1, b, c))
+                % MOD;
 
     }
 }

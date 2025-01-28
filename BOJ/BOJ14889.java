@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -9,44 +11,45 @@ public class BOJ14889 {
     static int[][] map;
     static boolean[] team_check;
     static int min = Integer.MAX_VALUE;
+
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
-        
+
         n = Integer.parseInt(br.readLine());
 
         map = new int[n][n];
         team_check = new boolean[n];
 
-        for(int i = 0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             st = new StringTokenizer(br.readLine());
-            for(int j = 0; j<n; j++){
+            for (int j = 0; j < n; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
             }
         }
 
-        team(0,0);
+        team(0, 0);
 
-        System.out.println(min); 
-        
-                
+        System.out.println(min);
+
+
     }
 
-    static void team(int x, int count){
+    static void team(int x, int count) {
 
-        if(count == n/2){
-            
+        if (count == n / 2) {
+
             score();
 
             return;
         }
 
-        for(int i = x; i< n; i++){
-            
-            if(!team_check[i]){
+        for (int i = x; i < n; i++) {
+
+            if (!team_check[i]) {
                 team_check[i] = true;
-                team(i+1, count+1);
+                team(i + 1, count + 1);
                 team_check[i] = false;
             }
         }
@@ -56,14 +59,14 @@ public class BOJ14889 {
         int start_score = 0;
         int link_score = 0;
 
-        for(int i = 0; i<n-1; i++){
-            for(int j = i+1 ; j<n; j++){
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = i + 1; j < n; j++) {
 
-                if(team_check[i] == true && team_check[j] == true){
+                if (team_check[i] == true && team_check[j] == true) {
                     start_score = start_score + map[i][j] + map[j][i];
                 }
 
-                if(team_check[i] == false && team_check[j] == false){
+                if (team_check[i] == false && team_check[j] == false) {
                     link_score = link_score + map[i][j] + map[j][i];
                 }
             }
@@ -71,7 +74,7 @@ public class BOJ14889 {
 
         int diff = Math.abs(start_score - link_score);
 
-        if(diff == 0){
+        if (diff == 0) {
             System.out.println(0);
             System.exit(0);
         }

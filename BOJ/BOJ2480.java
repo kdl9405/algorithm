@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    주사위 세개
-*/
+/*
+ * 주사위 세개
+ */
 public class BOJ2480 {
 
     public static void main(String[] args) throws IOException {

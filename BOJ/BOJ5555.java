@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-    반지 
-*/
+ * 반지
+ */
 
 import java.io.*;
 

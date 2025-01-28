@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
-/* 
-    우제국
-*/
+/*
+ * 우제국
+ */
 public class BOJ2285 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -36,7 +36,7 @@ public class BOJ2285 {
         long count = 0;
         for (int i = 0; i < n; i++) {
             count += arr[i][1];
-            if (count > total/2) {
+            if (count > total / 2) {
                 System.out.println(arr[i][0]);
                 break;
             }

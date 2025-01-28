@@ -1,14 +1,11 @@
-package BOJ;
+package boj;
 
-/* 
-    회문은 회문아니야!!
-
-    1. 입력 S가 펠린드롬이 아니면 -> S의 길이
-    2.  펠린드롬이라면
-    3.      하나의 문자열로 이루어져 있다면? -> -1 리턴
-    4.        아니라면 -> S의 길이 -1                     
-
-*/
+/*
+ * 회문은 회문아니야!!
+ * 
+ * 1. 입력 S가 펠린드롬이 아니면 -> S의 길이 2. 펠린드롬이라면 3. 하나의 문자열로 이루어져 있다면? -> -1 리턴 4. 아니라면 -> S의 길이 -1
+ * 
+ */
 
 import java.io.*;
 import java.util.HashSet;
@@ -29,7 +26,7 @@ public class BOJ15927 {
 
         for (int i = 0; i < S.length() / 2; i++) {
 
-            if (S.charAt(i) != S.charAt(i+1)) {
+            if (S.charAt(i) != S.charAt(i + 1)) {
                 one = false;
             }
 

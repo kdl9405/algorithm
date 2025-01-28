@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,11 +6,11 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 
-/* 
-    사다리 타기
-
-    실패...
-*/
+/*
+ * 사다리 타기
+ * 
+ * 실패...
+ */
 
 public class BOJ2469_copy {
 
@@ -28,7 +28,7 @@ public class BOJ2469_copy {
         }
         positon[3] = br.readLine().toCharArray();
 
-        line = new char[n][k-1];
+        line = new char[n][k - 1];
 
         int index = 0;
         for (int i = 0; i < n; i++) {
@@ -55,11 +55,11 @@ public class BOJ2469_copy {
 
 
         for (int i = 0; i < k - 1; i++) {
-            if (positon[1][i] == positon[2][i + 1] && positon[1][i+1] == positon[2][i]) {
+            if (positon[1][i] == positon[2][i + 1] && positon[1][i + 1] == positon[2][i]) {
                 line[index][i] = '-';
-            } else if(positon[1][i] == positon[2][i] && positon[1][i+1] == positon[2][i+1]){
+            } else if (positon[1][i] == positon[2][i] && positon[1][i + 1] == positon[2][i + 1]) {
                 line[index][i] = '*';
-            }else{
+            } else {
                 Arrays.fill(line[index], 'x');
                 break;
             }

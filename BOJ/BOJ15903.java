@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-카드 합체 놀이
-
+ * 카드 합체 놀이
+ * 
  */
 
 import java.io.*;
@@ -38,7 +38,7 @@ public class BOJ15903 {
 
         long sum = 0;
         while (!pq.isEmpty()) {
-            sum+=pq.poll();
+            sum += pq.poll();
         }
 
         System.out.println(sum);

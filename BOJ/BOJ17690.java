@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    회문
-*/
+/*
+ * 회문
+ */
 
 public class BOJ17690 {
 
@@ -29,7 +29,8 @@ public class BOJ17690 {
         while (left <= right) {
             if (s.charAt(left) != s.charAt(right)) {
 
-                if (isPseudoPalindrome(s, left + 1, right) || isPseudoPalindrome(s, left, right - 1)) {
+                if (isPseudoPalindrome(s, left + 1, right)
+                        || isPseudoPalindrome(s, left, right - 1)) {
                     return "1\n";
                 }
                 return "2\n";

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,11 +7,11 @@ import java.math.BigInteger;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-/* 
-    우체국
-
-    BigInteger 사용 = > 틀림
-*/
+/*
+ * 우체국
+ * 
+ * BigInteger 사용 = > 틀림
+ */
 public class BOJ2141_copy2 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -38,7 +38,7 @@ public class BOJ2141_copy2 {
         arr[0][0] = 0;
         arr[0][1] = 0;
 
-        Arrays.sort(arr, (a1,a2)->{
+        Arrays.sort(arr, (a1, a2) -> {
             return (int) (a1[0] - a2[0]);
         });
 

@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    최소비용 구하기 2
-
-    메모리 초과
-*/
+/*
+ * 최소비용 구하기 2
+ * 
+ * 메모리 초과
+ */
 public class BOJ11779_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -30,7 +30,7 @@ public class BOJ11779_copy {
             int b = Integer.parseInt(st.nextToken());
             int c = Integer.parseInt(st.nextToken());
 
-            cost.get(a).add(new int[] { b, c });
+            cost.get(a).add(new int[] {b, c});
         }
 
         st = new StringTokenizer(br.readLine());
@@ -71,7 +71,7 @@ public class BOJ11779_copy {
             return a[1] - b[1];
         });
 
-        pq.add(new int[] { start, 0 });
+        pq.add(new int[] {start, 0});
 
         while (!pq.isEmpty()) {
 
@@ -93,7 +93,7 @@ public class BOJ11779_copy {
                 }
 
                 d[next[0]] = d[now[0]] + next[1];
-                pq.add(new int[] { next[0], d[next[0]] });
+                pq.add(new int[] {next[0], d[next[0]]});
                 root[next[0]] = now[0];
 
             }

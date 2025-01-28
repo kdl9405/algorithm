@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    두 용액
-*/
+ * 두 용액
+ */
 
 public class BOJ2470 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -41,13 +41,13 @@ public class BOJ2470 {
 
             if (sum > 0) {
                 r--;
-            }else if(sum < 0){
+            } else if (sum < 0) {
                 l++;
-            }else {
+            } else {
                 break;
             }
         }
 
-        System.out.println(result[0]+" "+ result[1]);
+        System.out.println(result[0] + " " + result[1]);
     }
 }

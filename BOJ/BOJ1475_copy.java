@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    방 번호
-
-*/
+/*
+ * 방 번호
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -41,7 +41,7 @@ public class BOJ1475_copy {
 
         int max = 0;
 
-        for (int i = 0  ; i < 9; i++) {
+        for (int i = 0; i < 9; i++) {
 
             if (!count.containsKey(i)) {
                 continue;

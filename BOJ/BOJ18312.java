@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/* 
-    시각 
-*/
+/*
+ * 시각
+ */
 
 public class BOJ18312 {
 

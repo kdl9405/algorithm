@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    숫자판 점프
-*/
+/*
+ * 숫자판 점프
+ */
 
 import java.io.*;
 import java.util.*;
@@ -40,22 +40,22 @@ public class BOJ2210_copy {
                         continue;
                     }
 
-                    queue.add(new State(nx, ny, now.number*10 + board[nx][ny]));
+                    queue.add(new State(nx, ny, now.number * 10 + board[nx][ny]));
                 }
             }
         }
 
         Set<Integer> answerSet = new HashSet<>();
         while (!queue.isEmpty()) {
-            
-            answerSet.add(queue.poll().number);            
+
+            answerSet.add(queue.poll().number);
         }
         System.out.println(answerSet.size());
-       
+
     }
 
     static int[][] board;
-    static int[][] move = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+    static int[][] move = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
     private static class State {
         int x;

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    카드 구매하기 2
-*/
+/*
+ * 카드 구매하기 2
+ */
 
 public class BOJ16194 {
 

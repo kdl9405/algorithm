@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
 public class BOJ1655 {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
 
@@ -15,12 +15,12 @@ public class BOJ1655 {
 
         int n = Integer.parseInt(br.readLine());
 
-        while (n-- >0) {
+        while (n-- > 0) {
             int num = Integer.parseInt(br.readLine());
 
             if (left.size() == right.size()) {
                 left.offer(num);
-            }else{
+            } else {
                 right.offer(num);
             }
 
@@ -29,12 +29,12 @@ public class BOJ1655 {
                     left.offer(right.poll());
                     right.offer(left.poll());
                 }
-            }           
+            }
 
-            sb.append(left.peek()+"\n");
+            sb.append(left.peek() + "\n");
 
         }
-       
+
         System.out.println(sb);
     }
 }

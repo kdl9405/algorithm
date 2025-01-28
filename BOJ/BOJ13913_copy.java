@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    숨바꼭질 4
-
-    시간초과
-*/
+/*
+ * 숨바꼭질 4
+ * 
+ * 시간초과
+ */
 public class BOJ13913_copy {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -24,30 +24,29 @@ public class BOJ13913_copy {
 
         int count = 0;
 
-        loop:
-        while (true) {            
+        loop: while (true) {
             int size = queue.size();
 
             while (size-- > 0) {
-                
+
                 root n = queue.poll();
 
                 StringBuilder sb = new StringBuilder();
-                sb.append(n.before+""+n.now+" ");
+                sb.append(n.before + "" + n.now + " ");
 
                 if (n.now == K) {
-                    System.out.println(count+"\n"+sb.toString());
+                    System.out.println(count + "\n" + sb.toString());
                     break loop;
                 }
 
-                int[] next = {n.now-1,n.now+1,n.now*2};
+                int[] next = {n.now - 1, n.now + 1, n.now * 2};
 
-                for(int x : next){
-                    if (x <= 100000 && !visit[x]) {                        
+                for (int x : next) {
+                    if (x <= 100000 && !visit[x]) {
                         visit[x] = true;
-                        queue.add(new root(x,sb));
+                        queue.add(new root(x, sb));
                     }
-                }                
+                }
             }
 
             count++;
@@ -55,13 +54,14 @@ public class BOJ13913_copy {
     }
 }
 
-class root{
+
+class root {
 
     int now;
     StringBuilder before;
 
-    public root(int now, StringBuilder before){
+    public root(int now, StringBuilder before) {
         this.now = now;
-        this.before = before; 
+        this.before = before;
     }
 }

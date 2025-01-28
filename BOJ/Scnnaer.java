@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 
@@ -8,33 +8,34 @@ public class Scnnaer {
 
         List<Person> list = new ArrayList<>();
 
-        list.add(new Person("A",1,1));
-        list.add(new Person("B",1,2));
-        list.add(new Person("C",2,2));
+        list.add(new Person("A", 1, 1));
+        list.add(new Person("B", 1, 2));
+        list.add(new Person("C", 2, 2));
 
         Collections.sort(list);
 
-        for(Person p : list){
-            System.out.println(p.name + " "+ p.w +" " + p.h);
+        for (Person p : list) {
+            System.out.println(p.name + " " + p.w + " " + p.h);
         }
 
-        
+
     }
 
-   
-    
+
+
 }
+
 
 /**
  * Person
  */
 class Person implements Comparable<Person> {
-    
+
     String name;
     int w;
     int h;
 
-    public Person(String name, int w, int h){
+    public Person(String name, int w, int h) {
         this.name = name;
         this.w = w;
         this.h = h;
@@ -50,6 +51,6 @@ class Person implements Comparable<Person> {
         return -1;
     }
 
-    
-    
+
+
 }

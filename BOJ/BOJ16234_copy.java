@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    인구 이동
-
-    2640 ms
-*/
+/*
+ * 인구 이동
+ * 
+ * 2640 ms
+ */
 
 public class BOJ16234_copy {
     public static void main(String[] args) throws IOException {
@@ -48,7 +48,8 @@ public class BOJ16234_copy {
                         set.add(i + " " + j);
 
                         while (!queue.isEmpty()) {
-                            int[] now = Arrays.stream(queue.poll().split(" ")).mapToInt(Integer::parseInt).toArray();
+                            int[] now = Arrays.stream(queue.poll().split(" "))
+                                    .mapToInt(Integer::parseInt).toArray();
                             for (int k = 0; k < 4; k++) {
                                 int nx = now[0] + dx[k];
                                 int ny = now[1] + dy[k];
@@ -69,7 +70,8 @@ public class BOJ16234_copy {
                         if (set.size() > 1) {
                             sum /= set.size();
                             for (String s : set) {
-                                int[] str = Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt).toArray();
+                                int[] str = Arrays.stream(s.split(" ")).mapToInt(Integer::parseInt)
+                                        .toArray();
                                 arr[str[0]][str[1]] = sum;
                             }
 
@@ -82,7 +84,7 @@ public class BOJ16234_copy {
             if (united.isEmpty()) {
                 break;
             }
-          
+
             count++;
 
         }
@@ -91,7 +93,7 @@ public class BOJ16234_copy {
 
     }
 
-    static int[] dx = { 1, -1, 0, 0 };
-    static int[] dy = { 0, 0, 1, -1 };
+    static int[] dx = {1, -1, 0, 0};
+    static int[] dy = {0, 0, 1, -1};
 
 }

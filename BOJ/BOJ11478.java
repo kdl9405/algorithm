@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 서로 다른 부분 문자열의 개수

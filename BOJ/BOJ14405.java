@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
-/* 
-    피카츄
-*/
+/*
+ * 피카츄
+ */
 
 import java.io.*;
 
 public class BOJ14405 {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         String S = br.readLine();
@@ -21,7 +21,7 @@ public class BOJ14405 {
 
         if (S.equals("")) {
             System.out.println("YES");
-        }else{
+        } else {
             System.out.println("NO");
         }
     }

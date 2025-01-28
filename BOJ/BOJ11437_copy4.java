@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    LCA
-*/
+/*
+ * LCA
+ */
 
 import java.io.*;
 import java.util.*;
@@ -38,11 +38,11 @@ public class BOJ11437_copy4 {
         defineParent(1);
 
         // for (int i = 1; i <= N; i++) {
-        //     System.out.print(i + "  :  ");
-        //     for (int j = 1; j <= N; j++) {
-        //         System.out.print(parent[i][j] + "  ");
-        //     }
-        //     System.out.println();
+        // System.out.print(i + " : ");
+        // for (int j = 1; j <= N; j++) {
+        // System.out.print(parent[i][j] + " ");
+        // }
+        // System.out.println();
         // }
 
         int M = Integer.parseInt(br.readLine());
@@ -50,12 +50,12 @@ public class BOJ11437_copy4 {
         StringBuilder sb = new StringBuilder();
         while (M-- > 0) {
 
-        st = new StringTokenizer(br.readLine());
+            st = new StringTokenizer(br.readLine());
 
-        int a = Integer.parseInt(st.nextToken());
-        int b = Integer.parseInt(st.nextToken());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
 
-        sb.append(findLCA(a, b)).append("\n");
+            sb.append(findLCA(a, b)).append("\n");
 
         }
 

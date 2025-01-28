@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.io.BufferedReader;
@@ -34,6 +34,6 @@ class BOJ1564 {
         double avg = 0;
         avg = 100.0 * total / max / n;
         System.out.printf("%.2f", avg);
-      
+
     }
 }

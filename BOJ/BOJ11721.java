@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 열 개씩 끊어 출력하기
@@ -18,10 +18,10 @@ public class BOJ11721 {
         for (int i = 0; i < s.length(); i++) {
             sb.append(s.charAt(i));
 
-            if ((i+1)%10 == 0) {
+            if ((i + 1) % 10 == 0) {
                 sb.append("\n");
             }
-        }   
+        }
         System.out.println(sb.toString().trim());
     }
 }

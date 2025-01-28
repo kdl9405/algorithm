@@ -1,20 +1,18 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/* 
-    새로운 게임
-
-
-    1. 말이 가장 아래에 있는지 체크하면서 이동..
-    2. 어떻게 겹쳐진 말을 체크할건가..(맨 아래, 맨 위도 체크해야함)
-    3. 4개 쌓이면 끝!!!
-
-
-*/
+/*
+ * 새로운 게임
+ * 
+ * 
+ * 1. 말이 가장 아래에 있는지 체크하면서 이동.. 2. 어떻게 겹쳐진 말을 체크할건가..(맨 아래, 맨 위도 체크해야함) 3. 4개 쌓이면 끝!!!
+ * 
+ * 
+ */
 
 public class BOJ17780 {
 
@@ -50,7 +48,7 @@ public class BOJ17780 {
         }
 
         finish = false;
-        int count = 0;         
+        int count = 0;
         while (!finish && count <= 1000) {
 
             for (int i = 1; i <= k; i++) {
@@ -59,7 +57,7 @@ public class BOJ17780 {
                 }
                 blue = false;
                 move(i, p[i][0] + dx[p[i][2]], p[i][1] + dy[p[i][2]]);
-               
+
             }
             count++;
 
@@ -72,13 +70,14 @@ public class BOJ17780 {
 
     }
 
-    static void testPrint(){
+    static void testPrint() {
         StringBuilder sb = new StringBuilder();
         sb.append("-----------\n");
-        for(int i = 1; i<=n; i++){
-            for(int j = 1; j<=n; j++){
-                sb.append(map[i][j][3]+" ");
-            }sb.append("\n");
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                sb.append(map[i][j][3] + " ");
+            }
+            sb.append("\n");
         }
 
         System.out.println(sb.toString());
@@ -90,8 +89,8 @@ public class BOJ17780 {
     static boolean[] not_Move;
     static boolean blue;
     static boolean finish;
-    static int[] dx = { 0, 0, 0, -1, 1 };
-    static int[] dy = { 0, 1, -1, 0, 0 };
+    static int[] dx = {0, 0, 0, -1, 1};
+    static int[] dy = {0, 1, -1, 0, 0};
 
     static void move(int k, int nx, int ny) {
 
@@ -140,7 +139,7 @@ public class BOJ17780 {
                 p[up][0] = nx;
                 p[up][1] = ny;
             }
-            
+
 
             return;
         }
@@ -155,7 +154,7 @@ public class BOJ17780 {
 
                 not_Move[k] = true;
                 not_Move[up] = false;
-                
+
                 map[p[k][0]][p[k][1]][1] = 0;
                 map[p[k][0]][p[k][1]][2] = 0;
                 map[p[k][0]][p[k][1]][3] = 0;

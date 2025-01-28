@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -31,35 +31,35 @@ public class BOJ11054 {
         LDS();
 
         int max = 0;
-        for(int i = 0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             if (max < up[i] + down[i]) {
                 max = up[i] + down[i];
             }
         }
 
-        System.out.println(max-1);
+        System.out.println(max - 1);
 
     }
 
     static void LIS() {
-        for(int i = 0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             up[i] = 1;
 
-            for(int j = 0; j<i; j++){
-                if (arr[i] > arr[j] && up[i] < up[j]+1) {
-                    up[i] = up[j]+1;
+            for (int j = 0; j < i; j++) {
+                if (arr[i] > arr[j] && up[i] < up[j] + 1) {
+                    up[i] = up[j] + 1;
                 }
             }
         }
     }
 
-    static void LDS(){
-        for(int i = n-1; i>=0; i--){
+    static void LDS() {
+        for (int i = n - 1; i >= 0; i--) {
             down[i] = 1;
 
-            for(int j = n-1;j > i; j--){
-                if (arr[i] > arr[j] && down[i] < down[j]+1 ) {
-                    down[i] = down[j]+1;
+            for (int j = n - 1; j > i; j--) {
+                if (arr[i] > arr[j] && down[i] < down[j] + 1) {
+                    down[i] = down[j] + 1;
                 }
             }
         }

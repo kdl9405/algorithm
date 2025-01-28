@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    자리배정
-*/
+/*
+ * 자리배정
+ */
 
 import java.io.*;
 import java.util.*;
@@ -50,5 +50,5 @@ public class BOJ10157 {
         System.out.println(x + " " + y);
     }
 
-    static int[][] move = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 } };
+    static int[][] move = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 }

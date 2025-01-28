@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    뒤집기
-*/
+/*
+ * 뒤집기
+ */
 
 import java.io.*;
 

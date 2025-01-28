@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    함께 블록 쌓기 
-*/
+/*
+ * 함께 블록 쌓기
+ */
 
 public class BOJ18427 {
 
@@ -33,7 +33,7 @@ public class BOJ18427 {
         int[][] dp = new int[n + 1][h + 1]; // i번학생까지 블록을 쌓았을 때, 높이가 j일 경우의 수
 
         dp[0][0] = 1;
-      
+
         for (int i = 1; i <= n; i++) {
             for (Integer b : blocks.get(i - 1)) {
                 for (int j = b; j <= h; j++) {

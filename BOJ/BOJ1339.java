@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    단어 수학
-
-*/
+/*
+ * 단어 수학
+ * 
+ */
 import java.io.*;
 import java.util.*;
 

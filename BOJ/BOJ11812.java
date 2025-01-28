@@ -1,17 +1,17 @@
-package BOJ;
+package boj;
 
 
-/* 
-    K진 트리 
-*/
+/*
+ * K진 트리
+ */
 
 import java.io.*;
 import java.util.*;
 
 public class BOJ11812 {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -26,16 +26,16 @@ public class BOJ11812 {
             long y = Long.parseLong(st.nextToken());
 
             if (K == 1) {
-                sb.append(Math.abs(x-y)).append("\n");
-            }else{
+                sb.append(Math.abs(x - y)).append("\n");
+            } else {
 
                 int d = 0;
 
                 while (x != y) {
                     if (x > y) {
-                        x = (x+K-2)/K;
-                    }else{
-                        y = (y+K-2)/K;
+                        x = (x + K - 2) / K;
+                    } else {
+                        y = (y + K - 2) / K;
                     }
 
                     d++;
@@ -47,6 +47,6 @@ public class BOJ11812 {
 
         System.out.println(sb.toString().trim());
 
-        
+
     }
 }

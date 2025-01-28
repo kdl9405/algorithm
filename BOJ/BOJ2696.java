@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
-/* 
-    중앙값 구하기
-*/
+/*
+ * 중앙값 구하기
+ */
 public class BOJ2696 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -21,21 +21,21 @@ public class BOJ2696 {
         while (t-- > 0) {
             int m = Integer.parseInt(br.readLine());
 
-            int c = (m/10)+1;
+            int c = (m / 10) + 1;
 
             int index = 0;
 
-            sb.append((m/2)+(m%2)).append("\n");
+            sb.append((m / 2) + (m % 2)).append("\n");
             int sbCount = 0;
 
             ArrayList<Integer> list = new ArrayList<>();
             while (c > 0) {
-                
+
                 String[] str = br.readLine().split(" ");
 
-                for(int i = 0; i<str.length; i++){
+                for (int i = 0; i < str.length; i++) {
                     list.add(Integer.parseInt(str[i]));
-                    if (i%2 == 0) {                        
+                    if (i % 2 == 0) {
                         Collections.sort(list);
                         sb.append(list.get(index)).append(" ");
                         sbCount++;
@@ -45,14 +45,14 @@ public class BOJ2696 {
                         index++;
                     }
                 }
-                c--;               
+                c--;
             }
             if (sbCount % 10 != 0) {
                 sb.append("\n");
             }
         }
 
-       System.out.println(sb.toString());
+        System.out.println(sb.toString());
     }
 
 }

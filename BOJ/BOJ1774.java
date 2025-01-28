@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    우주신과의 교감
-
-
-*/
+/*
+ * 우주신과의 교감
+ * 
+ * 
+ */
 
 public class BOJ1774 {
 
@@ -34,24 +34,25 @@ public class BOJ1774 {
             st = new StringTokenizer(br.readLine());
             int a = findGroup(Integer.parseInt(st.nextToken()));
             int b = findGroup(Integer.parseInt(st.nextToken()));
-                    
+
             if (a != b) {
                 group[b] = a;
                 count++;
             }
         }
 
-   
-        PriorityQueue<link> pq = new PriorityQueue<>((a,b)->{
+
+        PriorityQueue<link> pq = new PriorityQueue<>((a, b) -> {
             return Double.compare(a.d, b.d);
         });
 
         double total = 0;
 
-        for(int i = 1; i<n; i++){
-            for(int j = i+1; j<=n; j++){
-                double d = Math.sqrt(Math.pow(point[i][0] - point[j][0], 2) + Math.pow(point[i][1] - point[j][1], 2));
-                pq.add(new link(i,j,d));
+        for (int i = 1; i < n; i++) {
+            for (int j = i + 1; j <= n; j++) {
+                double d = Math.sqrt(Math.pow(point[i][0] - point[j][0], 2)
+                        + Math.pow(point[i][1] - point[j][1], 2));
+                pq.add(new link(i, j, d));
             }
         }
 
@@ -69,7 +70,7 @@ public class BOJ1774 {
             count++;
         }
 
-        System.out.printf("%.2f",total);
+        System.out.printf("%.2f", total);
 
     }
 
@@ -88,6 +89,7 @@ public class BOJ1774 {
     }
 
 }
+
 
 class link {
     int x;

@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    수리공 항승
-
-*/
+/*
+ * 수리공 항승
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -69,7 +69,7 @@ public class BOJ1449 {
             }
 
             int fin = Math.min(start + (L * tape), 2002);
-            for (int i = start; i < fin ; i++) {
+            for (int i = start; i < fin; i++) {
                 isCovered[i] = true;
             }
 

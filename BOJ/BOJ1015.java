@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    수열 정렬
-*/
+/*
+ * 수열 정렬
+ */
 
 import java.io.*;
 import java.util.*;
@@ -41,7 +41,7 @@ public class BOJ1015 {
 
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             sb.append(B[i][1]).append(" ");
         }
 

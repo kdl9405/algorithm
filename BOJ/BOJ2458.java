@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    키 순서
-
-*/
+/*
+ * 키 순서
+ * 
+ */
 
 import java.io.*;
 import java.util.*;

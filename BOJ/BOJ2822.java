@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    점수 계산
-*/
+/*
+ * 점수 계산
+ */
 public class BOJ2822 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -36,7 +36,7 @@ public class BOJ2822 {
         for (int i = 0; i < 5; i++) {
             sum += scores[i][1];
             question.append(scores[i][0]).append(" ");
-        }   
+        }
 
         System.out.println(sum);
         System.out.println(question.toString().trim());

@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    가르침 
-
-    
-*/
+/*
+ * 가르침
+ * 
+ * 
+ */
 public class BOJ1062_copy {
 
     public static void main(String[] args) throws IOException {
@@ -52,14 +52,14 @@ public class BOJ1062_copy {
     static String[] words;
 
     static void teachAlphabet(int index, int depth, int bit) {
-       
+
         if (depth == k) {
             int count = 0;
             for (String word : words) {
                 boolean possible = true;
-       
+
                 for (int i = 4; i < word.length() - 4; i++) {
-       
+
                     if ((bit & (1 << (word.charAt(i) - 'a'))) == 0) {
                         possible = false;
                         break;
@@ -75,7 +75,7 @@ public class BOJ1062_copy {
         }
 
         for (int i = index; i < 26; i++) {
-            if ( (bit & (1 << i)) != 0) {
+            if ((bit & (1 << i)) != 0) {
                 continue;
             }
             teachAlphabet(i + 1, depth + 1, bit | (1 << i));

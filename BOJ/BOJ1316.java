@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
@@ -29,8 +29,7 @@ public class BOJ1316 {
                     char c = A[j].charAt(0);
                     alphabet[(int) c - 97] += 1;
 
-                }
-                else if (j > 0) {
+                } else if (j > 0) {
                     if (!A[j - 1].equals(A[j])) {
                         char c = A[j].charAt(0);
 

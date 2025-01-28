@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
-/* 
-    다리 놓기
-*/
+/*
+ * 다리 놓기
+ */
 public class BOJ1010 {
-    
+
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         StringTokenizer st;
@@ -31,7 +31,7 @@ public class BOJ1010 {
     static int[][] dp;
     static int count;
 
-    static int findDP(int n, int m){
+    static int findDP(int n, int m) {
 
         if (n == 0) {
             return 1;
@@ -40,16 +40,16 @@ public class BOJ1010 {
         if (n == m) {
             return 1;
         }
-        
-        if(dp[n][m] != 0){
+
+        if (dp[n][m] != 0) {
             return dp[n][m];
         }
 
-        
-        for(int i = m-1; i>=n-1; i--){
-            dp[n][m] += findDP(n-1, i);
+
+        for (int i = m - 1; i >= n - 1; i--) {
+            dp[n][m] += findDP(n - 1, i);
         }
-        
+
         return dp[n][m];
     }
 }

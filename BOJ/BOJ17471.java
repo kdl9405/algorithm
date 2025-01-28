@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -37,7 +37,7 @@ public class BOJ17471 {
             population[i] = Integer.parseInt(st.nextToken());
             total += population[i];
         }
-     
+
         link = new ArrayList<>();
         link.add(new ArrayList<>());
 
@@ -72,14 +72,14 @@ public class BOJ17471 {
         if (depth == r) {
             // 가능성 체크 -> 가능하면 인구차이 갱신
 
-            if(possibleLink(r)){
+            if (possibleLink(r)) {
                 possible = true;
                 int count = 0;
-                for(Integer p : partition){
+                for (Integer p : partition) {
                     count += population[p];
                 }
-                
-                min = Math.min(min, Math.abs((total-count)-count));                
+
+                min = Math.min(min, Math.abs((total - count) - count));
             }
             return;
         }
@@ -97,7 +97,7 @@ public class BOJ17471 {
 
     static boolean possibleLink(int r) {
 
-        boolean[] linked = new boolean[N+1];
+        boolean[] linked = new boolean[N + 1];
 
         boolean A = false;
         boolean B = false;
@@ -146,7 +146,7 @@ public class BOJ17471 {
                         }
                     }
                 }
-                if (count != N-r) {
+                if (count != N - r) {
                     return false;
                 }
 

@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    기차가 어둠을 헤치고 은하수를
-
-    비트 연산
-*/
+/*
+ * 기차가 어둠을 헤치고 은하수를
+ * 
+ * 비트 연산
+ */
 
 public class BOJ15787 {
     public static void main(String[] args) throws IOException {
@@ -28,25 +28,25 @@ public class BOJ15787 {
             int x = 0;
 
             switch (oper) {
-            case 1:
-                x = Integer.parseInt(st.nextToken());
-                train[i] = (train[i] | 1 << (20 - x));
-                break;
-            case 2:
-                x = Integer.parseInt(st.nextToken());
-                train[i] = (train[i] & ~(1 << (20 - x)));
+                case 1:
+                    x = Integer.parseInt(st.nextToken());
+                    train[i] = (train[i] | 1 << (20 - x));
+                    break;
+                case 2:
+                    x = Integer.parseInt(st.nextToken());
+                    train[i] = (train[i] & ~(1 << (20 - x)));
 
-                break;
+                    break;
 
-            case 3:
-                train[i] = (train[i]) >> 1;
+                case 3:
+                    train[i] = (train[i]) >> 1;
 
-                break;
-            case 4:
-                train[i] = (train[i]) << 1;
-                train[i] = (train[i] & ~(1 << 20));
+                    break;
+                case 4:
+                    train[i] = (train[i]) << 1;
+                    train[i] = (train[i] & ~(1 << 20));
 
-                break;
+                    break;
             }
         }
 

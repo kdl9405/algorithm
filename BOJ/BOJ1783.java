@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
-병든 나이트
+ * 병든 나이트
  */
 
 import java.io.*;

@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    돌 그룹
-    828ms
-*/
+/*
+ * 돌 그룹 828ms
+ */
 public class BOJ12886_copy2 {
     public static void main(String[] args) throws IOException {
 
@@ -24,8 +23,7 @@ public class BOJ12886_copy2 {
 
         int answer = 0;
 
-        loop:
-        for (int x = 0; x < 10; x++) {
+        loop: for (int x = 0; x < 10; x++) {
             int size = queue.size();
             while (size-- > 0) {
                 int[] stone = queue.poll();
@@ -43,13 +41,13 @@ public class BOJ12886_copy2 {
                 }
 
                 if (stone[0] != stone[1]) {
-                    queue.add(new int[] { stone[0] * 2, stone[1] - stone[0], stone[2] });
+                    queue.add(new int[] {stone[0] * 2, stone[1] - stone[0], stone[2]});
                 }
                 if (stone[0] != stone[2]) {
-                    queue.add(new int[] { stone[0] * 2, stone[1], stone[2] - stone[0] });
+                    queue.add(new int[] {stone[0] * 2, stone[1], stone[2] - stone[0]});
                 }
                 if (stone[1] != stone[2]) {
-                    queue.add(new int[] { stone[0], stone[1] * 2, stone[2] - stone[1] });
+                    queue.add(new int[] {stone[0], stone[1] * 2, stone[2] - stone[1]});
                 }
             }
         }

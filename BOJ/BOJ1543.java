@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
-/* 
-    문서 검색
+/*
+ * 문서 검색
  */
 
 import java.io.*;

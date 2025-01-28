@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,7 +25,7 @@ public class BOJ20437 {
             for (; l < str.length; l++) {
                 alphabet[str[l] - 'a']++;
 
-                
+
             }
 
         }

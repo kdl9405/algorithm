@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    나의 인생에는 수학과 함께
-
-    // 완전탐색
-*/
+/*
+ * 나의 인생에는 수학과 함께
+ * 
+ * // 완전탐색
+ */
 public class BOJ17265 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -36,8 +36,8 @@ public class BOJ17265 {
     static String[][] map;
     static int[][][] dp;
 
-    static int[] dx = { 1, 0 };
-    static int[] dy = { 0, 1 };
+    static int[] dx = {1, 0};
+    static int[] dy = {0, 1};
 
     static int min, max;
 

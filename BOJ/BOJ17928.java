@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    오큰수
-*/
+/*
+ * 오큰수
+ */
 
 import java.io.*;
 import java.util.*;
@@ -19,7 +19,7 @@ public class BOJ17928 {
 
         // StringTokenizer st = new StringTokenizer(br.readLine());
         // for(int i = 0; i<N; i++){
-        //     num[i] = Integer.parseInt(st.nextToken());
+        // num[i] = Integer.parseInt(st.nextToken());
         // }
 
         Stack<Integer> stack = new Stack<>();

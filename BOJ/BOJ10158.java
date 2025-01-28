@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 개미
@@ -23,18 +23,18 @@ public class BOJ10158 {
 
         int t = Integer.parseInt(br.readLine());
 
-        int x = (t + p) % (2*w);
-        int y = (t + q) % (2*h);
+        int x = (t + p) % (2 * w);
+        int y = (t + q) % (2 * h);
 
         if (x > w) {
-            x = 2*w-x;
+            x = 2 * w - x;
         }
 
         if (y > h) {
-            y = 2*h-y;
+            y = 2 * h - y;
         }
 
-        System.out.println(x+" " +y);
+        System.out.println(x + " " + y);
     }
 
 }

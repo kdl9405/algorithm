@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
@@ -9,20 +9,20 @@ import java.io.*;
  */
 public class BOJ2439 {
 
-    public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException {
 
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
-		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 		int T = Integer.parseInt(br.readLine());
- 
+
 		StringBuilder sb = new StringBuilder();
 		for (int i = 1; i <= T; i++) {
 
-			for(int j = 1; j <= T-i; j++){
+			for (int j = 1; j <= T - i; j++) {
 				sb.append(" ");
 			}
 
-			for(int n = 1; n<=i; n++){
+			for (int n = 1; n <= i; n++) {
 				sb.append("*");
 			}
 
@@ -31,4 +31,3 @@ public class BOJ2439 {
 		System.out.println(sb);
 	}
 }
- 

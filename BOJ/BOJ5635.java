@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
- * 생일 
+ * 생일
  */
 
 import java.io.*;

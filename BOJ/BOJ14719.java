@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    빗물
-*/
+/*
+ * 빗물
+ */
 public class BOJ14719 { // left을 찾고 right을 찾아 가운데 값을 계산
 
     public static void main(String[] args) throws IOException {
@@ -28,13 +28,13 @@ public class BOJ14719 { // left을 찾고 right을 찾아 가운데 값을 계�
 
             int left = 0;
             int right = 0;
-            for(int j = 0; j<i; j++){
+            for (int j = 0; j < i; j++) {
                 if (arr[j] > left) {
                     left = arr[j];
                 }
             }
 
-            for(int j = i+1; j<w; j++){
+            for (int j = i + 1; j < w; j++) {
                 if (arr[j] > right) {
                     right = arr[j];
                 }
@@ -42,7 +42,7 @@ public class BOJ14719 { // left을 찾고 right을 찾아 가운데 값을 계�
 
             int x = Math.min(left, right);
             if (arr[i] < x) {
-                total += (x-arr[i]);
+                total += (x - arr[i]);
             }
         }
 

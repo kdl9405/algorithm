@@ -1,14 +1,13 @@
-package BOJ;
+package boj;
 
 
-/* 
-    숫자 카드
-
-
-    java 11 - 896ms
-    java 8  - 864ms
-
-*/
+/*
+ * 숫자 카드
+ * 
+ * 
+ * java 11 - 896ms java 8 - 864ms
+ * 
+ */
 
 
 import java.io.*;
@@ -34,8 +33,8 @@ public class BOJ10815_copy {
         st = new StringTokenizer(br.readLine());
         while (M-- > 0) {
             if (card.contains(Integer.parseInt(st.nextToken()))) {
-                sb.append("1 "); 
-            }  else{
+                sb.append("1 ");
+            } else {
                 sb.append("0 ");
             }
         }

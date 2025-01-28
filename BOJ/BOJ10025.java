@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,8 +6,8 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 /*
-    게으른 백곰
-*/
+ * 게으른 백곰
+ */
 
 public class BOJ10025 {
 
@@ -34,7 +34,7 @@ public class BOJ10025 {
 
         if (K * 2 >= 1000000) {
 
-            for(long i : ice){
+            for (long i : ice) {
                 max += i;
             }
             System.out.println(max);
@@ -50,8 +50,8 @@ public class BOJ10025 {
             max = sum;
 
             for (; to <= 1000000; to++) {
-                sum-=ice[from];
-                sum+=ice[to];
+                sum -= ice[from];
+                sum += ice[to];
                 max = Math.max(max, sum);
                 from++;
             }

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.Deque;
 import java.util.LinkedList;
 
-/* 
-    큐
-*/
+/*
+ * 큐
+ */
 
 public class BOJ10845 {
 
@@ -56,11 +56,11 @@ public class BOJ10845 {
                         }
                         break;
                     case "back":
-                    if (deque.isEmpty()) {
-                        sb.append("-1" + "\n");
-                    } else {
-                        sb.append(deque.peekLast() + "\n");
-                    }
+                        if (deque.isEmpty()) {
+                            sb.append("-1" + "\n");
+                        } else {
+                            sb.append(deque.peekLast() + "\n");
+                        }
                         break;
                 }
             }

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -22,8 +22,10 @@ public class BOJ1726 {
 
         Queue<int[]> queue = new LinkedList<>();
 
-        int[] start = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).map(i -> i - 1).toArray();
-        int[] end = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).map(i -> i - 1).toArray();
+        int[] start = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt)
+                .map(i -> i - 1).toArray();
+        int[] end = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt)
+                .map(i -> i - 1).toArray();
 
         queue.add(start);
 
@@ -42,27 +44,27 @@ public class BOJ1726 {
                     break loop;
                 }
 
-                for(int i = 1; i<=3; i++){
-                    int nx = now[0]+d[now[2]][0]*i;
-                    int ny = now[1]+d[now[2]][1]*i;
+                for (int i = 1; i <= 3; i++) {
+                    int nx = now[0] + d[now[2]][0] * i;
+                    int ny = now[1] + d[now[2]][1] * i;
 
-                    if (nx <0 || nx>=m || ny<0 || ny>=n || visit[nx][ny][now[2]]) {
+                    if (nx < 0 || nx >= m || ny < 0 || ny >= n || visit[nx][ny][now[2]]) {
                         continue;
                     }
 
                     visit[nx][ny][now[2]] = true;
-                    queue.add(new int[]{nx,ny,now[2]});
+                    queue.add(new int[] {nx, ny, now[2]});
                 }
 
-                int nd = (now[2]+1)%4;
+                int nd = (now[2] + 1) % 4;
                 if (!visit[now[0]][now[1]][nd]) {
                     visit[now[0]][now[1]][nd] = true;
-                    queue.add(new int[]{now[0],now[1],nd});
+                    queue.add(new int[] {now[0], now[1], nd});
                 }
-                nd = (now[2]+3)%4;
+                nd = (now[2] + 3) % 4;
                 if (!visit[now[0]][now[1]][nd]) {
                     visit[now[0]][now[1]][nd] = true;
-                    queue.add(new int[]{now[0],now[1],nd});
+                    queue.add(new int[] {now[0], now[1], nd});
                 }
 
             }
@@ -78,5 +80,5 @@ public class BOJ1726 {
     static int[][] map;
     static boolean[][][] visit;
 
-    static int[][] d = { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
+    static int[][] d = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 }

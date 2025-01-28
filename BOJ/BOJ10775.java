@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    공항 
-*/
+/*
+ * 공항
+ */
 public class BOJ10775 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -33,7 +33,7 @@ public class BOJ10775 {
                 break;
             }
         }
-     
+
         System.out.println(count);
     }
 

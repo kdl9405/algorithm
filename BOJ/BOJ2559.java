@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    수열
-*/
+/*
+ * 수열
+ */
 
 import java.io.*;
 import java.util.*;

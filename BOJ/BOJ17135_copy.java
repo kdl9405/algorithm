@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    캐슬 디펜스
-
-    완탐 => 848ms...
-*/
+/*
+ * 캐슬 디펜스
+ * 
+ * 완탐 => 848ms...
+ */
 public class BOJ17135_copy {
 
     static int N, M, D;

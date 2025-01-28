@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -8,9 +8,7 @@ import java.util.*;
  * 
  * 1) root로 그룹을 묶어서 표현 2) root을 찾은 후 전투 및 병력 계산.
  * 
- *      정렬 시 Arrays.sort 활용
- *      java 8 : 384ms
- *      java 11 : 560ms
+ * 정렬 시 Arrays.sort 활용 java 8 : 384ms java 11 : 560ms
  */
 public class BOJ15809_copy {
 
@@ -51,7 +49,7 @@ public class BOJ15809_copy {
                 if (militaly[P] == militaly[Q]) {
                     root[P] = 0;
                     root[Q] = 0;
-                    nation-=2;
+                    nation -= 2;
                 } else if (militaly[P] > militaly[Q]) {
                     militaly[P] -= militaly[Q];
                     root[Q] = P;
@@ -68,16 +66,16 @@ public class BOJ15809_copy {
 
         int index = 0;
         for (int i = 1; i <= N; i++) {
-            if (root[i] == i) {                
-                mArr[index++] = militaly[i]; 
+            if (root[i] == i) {
+                mArr[index++] = militaly[i];
             }
         }
         StringBuilder sb = new StringBuilder();
-        sb.append(nation+"\n");
+        sb.append(nation + "\n");
 
         Arrays.sort(mArr);
-        for(int m : mArr){
-            sb.append(m +" ");
+        for (int m : mArr) {
+            sb.append(m + " ");
         }
         System.out.println(sb.toString());
     }

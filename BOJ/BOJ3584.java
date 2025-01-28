@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    가장 가까운 공통 조상
-*/
+/*
+ * 가장 가까운 공통 조상
+ */
 
 import java.io.*;
 import java.util.*;

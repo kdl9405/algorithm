@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    백대열
-*/
+/*
+ * 백대열
+ */
 
 import java.io.*;
 import java.util.*;
@@ -20,7 +20,7 @@ public class BOJ14490 {
         int gcd = (n < m) ? getGCD(n, m) : getGCD(m, n);
 
         StringBuilder sb = new StringBuilder();
-        sb.append(n/gcd).append(":").append(m/gcd);
+        sb.append(n / gcd).append(":").append(m / gcd);
         System.out.println(sb.toString());
 
     }

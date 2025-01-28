@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    수확 
-
-    시간초과
-*/
+/*
+ * 수확
+ * 
+ * 시간초과
+ */
 
 public class BOJ1823_copy {
 
@@ -30,28 +30,28 @@ public class BOJ1823_copy {
         System.out.println(max);
     }
 
-    static int[] arr;   
+    static int[] arr;
     static int[] cost; // 수확 시기때마다 수확한 벼의 가치
     static int max;
 
-    static void dfs(int index, int left, int right){
+    static void dfs(int index, int left, int right) {
         if (left == right) { // 벼가 1개 남은 경우
             int t = 0;
-            for(int i = 1; i<cost.length-1; i++){
-                t +=(i*cost[i]);
+            for (int i = 1; i < cost.length - 1; i++) {
+                t += (i * cost[i]);
             }
-            t += (index*arr[left]);
+            t += (index * arr[left]);
             max = Math.max(max, t);
-            return; 
-        }       
+            return;
+        }
 
         // 왼쪽 끝의 벼를 수확하는 경우
         cost[index] = arr[left];
-        dfs(index+1, left+1, right);
+        dfs(index + 1, left + 1, right);
 
         // 오른쪽 끝의 벼를 수확하는 경우
         cost[index] = arr[right];
-        dfs(index+1, left, right-1);
+        dfs(index + 1, left, right - 1);
     }
 
 }

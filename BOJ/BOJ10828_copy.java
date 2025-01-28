@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,29 +29,29 @@ public class BOJ10828_copy {
                 if (list.isEmpty()) {
                     System.out.println(-1);
                 } else {
-                    System.out.println(list.get(index-1));
-                    list.remove(index-1);
+                    System.out.println(list.get(index - 1));
+                    list.remove(index - 1);
                     index--;
                 }
             } else if (s.contains("top")) {
                 if (list.isEmpty()) {
                     System.out.println(-1);
                 } else {
-                    System.out.println(list.get(index-1));
+                    System.out.println(list.get(index - 1));
                 }
-            } else if(s.contains("size")){
+            } else if (s.contains("size")) {
                 System.out.println(list.size());
-            }else if(s.contains("empty")){
+            } else if (s.contains("empty")) {
                 if (list.isEmpty()) {
                     System.out.println(-1);
-                }else{
+                } else {
                     System.out.println(0);
                 }
             }
 
             i++;
         }
-      
+
 
     }
 }

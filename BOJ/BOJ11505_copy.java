@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
-/* 
-    구간 곱 구하기
-*/
+/*
+ * 구간 곱 구하기
+ */
 
 import java.io.*;
 import java.util.*;
 
 public class BOJ11505_copy {
 
-    static int MOD = 1000000007;
+	static int MOD = 1000000007;
 	static long[] arr, tree;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
@@ -26,18 +26,18 @@ public class BOJ11505_copy {
 			arr[i] = Long.parseLong(br.readLine());
 		}
 
-//		int k = (int) Math.ceil(Math.log(N) / Math.log(2)) + 1;
-//		int size = (int) Math.pow(2, k);
-//		
-//		tree = new long[size];
+		// int k = (int) Math.ceil(Math.log(N) / Math.log(2)) + 1;
+		// int size = (int) Math.pow(2, k);
+		//
+		// tree = new long[size];
 
 		tree = new long[N * 4];
 
-        init(1, N, 1);
+		init(1, N, 1);
 
-        for(int i = 0; i<N*4; i++){
-            System.out.println(i+" " + tree[i]);
-        }
+		for (int i = 0; i < N * 4; i++) {
+			System.out.println(i + " " + tree[i]);
+		}
 
 		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < M + K; i++) {
@@ -88,7 +88,8 @@ public class BOJ11505_copy {
 
 		// 그렇지 않다면, 두 부분으로 나누어 합을 구하기
 		int mid = (start + end) / 2;
-		return (mul(start, mid, node * 2, left, right) * mul(mid + 1, end, node * 2 + 1, left, right)) % MOD;
+		return (mul(start, mid, node * 2, left, right)
+				* mul(mid + 1, end, node * 2 + 1, left, right)) % MOD;
 	}
 
 	// start: 시작 인덱스, end: 끝 인덱스
@@ -110,8 +111,8 @@ public class BOJ11505_copy {
 		}
 
 		int mid = (start + end) / 2;
-		return tree[node] = (update(start, mid, node * 2, idx, val) * update(mid + 1, end, node * 2 + 1, idx, val))
-				% MOD;
+		return tree[node] = (update(start, mid, node * 2, idx, val)
+				* update(mid + 1, end, node * 2 + 1, idx, val)) % MOD;
 	}
 
 }

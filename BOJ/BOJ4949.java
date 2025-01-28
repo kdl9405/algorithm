@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -58,9 +60,9 @@ public class BOJ4949 {
                     break;
                 }
             }
-            if (list.size()==0 && check) {
+            if (list.size() == 0 && check) {
                 sb.append("yes" + "\n");
-            }else{
+            } else {
                 sb.append("no" + "\n");
             }
         }

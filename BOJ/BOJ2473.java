@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-   세 용액
-*/
+/*
+ * 세 용액
+ */
 
 public class BOJ2473 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -29,13 +29,13 @@ public class BOJ2473 {
         long min = Long.MAX_VALUE;
         long sum = 0;
 
-       
+
         for (int i = 0; i < n - 2; i++) {
 
             long pick = arr[i];
-            int left = i+1;
+            int left = i + 1;
             int right = n - 1;
-    
+
 
             while (left < right) {
 
@@ -58,5 +58,5 @@ public class BOJ2473 {
 
         System.out.println(result[0] + " " + result[1] + " " + result[2]);
     }
-    
+
 }

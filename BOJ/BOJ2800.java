@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 
-/* 
-    괄호 제거
-*/
+/*
+ * 괄호 제거
+ */
 
 public class BOJ2800 {
 
@@ -76,6 +76,7 @@ public class BOJ2800 {
     }
 
 }
+
 
 class bracket {
     int left;

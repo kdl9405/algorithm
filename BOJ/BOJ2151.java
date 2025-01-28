@@ -1,27 +1,25 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    거울 설치
-
-    1) 맵 인식 -> 시작지점 저장
-    2) 시작지점부터 출발
-    3) *이면 중단 .이면 지속  ! 좌표와 방향값 큐 저장. 
-
-    => 큐에는 좌표와 기존 방향이 담기고 -> 방향의 90도인 2개 방향으로 지속.
-*/
+/*
+ * 거울 설치
+ * 
+ * 1) 맵 인식 -> 시작지점 저장 2) 시작지점부터 출발 3) *이면 중단 .이면 지속 ! 좌표와 방향값 큐 저장.
+ * 
+ * => 큐에는 좌표와 기존 방향이 담기고 -> 방향의 90도인 2개 방향으로 지속.
+ */
 public class BOJ2151 {
 
-    static int[][] direction = { { -1, 0 }, { 0, 1 }, { 1, 0 }, { 0, -1 } }; // 0,2 1,3
+    static int[][] direction = {{-1, 0}, {0, 1}, {1, 0}, {0, -1}}; // 0,2 1,3
 
     public static void main(String[] args) throws NumberFormatException, IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int N = Integer.parseInt(br.readLine());
 
-        int[] start = new int[] { -1, -1 };
+        int[] start = new int[] {-1, -1};
 
         char[][] map = new char[N][N];
         for (int i = 0; i < N; i++) {
@@ -42,8 +40,8 @@ public class BOJ2151 {
         visit[start[0]][start[1]][1] = true;
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { start[0], start[1], 0 });
-        queue.add(new int[] { start[0], start[1], 1 });
+        queue.add(new int[] {start[0], start[1], 0});
+        queue.add(new int[] {start[0], start[1], 1});
 
         int answer = 0;
 
@@ -77,7 +75,7 @@ public class BOJ2151 {
                             visit[nx][ny][1] = true;
 
                             if (map[nx][ny] == '!') {
-                                queue.add(new int[] { nx, ny, 1 });
+                                queue.add(new int[] {nx, ny, 1});
                             }
 
                             nx += direction[i][0];
@@ -106,7 +104,7 @@ public class BOJ2151 {
                             visit[nx][ny][0] = true;
 
                             if (map[nx][ny] == '!') {
-                                queue.add(new int[] { nx, ny, 0 });
+                                queue.add(new int[] {nx, ny, 0});
                             }
 
                             nx += direction[i][0];

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    플로이드 2
-*/
+/*
+ * 플로이드 2
+ */
 public class BOJ11780 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {

@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    가르침 
-*/
+/*
+ * 가르침
+ */
 public class BOJ1062 {
 
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -35,11 +35,11 @@ public class BOJ1062 {
         }
 
         if (k < 5) {
-        System.out.println(0);
-        return;
+            System.out.println(0);
+            return;
         } else if (k == 26) {
-        System.out.println(n);
-        return;
+            System.out.println(n);
+            return;
         }
 
         k -= 5;

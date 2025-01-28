@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
-    상자넣기
+ * 상자넣기
  */
 
 import java.io.*;

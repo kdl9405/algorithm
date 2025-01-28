@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    N과 M (12) 
-    
-    160ms
-    
+ * N과 M (12)
+ * 
+ * 160ms
+ * 
  */
 
 public class BOJ15666 {
@@ -42,24 +42,24 @@ public class BOJ15666 {
     static int[] arr;
     static StringBuilder sb;
 
-    static void findP (int depth, int r){
+    static void findP(int depth, int r) {
         if (depth == r) {
-            for(int a : arr){
+            for (int a : arr) {
                 sb.append(a).append(" ");
             }
             sb.append("\n");
             return;
         }
 
-        for(int i = 0; i<numbers.length; i++){
-            if (depth>0) {
-                if (arr[depth-1] > numbers[i]) {
+        for (int i = 0; i < numbers.length; i++) {
+            if (depth > 0) {
+                if (arr[depth - 1] > numbers[i]) {
                     continue;
                 }
             }
 
             arr[depth] = numbers[i];
-            findP(depth+1, r);
+            findP(depth + 1, r);
         }
     }
 }

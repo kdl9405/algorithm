@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    트리와 쿼리 
-
-*/
+/*
+ * 트리와 쿼리
+ * 
+ */
 public class BOJ15681 {
     static int N, R, Q;
     static ArrayList<Integer>[] line;
@@ -22,7 +22,7 @@ public class BOJ15681 {
         R = Integer.parseInt(st.nextToken());
         Q = Integer.parseInt(st.nextToken());
 
-        line = new ArrayList[N+1];
+        line = new ArrayList[N + 1];
         for (int i = 1; i <= N; i++) {
             line[i] = new ArrayList<>();
         }

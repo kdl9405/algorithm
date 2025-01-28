@@ -1,15 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    승부 예측
-
-    // 6경기에 대한 승무패를 모두 구하여 6^3 경우의 수에 대한 확률을 누적.
-    // 18가지 경우의 수에 대해서, 각 경우마다 확률*승점으로 각 팀의 최종 승점을 구하고 진출 확률을 구함.
-    // 그리고 진출확률 18개를 모두 더해 18로 나누고 최종 진출확률을 산출?
-*/
+/*
+ * 승부 예측
+ * 
+ * // 6경기에 대한 승무패를 모두 구하여 6^3 경우의 수에 대한 확률을 누적. // 18가지 경우의 수에 대해서, 각 경우마다 확률*승점으로 각 팀의 최종 승점을 구하고
+ * 진출 확률을 구함. // 그리고 진출확률 18개를 모두 더해 18로 나누고 최종 진출확률을 산출?
+ */
 
 public class BOJ15997 {
     public static void main(String[] args) throws IOException {
@@ -112,7 +111,8 @@ public class BOJ15997 {
             } else if (chance == 0) {
                 probability.put(pointGroup[i], (double) 0);
             } else {
-                probability.put(pointGroup[i], ((double) chance / pointTable.get(pointGroup[i])) * prob);
+                probability.put(pointGroup[i],
+                        ((double) chance / pointTable.get(pointGroup[i])) * prob);
                 chance = 0;
             }
         }

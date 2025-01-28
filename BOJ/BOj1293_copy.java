@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    이친수
-*/
+/*
+ * 이친수
+ */
 
 import java.io.*;
 

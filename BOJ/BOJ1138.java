@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    한 줄로 서기
-*/
+/*
+ * 한 줄로 서기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -42,7 +42,7 @@ public class BOJ1138 {
         }
 
         StringBuilder answer = new StringBuilder();
-        for(int num : line){
+        for (int num : line) {
             answer.append(num).append(" ");
         }
         System.out.println(answer.toString().trim());

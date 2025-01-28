@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    연구소 
-
-    최적화 필요
-*/
+/*
+ * 연구소
+ * 
+ * 최적화 필요
+ */
 
 public class BOJ14502 {
 
@@ -67,8 +67,8 @@ public class BOJ14502 {
     static int[][] map;
     static List<point> blank;
     static List<point> virus;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
     static void infect() {
 
@@ -105,6 +105,7 @@ public class BOJ14502 {
         max = Math.max(max, blank.size() - 3 - count);
     }
 }
+
 
 class point {
     int r;

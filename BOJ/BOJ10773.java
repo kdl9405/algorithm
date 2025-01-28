@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,7 +9,7 @@ import java.util.List;
 public class BOJ10773 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int n = Integer.parseInt(br.readLine());
@@ -17,13 +19,13 @@ public class BOJ10773 {
         int i = 0;
         int index = 0;
 
-        while (i< n) {
+        while (i < n) {
             int num = Integer.parseInt(br.readLine());
 
             if (num == 0) {
                 index--;
-                list.remove(index);                
-            }else{
+                list.remove(index);
+            } else {
                 list.add(index, num);
                 index++;
             }
@@ -32,7 +34,7 @@ public class BOJ10773 {
 
         int sum = 0;
 
-        for(int x : list){
+        for (int x : list) {
             sum += x;
         }
 

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    MST 게임
-*/
+/*
+ * MST 게임
+ */
 public class BOJ16202 {
 
     static int N, M;
@@ -34,7 +34,7 @@ public class BOJ16202 {
             a = Integer.parseInt(st.nextToken());
             b = Integer.parseInt(st.nextToken());
 
-            link[i] = new int[] { a, b, i + 1 };
+            link[i] = new int[] {a, b, i + 1};
         }
 
         StringBuilder sb = new StringBuilder();
@@ -66,14 +66,14 @@ public class BOJ16202 {
             }
 
             if (count < N) {
-                for(; i<K; i++){
-                    sb.append(0+" ");
+                for (; i < K; i++) {
+                    sb.append(0 + " ");
                 }
                 break;
             }
 
-            sb.append(sum+" ");
-            for(int j = 1; j<=N; j++){
+            sb.append(sum + " ");
+            for (int j = 1; j <= N; j++) {
                 root[j] = j;
             }
         }
@@ -81,10 +81,10 @@ public class BOJ16202 {
         System.out.println(sb.toString());
     }
 
-    static int findRoot(int i){
+    static int findRoot(int i) {
         if (root[i] == i) {
             return i;
-        }else{
+        } else {
             return root[i] = findRoot(root[i]);
         }
     }

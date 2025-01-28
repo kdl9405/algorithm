@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,31 +7,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/* 
-    이진 검색 트리
-*/
+/*
+ * 이진 검색 트리
+ */
 public class BOJ5639 {
-    
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         number = new ArrayList<>();
 
         String n;
-        while(true){
+        while (true) {
             n = br.readLine();
 
-            if (n == null || n.equals("")){
+            if (n == null || n.equals("")) {
                 break;
             }
 
             number.add(Integer.parseInt(n));
-            
+
         }
 
         sb = new StringBuilder();
 
-        printNum(0, number.size()-1);
+        printNum(0, number.size() - 1);
 
         System.out.println(sb.toString());
 
@@ -40,28 +40,28 @@ public class BOJ5639 {
     static StringBuilder sb;
     static List<Integer> number;
 
-    static void printNum(int from, int to){
+    static void printNum(int from, int to) {
 
         if (from == to) {
-            sb.append(number.get(from)+"\n");
+            sb.append(number.get(from) + "\n");
             return;
         }
 
         int root = number.get(from);
-        for(int i = from+1; i<=to; i++){
+        for (int i = from + 1; i <= to; i++) {
             if (number.get(i) > root) {
-                printNum(from+1, i-1);
+                printNum(from + 1, i - 1);
                 printNum(i, to);
-                sb.append(root+"\n");
+                sb.append(root + "\n");
                 return;
             }
 
             if (i == to) {
-                printNum(from+1, to);
-                sb.append(root+"\n");
+                printNum(from + 1, to);
+                sb.append(root + "\n");
             }
         }
 
-      
+
     }
 }

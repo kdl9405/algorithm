@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    숨바꼭질 3
-*/
+/*
+ * 숨바꼭질 3
+ */
 public class BOJ13549 {
 
     public static void main(String[] args) throws IOException {

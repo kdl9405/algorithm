@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    가장 긴 증가하는 부분 수열 3
-*/
+/*
+ * 가장 긴 증가하는 부분 수열 3
+ */
 
 import java.io.*;
 import java.util.*;
@@ -35,7 +35,7 @@ public class BOJ12738 {
             answer = Math.max(answer, index);
             arr[index] = a;
 
-            System.out.println(answer +" " + index);
+            System.out.println(answer + " " + index);
         }
 
         System.out.println(answer);

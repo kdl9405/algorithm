@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    치킨 배달
-*/
+/*
+ * 치킨 배달
+ */
 public class BOJ15686 {
 
     public static void main(String[] args) throws IOException {
@@ -26,9 +26,9 @@ public class BOJ15686 {
                 String x = st.nextToken();
 
                 if (x.equals("1")) {
-                    house.add(new int[] { i, j });
+                    house.add(new int[] {i, j});
                 } else if (x.equals("2")) {
-                    chicken.add(new int[] { i, j });
+                    chicken.add(new int[] {i, j});
                 }
             }
         }

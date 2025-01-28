@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    이항 계수 3
-*/
+/*
+ * 이항 계수 3
+ */
 
 import java.io.*;
 import java.util.*;
@@ -18,9 +18,9 @@ public class BOJ11401 {
         long K = Long.parseLong(st.nextToken());
 
         long x = factoiral(N);
-        long y = factoiral(K) * factoiral(N-K) % INF;
+        long y = factoiral(K) * factoiral(N - K) % INF;
 
-        System.out.println(x * pow(y, INF-2)%INF);
+        System.out.println(x * pow(y, INF - 2) % INF);
 
     }
 

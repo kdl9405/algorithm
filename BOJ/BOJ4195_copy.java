@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    친구 네트워크
-*/
+/*
+ * 친구 네트워크
+ */
 
 import java.io.*;
 import java.util.*;

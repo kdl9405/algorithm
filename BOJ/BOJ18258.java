@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -6,9 +6,7 @@ import java.util.*;
 /**
  * BOJ18258
  * 
- * Deque를 이용해서 구현 -  
- *      java 8 - 1276ms
- *      java 11 - 1480ms
+ * Deque를 이용해서 구현 - java 8 - 1276ms java 11 - 1480ms
  */
 public class BOJ18258 {
 

@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
-/* 
-    반도체 설계
+/*
+ * 반도체 설계
  */
 
 import java.io.*;

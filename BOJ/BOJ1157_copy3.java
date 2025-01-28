@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.Arrays;
@@ -17,7 +17,7 @@ public class BOJ1157_copy3 {
 
         while (Character.isDigit(c)) {
 
-            if (c < 'A' ) {
+            if (c < 'A') {
                 alphabet[c - 'a']++;
             } else {
                 alphabet[c - 'A']++;
@@ -30,7 +30,7 @@ public class BOJ1157_copy3 {
         for (int i = 0; i < 26; i++) {
             if (alphabet[i] > max) {
                 max = alphabet[i];
-                answer = (char) (i+'A');
+                answer = (char) (i + 'A');
             } else if (alphabet[i] == max) {
                 answer = '?';
             }

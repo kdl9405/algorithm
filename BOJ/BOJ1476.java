@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    날짜 계산
-
+/*
+ * 날짜 계산
+ * 
  */
 
 import java.io.*;

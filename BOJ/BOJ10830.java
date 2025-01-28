@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-
-행렬 제곱
-
-  */
+ * 
+ * 행렬 제곱
+ * 
+ */
 
 public class BOJ10830 {
 
@@ -50,7 +50,7 @@ public class BOJ10830 {
     }
 
     static int[][] powArr(int[][] a, long b) {
-        
+
         if (b == 0) {
             return unit;
         }
@@ -58,13 +58,13 @@ public class BOJ10830 {
             return a;
         }
 
-        int[][] temp = powArr(a, b/2);
+        int[][] temp = powArr(a, b / 2);
         temp = multiful(temp, temp);
 
 
-        if (b%2 == 0) {
+        if (b % 2 == 0) {
             return temp;
-        }else {
+        } else {
             return multiful(temp, a);
         }
 
@@ -74,17 +74,17 @@ public class BOJ10830 {
 
         int[][] temp = new int[N][N];
 
-        for(int i = 0; i<N; i++){
-            for(int j = 0; j<N; j++){
-                for(int k = 0; k<N; k++){
-                    temp[i][j] += (a[i][k] * b[k][j])%1000;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                for (int k = 0; k < N; k++) {
+                    temp[i][j] += (a[i][k] * b[k][j]) % 1000;
                 }
                 temp[i][j] %= 1000;
             }
         }
 
         return temp;
-       
+
     }
 
 }

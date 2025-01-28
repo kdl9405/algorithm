@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    수들의 합 2
-
-*/
+/*
+ * 수들의 합 2
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -47,11 +47,11 @@ public class BOJ2003 {
             }
         }
 
-        for(; l<N; l++){
-            sum-= A[l];
+        for (; l < N; l++) {
+            sum -= A[l];
             if (sum == M) {
                 count++;
-            }else if(sum < M){
+            } else if (sum < M) {
                 break;
             }
         }

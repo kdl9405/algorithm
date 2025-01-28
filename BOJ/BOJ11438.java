@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 /**
-    LCA 2
-
-
-    // 희소테이블??
-
+ * LCA 2
+ * 
+ * 
+ * // 희소테이블??
+ * 
  */
 
 import java.io.*;

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 /**
  * 팰린드롬 만들기

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    내려가기 
-
-*/
+/*
+ * 내려가기
+ * 
+ */
 public class BOJ2096 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -44,8 +44,8 @@ public class BOJ2096 {
             }
         }
 
-        System.out.println(Math.max(max[N-1][0], Math.max(max[N-1][1], max[N-1][2])) +" "+
-                Math.min(min[N-1][0],Math.min(min[N-1][1], min[N-1][2])));
+        System.out.println(Math.max(max[N - 1][0], Math.max(max[N - 1][1], max[N - 1][2])) + " "
+                + Math.min(min[N - 1][0], Math.min(min[N - 1][1], min[N - 1][2])));
 
     }
 

@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
-/* 
-    미로만들기
+/*
+ * 미로만들기
  */
 
 import java.io.*;
@@ -31,7 +31,7 @@ public class BOJ2665 {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
             return a[2] - b[2];
         });
-        pq.add(new int[] { 0, 0, 0 });
+        pq.add(new int[] {0, 0, 0});
 
         while (!pq.isEmpty()) {
             int[] now = pq.poll();
@@ -48,25 +48,25 @@ public class BOJ2665 {
             visit[now[0]][now[1]] = now[2];
 
             for (int i = 0; i < 4; i++) {
-                int x = now[0]+move[i][0];
-                int y = now[1]+move[i][1];
+                int x = now[0] + move[i][0];
+                int y = now[1] + move[i][1];
 
-                if (x<0 || x>=n || y<0 || y>=n) {
+                if (x < 0 || x >= n || y < 0 || y >= n) {
                     continue;
                 }
 
                 if (map[x][y]) {
-                    if (visit[x][y] > now[2]+1) {
-                        pq.add(new int[]{x,y,now[2]+1});
+                    if (visit[x][y] > now[2] + 1) {
+                        pq.add(new int[] {x, y, now[2] + 1});
                     }
-                }else{
+                } else {
                     if (visit[x][y] > now[2]) {
-                        pq.add(new int[]{x,y,now[2]});
+                        pq.add(new int[] {x, y, now[2]});
                     }
                 }
             }
         }
     }
 
-    public static int[][] move = { { 1, 0 }, { -1, 0 }, { 0, 1 }, { 0, -1 } };
+    public static int[][] move = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 }

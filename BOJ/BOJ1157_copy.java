@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
@@ -15,18 +15,18 @@ public class BOJ1157_copy {
 
         int[] alphabet = new int[26];
 
-        for(char c : S.toCharArray()){
-            alphabet[c-'A']++;
+        for (char c : S.toCharArray()) {
+            alphabet[c - 'A']++;
         }
 
         int max = 0;
         char c = '?';
 
-        for(int i = 0; i<26; i++){
+        for (int i = 0; i < 26; i++) {
             if (alphabet[i] > max) {
                 max = alphabet[i];
-                c = (char)(i+'A');
-            }else if(alphabet[i] == max){
+                c = (char) (i + 'A');
+            } else if (alphabet[i] == max) {
                 c = '?';
             }
         }

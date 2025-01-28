@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
-/* 
-    최대공약수
+/*
+ * 최대공약수
  */
 
 import java.io.*;
@@ -23,7 +23,7 @@ public class BOJ1850 {
 
         long gcd = (A < B) ? GCD(A, B) : GCD(B, A);
 
-        System.out.println("1".repeat((int)gcd));
+        System.out.println("1".repeat((int) gcd));
     }
 
     long GCD(long A, long B) {

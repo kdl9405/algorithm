@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    마법사 상어와 파이어
-*/
+/*
+ * 마법사 상어와 파이어
+ */
 
 public class BOJ20056 {
     public static void main(String[] args) throws IOException {
@@ -17,13 +17,14 @@ public class BOJ20056 {
         M = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
 
-        direcion = new int[][] { { N - 1, 0 }, { N - 1, 1 }, { 0, 1 }, { 1, 1 }, { 1, 0 }, { 1, N - 1 }, { 0, N - 1 },
-                { N - 1, N - 1 } };
+        direcion = new int[][] {{N - 1, 0}, {N - 1, 1}, {0, 1}, {1, 1}, {1, 0}, {1, N - 1},
+                {0, N - 1}, {N - 1, N - 1}};
 
         fireball = new ArrayList<>();
         while (M-- > 0) {
 
-            int[] fire = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+            int[] fire =
+                    Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             fire[0]--;
             fire[1]--;
             fireball.add(fire);
@@ -133,14 +134,14 @@ public class BOJ20056 {
                     }
 
                     for (; k < 8; k += 2) {
-                        fireball.add(new int[] { i, j, m, s, k });
+                        fireball.add(new int[] {i, j, m, s, k});
                     }
 
                 } else if (mergeInfo[i][j][2] == 1) {
-                    fireball.add(new int[] { i, j, map[i][j][0], map[i][j][1], map[i][j][2] });
+                    fireball.add(new int[] {i, j, map[i][j][0], map[i][j][1], map[i][j][2]});
                 }
             }
-        }    
+        }
 
         return;
 

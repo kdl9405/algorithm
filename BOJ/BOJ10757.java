@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.math.BigInteger;
 import java.util.Scanner;
 
 /*
-    큰 수 A+B
-*/
+ * 큰 수 A+B
+ */
 
 public class BOJ10757 {
 

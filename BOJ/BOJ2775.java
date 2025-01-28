@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
@@ -12,7 +12,7 @@ public class BOJ2775 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int t = Integer.parseInt(br.readLine());
-        int k = 0,n =0;
+        int k = 0, n = 0;
         for (int i = 0; i < t; i++) {
 
             k = Integer.parseInt(br.readLine());

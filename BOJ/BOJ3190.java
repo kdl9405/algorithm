@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    뱀 
-*/
+/*
+ * 뱀
+ */
 
 import java.io.*;
 import java.util.*;
@@ -15,7 +15,7 @@ public class BOJ3190 {
         StringTokenizer st;
         int N = Integer.parseInt(br.readLine());
 
-        boolean[][] apple = new boolean[N+1][N+1];
+        boolean[][] apple = new boolean[N + 1][N + 1];
 
         int K = Integer.parseInt(br.readLine());
         for (int i = 0; i < K; i++) {
@@ -38,24 +38,24 @@ public class BOJ3190 {
         int y = 1;
         int d = 0;
 
-        boolean[][] board = new boolean[N+1][N+1];
+        boolean[][] board = new boolean[N + 1][N + 1];
         LinkedList<int[]> snake = new LinkedList<>();
-        snake.add(new int[] { 1, 1 });
+        snake.add(new int[] {1, 1});
         board[1][1] = true;
 
         while (true) {
 
             time++;
 
-            x +=dx[d];
-            y +=dy[d];
+            x += dx[d];
+            y += dy[d];
 
             if (x <= 0 || x > N || y <= 0 || y > N || board[x][y]) {
                 break;
             }
 
             board[x][y] = true;
-            snake.addFirst(new int[] { x, y });
+            snake.addFirst(new int[] {x, y});
             if (apple[x][y]) {
                 apple[x][y] = false;
             } else {
@@ -73,10 +73,11 @@ public class BOJ3190 {
 
 
             System.out.println(time);
-            for(int i = 1; i<=N; i++){
-                for(int j = 1; j<=N; j++){
-                    System.out.print(board[i][j]? "X": ".");
-                }System.out.println();
+            for (int i = 1; i <= N; i++) {
+                for (int j = 1; j <= N; j++) {
+                    System.out.print(board[i][j] ? "X" : ".");
+                }
+                System.out.println();
             }
         }
 
@@ -84,6 +85,6 @@ public class BOJ3190 {
 
     }
 
-    static int[] dx = { 0, 1, 0, -1 };
-    static int[] dy = { 1, 0, -1, 0 };
+    static int[] dx = {0, 1, 0, -1};
+    static int[] dy = {1, 0, -1, 0};
 }

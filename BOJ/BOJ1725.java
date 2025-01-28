@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    히스토그램 
-*/
+/*
+ * 히스토그램
+ */
 
 import java.io.*;
 import java.util.*;
@@ -25,18 +25,18 @@ public class BOJ1725 {
         int max = 0;
 
         for (int i = 0; i < N; i++) {
-            
+
             while (!stack.isEmpty() && height[stack.peek()] > height[i]) {
-                
+
                 int h = height[stack.pop()];
                 int w = i;
 
                 if (!stack.isEmpty()) {
-                    System.out.println("stack "+ stack.peek()+" h "+ h);
-                    w = i-stack.peek()-1;
+                    System.out.println("stack " + stack.peek() + " h " + h);
+                    w = i - stack.peek() - 1;
                 }
 
-                max = Math.max(max, h*w);
+                max = Math.max(max, h * w);
             }
 
             stack.push(i);
@@ -45,15 +45,15 @@ public class BOJ1725 {
 
         System.out.println(stack);
 
-        while(!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             int h = height[stack.pop()];
             int w = N;
 
             if (!stack.isEmpty()) {
-                w = N-stack.peek()-1;
+                w = N - stack.peek() - 1;
             }
 
-            max = Math.max(max, h*w);
+            max = Math.max(max, h * w);
 
         }
 

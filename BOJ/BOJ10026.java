@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    적록색약 
-*/
+/*
+ * 적록색약
+ */
 public class BOJ10026 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -32,7 +32,7 @@ public class BOJ10026 {
             }
         }
 
-        sb.append(count+" ");
+        sb.append(count + " ");
 
         visit = new boolean[N][N];
 
@@ -57,8 +57,8 @@ public class BOJ10026 {
     static int N;
     static char[][] map;
     static boolean[][] visit;
-    static int[] dx = { -1, 1, 0, 0 };
-    static int[] dy = { 0, 0, -1, 1 };
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
 
     static void dfs(int x, int y) {
 
@@ -84,7 +84,8 @@ public class BOJ10026 {
 
             if (nx >= 0 && nx < N && ny >= 0 && ny < N) {
                 if (!visit[nx][ny]) {
-                    if ((map[x][y] == 'B' && map[nx][ny] == 'B') || map[x][y] != 'B' && map[nx][ny] != 'B') {
+                    if ((map[x][y] == 'B' && map[nx][ny] == 'B')
+                            || map[x][y] != 'B' && map[nx][ny] != 'B') {
                         visit[nx][ny] = true;
                         dfs2(nx, ny);
                     }

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-//신나는 함수 실행  
+// 신나는 함수 실행
 // 최적화 필요 => arr range 101 => 21변경 필요!!!
 public class BOJ9184 {
 
@@ -33,11 +33,11 @@ public class BOJ9184 {
                 break;
             }
 
-            answer = calW(a+50, b+50, c+50);
+            answer = calW(a + 50, b + 50, c + 50);
 
 
-            sb.append("w("+a+", " +b+", "+c+") = "+answer+"\n");
-            
+            sb.append("w(" + a + ", " + b + ", " + c + ") = " + answer + "\n");
+
         }
 
         System.out.println(sb);
@@ -64,7 +64,8 @@ public class BOJ9184 {
             return arr[a][b][c];
         }
 
-        arr[a][b][c] = calW(a - 1, b, c) + calW(a - 1, b - 1, c) + calW(a - 1, b, c - 1) - calW(a - 1, b - 1, c - 1);
+        arr[a][b][c] = calW(a - 1, b, c) + calW(a - 1, b - 1, c) + calW(a - 1, b, c - 1)
+                - calW(a - 1, b - 1, c - 1);
 
         return arr[a][b][c];
     }

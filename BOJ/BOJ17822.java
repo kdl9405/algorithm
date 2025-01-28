@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
-    원판 돌리기
+ * 원판 돌리기
  */
 
 import java.io.*;
@@ -20,7 +20,7 @@ public class BOJ17822 {
     int N, M, T;
     int[][] board;
     boolean isRemoved;
-    int[][] dir = { { 0, 1 }, { 0, -1 }, { 1, 0 }, { -1, 0 } };
+    int[][] dir = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
     void solution() throws IOException {
 
@@ -108,7 +108,7 @@ public class BOJ17822 {
 
                     if (j == 0 && temp[i][j] == temp[i][M - 1]) {
                         board[i][j] = 0;
-                        board[i][M-1] = 0;
+                        board[i][M - 1] = 0;
                         isRemoved = true;
                     }
 

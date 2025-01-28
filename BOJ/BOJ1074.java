@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/* 
-    Z 
-    
-*/
+/*
+ * Z
+ * 
+ */
 
 public class BOJ1074 {
 
@@ -41,7 +41,7 @@ public class BOJ1074 {
         if (size > 2) {
 
             devide(r, c, size);
-            
+
         } else {
             loop: for (int i = y1; i < y2; i++) {
                 for (int j = x1; j < x2; j++) {

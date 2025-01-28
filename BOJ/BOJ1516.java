@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 /**
  * 
  * 게임 개발
  * 
-*/
+ */
 
 import java.io.*;
 import java.util.*;
@@ -93,9 +93,9 @@ public class BOJ1516 {
         for (Build previous = buildSequence[num]; previous != null; previous = previous.previous) {
 
             need = Math.max(need, getNeedTime(previous.num));
-           
+
         }
 
-        return dp[num]+=need;
+        return dp[num] += need;
     }
 }

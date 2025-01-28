@@ -1,18 +1,18 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    왕위 계승
-*/
+ * 왕위 계승
+ */
 public class BOJ5021 {
 
     static HashMap<String, Double> bloods;
-    static HashMap<String, List<String>> parents; 
-  
+    static HashMap<String, List<String>> parents;
+
     public static void main(String[] args) throws IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 
@@ -22,7 +22,7 @@ public class BOJ5021 {
         String king = br.readLine();
 
         parents = new HashMap<>();
-        
+
         while (N-- > 0) {
             String[] input = br.readLine().split(" ");
 
@@ -34,29 +34,29 @@ public class BOJ5021 {
 
         bloods = new HashMap<>();
         bloods.put(king, 1.0);
-    
+
         String nextKing = "";
         double max = -1;
 
         while (M-- > 0) {
             String name = br.readLine();
             double blood = findKing(name);
-            if(blood > max){
+            if (blood > max) {
                 max = blood;
                 nextKing = name;
             }
 
         }
 
-        System.out.println(nextKing +" "+findKing(nextKing));    
+        System.out.println(nextKing + " " + findKing(nextKing));
 
 
-        for(String s : bloods.keySet()){
-            System.out.println(s +" " + findKing(s));
+        for (String s : bloods.keySet()) {
+            System.out.println(s + " " + findKing(s));
         }
     }
 
-    static double findKing(String child){
+    static double findKing(String child) {
 
         if (bloods.containsKey(child)) {
             return bloods.get(child);
@@ -68,9 +68,9 @@ public class BOJ5021 {
 
         double blood = 0;
 
-        for(String parent : parents.get(child)){
+        for (String parent : parents.get(child)) {
 
-            blood += (findKing(parent)/2.0);
+            blood += (findKing(parent) / 2.0);
         }
 
         bloods.put(child, blood);

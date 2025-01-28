@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    리모컨
-*/
+/*
+ * 리모컨
+ */
 public class BOJ1107_refactoring1 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {

@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -18,22 +20,22 @@ class BOJ3052 {
         int temp;
         int count = 0;
 
-        for (int i = 0; i < 10; i++){
-            
+        for (int i = 0; i < 10; i++) {
+
             num[i] = Integer.parseInt(br.readLine());
 
-            temp = num[i]%42;
+            temp = num[i] % 42;
 
-            if(N[temp] == 0){
+            if (N[temp] == 0) {
                 N[temp] = 1;
-                count +=1;
+                count += 1;
             }
-            
+
 
         }
 
         System.out.println(count);
-                
-       
+
+
     }
 }

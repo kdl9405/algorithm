@@ -1,18 +1,18 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    단어 섞기
-
-    
-*/
+/*
+ * 단어 섞기
+ * 
+ * 
+ */
 public class BOJ9177 {
 
     static char[] A, B, D;
     static boolean possible;
-    static boolean [][] visit;
+    static boolean[][] visit;
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -30,7 +30,7 @@ public class BOJ9177 {
             B = st.nextToken().toCharArray();
             D = st.nextToken().toCharArray();
 
-            visit = new boolean[A.length+1][B.length+1];
+            visit = new boolean[A.length + 1][B.length + 1];
             possible = false;
             makeCheck(A.length - 1, B.length - 1, D.length - 1);
 
@@ -47,10 +47,10 @@ public class BOJ9177 {
 
     static void makeCheck(int aIdx, int bIdx, int dIdx) {
 
-        if (visit[aIdx+1][bIdx+1]) {
+        if (visit[aIdx + 1][bIdx + 1]) {
             return;
         }
-        visit[aIdx+1][bIdx+1] = true;
+        visit[aIdx + 1][bIdx + 1] = true;
 
         if (aIdx < 0 && bIdx < 0 && dIdx < 0) {
             possible = true;
@@ -65,6 +65,6 @@ public class BOJ9177 {
             makeCheck(aIdx, bIdx - 1, dIdx - 1);
         }
 
-       
+
     }
 }

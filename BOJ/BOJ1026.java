@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    보물
-*/
+/*
+ * 보물
+ */
 
 import java.io.*;
 import java.util.*;
@@ -20,12 +20,12 @@ public class BOJ1026 {
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        for(int i = 0; i<N;i++){
+        for (int i = 0; i < N; i++) {
             A[i] = Integer.parseInt(st.nextToken());
         }
 
         st = new StringTokenizer(br.readLine());
-        for(int i = 0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             B[i] = Integer.parseInt(st.nextToken());
         }
 
@@ -33,12 +33,12 @@ public class BOJ1026 {
         Arrays.sort(B);
 
         int sum = 0;
-        for(int i = 0; i<N; i++){
-            sum +=(A[i]*B[N-1-i]);
-        }   
+        for (int i = 0; i < N; i++) {
+            sum += (A[i] * B[N - 1 - i]);
+        }
 
         System.out.println(sum);
-        
-        
+
+
     }
 }

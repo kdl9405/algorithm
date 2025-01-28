@@ -1,10 +1,10 @@
 
-package BOJ;
+package boj;
 
 /**
- 
-    사회망 서비스(SNS)
-
+ * 
+ * 사회망 서비스(SNS)
+ * 
  */
 
 import java.io.*;
@@ -67,6 +67,6 @@ public class BOJ2533_copy {
         }
 
     }
-    
+
 
 }

@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    UCPC는 무엇의 약자일까?
-*/
+/*
+ * UCPC는 무엇의 약자일까?
+ */
 public class BOJ15904 {
 
     public static void main(String[] args) throws IOException {
@@ -15,7 +15,7 @@ public class BOJ15904 {
 
         char[] S = br.readLine().toCharArray();
 
-        char[] UCPC = { 'U', 'C', 'P', 'C' };
+        char[] UCPC = {'U', 'C', 'P', 'C'};
 
         int index = 0;
         for (int i = 0; i < S.length; i++) {

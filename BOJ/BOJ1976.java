@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    여행 가자
-*/
+ * 여행 가자
+ */
 
 public class BOJ1976 {
 
@@ -19,26 +19,26 @@ public class BOJ1976 {
 
         parent = new int[n + 1];
 
-        for(int i = 1; i<=n; i++){
+        for (int i = 1; i <= n; i++) {
             parent[i] = i;
         }
 
-        for (int i = 1; i <=n; i++) {
+        for (int i = 1; i <= n; i++) {
             st = new StringTokenizer(br.readLine());
             int a = findParent(i);
 
-            for(int j = 1; j<=n; j++){
+            for (int j = 1; j <= n; j++) {
 
                 int link = Integer.parseInt(st.nextToken());
 
-                if(i == j || link == 0){
+                if (i == j || link == 0) {
                     continue;
                 }
 
                 int b = findParent(j);
 
                 if (a != b) {
-                    parent[b] = a; 
+                    parent[b] = a;
                 }
             }
         }
@@ -48,7 +48,7 @@ public class BOJ1976 {
         int x = findParent(Integer.parseInt(st.nextToken()));
         String answer = "YES";
 
-        for(int i = 1; i<m; i++){
+        for (int i = 1; i < m; i++) {
             if (x != findParent(Integer.parseInt(st.nextToken()))) {
                 answer = "NO";
                 break;

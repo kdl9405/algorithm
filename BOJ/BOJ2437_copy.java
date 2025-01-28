@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    저울
-*/
+/*
+ * 저울
+ */
 
 import java.io.*;
 import java.util.*;
@@ -26,7 +26,7 @@ public class BOJ2437_copy {
 
         int answer = 1;
         while (true) {
-            
+
             if (!weight.get(answer)) {
                 break;
             }

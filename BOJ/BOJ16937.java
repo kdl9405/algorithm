@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -51,7 +51,7 @@ public class BOJ16937 {
                 y = paper[i][0] * paper[i][1];
             }
 
-            if (x <= max/2 && y<=max/2) {
+            if (x <= max / 2 && y <= max / 2) {
                 continue;
             }
 

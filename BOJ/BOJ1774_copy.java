@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    우주신과의 교감
-
-    884ms
-*/
+/*
+ * 우주신과의 교감
+ * 
+ * 884ms
+ */
 
 public class BOJ1774_copy {
 
@@ -32,9 +32,10 @@ public class BOJ1774_copy {
         for (int i = 1; i < n; i++) {
             for (int j = i + 1; j <= n; j++) {
 
-                double d = Math.sqrt(Math.pow(point[i][0] - point[j][0], 2) + Math.pow(point[i][1] - point[j][1], 2));
+                double d = Math.sqrt(Math.pow(point[i][0] - point[j][0], 2)
+                        + Math.pow(point[i][1] - point[j][1], 2));
 
-                distance.add(new link (i, j, d));
+                distance.add(new link(i, j, d));
             }
         }
 
@@ -46,17 +47,17 @@ public class BOJ1774_copy {
             st = new StringTokenizer(br.readLine());
             int a = findGroup(Integer.parseInt(st.nextToken()));
             int b = findGroup(Integer.parseInt(st.nextToken()));
-                    
+
             if (a != b) {
                 group[b] = a;
             }
         }
 
-        Collections.sort(distance, (a,b)->{
+        Collections.sort(distance, (a, b) -> {
             return Double.compare(a.d, b.d);
         });
 
-        for(link now : distance){
+        for (link now : distance) {
             int a = findGroup(now.x);
             int b = findGroup(now.y);
 
@@ -64,12 +65,12 @@ public class BOJ1774_copy {
                 continue;
             }
 
-            total+=now.d;
+            total += now.d;
 
-            group[b]= a;
+            group[b] = a;
         }
 
-        System.out.printf("%.2f",total);
+        System.out.printf("%.2f", total);
 
     }
 
@@ -88,6 +89,7 @@ public class BOJ1774_copy {
     }
 
 }
+
 
 class link {
     int x;

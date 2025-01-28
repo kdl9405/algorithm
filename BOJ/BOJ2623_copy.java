@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 /*
-    음악프로그램 
-
-
-    메모리초과!!
-*/
+ * 음악프로그램
+ * 
+ * 
+ * 메모리초과!!
+ */
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -44,7 +44,7 @@ public class BOJ5014 {
 
         if (min[G] == -1) {
             System.out.println("use the stairs");
-        }else{
+        } else {
             System.out.println(min[G]);
         }
 

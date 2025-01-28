@@ -1,17 +1,15 @@
-package BOJ;
+package boj;
 
-/* 
-    백조의 호수
-
-
-    1. 물이 있는 영역 그룹을 조사.
-    2. 얼음이 녹은 영역은 주변과 비교해서, 그 영역 그룹을 정의.
-    3. 하루가 지난 후 녹은 얼음의 영역 그룹이 정의되면, 백조의 영역을 비교.
-    4. 백조의 영역이 같은면 => 만났다!!!
-
-
-    영역 맵과 호수를 하나로 관리
-*/
+/*
+ * 백조의 호수
+ * 
+ * 
+ * 1. 물이 있는 영역 그룹을 조사. 2. 얼음이 녹은 영역은 주변과 비교해서, 그 영역 그룹을 정의. 3. 하루가 지난 후 녹은 얼음의 영역 그룹이 정의되면, 백조의 영역을
+ * 비교. 4. 백조의 영역이 같은면 => 만났다!!!
+ * 
+ * 
+ * 영역 맵과 호수를 하나로 관리
+ */
 
 import java.io.*;
 import java.util.*;
@@ -23,8 +21,8 @@ public class BOJ3197 {
     static int[] area;
     static Queue<int[]> water;
 
-    static int[] dr = { 0, 0, -1, 1 };
-    static int[] dc = { -1, 1, 0, 0 };
+    static int[] dr = {0, 0, -1, 1};
+    static int[] dc = {-1, 1, 0, 0};
 
     public static void main(String[] args) throws IOException {
 
@@ -58,7 +56,7 @@ public class BOJ3197 {
 
         while (true) {
 
-           
+
             if (findArea(swan.get(0)) == findArea(swan.get(1))) {
                 break;
             }
@@ -79,7 +77,7 @@ public class BOJ3197 {
 
         lake[r][c] = '.';
 
-        water.add(new int[] { r, c });
+        water.add(new int[] {r, c});
 
         int a = findArea(r * C + c + 1);
         for (int i = 0; i < 4; i++) {
@@ -111,7 +109,7 @@ public class BOJ3197 {
 
             int[] w = water.poll();
 
-          
+
             for (int i = 0; i < 4; i++) {
                 int nr = w[0] + dr[i];
                 int nc = w[1] + dc[i];

@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,10 +6,10 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-/* 
-    암호 만들기
-
-*/
+/*
+ * 암호 만들기
+ * 
+ */
 public class BOJ1759 {
 
     public static void main(String[] args) throws IOException {
@@ -42,8 +42,9 @@ public class BOJ1759 {
 
         if (depth == L) {
             String p = new String(password);
-            if (p.replaceAll("[^aeiou]", "").length()>0 && p.replaceAll("[aeiou]", "").length()>1) {
-                sb.append(p+"\n");
+            if (p.replaceAll("[^aeiou]", "").length() > 0
+                    && p.replaceAll("[aeiou]", "").length() > 1) {
+                sb.append(p + "\n");
             }
 
             return;
@@ -54,9 +55,9 @@ public class BOJ1759 {
         }
 
         password[depth] = c[index];
-        dfs(index+1, depth+1);
-        dfs(index+1, depth);
-      
+        dfs(index + 1, depth + 1);
+        dfs(index + 1, depth);
+
 
     }
 }

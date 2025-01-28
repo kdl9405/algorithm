@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    보물섬
-*/
+/*
+ * 보물섬
+ */
 
 import java.io.*;
 import java.util.*;
@@ -40,7 +40,7 @@ public class BOJ2589_copy {
     static int R, C, distance;
     static char[][] map;
     static int[][] visit;
-    static int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
     static int BFS(int r, int c) {
 
@@ -49,7 +49,7 @@ public class BOJ2589_copy {
         int d = 0;
 
         Queue<int[]> queue = new LinkedList<>();
-        queue.add(new int[] { r, c });
+        queue.add(new int[] {r, c});
         visit[r][c] = 1;
 
         while (!queue.isEmpty()) {
@@ -70,12 +70,12 @@ public class BOJ2589_copy {
                 }
 
                 visit[nr][nc] = visit[now[0]][now[1]] + 1;
-                queue.add(new int[] { nr, nc });
+                queue.add(new int[] {nr, nc});
 
             }
         }
 
-        return d-1;
+        return d - 1;
     }
 
 }

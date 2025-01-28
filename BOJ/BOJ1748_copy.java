@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-    수 이어 쓰기 1
-*/
+ * 수 이어 쓰기 1
+ */
 
 import java.io.*;
 
@@ -25,7 +25,7 @@ public class BOJ1748_copy {
         for (int i = 1; i <= N; i++) {
 
             if (N >= range) {
-                answer += ((range - (range / 10)) * digit)+1;
+                answer += ((range - (range / 10)) * digit) + 1;
                 i = range - 1;
                 digit++;
                 range *= 10;

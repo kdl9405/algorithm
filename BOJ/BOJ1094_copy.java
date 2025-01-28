@@ -1,34 +1,34 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 
 public class BOJ1094_copy {
-    
-    public static void main(String[] args){
-        
+
+    public static void main(String[] args) {
+
         int[] stick = new int[7];
         stick[0] = 64;
-        for(int i = 1; i<7; i++){
-            stick[i] = stick[i-1]/2;
+        for (int i = 1; i < 7; i++) {
+            stick[i] = stick[i - 1] / 2;
         }
-        
+
         Scanner sc = new Scanner(System.in);
-        
+
         int x = sc.nextInt();
-        
+
         int answer = 0;
-        
-        for(int i = 0; i<7; i++){
-            if(x>=stick[i]){
-                x-=stick[i];
+
+        for (int i = 0; i < 7; i++) {
+            if (x >= stick[i]) {
+                x -= stick[i];
                 answer++;
 
-                if(x == 0){
+                if (x == 0) {
                     break;
                 }
-            }            
-        }        
-        
+            }
+        }
+
         System.out.println(answer);
     }
 }

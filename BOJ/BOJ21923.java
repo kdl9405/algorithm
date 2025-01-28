@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
-/* 
-    곡예 비행
-
-    1. 해당 좌표까지 상승으로 얻을 수 있는 최대 값 
-    2.  + 해당 좌표부터 하강으로 얻을 수 있는 최대 값
-
-*/
+/*
+ * 곡예 비행
+ * 
+ * 1. 해당 좌표까지 상승으로 얻을 수 있는 최대 값 2. + 해당 좌표부터 하강으로 얻을 수 있는 최대 값
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -36,16 +35,16 @@ public class BOJ21923 {
         upVisit = new boolean[N][M];
         downVisit = new boolean[N][M];
 
-        int max = findDown(N-1, M-1);
+        int max = findDown(N - 1, M - 1);
 
         // for(int i = 0; i<N; i++){
-        //     for(int j = 0; j<M; j++){
-        //      //   max = Math.max(max,findUP(i, j) +findDown(i, j));
-        //         System.out.println("!! " +findDown(i, j));
-        //     }
+        // for(int j = 0; j<M; j++){
+        // // max = Math.max(max,findUP(i, j) +findDown(i, j));
+        // System.out.println("!! " +findDown(i, j));
+        // }
         // }
 
-        System.out.println(upDP[0][0] + " "+downDP[0][0]);
+        System.out.println(upDP[0][0] + " " + downDP[0][0]);
 
         System.out.println(max);
 
@@ -56,7 +55,7 @@ public class BOJ21923 {
     static int INF = -40000000;
     static int[][] upDP;
     static int[][] downDP;
-    static boolean[][] upVisit; 
+    static boolean[][] upVisit;
     static boolean[][] downVisit;
 
     static int findUP(int r, int c) {
@@ -88,7 +87,7 @@ public class BOJ21923 {
     static int findDown(int r, int c) {
 
         // if (r < 0 || c < 0) {
-        //     return INF;
+        // return INF;
         // }
 
         if (downVisit[r][c]) {
@@ -98,7 +97,7 @@ public class BOJ21923 {
         downVisit[r][c] = true;
 
         if (r == 0 && c == 0) {
-            return downDP[r][c] = findUP(0,0)+board[0][0];
+            return downDP[r][c] = findUP(0, 0) + board[0][0];
         }
 
         if (r == 0) {
@@ -108,9 +107,11 @@ public class BOJ21923 {
         if (c == 0) {
             return downDP[r][c] = Math.max(findUP(r, c), findDown(r - 1, c)) + board[r][c];
         }
-        
 
-        return downDP[r][c] = Math.max(findUP(r, c), Math.max(findDown(r - 1, c), findDown(r, c - 1))) + board[r][c];
+
+        return downDP[r][c] =
+                Math.max(findUP(r, c), Math.max(findDown(r - 1, c), findDown(r, c - 1)))
+                        + board[r][c];
 
     }
 

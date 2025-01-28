@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    트리와 쿼리 
-
-    // List 사용
-*/
+/*
+ * 트리와 쿼리
+ * 
+ * // List 사용
+ */
 public class BOJ15681_copy {
 
     static int N, R, Q;
@@ -25,20 +25,20 @@ public class BOJ15681_copy {
 
         line = new ArrayList<>();
 
-        for(int i = 0; i<=N; i++){
+        for (int i = 0; i <= N; i++) {
             line.add(new ArrayList<>());
         }
 
-        dp = new int[N+1];
+        dp = new int[N + 1];
 
-        for(int i = 1; i<N; i++){
+        for (int i = 1; i < N; i++) {
             st = new StringTokenizer(br.readLine());
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
 
             line.get(x).add(y);
             line.get(y).add(x);
-            
+
         }
 
         findChildren(R, 0);
@@ -49,15 +49,16 @@ public class BOJ15681_copy {
         }
 
         System.out.println(sb.toString());
-        
+
     }
-    static int findChildren(int u, int parent){
+
+    static int findChildren(int u, int parent) {
 
         if (dp[u] != 0) {
             return dp[u];
         }
 
-        for(int child : line.get(u)){
+        for (int child : line.get(u)) {
             if (child == parent) {
                 continue;
             }

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    로또
-*/
+/*
+ * 로또
+ */
 
 public class BOJ2758 {
 
@@ -26,14 +26,14 @@ public class BOJ2758 {
             long[][] dp = new long[n + 1][m + 1]; // n번째에 m이하를 고르는 경우의 수
             Arrays.fill(dp[0], 1);
             for (int i = 1; i <= n; i++) {
-                int min = (int)Math.pow(2, (i-1));
+                int min = (int) Math.pow(2, (i - 1));
                 dp[i][min] = 1;
-                for (int j = min+1; j <= m; j++) {
-                    dp[i][j] = dp[i][j-1] + dp[i-1][j/2];
+                for (int j = min + 1; j <= m; j++) {
+                    dp[i][j] = dp[i][j - 1] + dp[i - 1][j / 2];
                 }
 
                 // for (int j = 1; j <= m; j++) {
-                //     System.out.print(dp[i][j] + " ");
+                // System.out.print(dp[i][j] + " ");
                 // }
                 // System.out.println();
             }

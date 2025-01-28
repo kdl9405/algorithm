@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    자상의 경로
-*/
+/*
+ * 자상의 경로
+ */
 
 import java.io.*;
 import java.util.*;
@@ -22,7 +22,8 @@ public class BOJ10164_copy {
 
         if (K == 0) {
 
-            System.out.println(findFactorial(N + M - 2) / (findFactorial(N - 1) * findFactorial(M - 1)));
+            System.out.println(
+                    findFactorial(N + M - 2) / (findFactorial(N - 1) * findFactorial(M - 1)));
 
         } else {
             int r1 = (K - 1) / M + 1;
@@ -30,8 +31,10 @@ public class BOJ10164_copy {
             int r2 = N + 1 - r1;
             int c2 = M + 1 - c1;
 
-            long before = findFactorial(r1 + c1 - 2) / (findFactorial(r1 - 1) * findFactorial(c1 - 1));
-            long after = findFactorial(r2 + c2 - 2) / (findFactorial(r2 - 1) * findFactorial(c2 - 1));
+            long before =
+                    findFactorial(r1 + c1 - 2) / (findFactorial(r1 - 1) * findFactorial(c1 - 1));
+            long after =
+                    findFactorial(r2 + c2 - 2) / (findFactorial(r2 - 1) * findFactorial(c2 - 1));
 
             System.out.println(before * after);
 

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    크면서 작은 수
-*/
+/*
+ * 크면서 작은 수
+ */
 
 import java.io.*;
 import java.util.*;

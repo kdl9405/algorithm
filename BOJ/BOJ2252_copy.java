@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
-/* 
-    줄 세우기 
-
-    1. 자신 앞에 있는 수의 그룹 조사.
-    2. 이미 줄이 서있는지 확인하는 check 배열.
-
-*/
+/*
+ * 줄 세우기
+ * 
+ * 1. 자신 앞에 있는 수의 그룹 조사. 2. 이미 줄이 서있는지 확인하는 check 배열.
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -77,9 +76,9 @@ public class BOJ2252_copy {
 
         // if (back.containsKey(n)) {
 
-        //     for (int b : back.get(n)) {
-        //         lineUp(b);
-        //     }
+        // for (int b : back.get(n)) {
+        // lineUp(b);
+        // }
         // }
 
         return;

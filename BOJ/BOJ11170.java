@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    0의 개수
-*/
+/*
+ * 0의 개수
+ */
 
 import java.io.*;
 import java.util.*;

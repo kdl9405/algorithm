@@ -1,3 +1,5 @@
+package boj;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -36,11 +38,11 @@ class BOJ8958 {
                 }
 
             }
-            
+
             totalscore[n] = total;
         }
 
-        for (int j = 0; j<t; j++)
+        for (int j = 0; j < t; j++)
             System.out.println(totalscore[j]);
     }
 }

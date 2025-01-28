@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    카멜레온 부분 문자열
-
-    포기
-*/
+/*
+ * 카멜레온 부분 문자열
+ * 
+ * 포기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -36,7 +36,7 @@ public class BOJ13506 {
             }
 
             // for (int x = 0; x < S.length(); x++) {
-            //     System.out.print(kmp[x] + " ");
+            // System.out.print(kmp[x] + " ");
             // }
             // System.out.println();
 
@@ -58,10 +58,10 @@ public class BOJ13506 {
             if (check) {
                 break;
             }
-            x = kmp[x-1];
+            x = kmp[x - 1];
         }
 
-        if(!check){
+        if (!check) {
             System.out.println("-1");
         }
 

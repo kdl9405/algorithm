@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
 /*
-    왕위 계승
-*/
+ * 왕위 계승
+ */
 public class BOJ5021_copy {
 
     static Map<String, List<String>> tree = new HashMap<>();

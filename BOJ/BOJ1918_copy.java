@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
-/* 
-    후위 표기식
-*/
+/*
+ * 후위 표기식
+ */
 
 public class BOJ1918_copy {
 

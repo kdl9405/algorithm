@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    N과 M (7)
-*/
+/*
+ * N과 M (7)
+ */
 
 import java.io.*;
 import java.util.*;

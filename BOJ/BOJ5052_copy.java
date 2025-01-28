@@ -1,15 +1,15 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-/* 
-    전화번호 목록
-
-    배열 이용
-*/
+/*
+ * 전화번호 목록
+ * 
+ * 배열 이용
+ */
 public class BOJ5052_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -32,18 +32,18 @@ public class BOJ5052_copy {
 
             boolean check = true;
 
-            for(int i = 0; i<n-1; i++){
+            for (int i = 0; i < n - 1; i++) {
 
-                if (number[i].length()> number[i+1].length()) {
+                if (number[i].length() > number[i + 1].length()) {
                     continue;
                 }
 
-                if (number[i+1].substring(0, number[i].length()).contains(number[i])) {
+                if (number[i + 1].substring(0, number[i].length()).contains(number[i])) {
                     check = false;
                     break;
                 }
             }
-           
+
             if (check) {
                 sb.append("YES").append("\n");
             } else {

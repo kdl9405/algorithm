@@ -1,14 +1,14 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    PPAP
-
-
-    가능할 때까지. PPAP를 P로 치환.. 
-*/
+/*
+ * PPAP
+ * 
+ * 
+ * 가능할 때까지. PPAP를 P로 치환..
+ */
 
 public class BOJ16120 {
 

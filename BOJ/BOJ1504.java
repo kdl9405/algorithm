@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    특정한 최단 경로
-*/
+/*
+ * 특정한 최단 경로
+ */
 public class BOJ1504 {
 
     public static void main(String[] args) throws IOException {
@@ -38,15 +38,15 @@ public class BOJ1504 {
         st = new StringTokenizer(br.readLine());
         int v1 = Integer.parseInt(st.nextToken());
         int v2 = Integer.parseInt(st.nextToken());
-        
-        int dis_a = dijkstra(1, v1) + dijkstra(v1, v2) +dijkstra(v2, n);
-        int dis_b = dijkstra(1, v2) + dijkstra(v2, v1) +dijkstra(v1, n);
-        
+
+        int dis_a = dijkstra(1, v1) + dijkstra(v1, v2) + dijkstra(v2, n);
+        int dis_b = dijkstra(1, v2) + dijkstra(v2, v1) + dijkstra(v1, n);
+
         dis_a = Math.min(dis_a, dis_b);
 
         if (dis_a > INF) {
             System.out.println(-1);
-        }else{
+        } else {
             System.out.println(dis_a);
         }
 
@@ -77,25 +77,26 @@ public class BOJ1504 {
 
             visit[now.to] = true;
 
-            for(road next : roads.get(now.to)){
+            for (road next : roads.get(now.to)) {
                 if (visit[next.to]) {
                     continue;
                 }
-                
-                if (distance[next.to] > distance[now.to]+next.dist) {
-                    distance[next.to] = distance[now.to]+next.dist;
+
+                if (distance[next.to] > distance[now.to] + next.dist) {
+                    distance[next.to] = distance[now.to] + next.dist;
                     pq.add(new road(next.to, distance[next.to]));
                 }
 
             }
-           
-        }   
+
+        }
 
         return distance[end];
 
     }
 
 }
+
 
 class road {
     int to;

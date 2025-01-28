@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    사전
-
-    메모리 초과
+/*
+ * 사전
+ * 
+ * 메모리 초과
  */
 
 import java.io.*;
@@ -23,10 +23,10 @@ public class BOJ1256_copy {
 
         makeNum(N, M, "");
 
-        if (list.size() <K) {
+        if (list.size() < K) {
             System.out.println(-1);
-        }else{
-            System.out.println(list.get(K-1));
+        } else {
+            System.out.println(list.get(K - 1));
         }
     }
 

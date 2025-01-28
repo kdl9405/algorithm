@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
 /**
-기타 레슨
-*/
+ * 기타 레슨
+ */
 
 import java.io.*;
 import java.util.*;

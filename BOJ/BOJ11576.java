@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    Base Conversion
-*/
+/*
+ * Base Conversion
+ */
 
 import java.io.*;
 import java.util.*;
@@ -34,7 +34,7 @@ public class BOJ11576 {
 
         while (num > 0) {
             stack.add(num % B);
-            num/=B;
+            num /= B;
         }
 
         StringBuilder answer = new StringBuilder();

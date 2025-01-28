@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    상근이의 여행
-*/
+/*
+ * 상근이의 여행
+ */
 
 public class BOJ9372_copy {
 
@@ -23,7 +23,7 @@ public class BOJ9372_copy {
             int M = Integer.parseInt(st.nextToken());
 
             List<List<Integer>> flight = new ArrayList<>();
-            for(int i = 0 ;i<=N; i++){
+            for (int i = 0; i <= N; i++) {
                 flight.add(new ArrayList<>());
             }
 
@@ -58,7 +58,7 @@ public class BOJ9372_copy {
                 continue;
             }
 
-            fly += (trip(flight, visit, next)+1);
+            fly += (trip(flight, visit, next) + 1);
         }
 
         return fly;

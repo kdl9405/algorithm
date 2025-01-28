@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    촌수계산
-*/
+/*
+ * 촌수계산
+ */
 
 import java.io.*;
 import java.util.*;

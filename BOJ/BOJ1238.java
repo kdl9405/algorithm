@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
 
-/* 
-    파티
-*/
+/*
+ * 파티
+ */
 
 import java.io.*;
 import java.util.*;
@@ -42,10 +42,10 @@ public class BOJ1238 {
 
         toTime = dijkstra(aToB);
         fromTime = dijkstra(bFromA);
-        
+
         int max = 0;
 
-        for(int i = 1; i<=N; i++){
+        for (int i = 1; i <= N; i++) {
             if (toTime[i] == INF || fromTime[i] == INF) {
                 continue;
             }
@@ -73,7 +73,7 @@ public class BOJ1238 {
         PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
             return a[1] - b[1];
         });
-        pq.add(new int[] { X, 0 });
+        pq.add(new int[] {X, 0});
 
         while (!pq.isEmpty()) {
 
@@ -84,15 +84,15 @@ public class BOJ1238 {
             }
             visit[now[0]] = true;
 
-            for(int next : roads.get(now[0]).keySet()){
+            for (int next : roads.get(now[0]).keySet()) {
 
                 if (visit[next]) {
                     continue;
                 }
 
-                if (time[next] > now[1]+roads.get(now[0]).get(next)) {
-                    time[next] = now[1]+roads.get(now[0]).get(next);
-                    pq.add(new int[]{next, time[next]});
+                if (time[next] > now[1] + roads.get(now[0]).get(next)) {
+                    time[next] = now[1] + roads.get(now[0]).get(next);
+                    pq.add(new int[] {next, time[next]});
                 }
             }
 

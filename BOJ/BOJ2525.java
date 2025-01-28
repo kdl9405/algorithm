@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
@@ -17,7 +17,7 @@ public class BOJ2525 {
         int B = Integer.parseInt(st.nextToken()) + Integer.parseInt(br.readLine());
 
         A += (B / 60);
-        
+
         A %= 24;
         B %= 60;
 

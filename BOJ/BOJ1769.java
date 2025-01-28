@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-
-    3의 배수
-
-*/
+/*
+ * 
+ * 3의 배수
+ * 
+ */
 
 import java.io.*;
 

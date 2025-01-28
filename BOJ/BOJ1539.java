@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    중량제한
-*/
+/*
+ * 중량제한
+ */
 
 import java.io.*;
 import java.util.*;
@@ -24,7 +24,7 @@ public class BOJ1539 {
             int B = Integer.parseInt(st.nextToken());
             int C = Integer.parseInt(st.nextToken());
 
-            bridge.add(new int[] { A, B, C });
+            bridge.add(new int[] {A, B, C});
 
         }
 
@@ -36,19 +36,19 @@ public class BOJ1539 {
             return b[2] - a[2];
         });
 
-        root = new int[N+1];
+        root = new int[N + 1];
 
         for (int[] b : bridge) {
 
             int x = findRoot(b[0]);
             int y = findRoot(b[1]);
-            if (x== y) {
+            if (x == y) {
                 continue;
             }
 
             root[y] = x;
 
-            if(findRoot(from) == findRoot(to)){
+            if (findRoot(from) == findRoot(to)) {
                 System.out.println(b[2]);
                 break;
             }

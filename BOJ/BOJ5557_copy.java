@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
 import java.util.*;
 import java.io.*;
 
-/* 
-    1학년 
-    시간초과
-*/
+/*
+ * 1학년 시간초과
+ */
 
 public class BOJ5557_copy {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -50,8 +49,8 @@ public class BOJ5557_copy {
             return;
         }
 
-        calculate(sum + num[index], index+1);
-        calculate(sum - num[index], index+1);
+        calculate(sum + num[index], index + 1);
+        calculate(sum - num[index], index + 1);
 
     }
 }

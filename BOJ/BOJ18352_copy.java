@@ -1,9 +1,9 @@
-package BOJ;
+package boj;
 
-/* 
-    특정 거리의 도시 찾기
-
-*/
+/*
+ * 특정 거리의 도시 찾기
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -39,7 +39,7 @@ public class BOJ18352_copy {
             return a[1] - b[1];
         });
 
-        pq.add(new int[] { X, 0 });
+        pq.add(new int[] {X, 0});
         boolean[] visit = new boolean[N + 1];
 
         List<Integer> result = new ArrayList<>();
@@ -66,7 +66,7 @@ public class BOJ18352_copy {
                     continue;
                 }
 
-                pq.add(new int[] { next, now[1] + 1 });
+                pq.add(new int[] {next, now[1] + 1});
             }
         }
 

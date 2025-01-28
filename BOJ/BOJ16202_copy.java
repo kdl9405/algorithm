@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    MST 게임
-
-    1092 ms
-*/
+/*
+ * MST 게임
+ * 
+ * 1092 ms
+ */
 public class BOJ16202_copy {
 
     static int N, M;
@@ -42,8 +42,8 @@ public class BOJ16202_copy {
             lineDetail[i + 1][0] = a;
             lineDetail[i + 1][1] = b;
 
-            lines.get(a).add(new int[] { b, i + 1 });
-            lines.get(b).add(new int[] { a, i + 1 });
+            lines.get(a).add(new int[] {b, i + 1});
+            lines.get(b).add(new int[] {a, i + 1});
         }
 
         closedLine = new boolean[M + 1];

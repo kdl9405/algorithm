@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
-/* 
-    알고스팟
-
-
-*/
+/*
+ * 알고스팟
+ * 
+ * 
+ */
 
 import java.io.*;
 import java.util.*;
@@ -31,7 +31,7 @@ public class BOJ1261_copy {
         PriorityQueue<int[]> queue = new PriorityQueue<>((a, b) -> {
             return a[2] - b[2];
         });
-        queue.add(new int[] { 0, 0, 0 });
+        queue.add(new int[] {0, 0, 0});
 
         while (!queue.isEmpty()) {
 
@@ -49,14 +49,14 @@ public class BOJ1261_copy {
 
                 if (x < 0 || x >= N || y < 0 || y >= M || visit[x][y]) {
                     continue;
-                    
+
                 }
 
                 visit[x][y] = true;
                 if (maze[x][y] == '1') {
-                    queue.add(new int[] { x, y, now[2] + 1 });
+                    queue.add(new int[] {x, y, now[2] + 1});
                 } else {
-                    queue.add(new int[] { x, y, now[2] });
+                    queue.add(new int[] {x, y, now[2]});
                 }
 
             }
@@ -65,5 +65,5 @@ public class BOJ1261_copy {
 
     }
 
-    static int[][] move = { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
+    static int[][] move = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 }

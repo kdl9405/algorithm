@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 /**
  * 
  * 게임 개발
  * 
-*/
+ */
 
 import java.io.*;
 import java.util.*;

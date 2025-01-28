@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,10 +6,9 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 
-/* 
-    스도쿠
-    시간초과
-*/
+/*
+ * 스도쿠 시간초과
+ */
 
 public class BOJ2580_copy {
 
@@ -30,21 +29,22 @@ public class BOJ2580_copy {
         while (true) {
             int count = 0;
 
-            for(int i = 0; i<9; i++){
-                for(int j = 0; j<9;j++){
+            for (int i = 0; i < 9; i++) {
+                for (int j = 0; j < 9; j++) {
                     if (arr[i][j] == 0) {
                         count++;
 
                         if (checkRow(i, j) || checkCol(i, j) || checkRect(i, j)) {
                             count--;
 
-                            System.out.println(i+" "+j+" = "+arr[i][j] +"  count = " + count);
+                            System.out.println(
+                                    i + " " + j + " = " + arr[i][j] + "  count = " + count);
 
                         }
 
 
                     }
-                    
+
 
                 }
             }
@@ -57,7 +57,7 @@ public class BOJ2580_copy {
 
         for (int i = 0; i < 9; i++) {
             for (int j = 0; j < 9; j++) {
-                System.out.print(arr[i][j] +" ");
+                System.out.print(arr[i][j] + " ");
             }
             System.out.println("");
         }
@@ -108,8 +108,8 @@ public class BOJ2580_copy {
 
     static boolean checkRect(int i, int j) {
 
-        int r = (i / 3)*3;
-        int c = (j / 3)*3;
+        int r = (i / 3) * 3;
+        int c = (j / 3) * 3;
 
         boolean[] used = new boolean[10];
         for (int x = r; x < r + 3; x++) {

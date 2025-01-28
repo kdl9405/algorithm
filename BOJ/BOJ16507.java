@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    어두운 건 무서워
-
-*/
+/*
+ * 어두운 건 무서워
+ * 
+ */
 public class BOJ16507 {
 
     public static void main(String[] args) throws IOException {
@@ -38,10 +38,11 @@ public class BOJ16507 {
             int r2 = Integer.parseInt(st.nextToken());
             int c2 = Integer.parseInt(st.nextToken());
 
-            int sum = picture[r2][c2] - picture[r1-1][c2] - picture[r2][c1-1] + picture[r1-1][c1-1];
-            int avg = sum / ((r2-r1+1)*(c2-c1+1));
+            int sum = picture[r2][c2] - picture[r1 - 1][c2] - picture[r2][c1 - 1]
+                    + picture[r1 - 1][c1 - 1];
+            int avg = sum / ((r2 - r1 + 1) * (c2 - c1 + 1));
 
-            sb.append(avg+"\n");
+            sb.append(avg + "\n");
         }
 
         System.out.println(sb.toString().trim());

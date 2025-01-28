@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    돌 게임 2
-*/
+/*
+ * 돌 게임 2
+ */
 
 import java.io.*;
 
@@ -14,7 +14,7 @@ public class BOJ9566 {
 
         if (N % 2 == 0) {
             System.out.println("SK");
-        }else{
+        } else {
             System.out.println("CY");
         }
     }

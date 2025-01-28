@@ -1,13 +1,13 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    섬의 개수
-
-    DFS 204ms
-*/
+/*
+ * 섬의 개수
+ * 
+ * DFS 204ms
+ */
 
 public class BOJ4963_copy2 {
 
@@ -59,15 +59,15 @@ public class BOJ4963_copy2 {
     static int w, h;
     static int[][] map;
     static boolean[][] visit;
-    static int[][] d = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
+    static int[][] d = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
     static void dfs(int x, int y) {
 
-        for(int i = 0; i<8; i++){
+        for (int i = 0; i < 8; i++) {
             int nx = x + d[i][0];
             int ny = y + d[i][1];
 
-            if (nx >= 0 && nx<h && ny>=0 && ny<w) {
+            if (nx >= 0 && nx < h && ny >= 0 && ny < w) {
                 if (map[nx][ny] == 1 && !visit[nx][ny]) {
                     visit[nx][ny] = true;
                     dfs(nx, ny);
@@ -76,6 +76,6 @@ public class BOJ4963_copy2 {
         }
 
         return;
-        
+
     }
 }

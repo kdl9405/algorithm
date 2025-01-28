@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    회사에 있는 사람 
-*/
+/*
+ * 회사에 있는 사람
+ */
 
 import java.io.*;
 import java.util.*;

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    벡터 매칭
-*/
+/*
+ * 벡터 매칭
+ */
 
 import java.io.*;
 import java.util.*;

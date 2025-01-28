@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    성적 통계
-*/
+/*
+ * 성적 통계
+ */
 
 import java.io.*;
 import java.util.*;

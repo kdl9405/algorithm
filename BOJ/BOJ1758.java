@@ -1,21 +1,21 @@
-package BOJ;
+package boj;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-/* 
-    알바생 강호
-*/
+/*
+ * 알바생 강호
+ */
 public class BOJ1758 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
+
         int n = Integer.parseInt(sc.nextLine());
 
         Integer[] arr = new Integer[n];
 
-        for(int i = 0; i<n; i++){
+        for (int i = 0; i < n; i++) {
             arr[i] = Integer.parseInt(sc.nextLine());
         }
 
@@ -23,13 +23,13 @@ public class BOJ1758 {
 
         long sum = 0;
 
-        for(int i = 0; i<arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             if (arr[i] - i <= 0) {
                 break;
             }
-            sum += (arr[i]-i);
+            sum += (arr[i] - i);
         }
-        
+
         System.out.println(sum);
 
     }

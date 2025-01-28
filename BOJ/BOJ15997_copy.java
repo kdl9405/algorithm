@@ -1,12 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    승부 예측
-    틀림... 확률처리???
-*/
+/*
+ * 승부 예측 틀림... 확률처리???
+ */
 
 public class BOJ15997_copy {
     public static void main(String[] args) throws IOException {

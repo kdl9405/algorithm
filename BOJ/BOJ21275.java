@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,9 +6,9 @@ import java.io.InputStreamReader;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-/* 
-    폰 호석만
-*/
+/*
+ * 폰 호석만
+ */
 public class BOJ21275 {
     public static void main(String[] args) throws IOException {
 
@@ -20,12 +20,14 @@ public class BOJ21275 {
         String num2 = st.nextToken();
 
         String max = Long.toString(Long.MAX_VALUE);
-        if (num1.length() > max.length() || (num1.length() == max.length() && num1.compareTo(max) > 0)) {
+        if (num1.length() > max.length()
+                || (num1.length() == max.length() && num1.compareTo(max) > 0)) {
             System.out.println("Impossible");
             return;
         }
 
-        if (num2.length() > max.length() || (num2.length() == max.length() && num2.compareTo(max) > 0)) {
+        if (num2.length() > max.length()
+                || (num2.length() == max.length() && num2.compareTo(max) > 0)) {
             System.out.println("Impossible");
             return;
         }
@@ -58,7 +60,7 @@ public class BOJ21275 {
                 long b = Long.parseLong(num2, j);
 
                 if (a == b && i != j) {
-                    X.add(new Long[] { a, (long) i, (long) j });
+                    X.add(new Long[] {a, (long) i, (long) j});
                 }
             }
         }

@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    별자리 만들기
-*/
+/*
+ * 별자리 만들기
+ */
 public class BOJ4386 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -22,12 +22,12 @@ public class BOJ4386 {
             double x = Double.parseDouble(st.nextToken());
             double y = Double.parseDouble(st.nextToken());
 
-            stars.add(new double[]{x,y});
+            stars.add(new double[] {x, y});
         }
 
         Collections.sort(stars, (a, b) -> {
-            
-            return Double.compare(Math.abs(a[0]+a[1]) , Math.abs(b[0]+b[1]));
+
+            return Double.compare(Math.abs(a[0] + a[1]), Math.abs(b[0] + b[1]));
         });
 
         double cost = 0;
@@ -37,18 +37,18 @@ public class BOJ4386 {
         stars.remove(0);
 
         while (!stars.isEmpty()) {
-            
+
             double min = INF;
             int index = 0;
 
-            for(int i = 0; i<stars.size(); i++){
+            for (int i = 0; i < stars.size(); i++) {
 
                 for (double[] star : set) {
-                    double x = Math.pow(stars.get(i)[0] - star[0],2);
-                    double y = Math.pow(stars.get(i)[1] - star[1],2);
-    
-                    double d = Math.sqrt(x+y);
-    
+                    double x = Math.pow(stars.get(i)[0] - star[0], 2);
+                    double y = Math.pow(stars.get(i)[1] - star[1], 2);
+
+                    double d = Math.sqrt(x + y);
+
                     if (d < min) {
                         min = d;
                         index = i;
@@ -62,7 +62,7 @@ public class BOJ4386 {
 
         }
 
-        
+
         System.out.println(String.format("%.2f", cost));
 
     }

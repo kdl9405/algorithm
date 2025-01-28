@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    백도어
-*/
+/*
+ * 백도어
+ */
 
 public class BOJ17396_copy {
 
@@ -30,7 +30,7 @@ public class BOJ17396_copy {
         for (int i = 0; i < N; i++) {
             roads[i] = new ArrayList<>();
         }
-        
+
         while (M-- > 0) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
@@ -86,6 +86,7 @@ public class BOJ17396_copy {
 
     }
 }
+
 
 class road {
     int dest;

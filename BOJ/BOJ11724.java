@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,9 +7,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-/* 
-    연결 요소의 개수
-*/
+/*
+ * 연결 요소의 개수
+ */
 
 public class BOJ11724 {
 
@@ -35,7 +35,7 @@ public class BOJ11724 {
 
         count = 0;
 
-        for(int i = 1; i<=n; i++){
+        for (int i = 1; i <= n; i++) {
             if (!visit[i]) {
                 count++;
                 bfs(i);
@@ -69,7 +69,7 @@ public class BOJ11724 {
                             temp.add(i);
                         }
                     }
-                    
+
                 }
 
             }

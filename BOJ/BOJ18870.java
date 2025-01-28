@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,9 +9,9 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.StringTokenizer;
 
-/* 
-    좌표 압축
-*/
+/*
+ * 좌표 압축
+ */
 public class BOJ18870 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -38,7 +38,7 @@ public class BOJ18870 {
             if (!sequence.containsKey(number)) {
                 sequence.put(number, index);
                 index++;
-            }   
+            }
         }
 
         StringBuilder sb = new StringBuilder();

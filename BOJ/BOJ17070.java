@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    파이프 옮기기 1
-
-*/
+/*
+ * 파이프 옮기기 1
+ * 
+ */
 public class BOJ17070 {
     public static void main(String[] args) throws NumberFormatException, IOException {
 
@@ -34,18 +34,19 @@ public class BOJ17070 {
 
                     dp[i][j][0] += (dp[i][j - 1][0] + dp[i][j - 1][2]); // 이동 후 가로가 됨
 
-                    if (i>1) {
+                    if (i > 1) {
                         dp[i][j][1] += (dp[i - 1][j][1] + dp[i - 1][j][2]); // 이동 후 세로가 됨
 
-                        if (map[i-1][j] == 0 && map[i][j-1] == 0){
-                            dp[i][j][2] += (dp[i-1][j-1][0] + dp[i-1][j-1][1] + dp[i-1][j-1][2]);
+                        if (map[i - 1][j] == 0 && map[i][j - 1] == 0) {
+                            dp[i][j][2] += (dp[i - 1][j - 1][0] + dp[i - 1][j - 1][1]
+                                    + dp[i - 1][j - 1][2]);
                         }
                     }
                 }
             }
         }
 
-        int count = dp[N][N][0] + dp[N][N][1] +dp[N][N][2];
+        int count = dp[N][N][0] + dp[N][N][1] + dp[N][N][2];
 
         System.out.println(count);
 

@@ -1,12 +1,12 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    섬의 개수
-
-*/
+/*
+ * 섬의 개수
+ * 
+ */
 
 public class BOJ4963 {
 
@@ -54,7 +54,7 @@ public class BOJ4963 {
 
     static int w, h;
     static int[][] map;
-    static int[][] d = { { -1, -1 }, { -1, 0 }, { -1, 1 }, { 0, -1 }, { 0, 1 }, { 1, -1 }, { 1, 0 }, { 1, 1 } };
+    static int[][] d = {{-1, -1}, {-1, 0}, {-1, 1}, {0, -1}, {0, 1}, {1, -1}, {1, 0}, {1, 1}};
 
     static void dfs(int x, int y) {
 

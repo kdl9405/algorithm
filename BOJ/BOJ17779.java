@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    게리맨더링 2
-*/
+/*
+ * 게리맨더링 2
+ */
 public class BOJ17779 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -30,12 +30,12 @@ public class BOJ17779 {
         for (int x = 0; x + 2 < N; x++) {
             for (int y = 0; y + 2 < N; y++) {
                 for (int d1 = 1;; d1++) {
-                    if (y-d1 < 0) {
+                    if (y - d1 < 0) {
                         break;
                     }
                     for (int d2 = 1;; d2++) {
-                        
-                        if (x+d2>=N || y+d2>=N || x+d1+d2 >= N) {
+
+                        if (x + d2 >= N || y + d2 >= N || x + d1 + d2 >= N) {
                             break;
                         }
 

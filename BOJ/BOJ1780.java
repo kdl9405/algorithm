@@ -1,4 +1,4 @@
-package BOJ;
+package boj;
 
 
 import java.util.*;
@@ -56,9 +56,8 @@ public class BOJ1780 {
 
         boolean check = true;
 
-        loop:
-        for(int i = x; i<x+len; i++){
-            for(int j =y; j<y+len; j++){
+        loop: for (int i = x; i < x + len; i++) {
+            for (int j = y; j < y + len; j++) {
                 if (arr[i][j] != color) {
                     check = false;
                     break loop;
@@ -78,19 +77,19 @@ public class BOJ1780 {
                     c++;
                     break;
             }
-        }else{
-            len = len/3;
+        } else {
+            len = len / 3;
             check_arr(x, y, len);
-            check_arr(x, y+len, len);
-            check_arr(x, y+(2*len), len);
+            check_arr(x, y + len, len);
+            check_arr(x, y + (2 * len), len);
 
-            check_arr(x+len, y, len);
-            check_arr(x+len, y+len, len);
-            check_arr(x+len, y+(2*len), len);
+            check_arr(x + len, y, len);
+            check_arr(x + len, y + len, len);
+            check_arr(x + len, y + (2 * len), len);
 
-            check_arr(x+(2*len), y, len);
-            check_arr(x+(2*len), y+len, len);
-            check_arr(x+(2*len), y+(2*len), len);
+            check_arr(x + (2 * len), y, len);
+            check_arr(x + (2 * len), y + len, len);
+            check_arr(x + (2 * len), y + (2 * len), len);
 
         }
 

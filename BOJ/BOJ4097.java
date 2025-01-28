@@ -1,17 +1,17 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    수익 
-*/
+/*
+ * 수익
+ */
 public class BOJ4097 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
-        
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
-        int max,sum;
+        int max, sum;
 
         while (true) {
             int n = Integer.parseInt(br.readLine());
@@ -23,18 +23,18 @@ public class BOJ4097 {
 
             while (n-- > 0) {
                 int num = Integer.parseInt(br.readLine());
-                sum+= num;
+                sum += num;
                 max = Math.max(max, sum);
-                if (sum<0) {
+                if (sum < 0) {
                     sum = 0;
                 }
             }
 
-            sb.append(max+"\n");
-           
+            sb.append(max + "\n");
+
         }
 
         System.out.println(sb.toString());
-    } 
-    
+    }
+
 }

@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    경찰차 
-*/
+/*
+ * 경찰차
+ */
 
 import java.io.*;
 import java.util.*;
@@ -34,7 +34,7 @@ public class BOJ2618 {
         getRoute(0, 0);
 
         System.out.println(route.toString().trim());
-        
+
     }
 
     static int N, W;
@@ -61,13 +61,15 @@ public class BOJ2618 {
         if (one == 0) {
             oneDis = Math.abs(1 - works[next][0]) + Math.abs(1 - works[next][1]);
         } else {
-            oneDis = Math.abs(works[one][0] - works[next][0]) + Math.abs(works[one][1] - works[next][1]);
+            oneDis = Math.abs(works[one][0] - works[next][0])
+                    + Math.abs(works[one][1] - works[next][1]);
         }
 
         if (two == 0) {
             twoDis = Math.abs(N - works[next][0]) + Math.abs(N - works[next][1]);
         } else {
-            twoDis = Math.abs(works[two][0] - works[next][0]) + Math.abs(works[two][1] - works[next][1]);
+            twoDis = Math.abs(works[two][0] - works[next][0])
+                    + Math.abs(works[two][1] - works[next][1]);
         }
 
         return dp[one][two] = Math.min(oneDis + findDP(next, two), twoDis + findDP(one, next));
@@ -87,13 +89,15 @@ public class BOJ2618 {
         if (one == 0) {
             oneDis = Math.abs(1 - works[next][0]) + Math.abs(1 - works[next][1]);
         } else {
-            oneDis = Math.abs(works[one][0] - works[next][0]) + Math.abs(works[one][1] - works[next][1]);
+            oneDis = Math.abs(works[one][0] - works[next][0])
+                    + Math.abs(works[one][1] - works[next][1]);
         }
 
         if (two == 0) {
             twoDis = Math.abs(N - works[next][0]) + Math.abs(N - works[next][1]);
         } else {
-            twoDis = Math.abs(works[two][0] - works[next][0]) + Math.abs(works[two][1] - works[next][1]);
+            twoDis = Math.abs(works[two][0] - works[next][0])
+                    + Math.abs(works[two][1] - works[next][1]);
         }
 
         if (dp[next][two] + oneDis < dp[one][next] + twoDis) {

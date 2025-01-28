@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    골드바흐의 추측
-*/
+/*
+ * 골드바흐의 추측
+ */
 
 import java.io.*;
 
@@ -29,7 +29,7 @@ public class BOJ6588 {
 
                 if (!notPrime[i] && !notPrime[n - i]) {
                     check = true;
-                    sb.append(n + " = " + i + " + " + (n - i) +"\n");
+                    sb.append(n + " = " + i + " + " + (n - i) + "\n");
                     break;
                 }
             }
@@ -49,7 +49,7 @@ public class BOJ6588 {
         for (int i = 2; i <= 1000000; i++) {
 
             for (int j = 2; i * j <= 1000000; j++) {
-                notPrime[i*j] = true;
+                notPrime[i * j] = true;
             }
         }
         return;

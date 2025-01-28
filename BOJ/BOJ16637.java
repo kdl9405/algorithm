@@ -1,7 +1,7 @@
-package BOJ;
+package boj;
 
 /**
-    괄호 추가하기
+ * 괄호 추가하기
  */
 
 import java.io.*;
@@ -47,9 +47,8 @@ public class BOJ16637 {
 
         // 괄호 사용
         if (index + 3 < N) {
-            dfs(index + 4, calculate(value, operation[index],
-                    calculate(operation[index + 1] - '0', operation[index + 2], operation[index +
-                            3] - '0')));
+            dfs(index + 4, calculate(value, operation[index], calculate(operation[index + 1] - '0',
+                    operation[index + 2], operation[index + 3] - '0')));
 
         }
 

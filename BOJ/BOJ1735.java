@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    분수 합
-*/
+/*
+ * 분수 합
+ */
 public class BOJ1735 {
 
     public static void main(String[] args) throws IOException {
@@ -29,7 +29,7 @@ public class BOJ1735 {
         int c = ((c1 * p2) + (c2 * p1));
 
         int lcd = LCD(c, p);
-        System.out.println((c/lcd)+" " + (p/lcd));
+        System.out.println((c / lcd) + " " + (p / lcd));
 
     }
 

@@ -1,10 +1,10 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 
-/* 
-    Hashing 
-*/
+/*
+ * Hashing
+ */
 public class BOJ15829 {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -22,8 +22,8 @@ public class BOJ15829 {
             int x = s.charAt(i) - 'a' + 1;
 
             sum += (x * y);
-            y = (y*r)%M;
-            
+            y = (y * r) % M;
+
 
         }
 

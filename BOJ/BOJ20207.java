@@ -1,11 +1,11 @@
-package BOJ;
+package boj;
 
 import java.io.*;
 import java.util.*;
 
-/* 
-    달력
-*/
+/*
+ * 달력
+ */
 
 public class BOJ20207 {
     public static void main(String[] args) throws NumberFormatException, IOException {
@@ -24,8 +24,8 @@ public class BOJ20207 {
 
         int[] calender = new int[367];
 
-        for(int[] work : works){
-            for(int i = work[0]; i<=work[1]; i++){
+        for (int[] work : works) {
+            for (int i = work[0]; i <= work[1]; i++) {
                 calender[i]++;
             }
         }
@@ -33,12 +33,12 @@ public class BOJ20207 {
         int day = 0;
         int count = 0;
         int total = 0;
-        for(int i = 1; i<=366; i++){
+        for (int i = 1; i <= 366; i++) {
             if (calender[i] == 0) {
-                total += (day*count);
+                total += (day * count);
                 day = 0;
                 count = 0;
-            }else{
+            } else {
                 day++;
                 count = Math.max(count, calender[i]);
             }

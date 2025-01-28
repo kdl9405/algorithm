@@ -1,10 +1,9 @@
-package BOJ;
-/* 
-    줄 세우기 
-
-    1. 자신 앞에 있는 수의 그룹 조사.
-    3. 이미 줄이 서있는지 확인하는 check 배열.
-*/
+package boj;
+/*
+ * 줄 세우기
+ * 
+ * 1. 자신 앞에 있는 수의 그룹 조사. 3. 이미 줄이 서있는지 확인하는 check 배열.
+ */
 
 import java.io.*;
 import java.util.*;

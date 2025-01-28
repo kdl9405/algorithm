@@ -1,3 +1,5 @@
+package boj;
+
 import java.util.*;
 
 public class BOJ5622 {

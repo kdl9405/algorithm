@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    크로스워드 퍼즐 쳐다보기
-*/
+/*
+ * 크로스워드 퍼즐 쳐다보기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -17,7 +17,7 @@ public class BOJ3005 {
         C = Integer.parseInt(st.nextToken());
         board = new char[R][C];
 
-        for(int i = 0; i<R; i++){
+        for (int i = 0; i < R; i++) {
             board[i] = br.readLine().toCharArray();
         }
 
@@ -45,7 +45,7 @@ public class BOJ3005 {
     static char[][] board;
     static List<String> words;
 
-    static void findInRow(int x, int y, StringBuilder sb){
+    static void findInRow(int x, int y, StringBuilder sb) {
 
         while (true) {
             if (y == C || board[x][y] == '#') {
@@ -55,7 +55,7 @@ public class BOJ3005 {
             y++;
         }
 
-        if (sb.length()>1) {
+        if (sb.length() > 1) {
             words.add(sb.toString());
         }
 
@@ -72,7 +72,7 @@ public class BOJ3005 {
             x++;
         }
 
-        if (sb.length()>1) {
+        if (sb.length() > 1) {
             words.add(sb.toString());
         }
         return;

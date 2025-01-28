@@ -1,8 +1,8 @@
-package BOJ;
+package boj;
 
-/* 
-    합 구하기
-*/
+/*
+ * 합 구하기
+ */
 
 import java.io.*;
 import java.util.*;
@@ -29,7 +29,7 @@ public class BOJ11441 {
             int i = Integer.parseInt(st.nextToken());
             int j = Integer.parseInt(st.nextToken());
 
-            answer.append(A[j]-A[i-1]).append("\n");
+            answer.append(A[j] - A[i - 1]).append("\n");
         }
 
         System.out.println(answer.toString().trim());
