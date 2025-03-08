@@ -1,8 +1,8 @@
-package reetcode;
+package leetcode;
 
 import java.util.*;
 
-public class reet27 {
+public class leet27 {
 
     public static void main(String[] args) {
 

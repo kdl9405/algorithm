@@ -1,6 +1,6 @@
-package reetcode;
+package leetcode;
 
-public class reet28 {
+public class leet28 {
 
     public static void main(String[] args) {
 

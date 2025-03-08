@@ -1,8 +1,8 @@
-package reetcode;
+package leetcode;
 
 import java.io.*;
 
-public class reet1079 {
+public class leet1079 {
 
     public static void main(String[] args) throws IOException {
 
