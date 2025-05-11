@@ -2,7 +2,7 @@ package leetcode;
 
 import java.util.*;
 
-public class reet205 {
+public class leet205 {
 
     public static void main(String[] args) {
         var s = "badc";
